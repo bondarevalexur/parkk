@@ -1,0 +1,471 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "TT Autonomous Trl Regular";
+  src: url("../fonts/TT Autonomous Trial Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl Light";
+  src: url("../fonts/TT Autonomous Trial Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl ExtraLight";
+  src: url("../fonts/TT Autonomous Trial ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RF Dewi Expanded Regular";
+  src: url("../fonts/RFDewiExtended-Regular.woff2") format("woff2"), url("../fonts/RFDewiExtended-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RF Dewi Expanded Bold";
+  src: url("../fonts/RFDewiExtended-Bold.woff2") format("woff2"), url("../fonts/RFDewiExtended-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "RF Dewi Expanded Regular";
+  color: #FFFFFF;
+}
+
+.flex {
+  display: flex;
+}
+
+.h1, .hero__title {
+  font-size: 60px;
+  line-height: 60px;
+  font-family: "TT Autonomous Trl Regular";
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "TT Autonomous Trl Light";
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 19.2px;
+  font-family: "RF Dewi Expanded Bold";
+}
+
+.p1, .services .car-care__list, .hero__subtitle, .nav__phone {
+  font-size: 14px;
+  line-height: 16.8px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.p2 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.number-font {
+  font-size: 110px;
+  line-height: 154px;
+  font-family: "TT Autonomous Trl ExtraLight";
+  font-style: normal;
+}
+
+.menu-font {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.button-font, .button {
+  font-size: 12px;
+  line-height: 14.4px;
+  font-family: "RF Dewi Expanded Bold";
+}
+
+.button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 23px 26px;
+  border-radius: 14px;
+}
+
+/* Хедер */
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+  align-items: center;
+}
+.header__logo {
+  justify-self: center;
+}
+.header__nav {
+  justify-self: end;
+}
+.header__button {
+  color: #FFFFFF;
+  border: 0.5px #A0A0A0 solid;
+}
+.header__button svg {
+  color: #FFF566;
+}
+.header__button:hover {
+  background-color: #FFF566;
+  color: #000000;
+}
+.header__button:hover svg {
+  color: #000000;
+}
+.header__button_premium {
+  margin-left: 10px;
+}
+.header__button_premium svg {
+  color: #F64A0A;
+}
+.header__button_premium:hover {
+  background-color: #F64A0A;
+  color: #FFFFFF;
+}
+.header__button_premium:hover svg {
+  color: #FFFFFF;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+.nav__burger {
+  cursor: pointer;
+  position: relative;
+  height: 5px;
+  width: 29px;
+  display: block;
+  align-self: center;
+}
+.nav__burger:after, .nav__burger:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 29px;
+  height: 1px;
+  background: #FFFFFF;
+}
+.nav__burger:before {
+  top: 0;
+}
+.nav__burger:after {
+  bottom: 0;
+}
+
+/* Главный экран */
+.hero {
+  background: url("../../assets/img/header-bg.jpeg") center/cover no-repeat;
+  padding: 100px 80px;
+  min-height: 790px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+  color: #FFFFFF;
+}
+.services {
+  min-height: 587px;
+  padding: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 453px;
+  column-gap: 20px;
+}
+.services .catalog {
+  position: relative;
+  border-radius: 20px;
+  background: #EBEBEB;
+  padding: 40px 20px;
+  color: #000000;
+}
+.services .catalog__title {
+  margin-bottom: 30px;
+}
+.services .catalog__button {
+  background: #52545A;
+  color: #FFF566;
+}
+.services .catalog__button:hover {
+  background: #FFF566;
+  color: #000000;
+}
+.services .catalog__image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 338px;
+}
+.services__plus-img {
+  position: absolute;
+  z-index: 10;
+  top: calc(50% - 47.5px);
+  right: 435.5px;
+  color: #FFF566;
+}
+.services .car-care {
+  border-radius: 20px;
+  background: #EBEBEB;
+  padding: 40px 20px;
+  color: #000000;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.services .car-care__title {
+  margin-bottom: 30px;
+  z-index: 10;
+}
+.services .car-care__button {
+  color: #000000;
+  border: 0.5px #A0A0A0 solid;
+  width: max-content;
+}
+.services .car-care__button:hover {
+  background: #FFF566;
+  color: #000000;
+}
+.services .car-care__list {
+  color: #52545A;
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-template-rows: repeat(3, min-content);
+  column-gap: 22px;
+  row-gap: 10px;
+  flex-grow: 1;
+  align-content: end;
+}
+.services .car-care__image {
+  height: 547px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.statistic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px;
+  gap: 20px;
+  color: #000000;
+}
+.statistic__column {
+  display: flex;
+  flex-direction: column;
+}
+.statistic__column:first-child {
+  border-right: 0.5px #A0A0A0 solid;
+  padding-right: 20px;
+}
+.statistic__block {
+  border-bottom: 0.5px #A0A0A0 solid;
+  padding-bottom: 20px;
+}
+.statistic__block .p1, .statistic__block .nav__phone, .statistic__block .hero__subtitle, .statistic__block .services .car-care__list, .services .statistic__block .car-care__list {
+  color: #52545A;
+}
+.statistic .first-block {
+  height: 420px;
+  padding-right: 100px;
+}
+.statistic .first-block .h2 {
+  margin-bottom: 20px;
+}
+.statistic .first-block .p1, .statistic .first-block .nav__phone, .statistic .first-block .hero__subtitle, .statistic .first-block .services .car-care__list, .services .statistic .first-block .car-care__list {
+  margin-bottom: 60px;
+}
+.statistic .first-block .button {
+  color: #000000;
+  border: 0.5px #A0A0A0 solid;
+  width: max-content;
+}
+.statistic .first-block .button:hover {
+  background: #FFF566;
+  color: #000000;
+}
+.statistic .second-block {
+  padding-top: 92px;
+}
+.statistic .second-block .number-font {
+  margin-bottom: 118px;
+}
+.statistic .third-block {
+  padding-top: 144px;
+}
+.statistic .third-block .number-font {
+  margin-bottom: 159px;
+}
+.statistic .fourth-block {
+  padding-top: 102px;
+}
+.statistic .fourth-block .number-font {
+  margin-bottom: 115px;
+}
+.statistic__partners {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 140px;
+}
+
+.advantages {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  column-gap: 19px;
+  color: #000000;
+}
+.advantages__list {
+  display: grid;
+  grid-template-columns: minmax(216px, 1fr) minmax(216px, 1fr) minmax(216px, 1fr);
+  column-gap: 20px;
+}
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 40px 10px 0 10px;
+}
+.advantages__item:nth-child(2) {
+  overflow: hidden;
+  background: #FFF566;
+  padding-top: 0;
+  padding-bottom: 40px;
+}
+.advantages__item:nth-child(2) .number-font {
+  flex-grow: 1;
+  position: relative;
+  left: -32px;
+}
+.advantages__item:nth-child(2) .h4 {
+  margin-bottom: 16px;
+}
+.advantages__item:nth-child(2) .sub_paragraph {
+  color: #52545A;
+}
+.advantages:hover .advantages__item {
+  background: #FFF566;
+}
+
+.animation-logo {
+  min-height: 790px;
+  background: #52545A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF566;
+}
+
+.preview {
+  background: #000000;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 140px 80px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.preview__header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.preview__block {
+  min-height: 274px;
+  background: #141414;
+  border-radius: 20px;
+  padding: 40px 20px 20px 20px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: min-content 1fr min-content;
+  row-gap: 16px;
+  column-gap: 16px;
+}
+.preview__block .datetime {
+  color: #A0A0A0;
+  justify-self: end;
+}
+.preview__block .description {
+  color: #EBEBEB;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.preview__block .location {
+  color: #A0A0A0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.preview__block .button {
+  justify-self: end;
+  color: #FFFFFF;
+  border: 0.5px #A0A0A0 solid;
+  width: max-content;
+}
+.preview__block .button:hover {
+  background: #52545A;
+  color: #FFF566;
+  border: none;
+}
+.preview__block:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-template-columns: calc(50% - 30px) 1fr max-content;
+  grid-template-rows: min-content 1fr min-content;
+  column-gap: 60px;
+}
+.preview__block:nth-child(4) .photo {
+  width: 100%;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.preview__block:nth-child(4) .description {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.preview__block:nth-child(4) .location {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+/*# sourceMappingURL=styles.css.map */

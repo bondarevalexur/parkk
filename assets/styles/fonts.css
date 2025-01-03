@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'TT Autonomous Trl Regular';
+    src: url('../fonts/TT Autonomous Trial Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Autonomous Trl Light';
+    src: url('../fonts/TT Autonomous Trial Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Autonomous Trl ExtraLight';
+    src: url('../fonts/TT Autonomous Trial ExtraLight.ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'RF Dewi Expanded Regular';
+    src: url('../fonts/RFDewiExtended-Regular.woff2') format('woff2'),
+    url('../fonts/RFDewiExtended-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Dewi Expanded Bold';
+    src: url('../fonts/RFDewiExtended-Bold.woff2') format('woff2'),
+    url('../fonts/RFDewiExtended-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
