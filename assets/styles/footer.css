@@ -1,0 +1,375 @@
+@charset "UTF-8";
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "RF Dewi Expanded Regular";
+  color: #FFFFFF;
+}
+
+.flex {
+  display: flex;
+}
+
+.h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-family: "TT Autonomous Trl Regular";
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "TT Autonomous Trl Light";
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 19.2px;
+  font-family: "RF Dewi Expanded Bold";
+}
+
+.p1 {
+  font-size: 14px;
+  line-height: 16.8px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.p2 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.number-font {
+  font-size: 110px;
+  line-height: 154px;
+  font-family: "TT Autonomous Trl ExtraLight";
+  font-style: normal;
+}
+
+.menu-font {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.button-font, .button {
+  font-size: 12px;
+  line-height: 14.4px;
+  font-family: "RF Dewi Expanded Bold";
+}
+
+.error {
+  background: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 23px 26px;
+  border-radius: 14px;
+}
+
+.color-white {
+  color: #FFFFFF;
+}
+
+.i-color-white {
+  color: #FFFFFF !important;
+}
+
+.bg-white {
+  background: #FFFFFF;
+}
+
+.i-bg-white {
+  background: #FFFFFF !important;
+}
+
+.color-black {
+  color: #000000;
+}
+
+.i-color-black {
+  color: #000000 !important;
+}
+
+.bg-black {
+  background: #000000;
+}
+
+.i-bg-black {
+  background: #000000 !important;
+}
+
+.color-dark-gray {
+  color: #141414;
+}
+
+.i-color-dark-gray {
+  color: #141414 !important;
+}
+
+.bg-dark-gray {
+  background: #141414;
+}
+
+.i-bg-dark-gray {
+  background: #141414 !important;
+}
+
+.color-light-gray {
+  color: #EBEBEB;
+}
+
+.i-color-light-gray {
+  color: #EBEBEB !important;
+}
+
+.bg-light-gray {
+  background: #EBEBEB;
+}
+
+.i-bg-light-gray {
+  background: #EBEBEB !important;
+}
+
+.color-gray {
+  color: #A0A0A0;
+}
+
+.i-color-gray {
+  color: #A0A0A0 !important;
+}
+
+.bg-gray {
+  background: #A0A0A0;
+}
+
+.i-bg-gray {
+  background: #A0A0A0 !important;
+}
+
+.color-graphite {
+  color: #52545A;
+}
+
+.i-color-graphite {
+  color: #52545A !important;
+}
+
+.bg-graphite {
+  background: #52545A;
+}
+
+.i-bg-graphite {
+  background: #52545A !important;
+}
+
+.color-lemon {
+  color: #FFF566;
+}
+
+.i-color-lemon {
+  color: #FFF566 !important;
+}
+
+.bg-lemon {
+  background: #FFF566;
+}
+
+.i-bg-lemon {
+  background: #FFF566 !important;
+}
+
+.color-orange {
+  color: #F64A0A;
+}
+
+.i-color-orange {
+  color: #F64A0A !important;
+}
+
+.bg-orange {
+  background: #F64A0A;
+}
+
+.i-bg-orange {
+  background: #F64A0A !important;
+}
+
+.color-error {
+  color: rgba(246, 74, 10, 0.1019607843);
+}
+
+.i-color-error {
+  color: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.bg-error {
+  background: rgba(246, 74, 10, 0.1019607843);
+}
+
+.i-bg-error {
+  background: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+@font-face {
+  font-family: "TT Autonomous Trl Regular";
+  src: url("../fonts/TT Autonomous Trial Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl Light";
+  src: url("../fonts/TT Autonomous Trial Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl ExtraLight";
+  src: url("../fonts/TT Autonomous Trial ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RF Dewi Expanded Regular";
+  src: url("../fonts/RFDewiExtended-Regular.woff2") format("woff2"), url("../fonts/RFDewiExtended-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RF Dewi Expanded Bold";
+  src: url("../fonts/RFDewiExtended-Bold.woff2") format("woff2"), url("../fonts/RFDewiExtended-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+.footer {
+  color: #000000;
+  background: #EBEBEB;
+  padding: 60px 20px 0 20px;
+  position: relative;
+}
+.footer__sitemap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 80px;
+  margin-bottom: 133px;
+  z-index: 10;
+  position: relative;
+}
+.footer__sitemap ul li {
+  margin-bottom: 10px;
+}
+.footer__sitemap ul li .po-update_сut {
+  display: none;
+}
+.footer__sitemap ul .p2 {
+  color: #52545A;
+}
+.footer__copywriting {
+  display: flex;
+  color: #52545A;
+  gap: 73px;
+  margin-bottom: 26px;
+}
+.footer__logo {
+  z-index: 10;
+  position: relative;
+  max-width: 100%;
+}
+.footer__logo svg {
+  max-width: 100%;
+}
+.footer__bg-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.footer__designer-logo {
+  z-index: 990;
+  bottom: 28px;
+  right: 20px;
+  display: flex;
+  align-items: end;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transition: 0.15s;
+}
+.footer__designer-logo_active {
+  position: fixed;
+}
+.footer__designer-logo svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 60px 10px 24px 10px;
+  }
+  .footer__sitemap {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 60px;
+    column-gap: 64px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    padding: 0 10px;
+  }
+  .footer__sitemap ul {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .footer__sitemap .po-update {
+    display: none;
+  }
+  .footer__sitemap .po-update_сut {
+    display: block !important;
+  }
+  .footer__copywriting {
+    max-width: 150px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  .footer__copywriting p:nth-child(1) {
+    display: none;
+  }
+  .footer__copywriting_mobile {
+    display: block;
+    margin-bottom: 0;
+    color: #52545A;
+  }
+  .footer__bg-image {
+    display: none;
+  }
+  .footer__designer-logo svg {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

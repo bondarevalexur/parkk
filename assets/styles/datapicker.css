@@ -1,0 +1,443 @@
+@charset "UTF-8";
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "RF Dewi Expanded Regular";
+  color: #FFFFFF;
+}
+
+.flex {
+  display: flex;
+}
+
+.h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-family: "TT Autonomous Trl Regular";
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "TT Autonomous Trl Light";
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 19.2px;
+  font-family: "RF Dewi Expanded Bold";
+}
+
+.p1 {
+  font-size: 14px;
+  line-height: 16.8px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.p2 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.number-font {
+  font-size: 110px;
+  line-height: 154px;
+  font-family: "TT Autonomous Trl ExtraLight";
+  font-style: normal;
+}
+
+.menu-font {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.button-font, .button {
+  font-size: 12px;
+  line-height: 14.4px;
+  font-family: "RF Dewi Expanded Bold";
+}
+
+.error {
+  background: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 23px 26px;
+  border-radius: 14px;
+}
+
+.color-white {
+  color: #FFFFFF;
+}
+
+.i-color-white {
+  color: #FFFFFF !important;
+}
+
+.bg-white {
+  background: #FFFFFF;
+}
+
+.i-bg-white {
+  background: #FFFFFF !important;
+}
+
+.color-black {
+  color: #000000;
+}
+
+.i-color-black {
+  color: #000000 !important;
+}
+
+.bg-black {
+  background: #000000;
+}
+
+.i-bg-black {
+  background: #000000 !important;
+}
+
+.color-dark-gray {
+  color: #141414;
+}
+
+.i-color-dark-gray {
+  color: #141414 !important;
+}
+
+.bg-dark-gray {
+  background: #141414;
+}
+
+.i-bg-dark-gray {
+  background: #141414 !important;
+}
+
+.color-light-gray {
+  color: #EBEBEB;
+}
+
+.i-color-light-gray {
+  color: #EBEBEB !important;
+}
+
+.bg-light-gray {
+  background: #EBEBEB;
+}
+
+.i-bg-light-gray {
+  background: #EBEBEB !important;
+}
+
+.color-gray {
+  color: #A0A0A0;
+}
+
+.i-color-gray {
+  color: #A0A0A0 !important;
+}
+
+.bg-gray {
+  background: #A0A0A0;
+}
+
+.i-bg-gray {
+  background: #A0A0A0 !important;
+}
+
+.color-graphite {
+  color: #52545A;
+}
+
+.i-color-graphite {
+  color: #52545A !important;
+}
+
+.bg-graphite {
+  background: #52545A;
+}
+
+.i-bg-graphite {
+  background: #52545A !important;
+}
+
+.color-lemon {
+  color: #FFF566;
+}
+
+.i-color-lemon {
+  color: #FFF566 !important;
+}
+
+.bg-lemon {
+  background: #FFF566;
+}
+
+.i-bg-lemon {
+  background: #FFF566 !important;
+}
+
+.color-orange {
+  color: #F64A0A;
+}
+
+.i-color-orange {
+  color: #F64A0A !important;
+}
+
+.bg-orange {
+  background: #F64A0A;
+}
+
+.i-bg-orange {
+  background: #F64A0A !important;
+}
+
+.color-error {
+  color: rgba(246, 74, 10, 0.1019607843);
+}
+
+.i-color-error {
+  color: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.bg-error {
+  background: rgba(246, 74, 10, 0.1019607843);
+}
+
+.i-bg-error {
+  background: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+@font-face {
+  font-family: "TT Autonomous Trl Regular";
+  src: url("../fonts/TT Autonomous Trial Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl Light";
+  src: url("../fonts/TT Autonomous Trial Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl ExtraLight";
+  src: url("../fonts/TT Autonomous Trial ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RF Dewi Expanded Regular";
+  src: url("../fonts/RFDewiExtended-Regular.woff2") format("woff2"), url("../fonts/RFDewiExtended-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RF Dewi Expanded Bold";
+  src: url("../fonts/RFDewiExtended-Bold.woff2") format("woff2"), url("../fonts/RFDewiExtended-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+.datepicker {
+  position: relative;
+}
+.datepicker .datepicker-input {
+  width: 100%;
+  padding: 13.5px 20px;
+  border: 0.5px solid #A0A0A0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  background: #FFFFFF;
+  color: #52545A;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.datepicker .datepicker-input:hover {
+  border-color: #52545A;
+}
+.datepicker .datepicker-input::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #52545A;
+}
+.datepicker .datepicker-input.active {
+  border-radius: 8px 8px 0 0;
+  border-bottom: none;
+  box-shadow: 0 20px 9px 3px rgba(0, 0, 0, 0.1);
+  background: #FFFFFF;
+}
+.datepicker .datepicker-icon {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 18px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.datepicker .datepicker-icon svg {
+  color: #52545A;
+  height: 12px;
+  width: 12px;
+  transition: fill 0.3s;
+}
+.datepicker .datepicker-icon svg:hover {
+  color: #A0A0A0;
+}
+.datepicker .datepicker-calendar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  border: 0.5px solid #A0A0A0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 20px 9px 3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding-top: 10px;
+  display: none;
+}
+.datepicker .datepicker-calendar.active {
+  display: block;
+}
+.datepicker .datepicker-calendar .datepicker-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 4px 0;
+}
+.datepicker .datepicker-calendar .datepicker-weekdays div {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 16px;
+  font-size: 8px;
+  color: #A0A0A0;
+  font-weight: 400;
+}
+.datepicker .datepicker-calendar .datepicker-weekdays .weekend {
+  color: #52545A;
+}
+.datepicker .datepicker-calendar .datepicker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: #FFFFFF;
+  border-radius: 8px 8px 0 0;
+}
+.datepicker .datepicker-calendar .datepicker-header button {
+  background: none;
+  border: none;
+  color: #52545A;
+  font-size: 16px;
+  cursor: pointer;
+}
+.datepicker .datepicker-calendar .datepicker-header button:hover {
+  color: #A0A0A0;
+}
+.datepicker .datepicker-calendar .datepicker-header .disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.datepicker .datepicker-calendar .datepicker-header .datepicker-prev {
+  margin-right: 10px;
+}
+.datepicker .datepicker-calendar .datepicker-title {
+  text-transform: capitalize;
+  padding: 4px 8px;
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 4px;
+  font-weight: 400;
+}
+.datepicker .datepicker-calendar .datepicker-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  padding: 10px;
+  color: #A0A0A0;
+}
+.datepicker .datepicker-calendar .datepicker-days .weekend {
+  color: #52545A;
+}
+.datepicker .datepicker-calendar .datepicker-days .disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.datepicker .datepicker-calendar .datepicker-days .active {
+  background: #FFF566;
+  color: #000000;
+}
+.datepicker .datepicker-calendar .datepicker-days div {
+  text-align: center;
+  padding: 4px 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 16px;
+  font-size: 8px;
+  color: #A0A0A0;
+  font-weight: 400;
+}
+.datepicker .datepicker-calendar .datepicker-days div:hover {
+  background: #FFF566;
+  color: #000000;
+}
+.datepicker .datepicker-calendar .datepicker-days div.selected {
+  background: #FFF566;
+  color: #000000;
+}
+.datepicker .datepicker-calendar .datepicker-days .datepicker-prevday {
+  color: #EBEBEB;
+  cursor: unset;
+}
+.datepicker .datepicker-calendar .datepicker-days .datepicker-prevday:hover {
+  background: unset;
+  color: #EBEBEB;
+}
+.datepicker .datepicker-calendar .datepicker-days .datepicker-nextday {
+  color: #EBEBEB;
+  cursor: unset;
+}
+.datepicker .datepicker-calendar .datepicker-days .datepicker-nextday:hover {
+  background: unset;
+  color: #EBEBEB;
+}
+
+/*# sourceMappingURL=datapicker.css.map */

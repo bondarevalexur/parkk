@@ -1,0 +1,369 @@
+@charset "UTF-8";
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "RF Dewi Expanded Regular";
+  color: #FFFFFF;
+}
+
+.flex {
+  display: flex;
+}
+
+.h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-family: "TT Autonomous Trl Regular";
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "TT Autonomous Trl Light";
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 19.2px;
+  font-family: "RF Dewi Expanded Bold";
+}
+
+.p1 {
+  font-size: 14px;
+  line-height: 16.8px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.p2 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.number-font {
+  font-size: 110px;
+  line-height: 154px;
+  font-family: "TT Autonomous Trl ExtraLight";
+  font-style: normal;
+}
+
+.menu-font {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "RF Dewi Expanded Regular";
+}
+
+.button-font, .button {
+  font-size: 12px;
+  line-height: 14.4px;
+  font-family: "RF Dewi Expanded Bold";
+}
+
+.error {
+  background: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 23px 26px;
+  border-radius: 14px;
+}
+
+.color-white {
+  color: #FFFFFF;
+}
+
+.i-color-white {
+  color: #FFFFFF !important;
+}
+
+.bg-white {
+  background: #FFFFFF;
+}
+
+.i-bg-white {
+  background: #FFFFFF !important;
+}
+
+.color-black {
+  color: #000000;
+}
+
+.i-color-black {
+  color: #000000 !important;
+}
+
+.bg-black {
+  background: #000000;
+}
+
+.i-bg-black {
+  background: #000000 !important;
+}
+
+.color-dark-gray {
+  color: #141414;
+}
+
+.i-color-dark-gray {
+  color: #141414 !important;
+}
+
+.bg-dark-gray {
+  background: #141414;
+}
+
+.i-bg-dark-gray {
+  background: #141414 !important;
+}
+
+.color-light-gray {
+  color: #EBEBEB;
+}
+
+.i-color-light-gray {
+  color: #EBEBEB !important;
+}
+
+.bg-light-gray {
+  background: #EBEBEB;
+}
+
+.i-bg-light-gray {
+  background: #EBEBEB !important;
+}
+
+.color-gray {
+  color: #A0A0A0;
+}
+
+.i-color-gray {
+  color: #A0A0A0 !important;
+}
+
+.bg-gray {
+  background: #A0A0A0;
+}
+
+.i-bg-gray {
+  background: #A0A0A0 !important;
+}
+
+.color-graphite {
+  color: #52545A;
+}
+
+.i-color-graphite {
+  color: #52545A !important;
+}
+
+.bg-graphite {
+  background: #52545A;
+}
+
+.i-bg-graphite {
+  background: #52545A !important;
+}
+
+.color-lemon {
+  color: #FFF566;
+}
+
+.i-color-lemon {
+  color: #FFF566 !important;
+}
+
+.bg-lemon {
+  background: #FFF566;
+}
+
+.i-bg-lemon {
+  background: #FFF566 !important;
+}
+
+.color-orange {
+  color: #F64A0A;
+}
+
+.i-color-orange {
+  color: #F64A0A !important;
+}
+
+.bg-orange {
+  background: #F64A0A;
+}
+
+.i-bg-orange {
+  background: #F64A0A !important;
+}
+
+.color-error {
+  color: rgba(246, 74, 10, 0.1019607843);
+}
+
+.i-color-error {
+  color: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.bg-error {
+  background: rgba(246, 74, 10, 0.1019607843);
+}
+
+.i-bg-error {
+  background: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+@font-face {
+  font-family: "TT Autonomous Trl Regular";
+  src: url("../fonts/TT Autonomous Trial Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl Light";
+  src: url("../fonts/TT Autonomous Trial Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl ExtraLight";
+  src: url("../fonts/TT Autonomous Trial ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RF Dewi Expanded Regular";
+  src: url("../fonts/RFDewiExtended-Regular.woff2") format("woff2"), url("../fonts/RFDewiExtended-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RF Dewi Expanded Bold";
+  src: url("../fonts/RFDewiExtended-Bold.woff2") format("woff2"), url("../fonts/RFDewiExtended-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+.select {
+  position: relative;
+}
+.select__input {
+  width: 100%;
+  padding: 13.5px 12px;
+  border: 0.5px solid #A0A0A0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  background: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #52545A;
+  font-family: "RF Dewi Expanded Regular";
+}
+.select__input:hover {
+  border-color: #52545A;
+}
+.select__input::placeholder {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #52545A;
+}
+.select__input.active {
+  border-radius: 8px 8px 0 0;
+  border-bottom: none;
+  box-shadow: 0 20px 9px 3px rgba(0, 0, 0, 0.1);
+  background: #FFFFFF;
+}
+.select__input.active:hover {
+  border-color: #A0A0A0;
+}
+.select__icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.select__icon svg {
+  color: #52545A;
+  transition: color 0.5s;
+}
+.select__icon svg:hover {
+  color: #000000;
+}
+.select__options {
+  position: absolute;
+  top: 33px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  max-height: 0;
+  padding-bottom: 17px;
+  transition: max-height 0.5s;
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1);
+  border: 0.5px solid #A0A0A0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  cursor: pointer;
+  outline: none;
+  background: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #52545A;
+}
+.select__options.active {
+  display: block;
+  max-height: 500px;
+}
+.select__options .select__option {
+  padding: 3px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #52545A;
+}
+.select__options .select__option:hover {
+  background-color: #EBEBEB;
+}
+.select__options .select__option.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/*# sourceMappingURL=select.css.map */
