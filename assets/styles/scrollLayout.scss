@@ -1,0 +1,14 @@
+.animation-section {
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Базовый уровень */
+  transition: background 0.3s, z-index 0.3s;
+}
+
+
+.animation-section-layer {
+  position: sticky;
+  top: 0;
+  transition: background 0.3s, z-index 0.3s;
+  z-index: 3; /* Ещё выше */
+}

@@ -1,0 +1,69 @@
+@use 'baseClasses';
+
+@import 'fonts';
+@import "constants";
+
+.checkbox {
+  position: relative;
+  display: inline-block;
+  color: $white;
+
+  &__input {
+    display: none;
+
+    &:checked + .checkbox__label {
+      color: $black;
+    }
+  }
+
+  &__label {
+    @extend .bg-white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 0.5px solid $gray;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: $graphite;
+    }
+  }
+}
+
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+
+  &__input {
+    display: none;
+
+    &:checked + .custom-checkbox__label {
+      background-color: #ffe600;
+      border-color: #ffe600;
+      color: $black;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    background-color: $white;
+    border: 0.5px solid $gray;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: $graphite;
+    }
+  }
+}

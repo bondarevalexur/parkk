@@ -1,0 +1,77 @@
+@use 'baseClasses';
+
+@import 'fonts';
+@import "constants";
+
+.toggle {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    display: none;
+
+    &:checked + .toggle__label .toggle__slider {
+      background-color: $gray;
+
+      &::after {
+        transform: translateX(24px);
+        background-color: $lemon;
+      }
+    }
+
+    &:checked + .toggle__label {
+      color: $gray;
+    }
+
+    &:checked + .toggle__label .toggle__text .toggle__option {
+      color: $black;
+    }
+
+    &:checked + .toggle__label .toggle__text .toggle__option--active {
+      color: $gray;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__slider {
+    width: 52px;
+    height: 29px;
+    background-color: $black;
+    border-radius: 18px;
+    position: relative;
+    margin-right: 16px;
+    transition: background-color 0.3s ease;
+    padding: 3px;
+
+    &::after {
+      content: "";
+      width: 23px;
+      height: 23px;
+      background-color: $lemon;
+      border-radius: 50%;
+      position: absolute;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+  }
+
+  &__text {
+    display: flex;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  &__option {
+    color: $gray;
+    transition: color 0.3s;
+
+    &--active {
+      color: $black;
+    }
+  }
+}

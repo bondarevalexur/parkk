@@ -1,0 +1,120 @@
+@import "constants";
+
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $dewi-Expanded-R;
+  color: $white;
+}
+
+.flex {
+  display: flex;
+}
+
+.h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-family: $autonomous-R;
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 42px;
+  font-family: $autonomous-L;
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-family: $dewi-Expanded-R;
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 19.2px;
+  font-family: $dewi-Expanded-B;
+}
+
+.p1 {
+  font-size: 14px;
+  line-height: 16.8px;
+  font-family: $dewi-Expanded-R;
+}
+
+.p2 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $dewi-Expanded-R;
+}
+
+.number-font {
+  font-size: 110px;
+  line-height: 154px;
+  font-family: $autonomous-EL;
+  font-style: normal;
+}
+
+.menu-font {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: $dewi-Expanded-R;
+}
+
+.button-font {
+  font-size: 12px;
+  line-height: 14.4px;
+  font-family: $dewi-Expanded-B;
+}
+
+.error {
+  background: $error !important;
+}
+
+.button {
+  @extend .button-font;
+
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding: 23px 26px;
+  border-radius: 14px;
+}
+
+// 🔴 Переменные цветов
+$colors: (
+        white: $white,
+        black: $black,
+        dark-gray: $dark-gray,
+        light-gray: $light-gray,
+        gray: $gray,
+        graphite: $graphite,
+        lemon: $lemon,
+        orange: $orange,
+        error: $error,
+);
+
+// 🔄 Генерация классов через цикл
+@each $name, $color in $colors {
+  .color-#{$name} {
+    color: $color;
+  }
+
+  .i-color-#{$name} {
+    color: $color !important;
+  }
+
+  .bg-#{$name} {
+    background: $color;
+  }
+
+  .i-bg-#{$name} {
+    background: $color !important;
+  }
+}
