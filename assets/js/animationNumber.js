@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const statisticBlock = document.querySelector('.statistic');
     const sold = statisticBlock.querySelector('.sold');
-    const year = statisticBlock.querySelector('.year');
-    const subject = statisticBlock.querySelector('.subject');
+    const years = statisticBlock.querySelectorAll('.year');
+    const year1 = years[0]
+    const year2 =years[1]
+    const subjects = statisticBlock.querySelectorAll('.subject');
+    const subject1 = subjects[0]
+    const subject2 = subjects[1]
     let startAnimation = false
 
     document.addEventListener("scroll", () => {
@@ -12,12 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
             startAnimation = true;
 
             sold.innerHTML = "0"
-            year.innerHTML = "0"
-            subject.innerHTML = "0"
+            year1.innerHTML = "0"
+            year2.innerHTML = "0"
+            subject1.innerHTML = "0"
+            subject2.innerHTML = "0"
 
             const interval = setInterval(() => {
                 const soldValue = Number(sold.innerHTML)
-                const yearValue = Number(year.innerHTML)
+                const yearValue = Number(year1.innerHTML)
 
                 if (soldValue < 719) {
                     sold.innerHTML = String(soldValue + 5)
@@ -26,17 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 if (yearValue < 2023) {
-                    year.innerHTML = String(yearValue + 13)
+                    year1.innerHTML = String(yearValue + 13)
+                    year2.innerHTML = String(yearValue + 13)
                 } else {
-                    year.innerHTML = "2023"
+                    year1.innerHTML = "2023"
+                    year2.innerHTML = "2023"
                 }
             }, 10)
 
             const intervalSubject = setInterval(() => {
-                const subjectValue = Number(subject.innerHTML.replace("+", ""))
+                const subjectValue = Number(subject1.innerHTML.replace("+", ""))
 
                 if (subjectValue < 11) {
-                    subject.innerHTML = `${subjectValue + 1}+`
+                    subject1.innerHTML = `${subjectValue + 1}+`
+                    subject2.innerHTML = `${subjectValue + 1}+`
                 }
             }, 100)
 
