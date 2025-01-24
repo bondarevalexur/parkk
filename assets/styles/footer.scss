@@ -45,6 +45,10 @@
 
     max-width: 100%;
 
+    & .mobile {
+      display: none;
+    }
+
     & svg {
       max-width: 100%;
     }
@@ -57,6 +61,7 @@
   }
 
   &__designer-logo {
+    cursor: pointer;
     z-index: 990;
     bottom: 28px;
     right: 20px;
@@ -81,6 +86,10 @@
       right: 0;
     }
   }
+
+  &__copywriting_mobile {
+    display: none;
+  }
 }
 
 
@@ -91,19 +100,11 @@
     &__sitemap {
       grid-template-columns: 1fr 1fr;
       row-gap: 60px;
-      column-gap: 64px;
+      column-gap: 10px;
       align-items: center;
       justify-content: center;
-      margin-bottom: 60px;
+      margin-bottom: 38px;
       padding: 0 10px;
-
-      & ul {
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 16px;
-
-      }
-
 
       & .po-update {
         display: none;
@@ -119,6 +120,11 @@
       max-width: 150px;
       margin-bottom: 20px;
       margin-left: 10px;
+
+      font-size: 8px !important;
+      font-weight: 400 !important;
+      line-height: 9.6px !important;
+
 
       & p:nth-child(1) {
         display: none
@@ -136,8 +142,36 @@
     }
 
     &__designer-logo {
+      font-size: 8px !important;
+      font-weight: 400 !important;
+      line-height: 9.6px !important;
+
+      width: max-content;
+      bottom: 22px;
+      right: 18px;
+
       & svg {
         display: none;
+      }
+    }
+
+
+    &__copywriting_mobile {
+      display: block;
+
+      font-size: 8px !important;
+      font-weight: 400 !important;
+      line-height: 9.6px !important;
+    }
+
+    &__logo {
+      & .mobile {
+        display: block;
+        margin-bottom: 14px;
+      }
+
+      & .desktop {
+        display: none
       }
     }
   }

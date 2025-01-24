@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     questions.forEach((question) => {
         question.addEventListener("click", () => {
             question.classList.toggle('question_open');
+
         })
     })
 
