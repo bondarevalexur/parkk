@@ -1,0 +1,1074 @@
+@use 'baseClasses';
+
+@import 'null-css.css';
+@import 'fonts.css';
+@import "constants";
+@import '../swiper-package/swiper-bundle.min.css';
+@import "footer.css";
+@import "scrollLayout.css";
+@import "header.css";
+@import "datapicker.css";
+@import "select.css";
+@import "checkbox.css";
+@import "text-input.css";
+@import "popup.css";
+@import "video-popup.css";
+@import "toggle.css";
+
+.header {
+  top: 0;
+  background: $white;
+
+  &__logo, &__container, &__button {
+    color: $black;
+
+    & .header__button, .header__logo {
+      color: $black;
+    }
+
+    &_visible {
+      color: $white;
+
+      & .header__button, .header__logo {
+        color: $white;
+      }
+    }
+  }
+
+
+  &__nav {
+    & .burger:after, .burger:before, {
+      background: $black;
+    }
+
+    & .burger_visible {
+      &:after, &:before {
+        background: $white;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 100px;
+}
+
+
+.product {
+  justify-content: center;
+  width: 100%;
+  color: $black;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 60px 20px 0 20px;
+
+
+    & .h1 {
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 42px;
+    }
+
+    & .price {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    & .breadcrumb {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+
+      color: $gray;
+
+      & span {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  // slider
+  & .controllers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $black;
+
+    padding: 20px 155px;
+
+    &__pagination {
+      display: flex;
+      align-self: center;
+      gap: 2px;
+    }
+
+    &__slider {
+      display: flex;
+      gap: 20px;
+    }
+
+    &__buttons {
+
+      & .manager {
+        background: $lemon;
+
+        &:hover {
+          background: $graphite;
+          color: $lemon;
+        }
+      }
+
+
+      & .test-drive {
+        border: 0.5px solid $graphite;
+        color: $graphite;
+
+        &:hover {
+          background: $lemon;
+          border-color: $lemon;
+        }
+      }
+    }
+  }
+
+  &-prev, &-next {
+    cursor: pointer;
+
+    & svg {
+      height: 100%;
+    }
+
+    color: $graphite;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  & [aria-disabled="true"] {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  &-slider {
+    position: relative;
+  }
+
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &-slide {
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 1;
+    opacity: 0.4;
+
+    width: calc(100% - 310px);
+
+    &.swiper-slide-active {
+      opacity: 1;
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 951px) {
+  .services {
+    grid-template-columns:1fr;
+    row-gap: 10px;
+    padding: 20px 10px;
+
+    .catalog {
+      min-height: 542px;
+      padding: 30px 10px 49px 10px;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        margin-bottom: 30px;
+        padding: 10px;
+      }
+
+      &__button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      &__image {
+        bottom: 60px;
+        height: 263px;
+      }
+    }
+
+    &__plus-img {
+      top: 534px;
+      left: calc(50% - 33px);
+      width: unset;
+      height: 66px;
+    }
+
+    .car-care {
+      gap: 10px;
+      padding: 40px 10px 10px 10px;;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        padding: 0 10px;
+      }
+
+      &__list {
+        margin-bottom: 56px;
+        padding: 0 10px;
+        row-gap: 20px;
+      }
+
+      &__button {
+        display: none;
+
+        &_mobile {
+          display: block;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      &__image {
+        height: 305px;
+      }
+    }
+  }
+}
+
+
+.spec {
+  color: $white;
+  background: $graphite;
+  border-radius: 20px;
+  max-width: 1130px;
+  margin: auto;
+  padding: 60px 40px;
+
+  &__header {
+    margin-bottom: 40px;
+
+    & h3 {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+
+    & p {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+
+      & b {
+        font-weight: 700;
+      }
+    }
+
+  }
+
+  &__technic {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 60px;
+
+    padding-bottom: 60px;
+    border-bottom: 0.5px solid $light-gray;
+
+    & .technic-item {
+      color: $light-gray;
+
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+
+
+      & span {
+        color: $lemon;
+      }
+    }
+  }
+
+  &__manufacture {
+    list-style: none;
+    padding: 60px 0 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+
+    li {
+      display: flex;
+      align-items: end;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      margin-bottom: 10px;
+      position: relative;
+
+      .manufacture-title {
+        display: flex;
+        width: 220px;
+        white-space: nowrap;
+
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+
+        color: $gray;
+
+
+        .dots {
+          flex-grow: 1;
+          border-bottom: 0.5px dashed $gray;
+          margin: 0 10px;
+        }
+      }
+
+      .manufacture-value {
+        white-space: nowrap;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 951px) {
+  .services {
+    grid-template-columns:1fr;
+    row-gap: 10px;
+    padding: 20px 10px;
+
+    .catalog {
+      min-height: 542px;
+      padding: 30px 10px 49px 10px;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        margin-bottom: 30px;
+        padding: 10px;
+      }
+
+      &__button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      &__image {
+        bottom: 60px;
+        height: 263px;
+      }
+    }
+
+    &__plus-img {
+      top: 534px;
+      left: calc(50% - 33px);
+      width: unset;
+      height: 66px;
+    }
+
+    .car-care {
+      gap: 10px;
+      padding: 40px 10px 10px 10px;;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        padding: 0 10px;
+      }
+
+      &__list {
+        margin-bottom: 56px;
+        padding: 0 10px;
+        row-gap: 20px;
+      }
+
+      &__button {
+        display: none;
+
+        &_mobile {
+          display: block;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      &__image {
+        height: 305px;
+      }
+    }
+  }
+}
+
+
+.sizes {
+  color: $black;
+  padding: 144px 155px;
+
+  display: grid;
+  grid-template-columns:minmax(629px, 1fr) 1fr;
+  column-gap: 78px;
+
+
+  & .h3 {
+    grid-column-start: 2;
+    margin-bottom: 25px;
+  }
+
+
+  &__image {
+    width: 100%;
+  }
+
+  & .size-list {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+
+    & li {
+      border-bottom: 1px solid $light-gray;
+      padding: 16px 0;
+
+      display: flex;
+      justify-content: space-between;
+
+      &:first-child {
+        border-top: 1px solid $light-gray;
+      }
+    }
+
+    &__title {
+      color: $graphite;
+    }
+  }
+
+}
+
+@media screen and (max-width: 951px) {
+  .services {
+    grid-template-columns:1fr;
+    row-gap: 10px;
+    padding: 20px 10px;
+
+    .catalog {
+      min-height: 542px;
+      padding: 30px 10px 49px 10px;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        margin-bottom: 30px;
+        padding: 10px;
+      }
+
+      &__button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      &__image {
+        bottom: 60px;
+        height: 263px;
+      }
+    }
+
+    &__plus-img {
+      top: 534px;
+      left: calc(50% - 33px);
+      width: unset;
+      height: 66px;
+    }
+
+    .car-care {
+      gap: 10px;
+      padding: 40px 10px 10px 10px;;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        padding: 0 10px;
+      }
+
+      &__list {
+        margin-bottom: 56px;
+        padding: 0 10px;
+        row-gap: 20px;
+      }
+
+      &__button {
+        display: none;
+
+        &_mobile {
+          display: block;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      &__image {
+        height: 305px;
+      }
+    }
+  }
+}
+
+
+.about {
+  background: $black;
+  padding: 100px 155px;
+  margin-bottom: 140px;
+  border-radius: 20px 20px 0 0;
+
+  display: flex;
+  gap: 132px;
+
+  &__description {
+    width: 422px;
+    flex-shrink: 0;
+
+    & p {
+      margin-bottom: 60px;
+    }
+
+    & .manager {
+      color: $black;
+      background: $lemon;
+
+      &:hover {
+        background: $white;
+      }
+    }
+
+    & .test-drive {
+      border: 0.5px solid $light-gray;
+
+      &:hover {
+        color: $black;
+        background: $lemon;
+      }
+    }
+
+  }
+}
+
+.equipment {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 140px;
+
+  // slider
+  & .controllers {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    color: $white;
+
+    &__slider {
+      width: calc(100% - 310px);
+      margin: 0 auto;
+      padding: 30px;
+      justify-content: end;
+
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  & .pagination {
+    display: flex;
+    align-self: center;
+    gap: 2px;
+
+
+    width: calc(100% - 310px);
+    margin: 0 auto;
+
+    .swiper-pagination-bullet {
+      height: 1px;
+      width: 100%;
+      background: $gray;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $black;
+    }
+  }
+
+  &-prev, &-next {
+    cursor: pointer;
+
+    & svg {
+      height: 100%;
+    }
+
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  & [aria-disabled="true"] {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  &-slider {
+    position: relative;
+  }
+
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
+
+  &-slide {
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 1;
+    opacity: 0.4;
+    width: calc(100% - 310px);
+    border-radius: 20px;
+
+    position: relative;
+
+    &.swiper-slide-active {
+      opacity: 1;
+    }
+
+    &__description {
+      position: absolute;
+      bottom: 40px;
+      left: 48px;
+
+      & h3 {
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+
+      & p {
+        font-weight: 400;
+      }
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+
+.options {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 140px;
+  color: $black;
+
+
+  &__header {
+    width: calc(100% - 310px);
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+
+    & .button {
+      border: 0.5px solid $gray;
+      background: $white;
+
+      &_active, &:hover {
+        border-color: $lemon;
+        background: $lemon;
+      }
+    }
+
+    & .exterior {
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    & .interior {
+      justify-content: center;
+      flex-grow: 1;
+    }
+  }
+
+  // slider
+  & .controllers {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: $black;
+
+    position: absolute;
+    bottom: 50px;
+    right: 155px;
+
+
+    &__pagination {
+      display: flex;
+      align-self: center;
+      gap: 2px;
+    }
+
+    &__slider {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    &__buttons {
+
+      & .manager {
+        background: $lemon;
+
+        &:hover {
+          background: $graphite;
+          color: $lemon;
+        }
+      }
+
+
+      & .test-drive {
+        border: 0.5px solid $graphite;
+        color: $graphite;
+
+        &:hover {
+          background: $lemon;
+          border-color: $lemon;
+        }
+      }
+    }
+  }
+
+  &-prev, &-next {
+    cursor: pointer;
+
+    & svg {
+      height: 100%;
+    }
+
+    color: $graphite;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  & [aria-disabled="true"] {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  &-slider {
+    position: relative;
+  }
+
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &-slide {
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 1;
+    opacity: 0.4;
+    width: calc(100% - 310px);
+
+    border-radius: 20px 20px 0 0;
+
+
+    &__description {
+      width: 50%;
+
+      & h3 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 16px;
+      }
+
+      & p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+
+      }
+    }
+
+    &.swiper-slide-active {
+      opacity: 1;
+    }
+
+    & img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.proposal {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 140px;
+  color: $black;
+
+
+  // slider
+  & .controllers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $black;
+
+    width: calc(100% - 310px);
+    margin: auto;
+    margin-bottom: 60px;
+
+    &__pagination {
+      display: flex;
+      align-self: center;
+      gap: 2px;
+    }
+
+    &__slider {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    &__buttons {
+
+      & .manager {
+        background: $lemon;
+
+        &:hover {
+          background: $graphite;
+          color: $lemon;
+        }
+      }
+
+
+      & .test-drive {
+        border: 0.5px solid $graphite;
+        color: $graphite;
+
+        &:hover {
+          background: $lemon;
+          border-color: $lemon;
+        }
+      }
+    }
+  }
+
+  &-prev, &-next {
+    cursor: pointer;
+
+    & svg {
+      height: 100%;
+    }
+
+    color: $graphite;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  & [aria-disabled="true"] {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  &-slider {
+    position: relative;
+  }
+
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &-slide {
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 1;
+    width: calc(100% - 310px);
+
+    border-radius: 0 0 20px 20px;
+
+    & .item {
+      display: flex;
+      flex-direction: column;
+
+      &__header {
+        margin-bottom: 24px;
+        z-index: 10;
+
+        display: flex;
+        justify-content: space-between;
+
+        & .h3 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+
+        & .h4 {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 19.2px;
+        }
+      }
+
+      &__car {
+        position: relative;
+        overflow: hidden;
+      }
+
+      & .car {
+        color: $white;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__status {
+          padding: 10px 17px;
+          width: max-content;
+          height: max-content;
+          border-radius: 10px;
+          border: 0.5px solid $light-gray;
+
+          align-self: end;
+          justify-self: end;
+
+          background: $lemon;
+          color: $black;
+        }
+
+        & .more {
+          position: absolute;
+          top: calc(50% - 30px);
+          opacity: 0;
+          transition: opacity 0.2s linear;
+
+          align-self: center;
+          background: $white;
+          color: $graphite;
+
+          &:hover {
+            background: $lemon;
+            color: $black;
+          }
+        }
+
+        &__specs {
+
+          position: absolute;
+          bottom: 20px;
+          padding: 20px;
+          width: calc(100% - 40px);
+
+          display: grid;
+          grid-template-columns: max-content max-content max-content 1fr;
+
+          & .car-spec {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+
+            margin-right: 60px;
+
+            &:nth-child(3) {
+              margin-right: 0;
+            }
+
+          }
+        }
+      }
+
+
+      &:hover .car .more {
+        opacity: 1;
+        transition: opacity 0.2s linear;
+      }
+
+      &__bg {
+        width: 100%;
+
+
+        top: 0;
+        right: 0;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & img {
+          width: 100%;
+          margin-bottom: 0;
+          border-radius: 20px;
+        }
+      }
+    }
+
+    & img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}

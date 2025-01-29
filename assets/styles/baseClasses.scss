@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: $dewi-Expanded-R;
+  font-family: $dewi-Expanded;
   color: $white;
 }
 
@@ -19,56 +19,63 @@ body {
 .h1 {
   font-size: 60px;
   line-height: 60px;
-  font-family: $autonomous-R;
+  font-family: $autonomous;
+  font-weight: 400;
 }
 
 .h2 {
   font-size: 36px;
   line-height: 42px;
-  font-family: $autonomous-L;
+  font-family: $autonomous;
+  font-weight: 300;
 }
 
 .h3 {
   font-size: 24px;
   line-height: 28.8px;
-  font-family: $dewi-Expanded-R;
+  font-family: $dewi-Expanded;
+  font-weight: 400;
 }
 
 .h4 {
   font-size: 16px;
   line-height: 19.2px;
-  font-family: $dewi-Expanded-B;
+  font-family: $dewi-Expanded;
+  font-weight: 700;
 }
 
 .p1 {
   font-size: 14px;
   line-height: 16.8px;
-  font-family: $dewi-Expanded-R;
+  font-family: $dewi-Expanded;
+  font-weight: 400;
 }
 
 .p2 {
   font-size: 12px;
   line-height: 16px;
-  font-family: $dewi-Expanded-R;
+  font-family: $dewi-Expanded;
+  font-weight: 400;
 }
 
 .number-font {
   font-size: 110px;
   line-height: 154px;
-  font-family: $autonomous-EL;
-  font-style: normal;
+  font-family: $autonomous;
+  font-weight: 200;
 }
 
 .menu-font {
   font-size: 30px;
   line-height: 36px;
-  font-family: $dewi-Expanded-R;
+  font-family: $dewi-Expanded;
+  font-weight: 400;
 }
 
 .button-font {
   font-size: 12px;
   line-height: 14.4px;
-  font-family: $dewi-Expanded-B;
+  font-weight: 700;
 }
 
 .error {

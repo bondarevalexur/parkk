@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Переключение видимости списка опций
         const toggleOptions = () => {
-
-
             if (selectOptions.style.display === "none") {
                 selectOptions.style.display = "block";
 

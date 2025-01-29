@@ -2,11 +2,14 @@
 /* Базовые цвета */
 $white: #FFFFFF;
 $black: #000000;
+$black-2: #141414;
 
 $dark-gray: #141414;
 $light-gray: #EBEBEB;
+$light-gray-200: #F6F6F6;
 $gray: #A0A0A0;
 $graphite: #52545A;
+$graphite-05: #52545a9a;
 
 /* Акцентный цвет */
 $lemon: #FFF566;
@@ -15,12 +18,8 @@ $error: #F64A0A1A;
 
 /* Шрифты */
 
-$autonomous-R: 'TT Autonomous Trl Regular';
-$autonomous-L: 'TT Autonomous Trl Light';
-$autonomous-EL: 'TT Autonomous Trl ExtraLight';
-
-$dewi-Expanded-R: 'RF Dewi Expanded Regular';
-$dewi-Expanded-B: 'RF Dewi Expanded Bold';
+$autonomous: 'TT Autonomous Trl';
+$dewi-Expanded: 'RF Dewi Expanded';
 
 //
 //$autonomous-R: 'TT Autonomous Trl Regular, sans-serif';

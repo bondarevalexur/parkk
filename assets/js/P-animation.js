@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const wordWidth = isMobile ? 68 : 137;
 
     const topBorder = 0
-    const bottomBorder = -664
 
     const leftMargin = (containerWidth - logoWidth) / 2
 

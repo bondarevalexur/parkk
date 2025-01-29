@@ -1,0 +1,288 @@
+@charset "UTF-8";
+@import 'null-css.css';
+@import 'fonts.css';
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+@import '../swiper-package/swiper-bundle.min.css';
+@import "footer.css";
+@import "scrollLayout.css";
+@import "header.css";
+@import "datapicker.css";
+@import "select.css";
+@import "checkbox.css";
+@import "text-input.css";
+@import "popup.css";
+@import "video-popup.css";
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "RF Dewi Expanded";
+  color: #FFFFFF;
+}
+
+.flex {
+  display: flex;
+}
+
+.h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-family: "TT Autonomous Trl";
+  font-weight: 400;
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "TT Autonomous Trl";
+  font-weight: 300;
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 19.2px;
+  font-family: "RF Dewi Expanded";
+  font-weight: 700;
+}
+
+.p1 {
+  font-size: 14px;
+  line-height: 16.8px;
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
+}
+
+.p2 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
+}
+
+.number-font {
+  font-size: 110px;
+  line-height: 154px;
+  font-family: "TT Autonomous Trl";
+  font-weight: 200;
+}
+
+.menu-font {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
+}
+
+.button-font, .button {
+  font-size: 12px;
+  line-height: 14.4px;
+  font-weight: 700;
+}
+
+.error {
+  background: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 23px 26px;
+  border-radius: 14px;
+}
+
+.color-white {
+  color: #FFFFFF;
+}
+
+.i-color-white {
+  color: #FFFFFF !important;
+}
+
+.bg-white {
+  background: #FFFFFF;
+}
+
+.i-bg-white {
+  background: #FFFFFF !important;
+}
+
+.color-black {
+  color: #000000;
+}
+
+.i-color-black {
+  color: #000000 !important;
+}
+
+.bg-black {
+  background: #000000;
+}
+
+.i-bg-black {
+  background: #000000 !important;
+}
+
+.color-dark-gray {
+  color: #141414;
+}
+
+.i-color-dark-gray {
+  color: #141414 !important;
+}
+
+.bg-dark-gray {
+  background: #141414;
+}
+
+.i-bg-dark-gray {
+  background: #141414 !important;
+}
+
+.color-light-gray {
+  color: #EBEBEB;
+}
+
+.i-color-light-gray {
+  color: #EBEBEB !important;
+}
+
+.bg-light-gray {
+  background: #EBEBEB;
+}
+
+.i-bg-light-gray {
+  background: #EBEBEB !important;
+}
+
+.color-gray {
+  color: #A0A0A0;
+}
+
+.i-color-gray {
+  color: #A0A0A0 !important;
+}
+
+.bg-gray {
+  background: #A0A0A0;
+}
+
+.i-bg-gray {
+  background: #A0A0A0 !important;
+}
+
+.color-graphite {
+  color: #52545A;
+}
+
+.i-color-graphite {
+  color: #52545A !important;
+}
+
+.bg-graphite {
+  background: #52545A;
+}
+
+.i-bg-graphite {
+  background: #52545A !important;
+}
+
+.color-lemon {
+  color: #FFF566;
+}
+
+.i-color-lemon {
+  color: #FFF566 !important;
+}
+
+.bg-lemon {
+  background: #FFF566;
+}
+
+.i-bg-lemon {
+  background: #FFF566 !important;
+}
+
+.color-orange {
+  color: #F64A0A;
+}
+
+.i-color-orange {
+  color: #F64A0A !important;
+}
+
+.bg-orange {
+  background: #F64A0A;
+}
+
+.i-bg-orange {
+  background: #F64A0A !important;
+}
+
+.color-error {
+  color: rgba(246, 74, 10, 0.1019607843);
+}
+
+.i-color-error {
+  color: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.bg-error {
+  background: rgba(246, 74, 10, 0.1019607843);
+}
+
+.i-bg-error {
+  background: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.error-404 {
+  background: #000000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error-404 .h1 {
+  font-size: 166.43px;
+  font-weight: 200;
+  line-height: 233px;
+}
+.error-404 .p2 {
+  max-width: 260px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.error-404 .button {
+  border: 0.5px solid #A0A0A0;
+}
+.error-404 .graphic {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.error-404 .graphic img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=error-404.css.map */

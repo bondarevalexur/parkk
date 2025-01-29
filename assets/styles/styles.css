@@ -27,7 +27,7 @@
 }
 
 body {
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
   color: #FFFFFF;
 }
 
@@ -38,56 +38,63 @@ body {
 .h1, .hero__title {
   font-size: 60px;
   line-height: 60px;
-  font-family: "TT Autonomous Trl Regular";
+  font-family: "TT Autonomous Trl";
+  font-weight: 400;
 }
 
 .h2 {
   font-size: 36px;
   line-height: 42px;
-  font-family: "TT Autonomous Trl Light";
+  font-family: "TT Autonomous Trl";
+  font-weight: 300;
 }
 
 .h3 {
   font-size: 24px;
   line-height: 28.8px;
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
 }
 
 .h4 {
   font-size: 16px;
   line-height: 19.2px;
-  font-family: "RF Dewi Expanded Bold";
+  font-family: "RF Dewi Expanded";
+  font-weight: 700;
 }
 
 .p1, .services .car-care__list, .contacts__info .contacts__phone a, .contacts__info .contacts__time time {
   font-size: 14px;
   line-height: 16.8px;
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
 }
 
 .p2, .news .controllers__tabs label {
   font-size: 12px;
   line-height: 16px;
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
 }
 
 .number-font {
   font-size: 110px;
   line-height: 154px;
-  font-family: "TT Autonomous Trl ExtraLight";
-  font-style: normal;
+  font-family: "TT Autonomous Trl";
+  font-weight: 200;
 }
 
 .menu-font {
   font-size: 30px;
   line-height: 36px;
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
 }
 
 .button-font, .news .controllers__tabs input[type=radio]:checked + label, .button {
   font-size: 12px;
   line-height: 14.4px;
-  font-family: "RF Dewi Expanded Bold";
+  font-weight: 700;
 }
 
 .error {

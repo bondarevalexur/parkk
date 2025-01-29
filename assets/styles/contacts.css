@@ -1,0 +1,443 @@
+@charset "UTF-8";
+@import 'null-css.css';
+@import 'fonts.css';
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+@import '../swiper-package/swiper-bundle.min.css';
+@import "footer.css";
+@import "scrollLayout.css";
+@import "header.css";
+@import "datapicker.css";
+@import "select.css";
+@import "checkbox.css";
+@import "text-input.css";
+@import "popup.css";
+@import "video-popup.css";
+/* Переменные */
+/* Базовые цвета */
+/* Акцентный цвет */
+/* Шрифты */
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "RF Dewi Expanded";
+  color: #FFFFFF;
+}
+
+.flex {
+  display: flex;
+}
+
+.h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-family: "TT Autonomous Trl";
+  font-weight: 400;
+}
+
+.h2 {
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "TT Autonomous Trl";
+  font-weight: 300;
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
+}
+
+.h4 {
+  font-size: 16px;
+  line-height: 19.2px;
+  font-family: "RF Dewi Expanded";
+  font-weight: 700;
+}
+
+.p1, .contacts__info .contacts__phone a, .contacts__info .contacts__time time {
+  font-size: 14px;
+  line-height: 16.8px;
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
+}
+
+.p2 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
+}
+
+.number-font {
+  font-size: 110px;
+  line-height: 154px;
+  font-family: "TT Autonomous Trl";
+  font-weight: 200;
+}
+
+.menu-font {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
+}
+
+.button-font, .button {
+  font-size: 12px;
+  line-height: 14.4px;
+  font-weight: 700;
+}
+
+.error {
+  background: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 23px 26px;
+  border-radius: 14px;
+}
+
+.color-white {
+  color: #FFFFFF;
+}
+
+.i-color-white {
+  color: #FFFFFF !important;
+}
+
+.bg-white {
+  background: #FFFFFF;
+}
+
+.i-bg-white {
+  background: #FFFFFF !important;
+}
+
+.color-black {
+  color: #000000;
+}
+
+.i-color-black {
+  color: #000000 !important;
+}
+
+.bg-black {
+  background: #000000;
+}
+
+.i-bg-black {
+  background: #000000 !important;
+}
+
+.color-dark-gray {
+  color: #141414;
+}
+
+.i-color-dark-gray {
+  color: #141414 !important;
+}
+
+.bg-dark-gray {
+  background: #141414;
+}
+
+.i-bg-dark-gray {
+  background: #141414 !important;
+}
+
+.color-light-gray {
+  color: #EBEBEB;
+}
+
+.i-color-light-gray {
+  color: #EBEBEB !important;
+}
+
+.bg-light-gray {
+  background: #EBEBEB;
+}
+
+.i-bg-light-gray {
+  background: #EBEBEB !important;
+}
+
+.color-gray {
+  color: #A0A0A0;
+}
+
+.i-color-gray {
+  color: #A0A0A0 !important;
+}
+
+.bg-gray {
+  background: #A0A0A0;
+}
+
+.i-bg-gray {
+  background: #A0A0A0 !important;
+}
+
+.color-graphite {
+  color: #52545A;
+}
+
+.i-color-graphite {
+  color: #52545A !important;
+}
+
+.bg-graphite {
+  background: #52545A;
+}
+
+.i-bg-graphite {
+  background: #52545A !important;
+}
+
+.color-lemon {
+  color: #FFF566;
+}
+
+.i-color-lemon {
+  color: #FFF566 !important;
+}
+
+.bg-lemon {
+  background: #FFF566;
+}
+
+.i-bg-lemon {
+  background: #FFF566 !important;
+}
+
+.color-orange {
+  color: #F64A0A;
+}
+
+.i-color-orange {
+  color: #F64A0A !important;
+}
+
+.bg-orange {
+  background: #F64A0A;
+}
+
+.i-bg-orange {
+  background: #F64A0A !important;
+}
+
+.color-error {
+  color: rgba(246, 74, 10, 0.1019607843);
+}
+
+.i-color-error {
+  color: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.bg-error {
+  background: rgba(246, 74, 10, 0.1019607843);
+}
+
+.i-bg-error {
+  background: rgba(246, 74, 10, 0.1019607843) !important;
+}
+
+.header {
+  top: 0;
+  background: #FFFFFF;
+}
+.header__logo, .header__container, .header__button {
+  color: #000000;
+}
+.header__logo .header__button, .header__logo .header__logo, .header__container .header__button, .header__container .header__logo, .header__button .header__button, .header__button .header__logo {
+  color: #000000;
+}
+.header__logo_visible, .header__container_visible, .header__button_visible {
+  color: #FFFFFF;
+}
+.header__logo_visible .header__button, .header__logo_visible .header__logo, .header__container_visible .header__button, .header__container_visible .header__logo, .header__button_visible .header__button, .header__button_visible .header__logo {
+  color: #FFFFFF;
+}
+.header__nav .burger:after, .header__nav .burger:before {
+  background: #000000;
+}
+.header__nav .burger_visible:after, .header__nav .burger_visible:before {
+  background: #FFFFFF;
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+  margin: 200px 80px 140px 80px;
+  color: #000000;
+}
+.contacts__title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-bottom: 60px;
+}
+.contacts__info {
+  background: #EBEBEB;
+  border-radius: 20px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content min-content min-content min-content 1fr min-content;
+}
+.contacts__info .h4 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-bottom: 16px;
+}
+.contacts__info .h4.premium {
+  margin-top: 60px;
+}
+.contacts__info .contacts__location {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 14px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.contacts__info .contacts__location svg {
+  color: #52545A;
+}
+.contacts__info .contacts__phone {
+  color: #A0A0A0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.contacts__info .contacts__phone a {
+  color: #52545A;
+}
+.contacts__info .contacts__time {
+  color: #A0A0A0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.contacts__info .contacts__time time {
+  color: #52545A;
+}
+.contacts__info .contacts__messengers {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  padding-top: 60px;
+}
+.contacts__info .contacts__messengers a {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px #A0A0A0 solid;
+  border-radius: 10px;
+  background: #EBEBEB;
+}
+.contacts__info .contacts__messengers a svg {
+  color: #52545A;
+}
+.contacts__info .contacts__messengers a:hover {
+  background: #FFF566;
+}
+.contacts__info .contacts__messengers a:hover svg {
+  color: #000000;
+}
+.contacts__info .contacts__button {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: max-content;
+  background: #FFF566;
+  color: #000000;
+}
+.contacts__info .contacts__button:hover {
+  background: #52545A;
+  color: #FFF566;
+}
+.contacts__info .info__image_mobile {
+  display: none;
+}
+.contacts__image {
+  width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .contacts {
+    margin: 0 10px 40px 10px;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .contacts__title {
+    text-align: left;
+    margin-bottom: 40px;
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+  }
+  .contacts__title .br {
+    display: none;
+  }
+  .contacts__image {
+    display: none;
+  }
+  .contacts__info {
+    background: unset;
+    padding: unset;
+    gap: 0;
+  }
+  .contacts__info .contacts__location {
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+  .contacts__info .info__image_mobile {
+    display: block;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-bottom: 10px;
+  }
+  .contacts__info .contacts__phone {
+    margin-left: 10px;
+  }
+  .contacts__info .contacts__time {
+    margin-right: 10px;
+  }
+  .contacts__info .contacts__messengers {
+    padding: 60px 10px;
+  }
+  .contacts__info .contacts__messengers a:hover {
+    background: #52545A;
+  }
+  .contacts__info .contacts__messengers a:hover svg {
+    color: #FFF566;
+  }
+  .contacts__info .contacts__button {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+/*# sourceMappingURL=contacts.css.map */

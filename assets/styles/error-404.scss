@@ -1,0 +1,54 @@
+@use 'baseClasses';
+
+@import 'null-css.css';
+@import 'fonts.css';
+@import "constants";
+@import '../swiper-package/swiper-bundle.min.css';
+@import "footer.css";
+@import "scrollLayout.css";
+@import "header.css";
+@import "datapicker.css";
+@import "select.css";
+@import "checkbox.css";
+@import "text-input.css";
+@import "popup.css";
+@import "video-popup.css";
+
+
+.error-404 {
+  background: $black;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & .h1 {
+    font-size: 166.43px;
+    font-weight: 200;
+    line-height: 233px;
+  }
+
+  & .p2 {
+    max-width: 260px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  & .button{
+    border: 0.5px solid $gray;
+  }
+
+  & .graphic {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+}

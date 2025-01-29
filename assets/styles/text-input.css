@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "RF_Devi_font.css";
 /* Переменные */
 /* Базовые цвета */
 /* Акцентный цвет */
@@ -11,7 +12,7 @@
 }
 
 body {
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
   color: #FFFFFF;
 }
 
@@ -22,56 +23,63 @@ body {
 .h1 {
   font-size: 60px;
   line-height: 60px;
-  font-family: "TT Autonomous Trl Regular";
+  font-family: "TT Autonomous Trl";
+  font-weight: 400;
 }
 
 .h2 {
   font-size: 36px;
   line-height: 42px;
-  font-family: "TT Autonomous Trl Light";
+  font-family: "TT Autonomous Trl";
+  font-weight: 300;
 }
 
 .h3 {
   font-size: 24px;
   line-height: 28.8px;
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
 }
 
 .h4 {
   font-size: 16px;
   line-height: 19.2px;
-  font-family: "RF Dewi Expanded Bold";
+  font-family: "RF Dewi Expanded";
+  font-weight: 700;
 }
 
 .p1 {
   font-size: 14px;
   line-height: 16.8px;
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
 }
 
 .p2 {
   font-size: 12px;
   line-height: 16px;
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
 }
 
 .number-font {
   font-size: 110px;
   line-height: 154px;
-  font-family: "TT Autonomous Trl ExtraLight";
-  font-style: normal;
+  font-family: "TT Autonomous Trl";
+  font-weight: 200;
 }
 
 .menu-font {
   font-size: 30px;
   line-height: 36px;
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
+  font-weight: 400;
 }
 
 .button-font, .button {
   font-size: 12px;
   line-height: 14.4px;
-  font-family: "RF Dewi Expanded Bold";
+  font-weight: 700;
 }
 
 .error {
@@ -232,33 +240,45 @@ body {
 }
 
 @font-face {
-  font-family: "TT Autonomous Trl Regular";
-  src: url("../fonts/TT Autonomous Trial Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Autonomous Trl Light";
-  src: url("../fonts/TT Autonomous Trial Light.ttf");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Autonomous Trl ExtraLight";
-  src: url("../fonts/TT Autonomous Trial ExtraLight.ttf");
+  font-family: "TT Autonomous Trl";
+  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial ExtraLight.ttf");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
-  font-family: "RF Dewi Expanded Regular";
-  src: url("../fonts/RFDewiExtended-Regular.woff2") format("woff2"), url("../fonts/RFDewiExtended-Regular.woff") format("woff");
+  font-family: "TT Autonomous Trl";
+  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl";
+  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "RF Dewi Expanded Bold";
-  src: url("../fonts/RFDewiExtended-Bold.woff2") format("woff2"), url("../fonts/RFDewiExtended-Bold.woff") format("woff");
+  font-family: "TT Autonomous Trl";
+  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl";
+  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial DemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl";
+  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial Bold.ttf");
   font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Autonomous Trl";
+  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial ExtraBold.ttf");
+  font-weight: 800;
   font-style: normal;
 }
 /* Переменные */
@@ -279,7 +299,7 @@ body {
   line-height: 18px;
   text-align: left;
   color: #52545A;
-  font-family: "RF Dewi Expanded Regular";
+  font-family: "RF Dewi Expanded";
 }
 .text-input::placeholder {
   font-size: 12px;
