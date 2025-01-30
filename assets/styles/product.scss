@@ -592,6 +592,79 @@ main {
   }
 }
 
+@media screen and (max-width: 951px) {
+  .services {
+    grid-template-columns:1fr;
+    row-gap: 10px;
+    padding: 20px 10px;
+
+    .catalog {
+      min-height: 542px;
+      padding: 30px 10px 49px 10px;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        margin-bottom: 30px;
+        padding: 10px;
+      }
+
+      &__button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      &__image {
+        bottom: 60px;
+        height: 263px;
+      }
+    }
+
+    &__plus-img {
+      top: 534px;
+      left: calc(50% - 33px);
+      width: unset;
+      height: 66px;
+    }
+
+    .car-care {
+      gap: 10px;
+      padding: 40px 10px 10px 10px;;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        padding: 0 10px;
+      }
+
+      &__list {
+        margin-bottom: 56px;
+        padding: 0 10px;
+        row-gap: 20px;
+      }
+
+      &__button {
+        display: none;
+
+        &_mobile {
+          display: block;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      &__image {
+        height: 305px;
+      }
+    }
+  }
+}
+
+
 .equipment {
   overflow: hidden;
   position: relative;
@@ -697,6 +770,78 @@ main {
 
     & img {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 951px) {
+  .services {
+    grid-template-columns:1fr;
+    row-gap: 10px;
+    padding: 20px 10px;
+
+    .catalog {
+      min-height: 542px;
+      padding: 30px 10px 49px 10px;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        margin-bottom: 30px;
+        padding: 10px;
+      }
+
+      &__button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      &__image {
+        bottom: 60px;
+        height: 263px;
+      }
+    }
+
+    &__plus-img {
+      top: 534px;
+      left: calc(50% - 33px);
+      width: unset;
+      height: 66px;
+    }
+
+    .car-care {
+      gap: 10px;
+      padding: 40px 10px 10px 10px;;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        padding: 0 10px;
+      }
+
+      &__list {
+        margin-bottom: 56px;
+        padding: 0 10px;
+        row-gap: 20px;
+      }
+
+      &__button {
+        display: none;
+
+        &_mobile {
+          display: block;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      &__image {
+        height: 305px;
+      }
     }
   }
 }
