@@ -57,11 +57,11 @@
   position: relative;
 
   width: 1280px;
-  margin: 0 auto;
+  margin: 0 auto 140px auto;
 
 
   &__breadcrumb {
-    margin: 70px 0;
+    margin: 52px 0 70px 0;
 
     color: $gray;
 
@@ -87,15 +87,15 @@
 
     & img {
       width: 100%;
+      max-width: 555px;
+
+      justify-self: end;
     }
   }
 
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 85px;
-
-    margin-bottom: 100px;
 
     & .h2 {
       grid-column-start: 1;
@@ -106,10 +106,12 @@
 
     & img {
       width: 100%;
+      max-width: 555px;
     }
 
 
     & .content {
+      margin-right: 30px;
 
       &__item {
         display: flex;
@@ -119,7 +121,7 @@
 
         border-bottom: 0.5px solid $gray;
 
-        padding: 30px 0;
+        padding: 30px 0 20px 0;
 
         cursor: pointer;
 
@@ -154,7 +156,7 @@
           & .p2 {
             transition: all 0.3s ease-in-out;
             max-height: 200px;
-            padding-top: 10px;
+            padding: 10px 0;
           }
 
           & svg {
@@ -162,6 +164,10 @@
             rotate: 180deg;
             color: $graphite;
           }
+        }
+
+        &:first-child {
+          padding-top: 0;
         }
       }
 
@@ -234,7 +240,7 @@
   }
 
   &__block {
-    min-height: 530px;
+    min-height: 500px;
     position: relative;
     overflow: hidden;
 
@@ -283,89 +289,8 @@
         transition: all 0.3s ease-in-out;
         max-height: 100px;
         padding: 0 10px 40px 10px;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
       }
-    }
-  }
-
-  // slider
-  & .controllers {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: $white;
-
-    &__pagination {
-      display: flex;
-      align-self: center;
-      gap: 2px;
-    }
-
-    &__slider {
-      display: flex;
-      gap: 20px;
-    }
-
-
-    & .button {
-      border: 0.5px solid $gray;
-      color: $white;
-
-      & svg {
-        color: $lemon
-      }
-
-      &:hover {
-        background: $lemon;
-        border-color: $lemon;
-        color: $black;
-
-        & svg {
-          color: $black;
-        }
-      }
-
-    }
-  }
-
-  &-prev, &-next {
-    cursor: pointer;
-
-    & svg {
-      height: 100%;
-    }
-
-    color: $white;
-  }
-
-  & [aria-disabled="true"] {
-    opacity: 0.5;
-    pointer-events: none;
-    cursor: not-allowed;
-  }
-
-  &-slider {
-    position: relative;
-    grid-column-start: 1;
-    grid-column-end: 5;
-
-    color: $white;
-  }
-
-  &-wrapper {
-    width: 100%;
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
-  }
-
-  &-slide {
-    overflow: hidden;
-    flex-shrink: 0;
-    flex-grow: 1;
-
-    & img {
-      width: 590px;
     }
   }
 }
@@ -432,8 +357,7 @@
   color: $black;
 
   width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 140px;
+  margin: 0 auto 140px auto;
 
   display: flex;
   gap: 51px;
@@ -450,7 +374,7 @@
     }
 
     & .p1 {
-      margin-bottom: 60px;
+      margin-bottom: 42px;
       max-width: 474px;
     }
   }
@@ -467,22 +391,27 @@
       text-align: left;
 
       @extend .p2, .color-graphite;
+
+      &:nth-child(3), &:nth-child(4){
+        text-align: center;
+      }
     }
 
-    & td:last-child {
-      min-width: 150px;
+    & td{
+      padding: 20px 0 34px 0;
+
+
+      &:last-child {
+        min-width: 150px;
+      }
     }
+
 
     & .td-wrapper {
       display: inline-flex;
       flex-direction: column;
       align-items: start;
       gap: 13px;
-
-
-      & .h4 {
-        //min-width: 183px;
-      }
     }
 
     tbody tr:last-child td {
@@ -560,10 +489,9 @@
   color: $white;
 
   & > div {
-    max-width: 1290px;
+    max-width: 1280px;
     margin: 0 auto;
 
-    padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 517px;
     column-gap: 20px;
@@ -572,7 +500,7 @@
   &__header {
     & .h2 {
       margin-bottom: 16px;
-      max-width: 570px;
+      max-width: 540px;
     }
 
     & .p1 {
@@ -671,6 +599,9 @@
     }
 
     & .agree {
+
+      margin-top: 10px;
+      margin-bottom: 27px;
 
       & .checkbox {
         margin-right: 10px;

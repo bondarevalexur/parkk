@@ -284,10 +284,10 @@ body {
   color: #000000;
   position: relative;
   width: 1280px;
-  margin: 0 auto;
+  margin: 0 auto 140px auto;
 }
 .maintenance__breadcrumb {
-  margin: 70px 0;
+  margin: 52px 0 70px 0;
   color: #A0A0A0;
 }
 .maintenance__breadcrumb span {
@@ -307,12 +307,12 @@ body {
 }
 .maintenance__description img {
   width: 100%;
+  max-width: 555px;
+  justify-self: end;
 }
 .maintenance__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 85px;
-  margin-bottom: 100px;
 }
 .maintenance__content .h2 {
   grid-column-start: 1;
@@ -321,6 +321,10 @@ body {
 }
 .maintenance__content img {
   width: 100%;
+  max-width: 555px;
+}
+.maintenance__content .content {
+  margin-right: 30px;
 }
 .maintenance__content .content__item {
   display: flex;
@@ -328,7 +332,7 @@ body {
   align-items: center;
   gap: 40px;
   border-bottom: 0.5px solid #A0A0A0;
-  padding: 30px 0;
+  padding: 30px 0 20px 0;
   cursor: pointer;
 }
 .maintenance__content .content__item .number-font {
@@ -357,12 +361,15 @@ body {
 .maintenance__content .content__item_open .p2, .maintenance__content .content__item_open .price-list .custom-table th, .price-list .custom-table .maintenance__content .content__item_open th, .maintenance__content .content__item_open .price-list .custom-table td, .price-list .custom-table .maintenance__content .content__item_open td {
   transition: all 0.3s ease-in-out;
   max-height: 200px;
-  padding-top: 10px;
+  padding: 10px 0;
 }
 .maintenance__content .content__item_open svg {
   transition: all 0.3s ease-in-out;
   rotate: 180deg;
   color: #52545A;
+}
+.maintenance__content .content__item:first-child {
+  padding-top: 0;
 }
 .maintenance__content .content .button {
   margin-top: 60px;
@@ -415,7 +422,7 @@ body {
   margin-bottom: 40px;
 }
 .preview__block {
-  min-height: 530px;
+  min-height: 500px;
   position: relative;
   overflow: hidden;
   color: #000000;
@@ -456,69 +463,7 @@ body {
   transition: all 0.3s ease-in-out;
   max-height: 100px;
   padding: 0 10px 40px 10px;
-  margin-bottom: 12px;
-}
-.preview .controllers {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #FFFFFF;
-}
-.preview .controllers__pagination {
-  display: flex;
-  align-self: center;
-  gap: 2px;
-}
-.preview .controllers__slider {
-  display: flex;
-  gap: 20px;
-}
-.preview .controllers .button {
-  border: 0.5px solid #A0A0A0;
-  color: #FFFFFF;
-}
-.preview .controllers .button svg {
-  color: #FFF566;
-}
-.preview .controllers .button:hover {
-  background: #FFF566;
-  border-color: #FFF566;
-  color: #000000;
-}
-.preview .controllers .button:hover svg {
-  color: #000000;
-}
-.preview-prev, .preview-next {
-  cursor: pointer;
-  color: #FFFFFF;
-}
-.preview-prev svg, .preview-next svg {
-  height: 100%;
-}
-.preview [aria-disabled=true] {
-  opacity: 0.5;
-  pointer-events: none;
-  cursor: not-allowed;
-}
-.preview-slider {
-  position: relative;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  color: #FFFFFF;
-}
-.preview-wrapper {
-  width: 100%;
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-  margin-bottom: 20px;
-}
-.preview-slide {
-  overflow: hidden;
-  flex-shrink: 0;
-  flex-grow: 1;
-}
-.preview-slide img {
-  width: 590px;
+  margin-bottom: 16px;
 }
 
 @media screen and (max-width: 768px) {
@@ -571,8 +516,7 @@ body {
 .price-list {
   color: #000000;
   width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 140px;
+  margin: 0 auto 140px auto;
   display: flex;
   gap: 51px;
 }
@@ -585,7 +529,7 @@ body {
   margin-bottom: 16px;
 }
 .price-list__main .p1 {
-  margin-bottom: 60px;
+  margin-bottom: 42px;
   max-width: 474px;
 }
 .price-list .custom-table {
@@ -597,6 +541,12 @@ body {
   border-bottom: 1px solid #ddd;
   vertical-align: top;
   text-align: left;
+}
+.price-list .custom-table th:nth-child(3), .price-list .custom-table th:nth-child(4), .price-list .custom-table td:nth-child(3), .price-list .custom-table td:nth-child(4) {
+  text-align: center;
+}
+.price-list .custom-table td {
+  padding: 20px 0 34px 0;
 }
 .price-list .custom-table td:last-child {
   min-width: 150px;
@@ -667,16 +617,15 @@ body {
   color: #FFFFFF;
 }
 .invite > div {
-  max-width: 1290px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 517px;
   column-gap: 20px;
 }
 .invite__header .h2 {
   margin-bottom: 16px;
-  max-width: 570px;
+  max-width: 540px;
 }
 .invite__header .p1 {
   max-width: 376px;
@@ -745,6 +694,10 @@ body {
 }
 .invite__main .invite-form .datepicker-calendar .weekend {
   color: #A0A0A0;
+}
+.invite__main .agree {
+  margin-top: 10px;
+  margin-bottom: 27px;
 }
 .invite__main .agree .checkbox {
   margin-right: 10px;
