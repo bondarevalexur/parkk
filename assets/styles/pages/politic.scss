@@ -1,0 +1,67 @@
+@use '../baseClasses';
+
+@import '../null-css.css';
+@import '../fonts.css';
+@import "../constants";
+@import '../../swiper-package/swiper-bundle.min.css';
+@import "../components/footer.css";
+@import "../scrollLayout.css";
+@import "../components/header.css";
+@import "../components/datapicker.css";
+@import "../components/select.css";
+@import "../components/checkbox.css";
+@import "../components/text-input.css";
+@import "../components/popup.css";
+@import "../components/video-popup.css";
+@import "../components/toggle.css";
+
+
+.header {
+  top: 0;
+  background: $white;
+
+  &__logo, &__container, &__button {
+    color: $black;
+
+    & .header__button, .header__logo {
+      color: $black;
+    }
+
+    &_visible {
+      color: $white;
+
+      & .header__button, .header__logo {
+        color: $white;
+      }
+    }
+  }
+
+
+  &__nav {
+    & .burger:after, .burger:before, {
+      background: $black;
+    }
+
+    & .burger_visible {
+      &:after, &:before {
+        background: $white;
+      }
+    }
+  }
+}
+
+.politic{
+  color: $black;
+
+
+  max-width: 946px;
+  margin: 200px auto;
+
+  &__title{
+    margin-bottom: 60px;
+  }
+
+  & li{
+    margin-bottom: 40px;
+  }
+}
