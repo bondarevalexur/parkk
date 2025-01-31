@@ -64,14 +64,14 @@ body {
   font-weight: 700;
 }
 
-.p1 {
+.p1, .equipment-slide__description p {
   font-size: 14px;
   line-height: 16.8px;
   font-family: "RF Dewi Expanded";
   font-weight: 400;
 }
 
-.p2 {
+.p2, .spec__manufacture li {
   font-size: 12px;
   line-height: 16px;
   font-family: "RF Dewi Expanded";
@@ -278,22 +278,20 @@ body {
   background: #FFFFFF;
 }
 
-main {
-  margin-top: 100px;
-}
-
 .product {
+  padding-top: 100px;
   justify-content: center;
-  width: 100%;
   color: #000000;
   overflow: hidden;
+  max-width: 1130px;
+  margin: 0 auto 118px auto;
 }
 .product__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  padding: 60px 20px 0 20px;
+  padding: 40px 20px 0 20px;
 }
 .product__header .h1 {
   font-size: 30px;
@@ -304,11 +302,15 @@ main {
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
+  padding-top: 6px;
+  min-width: 272px;
+  text-align: end;
 }
 .product__header .breadcrumb {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+  padding-top: 12px;
   color: #A0A0A0;
 }
 .product__header .breadcrumb span {
@@ -319,16 +321,17 @@ main {
   justify-content: space-between;
   align-items: center;
   color: #000000;
-  padding: 20px 155px;
+  padding: 20px 0;
 }
 .product .controllers__pagination {
   display: flex;
   align-self: center;
   gap: 2px;
+  margin-right: 14px;
 }
 .product .controllers__slider {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 .product .controllers__buttons .manager {
   background: #FFF566;
@@ -338,6 +341,7 @@ main {
   color: #FFF566;
 }
 .product .controllers__buttons .test-drive {
+  background: unset;
   border: 0.5px solid #52545A;
   color: #52545A;
 }
@@ -373,7 +377,7 @@ main {
   flex-shrink: 0;
   flex-grow: 1;
   opacity: 0.4;
-  width: calc(100% - 310px);
+  max-width: 1130px;
 }
 .product-slide.swiper-slide-active {
   opacity: 1;
@@ -383,60 +387,60 @@ main {
 }
 
 @media screen and (max-width: 951px) {
-  .services {
+  .product {
     grid-template-columns: 1fr;
     row-gap: 10px;
     padding: 20px 10px;
   }
-  .services .catalog {
+  .product .catalog {
     min-height: 542px;
     padding: 30px 10px 49px 10px;
   }
-  .services .catalog__title {
+  .product .catalog__title {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
     margin-bottom: 30px;
     padding: 10px;
   }
-  .services .catalog__button {
+  .product .catalog__button {
     width: 100%;
     justify-content: center;
   }
-  .services .catalog__image {
+  .product .catalog__image {
     bottom: 60px;
     height: 263px;
   }
-  .services__plus-img {
+  .product__plus-img {
     top: 534px;
     left: calc(50% - 33px);
     width: unset;
     height: 66px;
   }
-  .services .car-care {
+  .product .car-care {
     gap: 10px;
     padding: 40px 10px 10px 10px;
   }
-  .services .car-care__title {
+  .product .car-care__title {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
     padding: 0 10px;
   }
-  .services .car-care__list {
+  .product .car-care__list {
     margin-bottom: 56px;
     padding: 0 10px;
     row-gap: 20px;
   }
-  .services .car-care__button {
+  .product .car-care__button {
     display: none;
   }
-  .services .car-care__button_mobile {
+  .product .car-care__button_mobile {
     display: block;
     text-align: center;
     width: 100%;
   }
-  .services .car-care__image {
+  .product .car-care__image {
     height: 305px;
   }
 }
@@ -467,7 +471,7 @@ main {
 }
 .spec__technic {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 237px 260px 200px 1fr;
   row-gap: 60px;
   padding-bottom: 60px;
   border-bottom: 0.5px solid #EBEBEB;
@@ -486,17 +490,14 @@ main {
 }
 .spec__manufacture {
   list-style: none;
-  padding: 60px 0 20px 0;
+  padding: 60px 0 7px 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 60px;
+  grid-template-columns: 498px 1fr;
 }
 .spec__manufacture li {
   display: flex;
   align-items: end;
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   position: relative;
 }
 .spec__manufacture li .manufacture-title {
@@ -509,6 +510,7 @@ main {
   color: #A0A0A0;
 }
 .spec__manufacture li .manufacture-title .dots {
+  align-self: center;
   flex-grow: 1;
   border-bottom: 0.5px dashed #A0A0A0;
   margin: 0 10px;
@@ -582,7 +584,7 @@ main {
 }
 .sizes {
   color: #000000;
-  padding: 144px 155px;
+  padding: 140px 155px;
   display: grid;
   grid-template-columns: minmax(629px, 1fr) 1fr;
   column-gap: 78px;
@@ -613,60 +615,60 @@ main {
 }
 
 @media screen and (max-width: 951px) {
-  .services {
+  .sizes {
     grid-template-columns: 1fr;
     row-gap: 10px;
     padding: 20px 10px;
   }
-  .services .catalog {
+  .sizes .catalog {
     min-height: 542px;
     padding: 30px 10px 49px 10px;
   }
-  .services .catalog__title {
+  .sizes .catalog__title {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
     margin-bottom: 30px;
     padding: 10px;
   }
-  .services .catalog__button {
+  .sizes .catalog__button {
     width: 100%;
     justify-content: center;
   }
-  .services .catalog__image {
+  .sizes .catalog__image {
     bottom: 60px;
     height: 263px;
   }
-  .services__plus-img {
+  .sizes__plus-img {
     top: 534px;
     left: calc(50% - 33px);
     width: unset;
     height: 66px;
   }
-  .services .car-care {
+  .sizes .car-care {
     gap: 10px;
     padding: 40px 10px 10px 10px;
   }
-  .services .car-care__title {
+  .sizes .car-care__title {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
     padding: 0 10px;
   }
-  .services .car-care__list {
+  .sizes .car-care__list {
     margin-bottom: 56px;
     padding: 0 10px;
     row-gap: 20px;
   }
-  .services .car-care__button {
+  .sizes .car-care__button {
     display: none;
   }
-  .services .car-care__button_mobile {
+  .sizes .car-care__button_mobile {
     display: block;
     text-align: center;
     width: 100%;
   }
-  .services .car-care__image {
+  .sizes .car-care__image {
     height: 305px;
   }
 }
@@ -688,11 +690,15 @@ main {
 .about__description .manager {
   color: #000000;
   background: #FFF566;
+  letter-spacing: -1.3px;
+  margin-right: 10px;
 }
 .about__description .manager:hover {
   background: #FFFFFF;
 }
 .about__description .test-drive {
+  color: #FFFFFF;
+  background: #000000;
   border: 0.5px solid #EBEBEB;
 }
 .about__description .test-drive:hover {
@@ -701,67 +707,72 @@ main {
 }
 
 @media screen and (max-width: 951px) {
-  .services {
+  .about {
     grid-template-columns: 1fr;
     row-gap: 10px;
     padding: 20px 10px;
   }
-  .services .catalog {
+  .about .catalog {
     min-height: 542px;
     padding: 30px 10px 49px 10px;
   }
-  .services .catalog__title {
+  .about .catalog__title {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
     margin-bottom: 30px;
     padding: 10px;
   }
-  .services .catalog__button {
+  .about .catalog__button {
     width: 100%;
     justify-content: center;
   }
-  .services .catalog__image {
+  .about .catalog__image {
     bottom: 60px;
     height: 263px;
   }
-  .services__plus-img {
+  .about__plus-img {
     top: 534px;
     left: calc(50% - 33px);
     width: unset;
     height: 66px;
   }
-  .services .car-care {
+  .about .car-care {
     gap: 10px;
     padding: 40px 10px 10px 10px;
   }
-  .services .car-care__title {
+  .about .car-care__title {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
     padding: 0 10px;
   }
-  .services .car-care__list {
+  .about .car-care__list {
     margin-bottom: 56px;
     padding: 0 10px;
     row-gap: 20px;
   }
-  .services .car-care__button {
+  .about .car-care__button {
     display: none;
   }
-  .services .car-care__button_mobile {
+  .about .car-care__button_mobile {
     display: block;
     text-align: center;
     width: 100%;
   }
-  .services .car-care__image {
+  .about .car-care__image {
     height: 305px;
   }
 }
 .equipment {
   overflow: hidden;
   position: relative;
-  margin-bottom: 140px;
+  color: #000000;
+  max-width: 1130px;
+  margin: 0 auto 140px auto;
+}
+.equipment__header {
+  margin-bottom: 40px;
 }
 .equipment .controllers {
   position: absolute;
@@ -770,18 +781,16 @@ main {
   color: #FFFFFF;
 }
 .equipment .controllers__slider {
-  width: calc(100% - 310px);
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px 30px;
   justify-content: end;
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 .equipment .pagination {
   display: flex;
   align-self: center;
   gap: 2px;
-  width: calc(100% - 310px);
   margin: 0 auto;
 }
 .equipment .pagination .swiper-pagination-bullet {
@@ -814,15 +823,15 @@ main {
   width: 100%;
   display: flex;
   transition: transform 0.3s ease-in-out;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .equipment-slide {
   overflow: hidden;
   flex-shrink: 0;
   flex-grow: 1;
   opacity: 0.4;
-  width: calc(100% - 310px);
   border-radius: 20px;
+  width: 100%;
   position: relative;
 }
 .equipment-slide.swiper-slide-active {
@@ -832,86 +841,87 @@ main {
   position: absolute;
   bottom: 40px;
   left: 48px;
+  color: #FFFFFF;
 }
 .equipment-slide__description h3 {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   font-weight: 700;
 }
 .equipment-slide__description p {
-  font-weight: 400;
+  line-height: 20px;
+  max-width: 312px;
 }
 .equipment-slide img {
   width: 100%;
 }
 
 @media screen and (max-width: 951px) {
-  .services {
+  .equipment {
     grid-template-columns: 1fr;
     row-gap: 10px;
     padding: 20px 10px;
   }
-  .services .catalog {
+  .equipment .catalog {
     min-height: 542px;
     padding: 30px 10px 49px 10px;
   }
-  .services .catalog__title {
+  .equipment .catalog__title {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
     margin-bottom: 30px;
     padding: 10px;
   }
-  .services .catalog__button {
+  .equipment .catalog__button {
     width: 100%;
     justify-content: center;
   }
-  .services .catalog__image {
+  .equipment .catalog__image {
     bottom: 60px;
     height: 263px;
   }
-  .services__plus-img {
+  .equipment__plus-img {
     top: 534px;
     left: calc(50% - 33px);
     width: unset;
     height: 66px;
   }
-  .services .car-care {
+  .equipment .car-care {
     gap: 10px;
     padding: 40px 10px 10px 10px;
   }
-  .services .car-care__title {
+  .equipment .car-care__title {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
     padding: 0 10px;
   }
-  .services .car-care__list {
+  .equipment .car-care__list {
     margin-bottom: 56px;
     padding: 0 10px;
     row-gap: 20px;
   }
-  .services .car-care__button {
+  .equipment .car-care__button {
     display: none;
   }
-  .services .car-care__button_mobile {
+  .equipment .car-care__button_mobile {
     display: block;
     text-align: center;
     width: 100%;
   }
-  .services .car-care__image {
+  .equipment .car-care__image {
     height: 305px;
   }
 }
 .options {
   overflow: hidden;
   position: relative;
-  margin-bottom: 140px;
   color: #000000;
+  margin-bottom: 140px;
 }
 .options__header {
-  width: calc(100% - 310px);
-  margin: auto;
-  margin-bottom: 20px;
+  max-width: 1130px;
+  margin: 0 auto 20px auto;
   display: flex;
   gap: 20px;
 }
@@ -947,8 +957,12 @@ main {
 }
 .options .controllers__slider {
   display: flex;
-  gap: 20px;
+  width: 100%;
+  gap: 10px;
   align-items: center;
+}
+.options .controllers__slider .options-pagination {
+  margin-right: 10px;
 }
 .options .controllers__buttons .manager {
   background: #FFF566;
@@ -993,7 +1007,7 @@ main {
   flex-shrink: 0;
   flex-grow: 1;
   opacity: 0.4;
-  width: calc(100% - 310px);
+  max-width: 1130px;
   border-radius: 20px 20px 0 0;
 }
 .options-slide__description {
@@ -1018,20 +1032,81 @@ main {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 951px) {
+  .options {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    padding: 20px 10px;
+  }
+  .options .catalog {
+    min-height: 542px;
+    padding: 30px 10px 49px 10px;
+  }
+  .options .catalog__title {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  .options .catalog__button {
+    width: 100%;
+    justify-content: center;
+  }
+  .options .catalog__image {
+    bottom: 60px;
+    height: 263px;
+  }
+  .options__plus-img {
+    top: 534px;
+    left: calc(50% - 33px);
+    width: unset;
+    height: 66px;
+  }
+  .options .car-care {
+    gap: 10px;
+    padding: 40px 10px 10px 10px;
+  }
+  .options .car-care__title {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+    padding: 0 10px;
+  }
+  .options .car-care__list {
+    margin-bottom: 56px;
+    padding: 0 10px;
+    row-gap: 20px;
+  }
+  .options .car-care__button {
+    display: none;
+  }
+  .options .car-care__button_mobile {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .options .car-care__image {
+    height: 305px;
+  }
+}
 .proposal {
-  overflow: hidden;
   position: relative;
-  margin-bottom: 140px;
   color: #000000;
+  max-width: 1130px;
+  margin: 0 auto 140px auto;
+  overflow: visible;
 }
 .proposal .controllers {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #000000;
-  width: calc(100% - 310px);
-  margin: auto;
-  margin-bottom: 60px;
+  max-width: 1130px;
+  margin: 0 auto 60px auto;
+}
+.proposal .controllers .h2 {
+  max-width: 438px;
 }
 .proposal .controllers__pagination {
   display: flex;
@@ -1085,7 +1160,7 @@ main {
   overflow: hidden;
   flex-shrink: 0;
   flex-grow: 1;
-  width: calc(100% - 310px);
+  max-width: 867px;
   border-radius: 0 0 20px 20px;
 }
 .proposal-slide .item {
@@ -1144,9 +1219,9 @@ main {
 }
 .proposal-slide .item .car__specs {
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   padding: 20px;
-  width: calc(100% - 40px);
+  width: 100%;
   display: grid;
   grid-template-columns: max-content max-content max-content 1fr;
 }
@@ -1183,6 +1258,65 @@ main {
 .proposal-slide img {
   width: 100%;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 951px) {
+  .proposal {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    padding: 20px 10px;
+  }
+  .proposal .catalog {
+    min-height: 542px;
+    padding: 30px 10px 49px 10px;
+  }
+  .proposal .catalog__title {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  .proposal .catalog__button {
+    width: 100%;
+    justify-content: center;
+  }
+  .proposal .catalog__image {
+    bottom: 60px;
+    height: 263px;
+  }
+  .proposal__plus-img {
+    top: 534px;
+    left: calc(50% - 33px);
+    width: unset;
+    height: 66px;
+  }
+  .proposal .car-care {
+    gap: 10px;
+    padding: 40px 10px 10px 10px;
+  }
+  .proposal .car-care__title {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+    padding: 0 10px;
+  }
+  .proposal .car-care__list {
+    margin-bottom: 56px;
+    padding: 0 10px;
+    row-gap: 20px;
+  }
+  .proposal .car-care__button {
+    display: none;
+  }
+  .proposal .car-care__button_mobile {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .proposal .car-care__image {
+    height: 305px;
+  }
 }
 
 /*# sourceMappingURL=product.css.map */

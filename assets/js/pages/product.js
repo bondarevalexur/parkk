@@ -52,7 +52,6 @@ const proposalSwiper = new Swiper('.proposal-slider', {
     slideClass: 'proposal-slide',
     slidesPerView: "auto",
     spaceBetween: 20,
-    centeredSlides: true,
     navigation: {
         nextEl: '.proposal-next',
         prevEl: '.proposal-prev',

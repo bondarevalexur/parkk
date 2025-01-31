@@ -49,23 +49,22 @@
   }
 }
 
-main {
-  margin-top: 100px;
-}
-
 
 .product {
+  padding-top: 100px;
   justify-content: center;
-  width: 100%;
   color: $black;
   overflow: hidden;
+
+  max-width: 1130px;
+  margin: 0 auto 118px auto;
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    padding: 60px 20px 0 20px;
+    padding: 40px 20px 0 20px;
 
 
     & .h1 {
@@ -78,6 +77,10 @@ main {
       font-size: 20px;
       font-weight: 400;
       line-height: 24px;
+
+      padding-top: 6px;
+      min-width: 272px;
+      text-align: end;
     }
 
     & .breadcrumb {
@@ -85,6 +88,7 @@ main {
       font-weight: 400;
       line-height: 18px;
 
+      padding-top: 12px;
       color: $gray;
 
       & span {
@@ -100,17 +104,18 @@ main {
     align-items: center;
     color: $black;
 
-    padding: 20px 155px;
+    padding: 20px 0;
 
     &__pagination {
       display: flex;
       align-self: center;
       gap: 2px;
+      margin-right: 14px;
     }
 
     &__slider {
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
 
     &__buttons {
@@ -125,7 +130,9 @@ main {
       }
 
 
+
       & .test-drive {
+        background: unset;
         border: 0.5px solid $graphite;
         color: $graphite;
 
@@ -172,8 +179,8 @@ main {
     flex-shrink: 0;
     flex-grow: 1;
     opacity: 0.4;
+    max-width: 1130px;
 
-    width: calc(100% - 310px);
 
     &.swiper-slide-active {
       opacity: 1;
@@ -187,7 +194,7 @@ main {
 
 
 @media screen and (max-width: 951px) {
-  .services {
+  .product {
     grid-template-columns:1fr;
     row-gap: 10px;
     padding: 20px 10px;
@@ -292,7 +299,7 @@ main {
   &__technic {
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 237px 260px 200px 1fr;
     row-gap: 60px;
 
     padding-bottom: 60px;
@@ -318,17 +325,17 @@ main {
 
   &__manufacture {
     list-style: none;
-    padding: 60px 0 20px 0;
+    padding: 60px 0 7px 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 60px;
+    grid-template-columns: 498px 1fr;
 
     li {
+      @extend .p2;
+
       display: flex;
       align-items: end;
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-      margin-bottom: 10px;
+
+      margin-bottom: 14px;
       position: relative;
 
       .manufacture-title {
@@ -344,6 +351,7 @@ main {
 
 
         .dots {
+          align-self: center;
           flex-grow: 1;
           border-bottom: 0.5px dashed $gray;
           margin: 0 10px;
@@ -440,7 +448,7 @@ main {
 
 .sizes {
   color: $black;
-  padding: 144px 155px;
+  padding: 140px 155px;
 
   display: grid;
   grid-template-columns:minmax(629px, 1fr) 1fr;
@@ -482,7 +490,7 @@ main {
 }
 
 @media screen and (max-width: 951px) {
-  .services {
+  .sizes {
     grid-template-columns:1fr;
     row-gap: 10px;
     padding: 20px 10px;
@@ -574,6 +582,8 @@ main {
     & .manager {
       color: $black;
       background: $lemon;
+      letter-spacing: -1.3px;
+      margin-right: 10px;
 
       &:hover {
         background: $white;
@@ -581,6 +591,8 @@ main {
     }
 
     & .test-drive {
+      color: $white;
+      background: $black;
       border: 0.5px solid $light-gray;
 
       &:hover {
@@ -593,7 +605,7 @@ main {
 }
 
 @media screen and (max-width: 951px) {
-  .services {
+  .about {
     grid-template-columns:1fr;
     row-gap: 10px;
     padding: 20px 10px;
@@ -668,7 +680,14 @@ main {
 .equipment {
   overflow: hidden;
   position: relative;
-  margin-bottom: 140px;
+  color: $black;
+
+  max-width: 1130px;
+  margin: 0 auto 140px auto;
+
+  &__header {
+    margin-bottom: 40px;
+  }
 
   // slider
   & .controllers {
@@ -678,13 +697,12 @@ main {
     color: $white;
 
     &__slider {
-      width: calc(100% - 310px);
       margin: 0 auto;
-      padding: 30px;
+      padding: 20px 30px;
       justify-content: end;
 
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
   }
 
@@ -693,8 +711,6 @@ main {
     align-self: center;
     gap: 2px;
 
-
-    width: calc(100% - 310px);
     margin: 0 auto;
 
     .swiper-pagination-bullet {
@@ -736,7 +752,7 @@ main {
     width: 100%;
     display: flex;
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   &-slide {
@@ -744,8 +760,9 @@ main {
     flex-shrink: 0;
     flex-grow: 1;
     opacity: 0.4;
-    width: calc(100% - 310px);
     border-radius: 20px;
+
+    width: 100%;
 
     position: relative;
 
@@ -757,14 +774,18 @@ main {
       position: absolute;
       bottom: 40px;
       left: 48px;
+      color: $white;
 
       & h3 {
-        margin-bottom: 8px;
+        margin-bottom: 12px;
         font-weight: 700;
       }
 
       & p {
-        font-weight: 400;
+        @extend .p1;
+
+        line-height: 20px;
+        max-width: 312px;
       }
     }
 
@@ -775,7 +796,7 @@ main {
 }
 
 @media screen and (max-width: 951px) {
-  .services {
+  .equipment {
     grid-template-columns:1fr;
     row-gap: 10px;
     padding: 20px 10px;
@@ -850,14 +871,15 @@ main {
 .options {
   overflow: hidden;
   position: relative;
-  margin-bottom: 140px;
   color: $black;
+
+  margin-bottom: 140px;
 
 
   &__header {
-    width: calc(100% - 310px);
-    margin: auto;
-    margin-bottom: 20px;
+    max-width: 1130px;
+    margin: 0 auto 20px auto;
+
     display: flex;
     gap: 20px;
 
@@ -902,8 +924,13 @@ main {
 
     &__slider {
       display: flex;
-      gap: 20px;
+      width: 100%;
+      gap: 10px;
       align-items: center;
+
+      & .options-pagination {
+        margin-right: 10px;
+      }
     }
 
     &__buttons {
@@ -965,7 +992,7 @@ main {
     flex-shrink: 0;
     flex-grow: 1;
     opacity: 0.4;
-    width: calc(100% - 310px);
+    max-width: 1130px;
 
     border-radius: 20px 20px 0 0;
 
@@ -999,11 +1026,86 @@ main {
   }
 }
 
+@media screen and (max-width: 951px) {
+  .options {
+    grid-template-columns:1fr;
+    row-gap: 10px;
+    padding: 20px 10px;
+
+    .catalog {
+      min-height: 542px;
+      padding: 30px 10px 49px 10px;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        margin-bottom: 30px;
+        padding: 10px;
+      }
+
+      &__button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      &__image {
+        bottom: 60px;
+        height: 263px;
+      }
+    }
+
+    &__plus-img {
+      top: 534px;
+      left: calc(50% - 33px);
+      width: unset;
+      height: 66px;
+    }
+
+    .car-care {
+      gap: 10px;
+      padding: 40px 10px 10px 10px;;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        padding: 0 10px;
+      }
+
+      &__list {
+        margin-bottom: 56px;
+        padding: 0 10px;
+        row-gap: 20px;
+      }
+
+      &__button {
+        display: none;
+
+        &_mobile {
+          display: block;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      &__image {
+        height: 305px;
+      }
+    }
+  }
+}
+
+
 .proposal {
-  overflow: hidden;
   position: relative;
-  margin-bottom: 140px;
   color: $black;
+
+  max-width: 1130px;
+  margin: 0 auto 140px auto;
+  overflow: visible;
 
 
   // slider
@@ -1013,9 +1115,13 @@ main {
     align-items: center;
     color: $black;
 
-    width: calc(100% - 310px);
-    margin: auto;
-    margin-bottom: 60px;
+    max-width: 1130px;
+    margin: 0 auto 60px auto;
+
+
+    & .h2 {
+      max-width: 438px
+    }
 
     &__pagination {
       display: flex;
@@ -1087,7 +1193,7 @@ main {
     overflow: hidden;
     flex-shrink: 0;
     flex-grow: 1;
-    width: calc(100% - 310px);
+    max-width: 867px;
 
     border-radius: 0 0 20px 20px;
 
@@ -1160,9 +1266,9 @@ main {
         &__specs {
 
           position: absolute;
-          bottom: 20px;
+          bottom: 0;
           padding: 20px;
-          width: calc(100% - 40px);
+          width: 100%;
 
           display: grid;
           grid-template-columns: max-content max-content max-content 1fr;
@@ -1214,6 +1320,78 @@ main {
     & img {
       width: 100%;
       margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 951px) {
+  .proposal {
+    grid-template-columns:1fr;
+    row-gap: 10px;
+    padding: 20px 10px;
+
+    .catalog {
+      min-height: 542px;
+      padding: 30px 10px 49px 10px;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        margin-bottom: 30px;
+        padding: 10px;
+      }
+
+      &__button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      &__image {
+        bottom: 60px;
+        height: 263px;
+      }
+    }
+
+    &__plus-img {
+      top: 534px;
+      left: calc(50% - 33px);
+      width: unset;
+      height: 66px;
+    }
+
+    .car-care {
+      gap: 10px;
+      padding: 40px 10px 10px 10px;;
+
+      &__title {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+        padding: 0 10px;
+      }
+
+      &__list {
+        margin-bottom: 56px;
+        padding: 0 10px;
+        row-gap: 20px;
+      }
+
+      &__button {
+        display: none;
+
+        &_mobile {
+          display: block;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      &__image {
+        height: 305px;
+      }
     }
   }
 }
