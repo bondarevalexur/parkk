@@ -330,10 +330,10 @@
     </section>
 
 
-    <section class="statistic">
+    <section class="statistic" data-animationgap="200">
         <article class="statistic__history">
             <h2 class="h2">История компании</h2>
-            <p class="p1">С 2008 года мы занимаемся импортом автомобилей, делая акцент на качестве и надежности. Но
+            <p class="p2">С 2008 года мы занимаемся импортом автомобилей, делая акцент на качестве и надежности. Но
                 в 2022 году мы сделали шаг в будущее — открыли один из первых салонов электромобилей в Перми.
                 <br/>
                 <br/>
@@ -341,46 +341,30 @@
         </article>
 
         <div class="statistic__column">
-            <article class="statistic__block mobile-year">
-                <p class="number-font year">2023</p>
-                <p class="p1">год открытия салона</p>
-            </article>
-
             <article class="statistic__block second-block">
-                <p class="number-font sold">2008</p>
+                <p class="number-font animate-number-js" data-value="2008" data-step="20" data-time="10">2008</p>
                 <p class="p1">с 2008 года на рынке — знаем, как найти идеальный автомобиль для каждого</p>
             </article>
 
             <article class="statistic__block third-block">
-                <p class="number-font year">2022</p>
+                <p class="number-font animate-number-js" data-value="2022" data-step="20" data-time="10">2022</p>
                 <p class="p1">открыли один из первых салонов электромобилей в Перми</p>
-            </article>
-
-            <article class="statistic__block mobile-regions">
-                <p class="number-font subject">11+</p>
-                <p class="p1">субъектов, куда доставили</p>
             </article>
         </div>
 
         <div class="statistic__column">
             <article class="statistic__block first-block">
-                <p class="number-font year">107+</p>
+                <p class="number-font animate-number-js" data-value="107" data-step="1" data-time="70" data-symbol="+">
+                    107+</p>
                 <p class="p1">довольных клиентов уже забрали свои электромобили из салона</p>
             </article>
 
             <article class="statistic__block fourth-block">
-                <p class="number-font subject">7+</p>
+                <p class="number-font animate-number-js" data-value="7" data-step="1" data-time="100" data-symbol="+">
+                    7+</p>
                 <p class="p1">премиальных брендов — представлены в PARKK</p>
             </article>
         </div>
-
-
-        <ul class="statistic__partners">
-            <li><img alt="services_backicon" src="assets/img/псс.png"></li>
-            <li><img alt="services_backicon" src="assets/img/гедонист.png"></li>
-            <li><img alt="services_backicon" src="assets/img/маэстро.jpg"></li>
-            <li><img alt="services_backicon" src="assets/img/девелопмент-юг.png"></li>
-        </ul>
     </section>
 
     <section class="advantages">
@@ -426,7 +410,10 @@
                 <div class="why-us-text-slide">
                     <h4 class="h4">Полный цикл покупки и обслуживания электромобилей в одном месте</h4>
                     <p>Покупая электромобиль в PARKK, вы становитесь частью сообщества, которое стремится сделать
-                        переход на электромобили комфортным. Не просто сделка, а полноценная экосистема для
+                        переход на электромобили комфортным.
+                        <br/>
+                        <br/>
+                        Не просто сделка, а полноценная экосистема для
                         владельцев.</p>
                 </div>
 
@@ -499,19 +486,19 @@
         <div class="what-us-slider">
             <div class="what-us-wrapper">
                 <div class="what-us-slide">
+                    <img src="assets/img/about-us/what-us-image-1.png" alt="auto"/>
+                </div>
+                <div class="what-us-slide">
                     <img src="assets/img/about-us/what-us-image-2.png" alt="auto"/>
                 </div>
                 <div class="what-us-slide">
                     <img src="assets/img/about-us/what-us-image-3.png" alt="auto"/>
                 </div>
-                <div class="what-us-slide">
-                    <img src="assets/img/about-us/what-us-image-1.png" alt="auto"/>
-                </div>
             </div>
         </div>
 
         <div class="what-us-description">
-            <div class="what-us-description__item what-us-description__item_active" data-value="0">
+            <div class="what-us-description__item" data-value="0">
                 <h4>Подбор и покупка</h4>
                 <p class="p2">Не просто продаем электрокар, а подбираем решение для вас</p>
                 <svg class="icon" width="23" height="45" viewBox="0 0 23 45" fill="none"
@@ -543,7 +530,7 @@
                 </svg>
             </div>
 
-            <div class="what-us-description__item" data-value="2">
+            <div class="what-us-description__item what-us-description__item_active" data-value="2">
                 <h4>Зарядка и инфраструктура</h4>
                 <p class="p2">Установка зарядных станций и сотрудничество с администрацией города</p>
                 <svg class="icon" width="29" height="29" viewBox="0 0 29 29" fill="none"
@@ -557,133 +544,139 @@
         </div>
     </section>
 
+    <div class="preview-container animation-section">
+        <section class="preview">
+            <header class="preview__header">
+                <h2 class="h2 ">Как мы работаем:</h2>
+                <p class="p1">Мы понимаем, что покупка электромобиля — это не просто выбор машины, это изменение стиля
+                    жизни.
+                    <br/> <br/>
+                    Поэтому мы предлагаем комплексный подход:</p>
+            </header>
 
-    <section class="preview animation-section">
-        <header class="preview__header">
-            <h2 class="h2 ">Как мы работаем:</h2>
-            <p class="p1">Мы понимаем, что покупка электромобиля — это не просто выбор машины, это изменение стиля
-                жизни.
-                <br/> <br/>
-                Поэтому мы предлагаем комплексный подход:</p>
-        </header>
+            <article class="preview__block">
+                <h4 class="h4">Запись на тест-драйв и консультация</h4>
+                <span class="number-font">01</span>
+            </article>
 
-        <article class="preview__block">
-            <h4 class="h4">Запись на тест-драйв и консультация</h4>
-            <span class="number-font">01</span>
-        </article>
+            <article class="preview__block">
+                <span class="number-font">02</span>
+                <h4 class="h4">Подбор модели и полное юридическое сопровождение</h4>
+            </article>
 
-        <article class="preview__block">
-            <span class="number-font">02</span>
-            <h4 class="h4">Подбор модели и полное юридическое сопровождение</h4>
-        </article>
+            <article class="preview__block">
+                <h4 class="h4">Выдача готового к эксплуатации электромобиля из салона</h4>
+                <span class="number-font">03</span>
+            </article>
 
-        <article class="preview__block">
-            <h4 class="h4">Выдача готового к эксплуатации электромобиля из салона</h4>
-            <span class="number-font">03</span>
-        </article>
+            <article class="preview__block">
+                <span class="number-font">04</span>
+                <div>
+                    <h4 class="h4">Наслаждайтесь комфортом и поддержкой от PARKK на всех этапах:</h4>
+                    <p class="p2">участвуйте в мероприятиях, о необходимости визита в сервис мы напомним</p></div>
+            </article>
 
-        <article class="preview__block">
-            <span class="number-font">04</span>
-            <div>
-                <h4 class="h4">Наслаждайтесь комфортом и поддержкой от PARKK на всех этапах:</h4>
-                <p class="p2">участвуйте в мероприятиях, о необходимости визита в сервис мы напомним</p></div>
-        </article>
-
-        <div class="preview-slider">
-            <div class="preview-wrapper">
-                <div class="preview-slide">
-                    <img src="assets/img/about-us/us-work-image-1.png" alt="auto"/>
-                </div>
-
-                <div class="preview-slide">
-                    <img src="assets/img/about-us/us-work-image-2.png" alt="auto"/>
-                </div>
-
-                <div class="preview-slide">
-                    <img src="assets/img/about-us/us-work-image-3.png" alt="auto"/>
-                </div>
-
-                <div class="preview-slide">
-                    <img src="assets/img/about-us/us-work-image-4.png" alt="auto"/>
-                </div>
-
-                <div class="preview-slide">
-                    <img src="assets/img/about-us/us-work-image-5.png" alt="auto"/>
-                </div>
-            </div>
-
-            <div class="controllers">
-                <a href="#" class="button">Как мы работаем
-                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.70823 5.4734L0.806935 0.0814371C0.627763 -0.0271457 0.438159 -0.0271457 0.258656 0.0814371C0.0791535 0.190194 0 0.390854 0 0.608194V11.3919C0 11.6091 0.0791536 11.8099 0.258491 11.9185C0.348242 11.9729 0.432529 12 0.532713 12C0.632731 12 0.724966 11.9729 0.814718 11.9185L9.7122 6.52674C9.89154 6.41815 10 6.21732 10 6.00015C10 5.78281 9.88756 5.58215 9.70823 5.4734Z"
-                              fill="currentColor"/>
-                    </svg>
-                </a>
-
-
-                <div class="controllers__slider">
-                    <div class="preview-prev">
-                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21.7561 23.0223C21.2126 22.3976 19.7578 22.4543 18.8624 22.4543V21.4036C19.7736 21.4036 21.2126 21.4604 21.772 20.8215L27 15H22.5715L17.4077 20.9493C16.8641 21.574 16.8641 22.4543 17.4077 23.0791L22.5715 29H27L21.7403 23.0223H21.7561Z"
-                                  fill="currentColor"/>
-                            <circle cx="22" cy="22" r="21.75" transform="rotate(180 22 22)" stroke="currentColor"
-                                    stroke-width="0.5"/>
-                        </svg>
+            <div class="preview-slider">
+                <div class="preview-wrapper">
+                    <div class="preview-slide">
+                        <img src="assets/img/about-us/us-work-image-1.png" alt="auto"/>
                     </div>
-                    <div class="preview-next">
-                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.2439 20.9777C22.7874 21.6024 24.2422 21.5457 25.1376 21.5457L25.1376 22.5964C24.2264 22.5964 22.7874 22.5396 22.228 23.1785L17 29L21.4285 29L26.5923 23.0507C27.1359 22.426 27.1359 21.5457 26.5923 20.9209L21.4285 15L17 15L22.2597 20.9777L22.2439 20.9777Z"
-                                  fill="currentColor"/>
-                            <circle cx="22" cy="22" r="21.75" stroke="currentColor" stroke-width="0.5"/>
-                        </svg>
+
+                    <div class="preview-slide">
+                        <img src="assets/img/about-us/us-work-image-2.png" alt="auto"/>
+                    </div>
+
+                    <div class="preview-slide">
+                        <img src="assets/img/about-us/us-work-image-3.png" alt="auto"/>
+                    </div>
+
+                    <div class="preview-slide">
+                        <img src="assets/img/about-us/us-work-image-4.png" alt="auto"/>
+                    </div>
+
+                    <div class="preview-slide">
+                        <img src="assets/img/about-us/us-work-image-5.png" alt="auto"/>
                     </div>
                 </div>
+
+                <div class="controllers">
+                    <a href="#" class="button">Как мы работаем
+                        <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.70823 5.4734L0.806935 0.0814371C0.627763 -0.0271457 0.438159 -0.0271457 0.258656 0.0814371C0.0791535 0.190194 0 0.390854 0 0.608194V11.3919C0 11.6091 0.0791536 11.8099 0.258491 11.9185C0.348242 11.9729 0.432529 12 0.532713 12C0.632731 12 0.724966 11.9729 0.814718 11.9185L9.7122 6.52674C9.89154 6.41815 10 6.21732 10 6.00015C10 5.78281 9.88756 5.58215 9.70823 5.4734Z"
+                                  fill="currentColor"/>
+                        </svg>
+                    </a>
+
+
+                    <div class="controllers__slider">
+                        <div class="preview-prev">
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.7561 23.0223C21.2126 22.3976 19.7578 22.4543 18.8624 22.4543V21.4036C19.7736 21.4036 21.2126 21.4604 21.772 20.8215L27 15H22.5715L17.4077 20.9493C16.8641 21.574 16.8641 22.4543 17.4077 23.0791L22.5715 29H27L21.7403 23.0223H21.7561Z"
+                                      fill="currentColor"/>
+                                <circle cx="22" cy="22" r="21.75" transform="rotate(180 22 22)" stroke="currentColor"
+                                        stroke-width="0.5"/>
+                            </svg>
+                        </div>
+                        <div class="preview-next">
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.2439 20.9777C22.7874 21.6024 24.2422 21.5457 25.1376 21.5457L25.1376 22.5964C24.2264 22.5964 22.7874 22.5396 22.228 23.1785L17 29L21.4285 29L26.5923 23.0507C27.1359 22.426 27.1359 21.5457 26.5923 20.9209L21.4285 15L17 15L22.2597 20.9777L22.2439 20.9777Z"
+                                      fill="currentColor"/>
+                                <circle cx="22" cy="22" r="21.75" stroke="currentColor" stroke-width="0.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <section class="command animation-section-layer">
-        <header class="command__header">
-            <h2 class="h2">Команда PARKK</h2>
-            <p class="p1">За каждой успешной сделкой и довольным клиентом стоит команда. Мы вдохновляемся технологией
-                будущего и стремимся сделать ваш опыт владения электромобилем комфортным и безопасным.
-                <br/>
-                <br/>
-                Познакомьтесь с теми, кто ежедневно работает над созданием экосистемы для вашего удобства.
-            </p>
-        </header>
+    <div class="command-container animation-section-layer">
+        <section class="command">
+            <header class="command__header">
+                <h2 class="h2">Команда PARKK</h2>
+                <p class="p1">За каждой успешной сделкой и довольным клиентом стоит команда. Мы вдохновляемся
+                    технологией
+                    будущего и стремимся сделать ваш опыт владения электромобилем комфортным и безопасным.
+                    <br/>
+                    <br/>
+                    Познакомьтесь с теми, кто ежедневно работает над созданием экосистемы для вашего удобства.
+                </p>
+            </header>
 
 
-        <div class="command__persons">
-            <div class="person">
-                <img src="assets/img/about-us/command-photo-1.png" alt="people">
-                <h4 class="h4">Виталий Гордеев</h4>
-                <span class="p2">основатель</span>
-                <p class="p2">c 2008 года помогает находить идеальные решения в мире автомобилей</p>
+            <div class="command__persons">
+                <div class="person">
+                    <img src="assets/img/about-us/command-photo-1.png" alt="people">
+                    <h4 class="h4">Виталий Гордеев</h4>
+                    <span class="p2">основатель</span>
+                    <p class="p2">c 2008 года помогает находить идеальные решения в мире автомобилей</p>
+                </div>
+
+                <div class="person">
+                    <img src="assets/img/about-us/command-photo-2.png" alt="people">
+                    <h4 class="h4">Надежда Смирнова</h4>
+                    <span class="p2">менеджер по подбору</span>
+                    <p class="p2">подбирает оптимальные модели под потребности клиентов</p>
+                </div>
+
+                <div class="person">
+                    <img src="assets/img/about-us/command-photo-3.png" alt="people">
+                    <h4 class="h4">Артем Иванов</h4>
+                    <span class="p2">руководитель сервиса</span>
+                    <p class="p2">контролирует качество обслуживания и диагностики авто</p>
+                </div>
+
+                <div class="person">
+                    <img src="assets/img/about-us/command-photo-4.png" alt="people">
+                    <h4 class="h4">Мария Петрова</h4>
+                    <span class="p2">клиентский сервис</span>
+                    <p class="p2">всегда на связи для решения любых вопросов</p>
+                </div>
             </div>
-
-            <div class="person">
-                <img src="assets/img/about-us/command-photo-2.png" alt="people">
-                <h4 class="h4">Надежда Смирнова</h4>
-                <span class="p2">менеджер по подбору</span>
-                <p class="p2">подбирает оптимальные модели под потребности клиентов</p>
-            </div>
-
-            <div class="person">
-                <img src="assets/img/about-us/command-photo-3.png" alt="people">
-                <h4 class="h4">Артем Иванов</h4>
-                <span class="p2">руководитель сервиса</span>
-                <p class="p2">контролирует качество обслуживания и диагностики авто</p>
-            </div>
-
-            <div class="person">
-                <img src="assets/img/about-us/command-photo-4.png" alt="people">
-                <h4 class="h4">Мария Петрова</h4>
-                <span class="p2">клиентский сервис</span>
-                <p class="p2">всегда на связи для решения любых вопросов</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <section class="animation-logo-about">
         <div class="motion">
@@ -762,7 +755,7 @@
         </article>
 
 
-        <img src="assets/img/contatcts-image.png" class="contacts__image" alt="auto"/>
+        <img src="assets/img/about-us/contatcts-image.png" class="contacts__image" alt="auto"/>
     </section>
 </main>
 

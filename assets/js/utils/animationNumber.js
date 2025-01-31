@@ -1,59 +1,45 @@
 document.addEventListener("DOMContentLoaded", () => {
     const statisticBlock = document.querySelector('.statistic');
-    const sold = statisticBlock.querySelector('.sold');
-    const years = statisticBlock.querySelectorAll('.year');
-    const year1 = years[0]
-    const year2 =years[1]
-    const subjects = statisticBlock.querySelectorAll('.subject');
-    const subject1 = subjects[0]
-    const subject2 = subjects[1]
-    let startAnimation = false
 
-    document.addEventListener("scroll", () => {
-        const top = statisticBlock.getBoundingClientRect().y
+    if (statisticBlock) {
+        const animateNumbersList = statisticBlock.querySelectorAll('.animate-number-js');
 
-        if (top < 555 && !startAnimation) {
-            startAnimation = true;
+        let startAnimation = false
 
-            sold.innerHTML = "0"
-            year1.innerHTML = "0"
-            year2.innerHTML = "0"
-            subject1.innerHTML = "0"
-            subject2.innerHTML = "0"
+        document.addEventListener("scroll", () => {
+            const top = statisticBlock.getBoundingClientRect().y
+            const animationGap = Number(statisticBlock.dataset.animationgap)
 
-            const interval = setInterval(() => {
-                const soldValue = Number(sold.innerHTML)
-                const yearValue = Number(year1.innerHTML)
+            if (top + animationGap < window.innerHeight && !startAnimation) {
+                startAnimation = true;
 
-                if (soldValue < 719) {
-                    sold.innerHTML = String(soldValue + 5)
-                } else {
-                    sold.innerHTML = "719"
-                }
+                animateNumbersList.forEach((item) => {
+                    item.innerHTML = "0"
 
-                if (yearValue < 2023) {
-                    year1.innerHTML = String(yearValue + 13)
-                    year2.innerHTML = String(yearValue + 13)
-                } else {
-                    year1.innerHTML = "2023"
-                    year2.innerHTML = "2023"
-                }
-            }, 10)
+                    const time = Number(item.dataset.time)
+                    const toValue = Number(item.dataset.value)
+                    const stepValue = Number(item.dataset.step)
+                    const addSymbol = item.dataset.symbol || ""
 
-            const intervalSubject = setInterval(() => {
-                const subjectValue = Number(subject1.innerHTML.replace("+", ""))
+                    const interval = setInterval(() => {
+                        const itemValue = Number(item.innerHTML.replace(addSymbol, ""))
 
-                if (subjectValue < 11) {
-                    subject1.innerHTML = `${subjectValue + 1}+`
-                    subject2.innerHTML = `${subjectValue + 1}+`
-                }
-            }, 100)
+                        if (itemValue < toValue) {
+                            item.innerHTML = `${itemValue + stepValue}${addSymbol ? "+" : ""}`
+                        } else {
+                            item.innerHTML = `${toValue}${addSymbol ? "+" : ""}`
+                        }
+                    }, time)
 
-            setTimeout(() => {
-                clearInterval(interval)
-                clearInterval(intervalSubject)
-            }, 2000)
-        }
 
-    })
+                    setTimeout(() => {
+                        clearInterval(interval)
+
+                        item.innerHTML = `${toValue}${addSymbol ? "+" : ""}`
+                    }, 2000)
+                })
+            }
+
+        })
+    }
 });

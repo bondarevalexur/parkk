@@ -55,7 +55,7 @@ const equipmentSwiper = new Swiper('.what-us-slider', {
 });
 
 
-const previewSwiperText = new Swiper('.previewe-slider', {
+const previewSwiperText = new Swiper('.preview-slider', {
     wrapperClass: 'preview-wrapper',
     slideClass: 'preview-slide',
     slidesPerView: "auto",

@@ -5,3 +5,26 @@
 /* Шрифты */
 
 /*# sourceMappingURL=constants.css.map */
+
+/* Переменные */
+/* Базовые цвета */
+$white: #FFFFFF;
+$black: #000000;
+$black-2: #141414;
+
+$dark-gray: #141414;
+$light-gray: #EBEBEB;
+$light-gray-200: #F6F6F6;
+$gray: #A0A0A0;
+$graphite: #52545A;
+$graphite-05: #52545a9a;
+
+/* Акцентный цвет */
+$lemon: #FFF566;
+$orange: #F64A0A;
+$error: #F64A0A1A;
+
+/* Шрифты */
+
+$autonomous: 'TT Autonomous Trl';
+$dewi-Expanded: 'RF Dewi Expanded';

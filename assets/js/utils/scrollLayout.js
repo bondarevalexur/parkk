@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const lay = section.nextElementSibling
 
             const isHigher = section.getBoundingClientRect().height > window.innerHeight
+            console.log(section.getBoundingClientRect().height > window.innerHeight)
 
             if (isHigher && window.innerHeight - section.getBoundingClientRect().height < section.getBoundingClientRect().y) {
                 lay.style.position = 'static';
@@ -12,9 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (isHigher && (lay.getBoundingClientRect().y - window.innerHeight < 0) && lay.getBoundingClientRect().y > 0) {
+                section.style.top = `-${section.getBoundingClientRect().height - window.innerHeight}px`
                 lay.style.position = 'sticky';
                 section.style.position = 'sticky';
-                section.style.top = `-${415}px`;
+
+                lay.nextElementSibling.style = "position:sticky; z-index:2"
             }
 
             if (lay.getBoundingClientRect().y === 0) {
@@ -24,6 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!isHigher && lay.getBoundingClientRect().y > 0) {
                 lay.style.position = '';
                 section.style.position = '';
+
+                lay.nextElementSibling.style = "position:sticky; z-index:2"
+                lay.nextElementSibling.nextElementSibling.style = "position:sticky; z-index:2"
             }
         })
     })
