@@ -320,15 +320,15 @@
         <div class="catalog__main">
             <article class="catalog_filters filters">
                 <ul class="filters__list p1">
-                    <li class="active"> Все</li>
-                    <li> Avatr</li>
-                    <li> Zeekr</li>
-                    <li> Hongqi</li>
-                    <li> NIO</li>
-                    <li> Leapmotor</li>
-                    <li> LiXiang</li>
-                    <li> Xiaomi</li>
-                    <li> Voyah</li>
+                    <li class="active" data-value="all"> Все</li>
+                    <li data-value="avatr"> Avatr</li>
+                    <li data-value="zeekr"> Zeekr</li>
+                    <li data-value="hongqi"> Hongqi</li>
+                    <li data-value="nio"> NIO</li>
+                    <li data-value="leapmotor"> Leapmotor</li>
+                    <li data-value="lixiang"> LiXiang</li>
+                    <li data-value="xiaomi"> Xiaomi</li>
+                    <li data-value="voyah"> Voyah</li>
                 </ul>
 
 
@@ -345,7 +345,7 @@
 
                 <div class="filters__checkbox">
                     <div>
-                        <div class="custom-checkbox">
+                        <div class="custom-checkbox" id="instock-checkbox">
                             <input type="checkbox" id="custom-checkbox1" class="custom-checkbox__input">
                             <label for="custom-checkbox1" class="custom-checkbox__label">
                                 <svg width="17" height="13" viewBox="0 0 17 13" fill="none"
@@ -359,7 +359,7 @@
                     </div>
 
                     <div>
-                        <div class="custom-checkbox">
+                        <div class="custom-checkbox" id="order-checkbox">
                             <input type="checkbox" id="custom-checkbox2" class="custom-checkbox__input">
                             <label for="custom-checkbox2" class="custom-checkbox__label">
                                 <svg width="17" height="13" viewBox="0 0 17 13" fill="none"
@@ -397,13 +397,13 @@
                             <p class="spec">Год<span class="h3">2024</span></p>
                             <p class="spec">Максимальная скорость<span class="h3">210 км/ч</span></p>
 
-                            <a class="button" href="#"> Тест-драйв
+                            <button class="button popup-open-button" > Тест-драйв
                                 <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
                                           fill="currentColor"/>
                                 </svg>
-                            </a>
+                            </button>
                         </div>
 
                         <div class="item__bg">
@@ -434,13 +434,13 @@
                             <p class="spec">Год<span class="h3">2024</span></p>
                             <p class="spec">Максимальная скорость<span class="h3">180 км/ч</span></p>
 
-                            <a class="button" href="#"> Тест-драйв
+                            <button class="button popup-open-button" > Тест-драйв
                                 <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
                                           fill="currentColor"/>
                                 </svg>
-                            </a>
+                            </button>
                         </div>
 
                         <div class="item__bg">
@@ -471,13 +471,13 @@
                             <p class="spec">Год<span class="h3">2023</span></p>
                             <p class="spec">Максимальная скорость<span class="h3">240 км/ч</span></p>
 
-                            <a class="button" href="#"> Тест-драйв
+                            <button class="button popup-open-button" > Тест-драйв
                                 <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
                                           fill="currentColor"/>
                                 </svg>
-                            </a>
+                            </button>
                         </div>
 
                         <div class="item__bg">
@@ -489,8 +489,8 @@
         </div>
     </section>
 
-    <section class="advantages">
 
+    <section class="advantages">
         <header class="advantages__header">
             <h2 class="h2">Преимущества покупки в PARKK</h2>
             <p class="p1">Наша миссия — компания с многолетним опытом работы
@@ -498,26 +498,40 @@
                 командой профессионалов.</p>
         </header>
 
-
-        <ul class="advantages__list">
-            <li class="advantages__item">
-                <span class="number-font">01</span>
+        <article class="advantages__block">
+            <span class="number-font">01</span>
+            <div>
                 <h4 class="h4">Гарантия</h4>
-            </li>
-            <li class="advantages__item">
-                <span class="number-font">02</span>
+                <p class="p2">Обучение у производителей
+                    и прямой доступ к обновлениям позволяют предугадывать потребности вашего автомобиля.</p>
+            </div>
+        </article>
+
+        <article class="advantages__block">
+            <span class="number-font">02</span>
+            <div>
                 <h4 class="h4">Тест-драйв</h4>
-                <span class="sub_paragraph">Компания с многолетним опытом работы в автомобильной сфере, собственным сервисным центром для электромобилей и автомобилей премиум класса.</span>
-            </li>
-            <li class="advantages__item">
-                <span class="number-font">03</span>
+                <p class="p2">Компания с многолетним опытом работы в автомобильной сфере, собственным сервисным центром для электромобилей и автомобилей премиум класса.</p>
+            </div>
+        </article>
+
+        <article class="advantages__block">
+            <span class="number-font">03</span>
+            <div>
                 <h4 class="h4">Лизинг</h4>
-            </li>
-            <li class="advantages__item">
-                <span class="number-font">04</span>
+                <p class="p2">Никаких лишних услуг. Объясняем каждую рекомендацию и работаем в рамках согласованного бюджета.</p>
+            </div>
+        </article>
+
+        <article class="advantages__block">
+            <span class="number-font">04</span>
+            <div>
                 <h4 class="h4">Специальные предложения</h4>
-            </li>
-        </ul>
+                <p class="p2">Сервис, консультации
+                    по зарядным станциям, помощь
+                    в эксплуатации, покупка нового электромобиля.</p>
+            </div>
+        </article>
     </section>
 
 
@@ -851,8 +865,8 @@
                 </button>
                 <div class="select__options" style="display: none">
                     <div class="select__option" data-value="test">Тест-драйв</div>
-                    <div class="select__option" data-value="order">Запись в сервис</div>
-                    <div class="select__option" data-value="car-care">Запись на событие</div>
+                    <div class="select__option" data-value="car-care">Запись в сервис</div>
+                    <div class="select__option" data-value="event">Запись на событие</div>
                     <div class="select__option" data-value="technic">Техническое обслуживание</div>
                     <div class="select__option" data-value="order">Заказ электромобиля</div>
                 </div>
@@ -1010,10 +1024,6 @@
 <script src="assets/js/popup.js"></script>
 <script src="assets/js/select.js"></script>
 <script src="assets/js/scrollLayout.js"></script>
-<script src="assets/js/video.js"></script>
-<script src="assets/js/video-popup.js"></script>
-<script src="assets/js/P-animation.js"></script>
-<script src="assets/js/animationNumber.js"></script>
 <script src="assets/js/burgerMenu.js"></script>
 <script src="assets/js/footer.js"></script>
 </html>

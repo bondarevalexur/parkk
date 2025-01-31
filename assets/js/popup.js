@@ -31,6 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 case "event":
                     buttonPopupForm.classList.add('popup-form__button_premium');
                     questionSelect.value = "Запись на событие";
+                    questionSelect.dataset.value = "event";
+                    break;
+
+                case "electric":
+                    buttonPopupForm.classList.add('popup-form__button_premium');
+                    questionSelect.value = "Запись в сервис";
+                    questionSelect.dataset.value = "car-care";
+                    break;
+
+                case "electric-car":
+                    buttonPopupForm.classList.add('popup-form__button_premium');
+                    questionSelect.value = "Заказ электромобиля";
                     questionSelect.dataset.value = "order";
                     break;
 
