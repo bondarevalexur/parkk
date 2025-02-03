@@ -27,5 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
             header.classList.remove('header_black');
         }
     })
+
+    const maintenance = document.querySelector('.maintenance');
+    const maintenanceItems = maintenance.querySelectorAll('.content__item');
+
+    maintenanceItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("content__item_open")
+        })
+    })
 });
 

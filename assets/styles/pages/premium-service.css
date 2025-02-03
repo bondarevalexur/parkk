@@ -256,7 +256,7 @@ body {
 }
 
 main {
-  background: #F6F6F6;
+  background: #EBEBEB;
 }
 
 .header__button_premium {
@@ -612,7 +612,7 @@ main {
   overflow: hidden;
   border-radius: 20px 20px 0 0;
   width: 100%;
-  background: #F6F6F6;
+  background: #EBEBEB;
   margin-top: -17px;
 }
 .reason-container .reason {
@@ -879,7 +879,7 @@ main {
   width: 100%;
   margin-bottom: 140px;
   padding-top: 140px;
-  background: #F6F6F6;
+  background: #EBEBEB;
 }
 .feedback__header {
   display: flex;
@@ -997,7 +997,7 @@ main {
   }
 }
 .preview {
-  background: #F6F6F6;
+  background: #EBEBEB;
   border-radius: 20px 20px 0 0;
   max-width: 1280px;
   margin: 0 auto;

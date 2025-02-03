@@ -294,6 +294,7 @@ body {
 .header_black {
   background: url("../../../assets/img/header-bg.png") center/cover no-repeat;
   background-position-y: bottom;
+  box-shadow: -1px 6px 34px -10px rgba(34, 60, 80, 0.16);
 }
 .header .messengers {
   display: none;
