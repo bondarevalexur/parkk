@@ -361,7 +361,7 @@ body {
   rotate: 45deg;
 }
 .header__nav .burger_visible:after {
-  top: 12px !important;
+  top: 9px !important;
   rotate: -45deg;
 }
 .header__nav .burger:after, .header__nav .burger:before {
@@ -549,7 +549,7 @@ body {
     gap: 40px;
     max-height: max-content;
     padding-bottom: 80px;
-    margin-top: 56px;
+    margin-top: 0;
   }
   .header .nav__menu .main-navigation {
     padding: 0;
@@ -576,6 +576,9 @@ body {
   }
   .header .nav__menu .secondary-navigation ul li .header__button_premium {
     margin-left: 0;
+  }
+  .header .nav__menu .secondary-navigation ul li .button {
+    color: #FFFFFF;
   }
   .header .nav__menu .secondary-navigation .location {
     display: none;

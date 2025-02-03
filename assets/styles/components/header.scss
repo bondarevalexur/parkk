@@ -102,7 +102,7 @@
         }
 
         &:after {
-          top: 12px !important;
+          top: 9px !important;
           rotate: -45deg;
         }
       }
@@ -408,7 +408,7 @@
         gap: 40px;
         max-height: max-content;
         padding-bottom: 80px;
-        margin-top: 56px;
+        margin-top: 0;
 
         & .main-navigation {
           padding: 0;
@@ -441,6 +441,10 @@
 
               & .header__button_premium {
                 margin-left: 0;
+              }
+
+              & .button {
+                color: $white
               }
             }
           }

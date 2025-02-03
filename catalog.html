@@ -318,7 +318,7 @@
         <h1 class="catalog__title h1">Каталог</h1>
 
         <div class="catalog__main">
-            <article class="catalog_filters filters">
+            <article class="catalog__filters filters">
                 <ul class="filters__list p1">
                     <li class="active" data-value="all"> Все</li>
                     <li data-value="avatr"> Avatr</li>
@@ -341,6 +341,42 @@
                         <span class="toggle__option toggle__option--active">Гибрид</span>
                     </span>
                     </label>
+                </div>
+
+                <div class="select">
+                    <input type="text" name="brand" class="select__input" placeholder="Выберите" value="Все"
+                           readonly>
+                    <button type="button" class="select__icon">
+                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.02229 5.24386C7.39756 5.78742 7.45435 7.24218 7.45435 8.13756L6.40364 8.13756C6.40364 7.22635 6.46043 5.78742 5.82148 5.22803L-4.37114e-07 0L-2.43537e-07 4.42851L5.94928 9.59233C6.57401 10.1359 7.45435 10.1359 8.07908 9.59233L14 4.42851L14 -6.11959e-07L8.02229 5.25969L8.02229 5.24386Z"
+                                  fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="select__options" style="display: none">
+                        <div class="select__option" data-value="all"> Все</div>
+                        <div class="select__option" data-value="avatr"> Avatr</div>
+                        <div class="select__option" data-value="zeekr"> Zeekr</div>
+                        <div class="select__option" data-value="hongqi"> Hongqi</div>
+                        <div class="select__option" data-value="nio"> NIO</div>
+                        <div class="select__option" data-value="leapmotor"> Leapmotor</div>
+                        <div class="select__option" data-value="lixiang"> LiXiang</div>
+                        <div class="select__option" data-value="xiaomi"> Xiaomi</div>
+                        <div class="select__option" data-value="voyah"> Voyah</div>
+                    </div>
+                </div>
+                <div class="select">
+                    <input type="text" name="delivery-type" class="select__input" placeholder="Выберите" value="Гибрид"
+                           readonly>
+                    <button type="button" class="select__icon">
+                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.02229 5.24386C7.39756 5.78742 7.45435 7.24218 7.45435 8.13756L6.40364 8.13756C6.40364 7.22635 6.46043 5.78742 5.82148 5.22803L-4.37114e-07 0L-2.43537e-07 4.42851L5.94928 9.59233C6.57401 10.1359 7.45435 10.1359 8.07908 9.59233L14 4.42851L14 -6.11959e-07L8.02229 5.25969L8.02229 5.24386Z"
+                                  fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="select__options" style="display: none">
+                        <div class="select__option" data-value="electro">Электрический</div>
+                        <div class="select__option" data-value="gibrid">Гибрид</div>
+                    </div>
                 </div>
 
                 <div class="filters__checkbox">
@@ -395,9 +431,12 @@
                         <div class="car__specs">
                             <p class="spec">Мощность<span class="h3">646 л.с.</span></p>
                             <p class="spec">Год<span class="h3">2024</span></p>
-                            <p class="spec">Максимальная скорость<span class="h3">210 км/ч</span></p>
+                            <p class="spec">
+                                <span class="speed-desc">Максимальная скорость</span>
+                                <span class="speed-mobile">Макс. скорость</span>
+                                <span class="h3">210 км/ч</span></p>
 
-                            <button class="button popup-open-button" > Тест-драйв
+                            <button class="button popup-open-button"> Тест-драйв
                                 <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
@@ -405,10 +444,19 @@
                                 </svg>
                             </button>
                         </div>
-
                         <div class="item__bg">
-                            <img src="assets/img/catalog-page/catalog-item-1.png" alt="car"/>
+                            <img src="assets/img/catalog-page/catalog-item-1.jpeg" alt="car"/>
                         </div>
+                    </div>
+                    <div class="mobile-actions">
+                        <a class="button more" href="#">Подробнее </a>
+                        <button class="button popup-open-button"> Тест-драйв
+                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </button>
                     </div>
                 </article>
 
@@ -434,7 +482,7 @@
                             <p class="spec">Год<span class="h3">2024</span></p>
                             <p class="spec">Максимальная скорость<span class="h3">180 км/ч</span></p>
 
-                            <button class="button popup-open-button" > Тест-драйв
+                            <button class="button popup-open-button"> Тест-драйв
                                 <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
@@ -446,6 +494,16 @@
                         <div class="item__bg">
                             <img src="assets/img/catalog-page/catalog-item-2.png" alt="car"/>
                         </div>
+                    </div>
+                    <div class="mobile-actions">
+                        <a class="button more" href="#">Подробнее </a>
+                        <button class="button popup-open-button"> Тест-драйв
+                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </button>
                     </div>
                 </article>
 
@@ -471,7 +529,7 @@
                             <p class="spec">Год<span class="h3">2023</span></p>
                             <p class="spec">Максимальная скорость<span class="h3">240 км/ч</span></p>
 
-                            <button class="button popup-open-button" > Тест-драйв
+                            <button class="button popup-open-button"> Тест-драйв
                                 <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
@@ -483,6 +541,16 @@
                         <div class="item__bg">
                             <img src="assets/img/catalog-page/catalog-item-3.png" alt="car"/>
                         </div>
+                    </div>
+                    <div class="mobile-actions">
+                        <a class="button more" href="#">Подробнее </a>
+                        <button class="button popup-open-button"> Тест-драйв
+                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </button>
                     </div>
                 </article>
             </div>
@@ -504,6 +572,8 @@
                 <h4 class="h4">Гарантия</h4>
                 <p class="p2">Обучение у производителей
                     и прямой доступ к обновлениям позволяют предугадывать потребности вашего автомобиля.</p>
+
+                <p class="p2 mobile-text">Производители зарядных станций,<br/> управляющие кампании, девелоперы</p>
             </div>
         </article>
 
@@ -511,7 +581,10 @@
             <span class="number-font">02</span>
             <div>
                 <h4 class="h4">Тест-драйв</h4>
-                <p class="p2">Компания с многолетним опытом работы в автомобильной сфере, собственным сервисным центром для электромобилей и автомобилей премиум класса.</p>
+                <p class="p2">Компания с многолетним опытом работы в автомобильной сфере, собственным сервисным центром
+                    для электромобилей и автомобилей премиум класса.</p>
+
+                <p class="p2 mobile-text">От выбора электрокара до его<br/> полной эксплуатации</p>
             </div>
         </article>
 
@@ -519,7 +592,11 @@
             <span class="number-font">03</span>
             <div>
                 <h4 class="h4">Лизинг</h4>
-                <p class="p2">Никаких лишних услуг. Объясняем каждую рекомендацию и работаем в рамках согласованного бюджета.</p>
+                <p class="p2">Никаких лишних услуг. Объясняем каждую рекомендацию и работаем в рамках согласованного
+                    бюджета.</p>
+
+                <p class="p2 mobile-text">Сертифицированные специалисты<br/>
+                    и современное оборудование</p>
             </div>
         </article>
 
@@ -530,6 +607,9 @@
                 <p class="p2">Сервис, консультации
                     по зарядным станциям, помощь
                     в эксплуатации, покупка нового электромобиля.</p>
+
+                <p class="p2 mobile-text">Сертифицированные специалисты<br/>
+                    и современное оборудование</p>
             </div>
         </article>
     </section>
@@ -543,7 +623,7 @@
         <div class="preview__main">
             <article class="loyalty">
                 <h3 class="h3 loyalty__title">Программа лояльности</h3>
-                <a href="#" class="button loyalty__button">Перейти в каталог </a>
+                <a href="#" class="button loyalty__button">Условия участия </a>
 
                 <svg width="187" height="250" viewBox="0 0 187 250" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -572,7 +652,7 @@
             <article class="new-cars">
                 <h3 class="h3 car-care__title">Новое поступление электромобилей ZEEKR</h3>
                 <a href="#" class="button car-care__button">Перейти</a>
-                
+
                 <img src="assets/img/catalog-page/preview-car.png">
 
             </article>
