@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.addEventListener("scroll", () => {
             const top = statisticBlock.getBoundingClientRect().y
-            const animationGap = Number(statisticBlock.dataset.animationgap)
+            const animationGap = Number(statisticBlock.dataset.animationgap ?? 0)
 
             if (top + animationGap < window.innerHeight && !startAnimation) {
                 startAnimation = true;
@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         const itemValue = Number(item.innerHTML.replace(addSymbol, ""))
 
                         if (itemValue < toValue) {
-                            item.innerHTML = `${itemValue + stepValue}${addSymbol ? "+" : ""}`
+                            item.innerHTML = `${itemValue + stepValue}${addSymbol ?? ""}`
                         } else {
-                            item.innerHTML = `${toValue}${addSymbol ? "+" : ""}`
+                            item.innerHTML = `${toValue}${addSymbol ?? ""}`
                         }
                     }, time)
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     setTimeout(() => {
                         clearInterval(interval)
 
-                        item.innerHTML = `${toValue}${addSymbol ? "+" : ""}`
+                        item.innerHTML = `${toValue}${addSymbol ?? ""}`
                     }, 2000)
                 })
             }

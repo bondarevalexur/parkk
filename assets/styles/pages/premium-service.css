@@ -293,7 +293,7 @@ main {
   margin: 0 80px;
 }
 .hero__title {
-  margin-top: 52px;
+  margin-top: 85px;
 }
 .hero__button {
   display: block;
@@ -327,7 +327,7 @@ main {
   }
 }
 .brands {
-  width: 1290px;
+  width: 1280px;
   margin: 0 auto;
   margin-bottom: 140px;
   padding-top: 140px;
@@ -336,13 +336,14 @@ main {
 .brands__header {
   display: flex;
   margin-bottom: 60px;
-  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
 }
 .brands__header .h2 {
-  width: 524px;
+  max-width: 524px;
 }
 .brands__header .p1 {
-  width: 400px;
+  width: 634px;
 }
 .brands__list {
   display: grid;
@@ -399,10 +400,10 @@ main {
 .statistic {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 80px;
   gap: 20px;
   color: #000000;
-  margin-bottom: 60px;
+  max-width: 1280px;
+  margin: 0 auto 140px auto;
 }
 .statistic__column {
   display: flex;
@@ -434,7 +435,7 @@ main {
   padding-top: 207px;
 }
 .statistic .second-block .number-font {
-  margin-bottom: 118px;
+  margin-bottom: 103px;
 }
 .statistic .third-block {
   padding-top: 102px;
@@ -512,34 +513,41 @@ main {
     height: 21px;
   }
 }
-.special-offer {
-  background: url("../../../assets/img/premium-service/special-offer-image-1.png") #000000 bottom/cover no-repeat;
-  padding: 100px 155px;
-  margin-bottom: 140px;
+.special-offer-container {
+  width: 100%;
+  padding: 140px 0 108px 0;
   border-radius: 20px 20px 0 0;
+  background: url("../../../assets/img/premium-service/special-offer-image-1.png") #000000 bottom/cover no-repeat;
+}
+.special-offer-container .special-offer {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   gap: 132px;
 }
-.special-offer__description {
-  width: 422px;
-  flex-shrink: 0;
-}
-.special-offer__description p {
+.special-offer-container .special-offer .h2 {
   margin-bottom: 60px;
 }
-.special-offer__description .manager {
+.special-offer-container .special-offer .manager {
+  border: 0.5px solid #A0A0A0;
+}
+.special-offer-container .special-offer__description {
+  width: 630px;
+  flex-shrink: 0;
+}
+.special-offer-container .special-offer__description .h4 {
+  margin-bottom: 18px;
+}
+.special-offer-container .special-offer__description .text {
+  margin-bottom: 60px;
+  max-width: 512px;
+}
+.special-offer-container .special-offer__description .manager {
   color: #000000;
   background: #F64A0A;
 }
-.special-offer__description .manager:hover {
+.special-offer-container .special-offer__description .manager:hover {
   background: #FFFFFF;
-}
-.special-offer__description .test-drive {
-  border: 0.5px solid #EBEBEB;
-}
-.special-offer__description .test-drive:hover {
-  color: #000000;
-  background: #F64A0A;
 }
 
 @media screen and (max-width: 951px) {
@@ -600,33 +608,40 @@ main {
     height: 305px;
   }
 }
-.reason {
-  padding-top: 100px;
+.reason-container {
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  background: #F6F6F6;
+  margin-top: -17px;
+}
+.reason-container .reason {
+  padding-top: 140px;
   color: #000000;
   position: relative;
   width: 1280px;
   margin: 0 auto;
 }
-.reason__breadcrumb {
+.reason-container .reason__breadcrumb {
   margin: 70px 0;
   color: #A0A0A0;
 }
-.reason__breadcrumb span {
+.reason-container .reason__breadcrumb span {
   color: #52545A;
 }
-.reason__description {
+.reason-container .reason__description {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 100px;
 }
-.reason__description .h2 {
+.reason-container .reason__description .h2 {
   max-width: 598px;
   margin-bottom: 20px;
 }
-.reason__description .p1 {
+.reason-container .reason__description .p1 {
   max-width: 491px;
 }
-.reason__description img {
+.reason-container .reason__description img {
   width: 100%;
 }
 
@@ -651,11 +666,11 @@ main {
   }
 }
 .services {
-  width: 1290px;
+  width: 1280px;
   margin: 0 auto;
   margin-bottom: 140px;
-  padding: 0 20px;
   color: #000000;
+  padding-top: 35px;
 }
 .services__header {
   margin-bottom: 60px;
@@ -663,15 +678,16 @@ main {
 .services__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 6px;
 }
 .services__item {
   display: grid;
-  grid-template-columns: 433px 420px 1fr 20px;
+  grid-template-columns: 371px 452px 1fr 20px;
+  column-gap: 20px;
   align-items: center;
   background: #FFFFFF;
   border-radius: 20px;
-  padding: 40px;
+  padding: 32px 40px;
 }
 .services__item .price {
   font-size: 12px;
@@ -726,114 +742,117 @@ main {
     line-height: 77px;
   }
 }
-.invite {
-  padding: 140px 0;
+.invite-container {
+  padding: 110px 0;
   background: url("../../../assets/img/electro-service/invite-image-1.png") center/cover no-repeat;
-  color: #FFFFFF;
 }
-.invite > div {
-  max-width: 1290px;
+.invite-container .invite {
+  color: #FFFFFF;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 517px;
   column-gap: 20px;
 }
-.invite__header .h2 {
-  margin-bottom: 16px;
+.invite-container .invite__header .h2 {
+  margin-bottom: 20px;
   max-width: 570px;
 }
-.invite__header .p1 {
+.invite-container .invite__header .p1 {
   max-width: 376px;
 }
-.invite__main {
+.invite-container .invite__main {
   background: #141414;
   padding: 20px;
   border-radius: 20px;
 }
-.invite__main .p1 {
+.invite-container .invite__main .p1 {
   padding: 20px 20px 30px 0;
 }
-.invite__main .invite-form {
+.invite-container .invite__main .invite-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.invite__main .invite-form .technic {
+.invite-container .invite__main .invite-form .technic {
   display: grid;
   column-gap: 10px;
   row-gap: 10px;
   grid-template-columns: repeat(2, 1fr);
 }
-.invite__main .invite-form .technic .datepicker {
+.invite-container .invite__main .invite-form .technic .datepicker {
   grid-column-start: 1;
   grid-column-end: 3;
 }
-.invite__main .invite-form .text-input {
+.invite-container .invite__main .invite-form .text-input {
   padding: 14px 20px;
   background: #141414;
   color: #FFFFFF;
 }
-.invite__main .invite-form .text-input::placeholder {
+.invite-container .invite__main .invite-form .text-input::placeholder {
   color: #A0A0A0;
 }
-.invite__main .invite-form .select__icon {
+.invite-container .invite__main .invite-form .select__icon {
   right: 20px;
 }
-.invite__main .invite-form .select__icon svg {
+.invite-container .invite__main .invite-form .select__icon svg {
   color: #FFFFFF;
 }
-.invite__main .invite-form .select__input {
+.invite-container .invite__main .invite-form .select__input {
   background: #141414;
   color: #FFFFFF;
   padding: 14px 20px;
 }
-.invite__main .invite-form .select__input::placeholder {
+.invite-container .invite__main .invite-form .select__input::placeholder {
   color: #A0A0A0;
 }
-.invite__main .invite-form .datepicker-input {
+.invite-container .invite__main .invite-form .datepicker-input {
   padding: 14px 20px;
   background: #141414;
   color: #FFFFFF;
 }
-.invite__main .invite-form .datepicker-input::placeholder {
+.invite-container .invite__main .invite-form .datepicker-input::placeholder {
   color: #A0A0A0;
 }
-.invite__main .invite-form .datepicker-input:hover {
+.invite-container .invite__main .invite-form .datepicker-input:hover {
   border-color: #A0A0A0;
 }
-.invite__main .invite-form .datepicker-icon {
+.invite-container .invite__main .invite-form .datepicker-icon {
   padding: 18px 4px;
   right: 20px;
 }
-.invite__main .invite-form .datepicker-icon svg {
+.invite-container .invite__main .invite-form .datepicker-icon svg {
   color: #FFFFFF;
 }
-.invite__main .invite-form .datepicker-calendar {
+.invite-container .invite__main .invite-form .datepicker-calendar {
   background: #141414;
 }
-.invite__main .invite-form .datepicker-calendar .datepicker-prevday, .invite__main .invite-form .datepicker-calendar .datepicker-nextday {
+.invite-container .invite__main .invite-form .datepicker-calendar .datepicker-prevday, .invite-container .invite__main .invite-form .datepicker-calendar .datepicker-nextday {
   color: #A0A0A0;
 }
-.invite__main .invite-form .datepicker-calendar .datepicker-day {
+.invite-container .invite__main .invite-form .datepicker-calendar .datepicker-day {
   color: #FFFFFF;
 }
-.invite__main .invite-form .datepicker-calendar .weekend {
+.invite-container .invite__main .invite-form .datepicker-calendar .weekend {
   color: #A0A0A0;
 }
-.invite__main .invite-form__button {
+.invite-container .invite__main .invite-form__button {
   display: flex;
   justify-content: center;
   background: #F64A0A;
   color: #FFFFFF;
 }
-.invite__main .agree .checkbox {
+.invite-container .invite__main .agree {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.invite-container .invite__main .agree .checkbox {
   margin-right: 10px;
 }
-.invite__main .agree .checkbox__input:checked + .checkbox__label {
+.invite-container .invite__main .agree .checkbox__input:checked + .checkbox__label {
   color: #FFFFFF;
 }
-.invite__main .agree .checkbox__label {
+.invite-container .invite__main .agree .checkbox__label {
   background: #141414;
   color: #141414;
 }
@@ -860,6 +879,7 @@ main {
   width: 100%;
   margin-bottom: 140px;
   padding-top: 140px;
+  background: #F6F6F6;
 }
 .feedback__header {
   display: flex;
@@ -977,14 +997,15 @@ main {
   }
 }
 .preview {
-  background: #EBEBEB;
+  background: #F6F6F6;
   border-radius: 20px 20px 0 0;
+  max-width: 1280px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 140px 80px;
   column-gap: 20px;
   row-gap: 20px;
-  margin-bottom: 140px;
+  padding-bottom: 140px;
   color: #000000;
   overflow: hidden;
 }
@@ -998,7 +1019,7 @@ main {
   margin-bottom: 40px;
 }
 .preview__block {
-  min-height: 530px;
+  min-height: 500px;
   position: relative;
   overflow: hidden;
   color: #000000;
