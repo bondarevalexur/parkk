@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const sections = document.querySelectorAll(".animation-section")
         sections.forEach((section) => {
             const lay = section.nextElementSibling
-
             const isHigher = section.getBoundingClientRect().height > window.innerHeight
-            console.log(section.getBoundingClientRect().height > window.innerHeight)
 
-            if (isHigher && window.innerHeight - section.getBoundingClientRect().height < section.getBoundingClientRect().y) {
+            const isException = section.classList.contains("animation-logo")
+
+            if (!isException && isHigher && window.innerHeight - section.getBoundingClientRect().height < section.getBoundingClientRect().y) {
                 lay.style.position = 'static';
                 section.style.position = 'static';
             }
