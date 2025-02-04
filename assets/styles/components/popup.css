@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "RF_Devi_font.css";
 /* Переменные */
 /* Базовые цвета */
 /* Акцентный цвет */
@@ -253,48 +252,6 @@ body {
   background: rgba(246, 74, 10, 0.1019607843) !important;
 }
 
-@font-face {
-  font-family: "TT Autonomous Trl";
-  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial ExtraLight.ttf");
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Autonomous Trl";
-  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial Light.ttf");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Autonomous Trl";
-  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial Regular.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Autonomous Trl";
-  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial Medium.ttf");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Autonomous Trl";
-  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial DemiBold.ttf");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Autonomous Trl";
-  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial Bold.ttf");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "TT Autonomous Trl";
-  src: url("../fonts/TT_Autonomous_trl/TT Autonomous Trial ExtraBold.ttf");
-  font-weight: 800;
-  font-style: normal;
-}
 /* Переменные */
 /* Базовые цвета */
 /* Акцентный цвет */

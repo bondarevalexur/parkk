@@ -667,6 +667,7 @@ main {
   height: 8px;
 }
 .stations .card__dot .address {
+  z-index: 1;
   display: none;
   position: absolute;
   left: 30px;
