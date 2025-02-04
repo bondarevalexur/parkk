@@ -1,16 +1,22 @@
+const isMobile = window.innerWidth < 768
+
 const whyUsSwiperText = new Swiper('.why-us-text-slider', {
     wrapperClass: 'why-us-text-wrapper',
     slideClass: 'why-us-text-slide',
     slidesPerView: "auto",
     spaceBetween: 20,
     loopFillGroupWithBlank: false,
-    pagination: {
-        el: ".why-us-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
+    pagination: isMobile ?
+        {
+            el: ".why-us-pagination",
+            type: "fraction"
+        } : {
+            el: ".why-us-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
         },
-    },
     navigation: {
         nextEl: '.why-us-next',
         prevEl: '.why-us-prev',
@@ -27,13 +33,17 @@ const whyUsSwiperPhoto = new Swiper('.why-us-photo-slider', {
         nextEl: '.why-us-next',
         prevEl: '.why-us-prev',
     },
-    pagination: {
-        el: ".why-us-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
+    pagination: isMobile ?
+        {
+            el: ".why-us-pagination",
+            type: "fraction"
+        } : {
+            el: ".why-us-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
         },
-    },
 });
 
 const equipmentSwiper = new Swiper('.what-us-slider', {
@@ -59,7 +69,7 @@ const previewSwiperText = new Swiper('.preview-slider', {
     wrapperClass: 'preview-wrapper',
     slideClass: 'preview-slide',
     slidesPerView: "auto",
-    spaceBetween: 20,
+    spaceBetween: isMobile ? 10 : 20,
     loopFillGroupWithBlank: false,
     navigation: {
         nextEl: '.preview-next',

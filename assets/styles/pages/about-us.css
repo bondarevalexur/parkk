@@ -110,6 +110,20 @@ body {
   border-radius: 14px;
 }
 
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+}
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+}
 .color-white, .hero {
   color: #FFFFFF;
 }
@@ -282,31 +296,24 @@ body {
 
 @media screen and (max-width: 768px) {
   .hero {
-    align-items: center;
-    min-height: 932px;
-    gap: 16px;
-  }
-  .hero__title, .hero__subtitle {
-    text-align: center;
+    min-height: 300px;
   }
   .hero__title {
-    margin-top: -10px;
     font-size: 40px;
     font-weight: 400;
     line-height: 48px;
-    padding: 0;
-  }
-  .hero__title .br {
-    display: block;
+    padding: 20px;
   }
 }
+/* БЛОК - История компании */
 .statistic {
   max-width: 1280px;
   margin: 140px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 30px 20px;
   color: #000000;
+  overflow: hidden;
 }
 .statistic__history {
   grid-column-start: 1;
@@ -387,10 +394,30 @@ body {
   height: 100%;
 }
 
+@media screen and (max-width: 1000px) {
+  .statistic {
+    padding: 80px 10px;
+  }
+  .statistic__block {
+    padding-right: 0 !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .statistic {
-    padding: 38px 10px 20px 10px;
-    margin-bottom: 80px;
+    padding: 0 10px;
+  }
+  .statistic__history {
+    padding: 0 10px;
+  }
+  .statistic__history .h2 {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+  }
+  .statistic__history .p2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
   }
   .statistic__column {
     grid-column-start: 1;
@@ -399,55 +426,24 @@ body {
     padding-right: 0 !important;
     justify-content: center;
   }
-  .statistic .third-block, .statistic .fourth-block {
-    display: none;
+  .statistic .first-block-wrapper, .statistic .fourth-block-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: end;
   }
-  .statistic .mobile-year, .statistic .mobile-regions, .statistic .second-block {
+  .statistic .first-block, .statistic .second-block, .statistic .third-block, .statistic .fourth-block {
     display: block;
     width: max-content;
     padding: 38px 42px 14px 10px !important;
   }
-  .statistic .mobile-year .number-font, .statistic .mobile-regions .number-font, .statistic .second-block .number-font {
+  .statistic .first-block .number-font, .statistic .second-block .number-font, .statistic .third-block .number-font, .statistic .fourth-block .number-font {
     font-size: 60px;
     font-weight: 200;
     line-height: 84px;
     margin-bottom: 10px;
   }
-  .statistic .mobile-year, .statistic .mobile-regions {
-    align-self: end;
-  }
-  .statistic .first-block {
-    min-height: unset;
-    border-bottom: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: max-content;
-  }
-  .statistic .first-block .button {
-    background: #FFF566;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    border: none;
-  }
-  .statistic .first-block .h2 {
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 32px;
-  }
-  .statistic__partners {
-    margin-top: 60px;
-    gap: 60px;
-    overflow: auto;
-    padding: 0 10px;
-  }
-  .statistic__partners li {
-    height: 36px;
-  }
-  .statistic__partners li:nth-child(2) {
-    height: 21px;
-  }
 }
+/* БЛОК - Партнер ведущих производителей зарядных станций и застройщиков */
 .advantages {
   max-width: 1280px;
   margin: 140px auto;
@@ -477,42 +473,13 @@ body {
 @media screen and (max-width: 951px) {
   .advantages {
     padding: 0 10px;
-    grid-template-columns: 1fr;
-    row-gap: 10px;
   }
   .advantages__list {
     grid-template-columns: 1fr;
     row-gap: 10px;
   }
-  .advantages__item {
-    background: #FFF566;
-    flex-direction: column-reverse;
-    padding: 0 10px 32px 10px !important;
-  }
-  .advantages__item .br {
-    display: none;
-  }
-  .advantages__item:nth-child(2) {
-    flex-direction: column;
-    padding-bottom: 30px;
-  }
-  .advantages__item .h4 {
-    margin-bottom: 10px;
-  }
-  .advantages__item .sub_paragraph {
-    color: #52545A;
-    padding-right: 100px;
-    display: block;
-  }
-  .advantages__item .number-font {
-    text-align: right;
-    position: static !important;
-    margin-bottom: 4px;
-    font-size: 60px;
-    font-weight: 200;
-    line-height: 77px;
-  }
 }
+/* БЛОК - Почему PARKK — ваш лучший выбор? */
 .why-us {
   justify-content: center;
   max-width: 1280px;
@@ -616,44 +583,33 @@ body {
 }
 
 @media screen and (max-width: 951px) {
-  .advantages {
+  .why-us {
     padding: 0 10px;
     grid-template-columns: 1fr;
     row-gap: 10px;
   }
-  .advantages__list {
-    grid-template-columns: 1fr;
-    row-gap: 10px;
+  .why-us__header {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    max-width: 100%;
+    margin-bottom: 40px;
   }
-  .advantages__item {
-    background: #FFF566;
-    flex-direction: column-reverse;
-    padding: 0 10px 32px 10px !important;
+  .why-us__header .h2 {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
   }
-  .advantages__item .br {
-    display: none;
+  .why-us-text-slide {
+    padding-top: 30px;
+    padding-bottom: 100px;
   }
-  .advantages__item:nth-child(2) {
-    flex-direction: column;
-    padding-bottom: 30px;
-  }
-  .advantages__item .h4 {
-    margin-bottom: 10px;
-  }
-  .advantages__item .sub_paragraph {
-    color: #52545A;
-    padding-right: 100px;
-    display: block;
-  }
-  .advantages__item .number-font {
-    text-align: right;
-    position: static !important;
-    margin-bottom: 4px;
-    font-size: 60px;
-    font-weight: 200;
-    line-height: 77px;
+  .why-us-text-slide p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
   }
 }
+/* БЛОК - Что значит экосистема PARKK? */
 .what-us {
   max-width: 1280px;
   margin: 140px auto;
@@ -743,70 +699,32 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .statistic {
-    padding: 38px 10px 20px 10px;
-    margin-bottom: 80px;
+  .what-us {
+    padding: 0 10px;
+    grid-template-columns: 1fr;
   }
-  .statistic__column {
+  .what-us__header {
     grid-column-start: 1;
-    grid-column-end: 3;
-    border-right: none !important;
-    padding-right: 0 !important;
-    justify-content: center;
+    grid-column-end: 2;
+    width: 100%;
+    margin-bottom: 40px;
   }
-  .statistic .third-block, .statistic .fourth-block {
+  .what-us-slider {
     display: none;
   }
-  .statistic .mobile-year, .statistic .mobile-regions, .statistic .second-block {
-    display: block;
-    width: max-content;
-    padding: 38px 42px 14px 10px !important;
+  .what-us-description {
+    gap: 10px;
   }
-  .statistic .mobile-year .number-font, .statistic .mobile-regions .number-font, .statistic .second-block .number-font {
-    font-size: 60px;
-    font-weight: 200;
-    line-height: 84px;
-    margin-bottom: 10px;
-  }
-  .statistic .mobile-year, .statistic .mobile-regions {
-    align-self: end;
-  }
-  .statistic .first-block {
-    min-height: unset;
-    border-bottom: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: max-content;
-  }
-  .statistic .first-block .button {
+  .what-us-description__item {
     background: #FFF566;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    border: none;
-  }
-  .statistic .first-block .h2 {
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 32px;
-  }
-  .statistic__partners {
-    margin-top: 60px;
-    gap: 60px;
-    overflow: auto;
-    padding: 0 10px;
-  }
-  .statistic__partners li {
-    height: 36px;
-  }
-  .statistic__partners li:nth-child(2) {
-    height: 21px;
   }
 }
+/* БЛОК - Как мы работаем */
 .preview-container {
   width: 100%;
   background: #000000;
   border-radius: 20px 20px 0 0;
+  overflow: hidden;
 }
 .preview-container .preview {
   display: grid;
@@ -914,53 +832,43 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .preview {
+  .preview-container {
+    padding: 0 10px;
+  }
+  .preview-container .preview {
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+  .preview-container .preview__header {
+    width: 100%;
     padding: 0 10px;
-    max-width: 1280px;
-    margin: 0 auto 200px auto;
   }
-  .preview__header {
-    padding: 0 10px;
-    margin-bottom: 50px;
+  .preview-container .preview__block {
+    min-height: max-content;
   }
-  .preview__header .h2 {
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 32px;
+  .preview-container .preview__block:nth-child(even) {
+    flex-direction: column-reverse;
   }
-  .preview__header .br {
-    display: none;
-  }
-  .preview__block {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 30px 10px 10px 10px !important;
-  }
-  .preview__block .button {
+  .preview-container .preview__block:nth-child(5) {
     background: #FFF566;
     color: #000000;
-    width: 100%;
-    justify-content: center;
   }
-  .preview__block .photo {
-    display: none;
+  .preview-container .preview__block .h4 {
+    max-width: calc(100% - 40px);
   }
-  .preview__block .h4 {
-    margin-bottom: 0 !important;
-    padding-top: 0 !important;
+  .preview-container .preview__block .number-font {
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 84px;
+    text-align: end;
+    margin-right: 10px;
   }
-  .preview__block .datetime {
-    margin-bottom: 18px;
-    padding-top: 0 !important;
-  }
-  .preview__block .location {
-    padding: 30px 0;
+  .preview-container .preview-slider img {
+    width: 370px;
   }
 }
+/* БЛОК - Команда PARKK */
 .command-container {
   background: #FFFFFF;
   padding: 140px 0;
@@ -976,6 +884,9 @@ body {
   align-items: start;
   color: #000000;
   margin-bottom: 60px;
+}
+.command-container .command__header .p1 {
+  color: #52545A;
 }
 .command-container .command__persons {
   display: grid;
@@ -1003,22 +914,27 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .feedback {
-    padding: 0 10px;
-    margin-bottom: 100px;
+  .command-container {
+    padding: 100px 20px;
   }
-  .feedback__header {
-    margin: 0 10px 40px 10px;
+  .command-container .command__header {
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
   }
-  .feedback__header .h2 {
+  .command-container .command__header .h2 {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
   }
-  .feedback__controllers {
-    height: 20px;
+  .command-container .command__persons {
+    overflow: auto;
+  }
+  .command-container .command__persons .person {
+    width: 305px;
   }
 }
+/* БЛОК - Мы — это больше, чем автосалон. */
 .animation-logo-about {
   background: #52545A;
   position: relative;
@@ -1063,16 +979,22 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .animation-logo {
-    min-height: 155vh;
+  .animation-logo-about .motion {
+    height: 400px;
   }
-  .animation-logo .motion-block .text {
+  .animation-logo-about .motion-block .text .h2 {
     font-size: 24px;
     font-weight: 400;
     line-height: 28.8px;
-    margin-top: -14px;
+  }
+  .animation-logo-about .motion-block .motion-wrapper .left-arrow-mobile, .animation-logo-about .motion-block .motion-wrapper .right-arrow-mobile {
+    margin-top: 40px;
+  }
+  .animation-logo-about .motion-block .motion-wrapper .text {
+    margin-top: 20px;
   }
 }
+/* БЛОК - Хотите познакомиться с нами лично? */
 .contacts {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -1123,13 +1045,14 @@ body {
 
 @media screen and (max-width: 1100px) {
   .contacts {
-    margin: 0 10px 40px 10px;
+    margin: 100px 10px;
     grid-template-columns: 1fr;
     column-gap: 0;
   }
   .contacts__title {
     text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-right: 30px;
     padding: 0 10px;
     font-size: 28px;
     font-weight: 300;
@@ -1138,42 +1061,22 @@ body {
   .contacts__title .br {
     display: none;
   }
-  .contacts__image {
-    display: none;
-  }
   .contacts__info {
     background: unset;
     padding: unset;
     gap: 0;
   }
   .contacts__info .contacts__location {
-    align-items: center;
     padding: 0 10px;
     margin-bottom: 20px;
   }
-  .contacts__info .info__image_mobile {
-    display: block;
-    width: 100%;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    margin-bottom: 10px;
+  .contacts__info .contacts__location .p1 {
+    margin-bottom: 20px;
   }
-  .contacts__info .contacts__phone {
-    margin-left: 10px;
+  .contacts__info .contacts__image {
+    margin-bottom: 20px;
   }
-  .contacts__info .contacts__time {
-    margin-right: 10px;
-  }
-  .contacts__info .contacts__messengers {
-    padding: 60px 10px;
-  }
-  .contacts__info .contacts__messengers a:hover {
-    background: #52545A;
-  }
-  .contacts__info .contacts__messengers a:hover svg {
-    color: #FFF566;
-  }
-  .contacts__info .contacts__button {
+  .contacts__info .contacts__questions .contacts__button {
     width: 100%;
     justify-content: center;
     margin-bottom: 20px;

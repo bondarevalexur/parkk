@@ -49,43 +49,32 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .hero {
-    align-items: center;
-    min-height: 932px;
-    gap: 16px;
-
-
-    &__title, &__subtitle {
-      text-align: center;
-    }
+    min-height: 300px;
 
     &__title {
-      margin-top: -10px;
-
       font-size: 40px;
       font-weight: 400;
       line-height: 48px;
-      padding: 0;
 
-      & .br {
-        display: block;
-      }
+      padding: 20px;
     }
   }
 }
 
 
+/* БЛОК - История компании */
 .statistic {
   max-width: 1280px;
   margin: 140px auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 30px 20px;
 
   color: $black;
+  overflow: hidden;
 
   &__history {
     grid-column-start: 1;
@@ -192,10 +181,37 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .statistic {
+    padding: 80px 10px;
+
+    &__block {
+      padding-right: 0 !important;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .statistic {
-    padding: 38px 10px 20px 10px;
-    margin-bottom: 80px;
+    padding: 0 10px;
+
+    &__history {
+      padding: 0 10px;
+
+      & .h2 {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+
+      }
+
+      & .p2 {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+
+      }
+    }
 
     &__column {
       grid-column-start: 1;
@@ -207,11 +223,13 @@
       justify-content: center;
     }
 
-    & .third-block, & .fourth-block {
-      display: none;
+    & .first-block-wrapper, & .fourth-block-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: end;
     }
 
-    & .mobile-year, .mobile-regions, .second-block {
+    & .first-block, & .second-block, & .third-block, & .fourth-block {
       display: block;
       width: max-content;
 
@@ -226,54 +244,11 @@
       }
     }
 
-    & .mobile-year, & .mobile-regions {
-      align-self: end;
-    }
-
-    & .first-block {
-      min-height: unset;
-      border-bottom: none;
-
-      padding-left: 10px;
-      padding-right: 10px;
-
-      height: max-content;
-
-      & .button {
-        background: $lemon;
-        text-align: center;
-        justify-content: center;
-        width: 100%;
-        border: none;
-      }
-
-      & .h2 {
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 32px;
-
-      }
-    }
-
-    &__partners {
-      margin-top: 60px;
-      gap: 60px;
-      overflow: auto;
-      padding: 0 10px;
-
-      & li {
-        height: 36px;
-      }
-
-      & li:nth-child(2) {
-        height: 21px;
-      }
-    }
-
   }
 }
 
 
+/* БЛОК - Партнер ведущих производителей зарядных станций и застройщиков */
 .advantages {
   max-width: 1280px;
   margin: 140px auto;
@@ -313,57 +288,16 @@
   .advantages {
     padding: 0 10px;
 
-    grid-template-columns: 1fr;
-    row-gap: 10px;
-
     &__list {
+
       grid-template-columns: 1fr;
       row-gap: 10px;
-    }
-
-    &__item {
-      background: $lemon;
-      flex-direction: column-reverse;
-
-      padding: 0 10px 32px 10px !important;
-
-      & .br {
-        display: none;
-      }
-
-      &:nth-child(2) {
-        flex-direction: column;
-        padding-bottom: 30px;
-      }
-
-      &:nth-child(1), &:nth-child(3) {
-      }
-
-      & .h4 {
-        margin-bottom: 10px;
-      }
-
-      & .sub_paragraph {
-        color: $graphite;
-        padding-right: 100px;
-        display: block;
-      }
-
-      & .number-font {
-        text-align: right;
-        position: static !important;
-
-        margin-bottom: 4px;
-
-        font-size: 60px;
-        font-weight: 200;
-        line-height: 77px;
-      }
     }
   }
 }
 
 
+/* БЛОК - Почему PARKK — ваш лучший выбор? */
 .why-us {
   justify-content: center;
 
@@ -498,59 +432,44 @@
 }
 
 @media screen and (max-width: 951px) {
-  .advantages {
+  .why-us {
     padding: 0 10px;
 
     grid-template-columns: 1fr;
+
     row-gap: 10px;
 
-    &__list {
-      grid-template-columns: 1fr;
-      row-gap: 10px;
+
+    &__header {
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+      max-width: 100%;
+      margin-bottom: 40px;
+
+      & .h2 {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+      }
     }
 
-    &__item {
-      background: $lemon;
-      flex-direction: column-reverse;
+    &-text-slide {
+      padding-top: 30px;
+      padding-bottom: 100px;
 
-      padding: 0 10px 32px 10px !important;
 
-      & .br {
-        display: none;
-      }
-
-      &:nth-child(2) {
-        flex-direction: column;
-        padding-bottom: 30px;
-      }
-
-      &:nth-child(1), &:nth-child(3) {
-      }
-
-      & .h4 {
-        margin-bottom: 10px;
-      }
-
-      & .sub_paragraph {
-        color: $graphite;
-        padding-right: 100px;
-        display: block;
-      }
-
-      & .number-font {
-        text-align: right;
-        position: static !important;
-
-        margin-bottom: 4px;
-
-        font-size: 60px;
-        font-weight: 200;
-        line-height: 77px;
+      & p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
       }
     }
   }
 }
 
+
+/* БЛОК - Что значит экосистема PARKK? */
 .what-us {
   max-width: 1280px;
   margin: 140px auto;
@@ -668,96 +587,42 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
-  .statistic {
-    padding: 38px 10px 20px 10px;
-    margin-bottom: 80px;
+  .what-us {
+    padding: 0 10px;
 
-    &__column {
+    grid-template-columns: 1fr;
+
+    &__header {
       grid-column-start: 1;
-      grid-column-end: 3;
-
-      border-right: none !important;
-      padding-right: 0 !important;
-
-      justify-content: center;
+      grid-column-end: 2;
+      width: 100%;
+      margin-bottom: 40px;
     }
 
-    & .third-block, & .fourth-block {
+    &-slider {
       display: none;
     }
 
-    & .mobile-year, .mobile-regions, .second-block {
-      display: block;
-      width: max-content;
+    &-description {
+      gap: 10px;
 
-      padding: 38px 42px 14px 10px !important;
-
-      & .number-font {
-        font-size: 60px;
-        font-weight: 200;
-        line-height: 84px;
-
-        margin-bottom: 10px;
+      &__item {
+        background: #FFF566;
       }
     }
-
-    & .mobile-year, & .mobile-regions {
-      align-self: end;
-    }
-
-    & .first-block {
-      min-height: unset;
-      border-bottom: none;
-
-      padding-left: 10px;
-      padding-right: 10px;
-
-      height: max-content;
-
-      & .button {
-        background: $lemon;
-        text-align: center;
-        justify-content: center;
-        width: 100%;
-        border: none;
-      }
-
-      & .h2 {
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 32px;
-
-      }
-    }
-
-    &__partners {
-      margin-top: 60px;
-      gap: 60px;
-      overflow: auto;
-      padding: 0 10px;
-
-      & li {
-        height: 36px;
-      }
-
-      & li:nth-child(2) {
-        height: 21px;
-      }
-    }
-
   }
 }
 
 
+/* БЛОК - Как мы работаем */
 .preview-container {
   width: 100%;
   background: $black;
   border-radius: 20px 20px 0 0;
+  overflow: hidden;
 
   .preview {
-
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -897,65 +762,57 @@
 }
 
 @media screen and (max-width: 768px) {
-  .preview {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .preview-container {
     padding: 0 10px;
 
-    max-width: 1280px;
-    margin: 0 auto 200px auto;
-
-    &__header {
-      padding: 0 10px;
-      margin-bottom: 50px;
-
-      & .h2 {
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 32px;
-      }
-
-      & .br {
-        display: none;
-      }
-    }
-
-    &__block {
+    .preview {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      padding: 30px 10px 10px 10px !important;
 
-      & .button {
-        background: $lemon;
-        color: $black;
+      &__header {
         width: 100%;
-        justify-content: center;
+        padding: 0 10px;
       }
 
-      & .photo {
-        display: none;
+      &__block {
+        min-height: max-content;
+
+        &:nth-child(even) {
+          flex-direction: column-reverse;
+        }
+
+
+        &:nth-child(5) {
+          background: $lemon;
+          color: $black;
+        }
+
+        & .h4 {
+          max-width: calc(100% - 40px);
+        }
+
+        & .number-font {
+          font-size: 60px;
+          font-weight: 200;
+          line-height: 84px;
+
+          text-align: end;
+          margin-right: 10px;
+        }
       }
 
-      & .h4 {
-        margin-bottom: 0 !important;
-        padding-top: 0 !important;
-      }
-
-      & .datetime {
-        margin-bottom: 18px;
-        padding-top: 0 !important;
-      }
-
-      & .location {
-        padding: 30px 0;
+      &-slider {
+        & img {
+          width: 370px;
+        }
       }
     }
   }
 }
 
 
+/* БЛОК - Команда PARKK */
 .command-container {
   background: $white;
   padding: 140px 0;
@@ -972,6 +829,10 @@
       color: $black;
 
       margin-bottom: 60px;
+
+      & .p1 {
+        color: $graphite;
+      }
     }
 
     &__persons {
@@ -1008,27 +869,37 @@
 }
 
 @media screen and (max-width: 768px) {
-  .feedback {
-    padding: 0 10px;
-    margin-bottom: 100px;
+  .command-container {
+    padding: 100px 20px;
 
-    &__header {
-      margin: 0 10px 40px 10px;
+    .command {
+      &__header {
+        flex-direction: column;
+        display: flex;
+        gap: 20px;
 
-      & .h2 {
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 32px;
+
+        & .h2 {
+          font-size: 28px;
+          font-weight: 300;
+          line-height: 32px;
+        }
       }
-    }
 
-    &__controllers {
-      height: 20px;
+      &__persons {
+        overflow: auto;
+
+        & .person {
+          width: 305px;
+
+        }
+      }
     }
   }
 }
 
 
+/* БЛОК - Мы — это больше, чем автосалон. */
 .animation-logo-about {
   background: $graphite;
   position: relative;
@@ -1082,24 +953,37 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
-  .animation-logo {
-    min-height: 155vh;
+  .animation-logo-about {
+
+    & .motion {
+      height: 400px;
+    }
 
     & .motion-block {
       & .text {
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 28.8px;
+        & .h2 {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28.8px;
+        }
+      }
 
-        margin-top: -14px;
+      .motion-wrapper {
+        & .left-arrow-mobile, .right-arrow-mobile {
+          margin-top: 40px;
+        }
+
+        & .text {
+          margin-top: 20px;
+        }
       }
     }
   }
 }
 
 
+/* БЛОК - Хотите познакомиться с нами лично? */
 .contacts {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -1133,9 +1017,10 @@
 
       padding-top: 10px;
 
-      & .h4{
-        & svg{
-          margin-right: 4px;}
+      & .h4 {
+        & svg {
+          margin-right: 4px;
+        }
       }
     }
 
@@ -1162,16 +1047,16 @@
   }
 }
 
-
 @media screen and (max-width: 1100px) {
   .contacts {
-    margin: 0 10px 40px 10px;
+    margin: 100px 10px;
     grid-template-columns: 1fr;
     column-gap: 0;
 
     &__title {
       text-align: left;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+      margin-right: 30px;
       padding: 0 10px;
 
       font-size: 28px;
@@ -1184,64 +1069,38 @@
       }
     }
 
-    &__image {
-      display: none;
-    }
-
     &__info {
       background: unset;
       padding: unset;
       gap: 0;
 
       & .contacts__location {
-        align-items: center;
         padding: 0 10px;
         margin-bottom: 20px;
-      }
 
-      & .info__image_mobile {
-        display: block;
-        width: 100%;
-        grid-column-start: 1;
-        grid-column-end: 3;
-
-        margin-bottom: 10px;
-      }
-
-      & .contacts__phone {
-        margin-left: 10px;
-      }
-
-      & .contacts__time {
-        margin-right: 10px;
-      }
-
-      & .contacts__messengers {
-        padding: 60px 10px;
-
-        & a {
-          &:hover {
-            background: $graphite;
-
-            & svg {
-              color: $lemon;
-            }
-          }
+        & .p1 {
+          margin-bottom: 20px;
         }
       }
 
-      & .contacts__button {
-        width: 100%;
-        justify-content: center;
+      & .contacts__image {
         margin-bottom: 20px;
+      }
 
-        grid-row-start: 3;
+      & .contacts__questions {
 
-        grid-column-start: 1;
-        grid-column-end: 3;
+        & .contacts__button {
+          width: 100%;
+          justify-content: center;
+          margin-bottom: 20px;
+
+          grid-row-start: 3;
+
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
       }
     }
-
 
   }
 }

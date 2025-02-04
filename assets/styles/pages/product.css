@@ -111,6 +111,20 @@ body {
   border-radius: 14px;
 }
 
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+}
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+}
 .color-white {
   color: #FFFFFF;
 }
@@ -276,6 +290,10 @@ body {
 }
 .header__nav .burger_visible:after, .header__nav .burger_visible:before {
   background: #FFFFFF;
+}
+
+main {
+  overflow: hidden;
 }
 
 .product {

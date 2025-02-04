@@ -94,6 +94,22 @@ body {
   border-radius: 14px;
 }
 
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none!important;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+}
+
 // 🔴 Переменные цветов
 $colors: (
         white: $white,
