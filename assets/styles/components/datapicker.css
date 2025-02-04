@@ -370,6 +370,7 @@ body {
 }
 .datepicker .datepicker-calendar.active {
   display: block;
+  z-index: 11;
 }
 .datepicker .datepicker-calendar .datepicker-weekdays {
   display: grid;

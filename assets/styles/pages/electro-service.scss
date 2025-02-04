@@ -34,7 +34,10 @@
       }
     }
   }
+}
 
+main {
+  background: $light-gray;
 }
 
 /* Главный экран */
@@ -51,19 +54,6 @@
   justify-content: center;
   gap: 20px;
   position: relative;
-
-  &__image-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-
-    & img {
-      width: 100%;
-    }
-  }
 
   & .p1, .button, &__title {
     position: relative;
@@ -91,37 +81,55 @@
 
 }
 
-
 @media screen and (max-width: 768px) {
   .hero {
     align-items: center;
     min-height: 932px;
-    gap: 16px;
-
+    gap: 0;
+    margin-bottom: 100px;
 
     &__title, &__subtitle {
       text-align: center;
     }
 
     &__title {
-      margin-top: -10px;
-
-      font-size: 40px;
+      font-size: 28px;
       font-weight: 400;
-      line-height: 48px;
+      line-height: 32px;
       padding: 0;
+
+      margin: 0 20px 16px 20px;
 
       & .br {
         display: block;
       }
     }
+
+    & .p1 {
+      margin: 0 20px 60px 20px;
+      text-align: center;
+    }
+
+    &__button {
+      color: $black !important;
+      background: $lemon;
+
+      &:hover {
+        color: $black;
+      }
+    }
+
+    & .bottom-arrow {
+      position: absolute;
+      bottom: 30px;
+    }
   }
 }
 
+/* Блок -  */
 .brands {
-  width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 140px;
+  max-width: 1280px;
+  margin: 0 auto 140px auto;
   padding-top: 140px;
   color: $black;
 
@@ -131,11 +139,11 @@
     align-items: center;
 
     & .h2 {
-      width: 524px;
+      max-width: 524px;
     }
 
     & .p1 {
-      width: 400px;
+      max-width: 400px;
     }
   }
 
@@ -156,64 +164,38 @@
   }
 }
 
-
-@media screen and (max-width: 951px) {
+@media screen and (max-width: 768px) {
   .brands {
+    width: 100%;
     padding: 0 10px;
 
-    grid-template-columns: 1fr;
-    row-gap: 10px;
+    &__header {
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 10px;
 
-    &__list {
-      grid-template-columns: 1fr;
-      row-gap: 10px;
+      & .h2 {
+        max-width: max-content;
+      }
+
+      & .p1 {
+        max-width: max-content;
+      }
     }
 
-    &__item {
-      background: $lemon;
-      flex-direction: column-reverse;
+    &__list {
+      grid-template-columns: 1fr 1fr 1fr;
 
-      padding: 0 10px 32px 10px !important;
-
-      & .br {
-        display: none;
-      }
-
-      &:nth-child(2) {
-        flex-direction: column;
-        padding-bottom: 30px;
-      }
-
-      &:nth-child(1), &:nth-child(3) {
-      }
-
-      & .h4 {
-        margin-bottom: 10px;
-      }
-
-      & .sub_paragraph {
-        color: $graphite;
-        padding-right: 100px;
-        display: block;
-      }
-
-      & .number-font {
-        text-align: right;
-        position: static !important;
-
-        margin-bottom: 4px;
-
-        font-size: 60px;
-        font-weight: 200;
-        line-height: 77px;
+      & .brand {
+        height: 94px;
       }
     }
   }
 }
 
-
+/* Блок -  */
 .services {
-  width: 1280px;
+  max-width: 1280px;
   margin: 140px auto;
   color: $black;
 
@@ -256,61 +238,46 @@
   }
 }
 
-@media screen and (max-width: 951px) {
+@media screen and (max-width: 768px) {
   .services {
     padding: 0 10px;
 
-    grid-template-columns: 1fr;
-    row-gap: 10px;
-
-    &__list {
-      grid-template-columns: 1fr;
-      row-gap: 10px;
+    &__header {
+      padding: 0 10px;
     }
 
     &__item {
-      background: $lemon;
-      flex-direction: column-reverse;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 16px;
 
-      padding: 0 10px 32px 10px !important;
+      position: relative;
 
-      & .br {
-        display: none;
+      padding: 30px 20px 20px 20px;
+
+      & .p2 {
+        max-width: 300px;
       }
 
-      &:nth-child(2) {
-        flex-direction: column;
-        padding-bottom: 30px;
+      & .price {
+        margin-top: 4px;
+        padding: 10px;
+        border-radius: 10px;
+        background: $lemon;
       }
 
-      &:nth-child(1), &:nth-child(3) {
-      }
-
-      & .h4 {
-        margin-bottom: 10px;
-      }
-
-      & .sub_paragraph {
-        color: $graphite;
-        padding-right: 100px;
-        display: block;
-      }
-
-      & .number-font {
-        text-align: right;
-        position: static !important;
-
-        margin-bottom: 4px;
-
-        font-size: 60px;
-        font-weight: 200;
-        line-height: 77px;
+      & .arrow {
+        position: absolute;
+        top: 32px;
+        right: 20px;
       }
     }
   }
 }
 
-
+/* Блок -  */
 .important {
   background: $black;
   border-radius: 20px 20px 0 0;
@@ -329,12 +296,12 @@
     grid-column-start: 1;
     grid-column-end: 3;
 
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 
   &__main {
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
 
     display: grid;
@@ -443,7 +410,7 @@
     }
 
 
-    & .p2{
+    & .p2 {
       max-width: 390px;
     }
 
@@ -453,65 +420,49 @@
   }
 }
 
-@media screen and (max-width: 951px) {
+@media screen and (max-width: 768px) {
   .important {
-    padding: 0 10px;
+    padding: 100px 10px;
 
-    grid-template-columns: 1fr;
-    row-gap: 10px;
-
-    &__list {
-      grid-template-columns: 1fr;
-      row-gap: 10px;
+    &__header {
+      padding: 0 0 40px 0;
     }
 
-    &__item {
-      background: $lemon;
-      flex-direction: column-reverse;
+    &__main {
+      grid-template-columns: 1fr;
+    }
 
-      padding: 0 10px 32px 10px !important;
 
-      & .br {
-        display: none;
-      }
+    &-text-slider {
+      height: 290px;
+    }
 
-      &:nth-child(2) {
-        flex-direction: column;
-        padding-bottom: 30px;
-      }
+    &-photo-slider {
+      max-height: 0;
 
-      &:nth-child(1), &:nth-child(3) {
-      }
+    }
 
-      & .h4 {
-        margin-bottom: 10px;
-      }
+    &__controllers {
+      padding: 0 10px;
+      bottom: 10px;
+    }
 
-      & .sub_paragraph {
-        color: $graphite;
-        padding-right: 100px;
-        display: block;
-      }
-
-      & .number-font {
-        text-align: right;
-        position: static !important;
-
-        margin-bottom: 4px;
-
-        font-size: 60px;
-        font-weight: 200;
-        line-height: 77px;
-      }
+    &-pagination {
+      color: $light-gray;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
     }
   }
 }
 
-
+/* Блок -  */
 .stations {
   color: $black;
-  width: 1290px;
+  max-width: 1290px;
   margin: 0 auto;
+
+  overflow: hidden;
 
   border-radius: 20px 20px 0 0;
   justify-content: center;
@@ -675,61 +626,50 @@
 
 }
 
-@media screen and (max-width: 951px) {
+@media screen and (max-width: 768px) {
   .stations {
-    padding: 0 10px;
+    padding: 100px 10px;
 
-    grid-template-columns: 1fr;
-    row-gap: 10px;
+    &__address {
+      display: flex;
+      gap: 40px;
 
-    &__list {
-      grid-template-columns: 1fr;
-      row-gap: 10px;
-    }
+      margin-bottom: 30px;
 
-    &__item {
-      background: $lemon;
-      flex-direction: column-reverse;
+      & ul {
+        & li {
+          margin-bottom: 4px;
 
-      padding: 0 10px 32px 10px !important;
+          &:nth-child(1) {
+            font-size: 8px;
+            font-weight: 400;
+            line-height: 9.6px;
 
-      & .br {
-        display: none;
+            color: $graphite;
+
+          }
+        }
       }
 
-      &:nth-child(2) {
-        flex-direction: column;
-        padding-bottom: 30px;
-      }
+      & .work-time {
 
-      &:nth-child(1), &:nth-child(3) {
-      }
+        & span {
+          display: block;
+          margin-bottom: 4px;
 
-      & .h4 {
-        margin-bottom: 10px;
-      }
+          font-size: 8px;
+          font-weight: 400;
+          line-height: 9.6px;
 
-      & .sub_paragraph {
-        color: $graphite;
-        padding-right: 100px;
-        display: block;
-      }
+          color: $graphite;
+        }
 
-      & .number-font {
-        text-align: right;
-        position: static !important;
-
-        margin-bottom: 4px;
-
-        font-size: 60px;
-        font-weight: 200;
-        line-height: 77px;
       }
     }
   }
 }
 
-
+/* Блок -  */
 .preview {
   background: $light-gray;
   border-radius: 20px 20px 0 0;
@@ -895,66 +835,100 @@
 
 @media screen and (max-width: 768px) {
   .preview {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     padding: 100px 10px;
-    margin-bottom: 100px;
+    grid-template-columns: 1fr;
 
     &__header {
+      width: 100%;
+
       padding: 0 10px;
-      margin-bottom: 50px;
+
+      grid-column-start: 1;
+      grid-column-end: 2;
 
       & .h2 {
         font-size: 28px;
         font-weight: 300;
         line-height: 32px;
-      }
 
-      & .br {
-        display: none;
+        padding-right: 0;
       }
     }
 
     &__block {
+      min-height: unset;
+      position: relative;
+      overflow: hidden;
+
+
+      background: $lemon;
+      color: $black;
+
+      border-radius: 20px;
+
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      padding: 30px 10px 10px 10px !important;
+      justify-content: space-between;
+      box-shadow: -1px 6px 34px -10px rgba(34, 60, 80, 0.16);
 
-      & .button {
-        background: $lemon;
-        color: $black;
-        width: 100%;
-        justify-content: center;
-      }
 
-      & .photo {
-        display: none;
+      & .number-font {
+        font-size: 60px;
+        font-weight: 200;
+        line-height: 84px;
+
+        text-align: end;
+        margin-right: 10px;
+
       }
 
       & .h4 {
-        margin-bottom: 0 !important;
-        padding-top: 0 !important;
+        padding: 10px;
       }
 
-      & .datetime {
-        margin-bottom: 18px;
-        padding-top: 0 !important;
+      & .p2 {
+        max-height: 100px;
+        padding: 0 10px;
+        margin-bottom: 20px;
       }
 
-      & .location {
-        padding: 30px 0;
+      & .mobile-text {
+        max-height: 100px;
+        display: block;
+        padding: 0 10px;
+        margin-bottom: 20px;
+      }
+
+      &:hover {
+        background: $lemon;
+        color: $black;
+
+        & .number-font {
+          position: unset;
+          left: unset;
+        }
+
+        & .h4 {
+          padding: 10px;
+          margin-bottom: 0;
+        }
+
+        & .p2 {
+          max-height: 100px;
+          padding: 0 10px;
+          margin-bottom: 20px;
+        }
       }
     }
   }
 }
 
 
+/* Блок -  */
 .invite {
   background: url("../../../assets/img/electro-service/invite-image-1.png") center/cover no-repeat;
 
-  padding: 140px 0 ;
+  padding: 140px 0;
   color: $white;
 
   & > div {
@@ -1091,22 +1065,181 @@
 }
 
 @media screen and (max-width: 768px) {
-  .feedback {
-    padding: 0 10px;
-    margin-bottom: 100px;
+  .invite {
+    margin: 0 10px;
+    background: black;
+
+    padding: 60px 10px 10px 10px;
+    color: $white;
+
+    border-radius: 20px;
+
+    & > div {
+      max-width: 1280px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 20px;
+    }
 
     &__header {
-      margin: 0 10px 40px 10px;
+      padding: 0 10px;
 
       & .h2 {
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 32px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28.8px;
+        font-family: $dewi-Expanded;
+      }
+
+      & .p1 {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
       }
     }
 
-    &__controllers {
-      height: 20px;
+
+    &__main {
+      background: $black-2;
+      border-radius: 20px;
+      padding: 0;
+
+      & .p1 {
+        padding: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+
+        margin-bottom: 40px;
+      }
+
+      & .invite-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        & .text-input {
+          padding: 14px 20px;
+          background: $black-2;
+          color: $white;
+
+          &::placeholder {
+            color: $gray;
+          }
+        }
+
+        & .select {
+          &__icon {
+            right: 20px;
+
+            & svg {
+              color: $graphite;
+            }
+          }
+
+          &__input {
+            background: $black-2;
+
+            color: $white;
+            padding: 14px 20px;
+
+            &::placeholder {
+              color: $gray;
+            }
+          }
+
+          &__options {
+            background: $black-2;
+            padding-top: 4px;
+            padding-left: 9px;
+
+            & .select__option {
+              color: $white;
+
+              &:hover {
+                background: $black-2;
+                color: $lemon;
+              }
+            }
+          }
+        }
+
+        & .datepicker {
+          &-input {
+            padding: 14px 20px;
+            background: $black-2;
+
+            color: $white;
+
+            &::placeholder {
+              color: $gray;
+            }
+
+            &:hover {
+              border-color: $gray;
+            }
+          }
+
+          &-icon {
+            padding: 18px 4px;
+            right: 20px;
+
+            & svg {
+              color: $graphite;
+            }
+          }
+
+          &-calendar {
+            background: $black-2;
+
+            & .datepicker-prevday, .datepicker-nextday {
+              color: $gray;
+            }
+
+            & .datepicker-day {
+              color: $white;
+
+              &.active{
+                color: $black;
+              }
+
+            }
+
+            & .weekend {
+              color: $gray;
+            }
+          }
+        }
+      }
+
+      & .agree {
+        margin-top: 10px;
+        margin-bottom: 17px;
+
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 9.6px;
+
+
+        & .checkbox {
+          margin-right: 10px;
+
+          &__input {
+            &:checked + .checkbox__label {
+              color: $white;
+            }
+          }
+
+
+          &__label {
+            background: $black-2;
+            color: $black-2;
+          }
+        }
+      }
     }
   }
 }

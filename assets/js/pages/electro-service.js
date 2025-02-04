@@ -1,10 +1,15 @@
+const isMobile = window.innerWidth < 768
+
 const whyUsSwiperText = new Swiper('.important-text-slider', {
     wrapperClass: 'important-text-wrapper',
     slideClass: 'important-text-slide',
     slidesPerView: "auto",
     spaceBetween: 20,
     loopFillGroupWithBlank: false,
-    pagination: {
+    pagination: isMobile ? {
+        el: ".important-pagination",
+        type: "fraction"
+    } : {
         el: ".important-pagination",
         clickable: true,
         renderBullet: function (index, className) {
@@ -27,7 +32,10 @@ const whyUsSwiperPhoto = new Swiper('.important-photo-slider', {
         nextEl: '.important-next',
         prevEl: '.important-prev',
     },
-    pagination: {
+    pagination: isMobile ? {
+        el: ".important-pagination",
+        type: "fraction"
+    } : {
         el: ".important-pagination",
         clickable: true,
         renderBullet: function (index, className) {

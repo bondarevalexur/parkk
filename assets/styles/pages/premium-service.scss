@@ -820,23 +820,183 @@ main {
   }
 }
 
+
 @media screen and (max-width: 768px) {
-  .feedback {
-    padding: 0 10px;
-    margin-bottom: 100px;
+  .invite {
+    margin: 0 10px;
+    background: black;
+
+    padding: 60px 10px 10px 10px;
+    color: $white;
+
+    border-radius: 20px;
+
+    & > div {
+      max-width: 1280px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 20px;
+    }
 
     &__header {
-      margin: 0 10px 40px 10px;
+      padding: 0 10px;
 
       & .h2 {
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 32px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28.8px;
+        font-family: $dewi-Expanded;
+      }
+
+      & .p1 {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
       }
     }
 
-    &__controllers {
-      height: 20px;
+
+    &__main {
+      background: $black-2;
+      border-radius: 20px;
+      padding: 0;
+
+      & .p1 {
+        padding: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+
+        margin-bottom: 40px;
+      }
+
+      & .invite-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        & .text-input {
+          padding: 14px 20px;
+          background: $black-2;
+          color: $white;
+
+          &::placeholder {
+            color: $gray;
+          }
+        }
+
+        & .select {
+          &__icon {
+            right: 20px;
+
+            & svg {
+              color: $graphite;
+            }
+          }
+
+          &__input {
+            background: $black-2;
+
+            color: $white;
+            padding: 14px 20px;
+
+            &::placeholder {
+              color: $gray;
+            }
+          }
+
+          &__options {
+            background: $black-2;
+            padding-top: 4px;
+            padding-left: 9px;
+
+            & .select__option {
+              color: $white;
+
+              &:hover {
+                background: $black-2;
+                color: $lemon;
+              }
+            }
+          }
+        }
+
+        & .datepicker {
+          &-input {
+            padding: 14px 20px;
+            background: $black-2;
+
+            color: $white;
+
+            &::placeholder {
+              color: $gray;
+            }
+
+            &:hover {
+              border-color: $gray;
+            }
+          }
+
+          &-icon {
+            padding: 18px 4px;
+            right: 20px;
+
+            & svg {
+              color: $graphite;
+            }
+          }
+
+          &-calendar {
+            background: $black-2;
+
+            & .datepicker-prevday, .datepicker-nextday {
+              color: $gray;
+            }
+
+            & .datepicker-day {
+              color: $white;
+
+              &.active {
+                color: $black;
+              }
+
+            }
+
+            & .weekend {
+              color: $gray;
+            }
+          }
+        }
+      }
+
+      & .agree {
+        margin-top: 10px;
+        margin-bottom: 17px;
+
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 9.6px;
+
+
+        & .checkbox {
+          margin-right: 10px;
+
+          &__input {
+            &:checked + .checkbox__label {
+              color: $white;
+            }
+          }
+
+
+          &__label {
+            background: $black-2;
+            color: $black-2;
+          }
+        }
+      }
     }
   }
 }
@@ -1166,56 +1326,88 @@ main {
 
 @media screen and (max-width: 768px) {
   .preview {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     padding: 100px 10px;
-    margin-bottom: 100px;
+    grid-template-columns: 1fr;
 
     &__header {
+      width: 100%;
+
       padding: 0 10px;
-      margin-bottom: 50px;
+
+      grid-column-start: 1;
+      grid-column-end: 2;
 
       & .h2 {
         font-size: 28px;
         font-weight: 300;
         line-height: 32px;
-      }
 
-      & .br {
-        display: none;
+        padding-right: 0;
       }
     }
 
     &__block {
+      min-height: unset;
+      position: relative;
+      overflow: hidden;
+
+      background: $lemon;
+      color: $black;
+
+      border-radius: 20px;
+
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      padding: 30px 10px 10px 10px !important;
+      justify-content: space-between;
+      box-shadow: -1px 6px 34px -10px rgba(34, 60, 80, 0.16);
 
-      & .button {
-        background: $orange;
-        color: $black;
-        width: 100%;
-        justify-content: center;
-      }
 
-      & .photo {
-        display: none;
+      & .number-font {
+        font-size: 60px;
+        font-weight: 200;
+        line-height: 84px;
+
+        text-align: end;
+        margin-right: 10px;
+
       }
 
       & .h4 {
-        margin-bottom: 0 !important;
-        padding-top: 0 !important;
+        padding: 10px;
       }
 
-      & .datetime {
-        margin-bottom: 18px;
-        padding-top: 0 !important;
+      & .p2 {
+        max-height: 100px;
+        padding: 0 10px;
+        margin-bottom: 20px;
       }
 
-      & .location {
-        padding: 30px 0;
+      & .mobile-text {
+        max-height: 100px;
+        display: block;
+        padding: 0 10px;
+        margin-bottom: 20px;
+      }
+
+      &:hover {
+        background: $lemon;
+        color: $black;
+
+        & .number-font {
+          position: unset;
+          left: unset;
+        }
+
+        & .h4 {
+          padding: 10px;
+          margin-bottom: 0;
+        }
+
+        & .p2 {
+          max-height: 100px;
+          padding: 0 10px;
+          margin-bottom: 20px;
+        }
       }
     }
   }

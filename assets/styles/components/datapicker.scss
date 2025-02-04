@@ -85,6 +85,7 @@
 
     &.active {
       display: block;
+      z-index: 11;
     }
 
     .datepicker-weekdays {
