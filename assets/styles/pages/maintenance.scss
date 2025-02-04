@@ -42,6 +42,10 @@
       background: $black;
     }
 
+    &_visible {
+      color: $white;
+    }
+
     & .burger_visible {
       &:after, &:before {
         background: $white;
@@ -56,7 +60,7 @@
   color: $black;
   position: relative;
 
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto 140px auto;
 
 
@@ -90,6 +94,10 @@
       max-width: 555px;
 
       justify-self: end;
+
+      overflow: hidden;
+      border-radius: 20px;
+      object-fit: cover;
     }
   }
 
@@ -134,6 +142,7 @@
 
         & .item-text {
           flex-grow: 1;
+          color: $graphite;
         }
 
         & .p2 {
@@ -145,7 +154,7 @@
         }
 
         & svg {
-          color: $gray;
+          color: $graphite;
           transition: all 0.3s ease-in-out;
         }
 
@@ -187,25 +196,64 @@
 
 @media screen and (max-width: 768px) {
   .maintenance {
-    align-items: center;
-    min-height: 932px;
-    gap: 16px;
+    padding: 100px 10px 0 10px;
+    margin-bottom: 100px;
 
-
-    &__title, &__subtitle {
-      text-align: center;
+    &__breadcrumb {
+      display: none;
     }
 
-    &__title {
-      margin-top: -10px;
+    &__description {
+      display: flex;
+      flex-direction: column;
 
-      font-size: 40px;
-      font-weight: 400;
-      line-height: 48px;
-      padding: 0;
+      & .image {
+        height: 552px;
+      }
 
-      & .br {
-        display: block;
+      & .text {
+        padding: 0 10px;
+        margin-bottom: 40px;
+
+        & .h2 {
+          font-size: 28px;
+          font-weight: 300;
+          line-height: 32px;
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+
+      & .content {
+        margin-right: 0;
+        padding: 0 10px;
+
+        &__item {
+          & .number-font {
+            display: none;
+          }
+        }
+
+        & .button {
+          width: 100%;
+          margin-top: 30px;
+          justify-content: center;
+        }
+      }
+
+      & .image {
+        display: none;
+      }
+
+      & .h2 {
+        padding: 0 10px;
+
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
       }
     }
   }
@@ -345,12 +393,14 @@
 
       & .h4 {
         padding: 10px;
+        max-width: 339px;
       }
 
       & .p2 {
         max-height: 100px;
         padding: 0 10px;
         margin-bottom: 20px;
+        max-width: 339px;
       }
 
       & .mobile-text {
@@ -387,7 +437,7 @@
 .price-list {
   color: $black;
 
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto 140px auto;
 
   display: flex;
@@ -423,12 +473,12 @@
 
       @extend .p2, .color-graphite;
 
-      &:nth-child(3), &:nth-child(4){
+      &:nth-child(3), &:nth-child(4) {
         text-align: center;
       }
     }
 
-    & td{
+    & td {
       padding: 20px 0 34px 0;
 
 
@@ -455,60 +505,40 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .price-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 100px 10px;
+    color: $black;
     margin-bottom: 100px;
+    padding: 0 10px;
 
-    &__header {
-      padding: 0 10px;
-      margin-bottom: 50px;
+    display: flex;
+    gap: 42px;
+
+    &__main {
+      flex-grow: 1;
+
+      display: flex;
+      flex-direction: column;
 
       & .h2 {
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 32px;
+        margin-bottom: 16px;
+        padding: 0 10px;
       }
 
-      & .br {
-        display: none;
+      & .p1 {
+        margin-bottom: 42px;
+        padding: 0 10px;
       }
     }
 
-    &__block {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding: 30px 10px 10px 10px !important;
-
-      & .button {
-        background: $lemon;
-        color: $black;
-        width: 100%;
-        justify-content: center;
+    .custom-table {
+      & td {
+        vertical-align: bottom;
       }
+    }
 
-      & .photo {
-        display: none;
-      }
-
-      & .h4 {
-        margin-bottom: 0 !important;
-        padding-top: 0 !important;
-      }
-
-      & .datetime {
-        margin-bottom: 18px;
-        padding-top: 0 !important;
-      }
-
-      & .location {
-        padding: 30px 0;
-      }
+    & img {
+      display: none;
     }
   }
 }
@@ -520,7 +550,7 @@
   color: $white;
 
   & > div {
-    max-width: 1280px;
+    max-max-width: 1280px;
     margin: 0 auto;
 
     display: grid;
@@ -570,7 +600,7 @@
           right: 20px;
 
           & svg {
-            color: $white;
+            color: $graphite;
           }
         }
 
@@ -582,6 +612,21 @@
 
           &::placeholder {
             color: $gray;
+          }
+        }
+
+        &__options {
+          background: $black-2;
+          padding-top: 4px;
+          padding-left: 9px;
+
+          & .select__option {
+            color: $white;
+
+            &:hover {
+              background: $black-2;
+              color: $lemon;
+            }
           }
         }
       }
@@ -607,7 +652,7 @@
           right: 20px;
 
           & svg {
-            color: $white;
+            color: $graphite;
           }
         }
 
@@ -655,7 +700,7 @@
 
 @media screen and (max-width: 768px) {
   .invite {
-    margin: 0 10px;
+    margin: 0 10px 100px 10px;
     background: black;
 
     padding: 60px 10px 10px 10px;
@@ -664,7 +709,7 @@
     border-radius: 20px;
 
     & > div {
-      max-width: 1280px;
+      max-max-width: 1280px;
       margin: 0 auto;
 
       display: grid;
@@ -791,7 +836,7 @@
             & .datepicker-day {
               color: $white;
 
-              &.active{
+              &.active {
                 color: $black;
               }
 

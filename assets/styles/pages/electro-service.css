@@ -1009,7 +1009,7 @@ main {
   right: 20px;
 }
 .invite__main .invite-form .select__icon svg {
-  color: #FFFFFF;
+  color: #52545A;
 }
 .invite__main .invite-form .select__input {
   background: #141414;
@@ -1018,6 +1018,18 @@ main {
 }
 .invite__main .invite-form .select__input::placeholder {
   color: #A0A0A0;
+}
+.invite__main .invite-form .select__options {
+  background: #141414;
+  padding-top: 4px;
+  padding-left: 9px;
+}
+.invite__main .invite-form .select__options .select__option {
+  color: #FFFFFF;
+}
+.invite__main .invite-form .select__options .select__option:hover {
+  background: #141414;
+  color: #FFF566;
 }
 .invite__main .invite-form .datepicker-input {
   padding: 14px 20px;
@@ -1035,7 +1047,7 @@ main {
   right: 20px;
 }
 .invite__main .invite-form .datepicker-icon svg {
-  color: #FFFFFF;
+  color: #52545A;
 }
 .invite__main .invite-form .datepicker-calendar {
   background: #141414;

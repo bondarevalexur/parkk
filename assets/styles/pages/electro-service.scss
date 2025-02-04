@@ -982,7 +982,7 @@ main {
           right: 20px;
 
           & svg {
-            color: $white;
+            color: $graphite;
           }
         }
 
@@ -994,6 +994,21 @@ main {
 
           &::placeholder {
             color: $gray;
+          }
+        }
+
+        &__options {
+          background: $black-2;
+          padding-top: 4px;
+          padding-left: 9px;
+
+          & .select__option {
+            color: $white;
+
+            &:hover {
+              background: $black-2;
+              color: $lemon;
+            }
           }
         }
       }
@@ -1019,7 +1034,7 @@ main {
           right: 20px;
 
           & svg {
-            color: $white;
+            color: $graphite;
           }
         }
 
