@@ -31,13 +31,19 @@ const equipmentSwiper = new Swiper('.equipment-slider', {
     },
 });
 
+
+const isMobile = window.innerWidth < 768
+
 const optionsSwiper = new Swiper('.options-slider', {
     wrapperClass: 'options-wrapper',
     slideClass: 'options-slide',
     slidesPerView: "auto",
     spaceBetween: 20,
     centeredSlides: true,
-    pagination: {
+    pagination: isMobile ? {
+        el: ".options-pagination",
+        clickable: true,
+    } : {
         el: ".options-pagination",
         type: "fraction",
     },
@@ -83,9 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const slides = [...slider.querySelectorAll('.options-slide')];
 
     slides.forEach((slide) => {
-        if (slide.dataset.value !==  "exterior") {
+        if (slide.dataset.value !== "exterior") {
             slider.removeChild(slide)
-        }else {
+        } else {
             slider.append(slide)
         }
     })
@@ -94,9 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", (e) => {
 
             slides.forEach((slide) => {
-                if (slide.dataset.value !==  button.dataset.value) {
+                if (slide.dataset.value !== button.dataset.value) {
                     slider.removeChild(slide)
-                }else {
+                } else {
                     slider.append(slide)
                 }
             })
