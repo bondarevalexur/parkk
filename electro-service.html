@@ -7,6 +7,21 @@
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/pages/electro-service.css">
+
+    <script type="text/javascript">
+        <!-- Если карта не загрузится, то покажем заглушку -->
+        function ymapErrorHandler() {
+            document.addEventListener("DOMContentLoaded", () => {
+                document.querySelector(".app-wrapper").style.display = "none"
+                document.querySelector(".card").style.display = "block"
+            })
+        }
+    </script>
+
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/@babel/standalone@7/babel.min.js"></script>
+    <!-- To make the map appear, you must add your apikey -->
+<!--        <script src="https://api-maps.yandex.ru/v3/?apikey=07dbea29-3ea7-4d23-b38e-58867f3f2a5e&lang=en_US"-->
+<!--                type="text/javascript" onerror="ymapErrorHandler()"></script>-->
 </head>
 <body>
 <header class="header">
@@ -1067,8 +1082,9 @@
                 круглосуточно
             </div>
         </div>
+        <!--         style="display: none"-->
         <div class="card">
-            <div class="card__dot dot-1">
+            <div data-value="dot-1"  class="card__dot dot-1">
                 <div class="address-wrapper">
                     <div class="address">
                         <p class="location">
@@ -1095,7 +1111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card__dot dot-2">
+            <div data-value="dot-2" class="card__dot dot-2">
                 <div class="address-wrapper">
                     <div class="address">
                         <p class="location">
@@ -1122,7 +1138,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card__dot dot-3">
+            <div data-value="dot-3" class="card__dot dot-3">
                 <div class="address-wrapper">
                     <div class="address">
                         <p class="location">
@@ -1149,7 +1165,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card__dot dot-4">
+            <div data-value="dot-4" class="card__dot dot-4">
                 <div class="address-wrapper">
                     <div class="address">
                         <p class="location">
@@ -1176,7 +1192,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card__dot dot-5">
+            <div data-value="dot-5" class="card__dot dot-5">
                 <div class="address-wrapper">
                     <div class="address">
                         <p class="location">
@@ -1203,7 +1219,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card__dot dot-6">
+            <div data-value="dot-6" class="card__dot dot-6">
                 <div class="address-wrapper">
                     <div class="address">
                         <p class="location">
@@ -1230,7 +1246,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card__dot dot-7">
+            <div data-value="dot-7" class="card__dot dot-7">
                 <div class="address-wrapper">
                     <div class="address">
                         <p class="location">
@@ -1259,6 +1275,174 @@
             </div>
             <img class="desktop" src="assets/img/electro-service/card.png" alt="car"/>
             <img class="mobile" src="assets/img/electro-service/card-mobile.png" alt="car"/>
+        </div>
+
+        <div style="display: none" class="app-wrapper">
+            <div id="app"></div>
+        </div>
+
+        <div class="mobile-address mobile">
+            <div data-value="dot-1" class="address">
+                <p class="location">
+                    <svg width="9" height="12" viewBox="0 0 9 12" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.56456 9.71496L4.61266 8.5666C4.82044 8.31192 5.8472 7.09193 6.0026 6.89573C6.77028 5.9265 6.9418 5.56605 6.9418 4.78076C6.9418 3.26803 5.7114 2.03761 4.20058 2.03761C2.68781 2.03761 1.45549 3.26803 1.45549 4.78076C1.45549 5.64872 1.45359 5.98445 5.15246 10.2442C4.85868 10.6009 4.54198 10.9919 4.20056 11.4173C0.841242 7.23012 0 6.71505 0 4.78074C0 2.4668 1.8847 0.583984 4.20056 0.583984C6.51446 0.583984 8.39731 2.4668 8.39731 4.78074C8.39731 6.02055 8.04886 6.68108 6.94543 8.06054C6.78406 8.26234 5.75956 9.47833 5.56456 9.71496Z"
+                              fill="currentColor"/>
+                    </svg>
+                    ул. Макаренко, 55
+                </p>
+
+                <p class="time">
+                    <span>часы работы</span>
+                    круглосуточно
+                </p>
+
+                <p class="spec">
+                    <span>зарядка электромобилей</span>
+                    мощность 7-22 кВт<br/>
+                    Type 1<br/>
+                    Type 2<br/>
+                    GB / T DC
+                </p>
+            </div>
+            <div data-value="dot-2" class="address">
+                <p class="location">
+                    <svg width="9" height="12" viewBox="0 0 9 12" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.56456 9.71496L4.61266 8.5666C4.82044 8.31192 5.8472 7.09193 6.0026 6.89573C6.77028 5.9265 6.9418 5.56605 6.9418 4.78076C6.9418 3.26803 5.7114 2.03761 4.20058 2.03761C2.68781 2.03761 1.45549 3.26803 1.45549 4.78076C1.45549 5.64872 1.45359 5.98445 5.15246 10.2442C4.85868 10.6009 4.54198 10.9919 4.20056 11.4173C0.841242 7.23012 0 6.71505 0 4.78074C0 2.4668 1.8847 0.583984 4.20056 0.583984C6.51446 0.583984 8.39731 2.4668 8.39731 4.78074C8.39731 6.02055 8.04886 6.68108 6.94543 8.06054C6.78406 8.26234 5.75956 9.47833 5.56456 9.71496Z"
+                              fill="currentColor"/>
+                    </svg>
+                    ул. Макаренко, 55
+                </p>
+
+                <p class="time">
+                    <span>часы работы</span>
+                    круглосуточно
+                </p>
+
+                <p class="spec">
+                    <span>зарядка электромобилей</span>
+                    мощность 7-22 кВт<br/>
+                    Type 1<br/>
+                    Type 2<br/>
+                    GB / T DC
+                </p>
+            </div>
+            <div data-value="dot-3" class="address">
+                <p class="location">
+                    <svg width="9" height="12" viewBox="0 0 9 12" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.56456 9.71496L4.61266 8.5666C4.82044 8.31192 5.8472 7.09193 6.0026 6.89573C6.77028 5.9265 6.9418 5.56605 6.9418 4.78076C6.9418 3.26803 5.7114 2.03761 4.20058 2.03761C2.68781 2.03761 1.45549 3.26803 1.45549 4.78076C1.45549 5.64872 1.45359 5.98445 5.15246 10.2442C4.85868 10.6009 4.54198 10.9919 4.20056 11.4173C0.841242 7.23012 0 6.71505 0 4.78074C0 2.4668 1.8847 0.583984 4.20056 0.583984C6.51446 0.583984 8.39731 2.4668 8.39731 4.78074C8.39731 6.02055 8.04886 6.68108 6.94543 8.06054C6.78406 8.26234 5.75956 9.47833 5.56456 9.71496Z"
+                              fill="currentColor"/>
+                    </svg>
+                    ул. Макаренко, 55
+                </p>
+
+                <p class="time">
+                    <span>часы работы</span>
+                    круглосуточно
+                </p>
+
+                <p class="spec">
+                    <span>зарядка электромобилей</span>
+                    мощность 7-22 кВт<br/>
+                    Type 1<br/>
+                    Type 2<br/>
+                    GB / T DC
+                </p>
+            </div>
+            <div data-value="dot-4" class="address">
+                <p class="location">
+                    <svg width="9" height="12" viewBox="0 0 9 12" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.56456 9.71496L4.61266 8.5666C4.82044 8.31192 5.8472 7.09193 6.0026 6.89573C6.77028 5.9265 6.9418 5.56605 6.9418 4.78076C6.9418 3.26803 5.7114 2.03761 4.20058 2.03761C2.68781 2.03761 1.45549 3.26803 1.45549 4.78076C1.45549 5.64872 1.45359 5.98445 5.15246 10.2442C4.85868 10.6009 4.54198 10.9919 4.20056 11.4173C0.841242 7.23012 0 6.71505 0 4.78074C0 2.4668 1.8847 0.583984 4.20056 0.583984C6.51446 0.583984 8.39731 2.4668 8.39731 4.78074C8.39731 6.02055 8.04886 6.68108 6.94543 8.06054C6.78406 8.26234 5.75956 9.47833 5.56456 9.71496Z"
+                              fill="currentColor"/>
+                    </svg>
+                    ул. Макаренко, 55
+                </p>
+
+                <p class="time">
+                    <span>часы работы</span>
+                    круглосуточно
+                </p>
+
+                <p class="spec">
+                    <span>зарядка электромобилей</span>
+                    мощность 7-22 кВт<br/>
+                    Type 1<br/>
+                    Type 2<br/>
+                    GB / T DC
+                </p>
+            </div>
+            <div data-value="dot-5" class="address">
+                <p class="location">
+                    <svg width="9" height="12" viewBox="0 0 9 12" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.56456 9.71496L4.61266 8.5666C4.82044 8.31192 5.8472 7.09193 6.0026 6.89573C6.77028 5.9265 6.9418 5.56605 6.9418 4.78076C6.9418 3.26803 5.7114 2.03761 4.20058 2.03761C2.68781 2.03761 1.45549 3.26803 1.45549 4.78076C1.45549 5.64872 1.45359 5.98445 5.15246 10.2442C4.85868 10.6009 4.54198 10.9919 4.20056 11.4173C0.841242 7.23012 0 6.71505 0 4.78074C0 2.4668 1.8847 0.583984 4.20056 0.583984C6.51446 0.583984 8.39731 2.4668 8.39731 4.78074C8.39731 6.02055 8.04886 6.68108 6.94543 8.06054C6.78406 8.26234 5.75956 9.47833 5.56456 9.71496Z"
+                              fill="currentColor"/>
+                    </svg>
+                    ул. Макаренко, 55
+                </p>
+
+                <p class="time">
+                    <span>часы работы</span>
+                    круглосуточно
+                </p>
+
+                <p class="spec">
+                    <span>зарядка электромобилей</span>
+                    мощность 7-22 кВт<br/>
+                    Type 1<br/>
+                    Type 2<br/>
+                    GB / T DC
+                </p>
+            </div>
+            <div data-value="dot-6" class="address">
+                <p class="location">
+                    <svg width="9" height="12" viewBox="0 0 9 12" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.56456 9.71496L4.61266 8.5666C4.82044 8.31192 5.8472 7.09193 6.0026 6.89573C6.77028 5.9265 6.9418 5.56605 6.9418 4.78076C6.9418 3.26803 5.7114 2.03761 4.20058 2.03761C2.68781 2.03761 1.45549 3.26803 1.45549 4.78076C1.45549 5.64872 1.45359 5.98445 5.15246 10.2442C4.85868 10.6009 4.54198 10.9919 4.20056 11.4173C0.841242 7.23012 0 6.71505 0 4.78074C0 2.4668 1.8847 0.583984 4.20056 0.583984C6.51446 0.583984 8.39731 2.4668 8.39731 4.78074C8.39731 6.02055 8.04886 6.68108 6.94543 8.06054C6.78406 8.26234 5.75956 9.47833 5.56456 9.71496Z"
+                              fill="currentColor"/>
+                    </svg>
+                    ул. Макаренко, 55
+                </p>
+
+                <p class="time">
+                    <span>часы работы</span>
+                    круглосуточно
+                </p>
+
+                <p class="spec">
+                    <span>зарядка электромобилей</span>
+                    мощность 7-22 кВт<br/>
+                    Type 1<br/>
+                    Type 2<br/>
+                    GB / T DC
+                </p>
+            </div>
+            <div data-value="dot-7" class="address">
+                <p class="location">
+                    <svg width="9" height="12" viewBox="0 0 9 12" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.56456 9.71496L4.61266 8.5666C4.82044 8.31192 5.8472 7.09193 6.0026 6.89573C6.77028 5.9265 6.9418 5.56605 6.9418 4.78076C6.9418 3.26803 5.7114 2.03761 4.20058 2.03761C2.68781 2.03761 1.45549 3.26803 1.45549 4.78076C1.45549 5.64872 1.45359 5.98445 5.15246 10.2442C4.85868 10.6009 4.54198 10.9919 4.20056 11.4173C0.841242 7.23012 0 6.71505 0 4.78074C0 2.4668 1.8847 0.583984 4.20056 0.583984C6.51446 0.583984 8.39731 2.4668 8.39731 4.78074C8.39731 6.02055 8.04886 6.68108 6.94543 8.06054C6.78406 8.26234 5.75956 9.47833 5.56456 9.71496Z"
+                              fill="currentColor"/>
+                    </svg>
+                    ул. Макаренко, 55
+                </p>
+
+                <p class="time">
+                    <span>часы работы</span>
+                    круглосуточно
+                </p>
+
+                <p class="spec">
+                    <span>зарядка электромобилей</span>
+                    мощность 7-22 кВт<br/>
+                    Type 1<br/>
+                    Type 2<br/>
+                    GB / T DC
+                </p>
+            </div>
         </div>
     </section>
 
@@ -1849,4 +2033,5 @@
 <script src="assets/js/utils/animationNumber.js"></script>
 <script src="assets/js/utils/burgerMenu.js"></script>
 <script src="assets/js/utils/footer.js"></script>
+<script src="assets/js/utils/map.js"></script>
 </html>

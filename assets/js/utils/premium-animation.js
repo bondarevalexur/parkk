@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerHeight = document.querySelector(".header").getBoundingClientRect().height
     const leftGap = isMobile ? 30 : 80;
     const rightGap = isMobile ? 7 : 30;
-    const topBorder = 0
+    const topBorder = isMobile ? window.innerHeight - 200 : 0
 
     const leftMargin = (containerWidth - textWidth) / 2
 
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         text.style.left = `${leftMargin}px`;
         text.style.maxWidth = `${textWidth}px`;
         text.querySelector("h2").style.width = `${textWidth}px`;
-        text.querySelector("p").style.width = `${textWidth}px`;
+        if (text.querySelector("p")) text.querySelector("p").style.width = `${textWidth}px`;
         text.querySelector(".container").style.width = `${textWidth}px`;
         text.querySelector(".container").style = `min-width: ${textWidth}px`;
     }
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function step() {
         const top = logoBlock.getBoundingClientRect().y - topGap
 
-        if (top < window.innerHeight - 200) {
+        if (top < topBorder) {
 
             const rightArrowOffset = leftMargin - top - arrowGap
             const leftArrowOffset = leftMargin + textWidth - arrowWidth + top + arrowGap
@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const titleLeft = leftMargin - top
             const titleCurrentWidth = Math.round(textWidth + top * 2) - 2
 
-            if (rightArrowOffset <= leftArrowBorder) {
 
+            if (rightArrowOffset <= leftArrowBorder) {
                 rightArrow.style.left = `${rightArrowOffset}px`;
                 leftArrow.style.left = `${leftArrowOffset}px`;
 

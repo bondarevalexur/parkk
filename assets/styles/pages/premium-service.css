@@ -290,7 +290,9 @@ main {
   color: #000000;
 }
 
+/* БЛОК - Премиальный сервис для вашего автомобиля */
 .hero {
+  background: url("../../../assets/img/premium-service/hero-image-1.png") bottom/cover no-repeat;
   min-height: 790px;
   display: flex;
   flex-direction: column;
@@ -333,24 +335,43 @@ main {
   .hero {
     align-items: center;
     min-height: 932px;
-    gap: 16px;
+    gap: 0;
+    margin-bottom: 100px;
+    background: url("../../../assets/img/premium-service/hero-image-1.png") bottom/cover no-repeat;
   }
   .hero__title, .hero__subtitle {
     text-align: center;
   }
   .hero__title {
-    margin-top: -10px;
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 400;
-    line-height: 48px;
+    line-height: 32px;
     padding: 0;
+    margin: 0 20px 16px 20px;
   }
   .hero__title .br {
     display: block;
   }
+  .hero .p1 {
+    margin: 0 20px 60px 20px;
+    text-align: center;
+  }
+  .hero__button {
+    background: #F64A0A;
+    color: #FFFFFF;
+    border: none;
+  }
+  .hero__button:hover {
+    color: #000000;
+  }
+  .hero .bottom-arrow {
+    position: absolute;
+    bottom: 30px;
+  }
 }
+/* БЛОК - Обслуживаем электромобили */
 .brands {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 140px;
   padding-top: 140px;
@@ -366,7 +387,7 @@ main {
   max-width: 524px;
 }
 .brands__header .p1 {
-  width: 634px;
+  max-width: 634px;
 }
 .brands__list {
   display: grid;
@@ -383,43 +404,29 @@ main {
 
 @media screen and (max-width: 768px) {
   .brands {
+    width: 100%;
     padding: 0 10px;
-    grid-template-columns: 1fr;
-    row-gap: 10px;
+    margin-bottom: 100px;
+  }
+  .brands__header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  .brands__header .h2 {
+    max-width: max-content;
+  }
+  .brands__header .p1 {
+    max-width: max-content;
   }
   .brands__list {
-    grid-template-columns: 1fr;
-    row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  .brands__item {
-    background: #F64A0A;
-    flex-direction: column-reverse;
-    padding: 0 10px 32px 10px !important;
-  }
-  .brands__item .br {
-    display: none;
-  }
-  .brands__item:nth-child(2) {
-    flex-direction: column;
-    padding-bottom: 30px;
-  }
-  .brands__item .h4 {
-    margin-bottom: 10px;
-  }
-  .brands__item .sub_paragraph {
-    color: #52545A;
-    padding-right: 100px;
-    display: block;
-  }
-  .brands__item .number-font {
-    text-align: right;
-    position: static !important;
-    margin-bottom: 4px;
-    font-size: 60px;
-    font-weight: 200;
-    line-height: 77px;
+  .brands__list .brand {
+    height: 94px;
   }
 }
+/* БЛОК - СТАТИСТИКА */
 .statistic {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -467,18 +474,22 @@ main {
   margin-bottom: 98px;
 }
 
-@media screen and (max-width: 1000px) {
-  .statistic {
-    padding: 80px 10px;
-  }
-  .statistic__block {
-    padding-right: 0 !important;
-  }
-}
 @media screen and (max-width: 768px) {
   .statistic {
-    padding: 38px 10px 20px 10px;
-    margin-bottom: 80px;
+    padding: 0 10px;
+  }
+  .statistic__history {
+    padding: 0 10px;
+  }
+  .statistic__history .h2 {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+  }
+  .statistic__history .p2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
   }
   .statistic__column {
     grid-column-start: 1;
@@ -487,55 +498,25 @@ main {
     padding-right: 0 !important;
     justify-content: center;
   }
-  .statistic .third-block, .statistic .fourth-block {
-    display: none;
+  .statistic .first-block-wrapper, .statistic .fourth-block-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: end;
   }
-  .statistic .mobile-year, .statistic .mobile-regions, .statistic .second-block {
+  .statistic .first-block, .statistic .second-block, .statistic .third-block {
     display: block;
     width: max-content;
+    min-height: auto;
     padding: 38px 42px 14px 10px !important;
   }
-  .statistic .mobile-year .number-font, .statistic .mobile-regions .number-font, .statistic .second-block .number-font {
+  .statistic .first-block .number-font, .statistic .second-block .number-font, .statistic .third-block .number-font {
     font-size: 60px;
     font-weight: 200;
     line-height: 84px;
     margin-bottom: 10px;
   }
-  .statistic .mobile-year, .statistic .mobile-regions {
-    align-self: end;
-  }
-  .statistic .first-block {
-    min-height: unset;
-    border-bottom: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: max-content;
-  }
-  .statistic .first-block .button {
-    background: #F64A0A;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    border: none;
-  }
-  .statistic .first-block .h2 {
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 32px;
-  }
-  .statistic__partners {
-    margin-top: 60px;
-    gap: 60px;
-    overflow: auto;
-    padding: 0 10px;
-  }
-  .statistic__partners li {
-    height: 36px;
-  }
-  .statistic__partners li:nth-child(2) {
-    height: 21px;
-  }
 }
+/* БЛОК - Специальное предложение */
 .special-offer-container {
   width: 100%;
   padding: 140px 0 108px 0;
@@ -555,7 +536,7 @@ main {
   border: 0.5px solid #A0A0A0;
 }
 .special-offer-container .special-offer__description {
-  width: 630px;
+  max-width: 630px;
   flex-shrink: 0;
 }
 .special-offer-container .special-offer__description .h4 {
@@ -573,64 +554,57 @@ main {
   background: #FFFFFF;
 }
 
-@media screen and (max-width: 951px) {
-  .services {
+@media screen and (max-width: 768px) {
+  .special-offer-container {
+    background: url("../../../assets/img/premium-service/special-offer-image-1-mobile.png") #000000 top/cover no-repeat;
+    padding: 100px 10px;
+  }
+  .special-offer-container .special-offer {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .special-offer-container .special-offer .h2 {
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+  }
+  .special-offer-container .special-offer__main {
     grid-template-columns: 1fr;
-    row-gap: 10px;
-    padding: 20px 10px;
   }
-  .services .catalog {
-    min-height: 542px;
-    padding: 30px 10px 49px 10px;
-  }
-  .services .catalog__title {
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 32px;
-    margin-bottom: 30px;
-    padding: 10px;
-  }
-  .services .catalog__button {
-    width: 100%;
-    justify-content: center;
-  }
-  .services .catalog__image {
-    bottom: 60px;
-    height: 263px;
-  }
-  .services__plus-img {
-    top: 534px;
-    left: calc(50% - 33px);
-    width: unset;
-    height: 66px;
-  }
-  .services .car-care {
-    gap: 10px;
-    padding: 40px 10px 10px 10px;
-  }
-  .services .car-care__title {
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 32px;
+  .special-offer-container .special-offer__description {
+    max-width: 410px;
     padding: 0 10px;
+    margin-bottom: 60px;
   }
-  .services .car-care__list {
-    margin-bottom: 56px;
-    padding: 0 10px;
-    row-gap: 20px;
+  .special-offer-container .special-offer__description > .h4 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
   }
-  .services .car-care__button {
-    display: none;
+  .special-offer-container .special-offer__description .text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
   }
-  .services .car-care__button_mobile {
+  .special-offer-container .special-offer__description .brands-text {
+    word-spacing: 16px;
+  }
+  .special-offer-container .special-offer__description .brands-text span {
     display: block;
-    text-align: center;
-    width: 100%;
+    padding-top: 10px;
+    word-spacing: normal;
   }
-  .services .car-care__image {
-    height: 305px;
+  .special-offer-container .special-offer .manager {
+    width: 100%;
+    color: #FFFFFF;
+    background: unset;
+    text-align: center;
+  }
+  .special-offer-container .special-offer .manager:hover {
+    background: unset;
+    color: #FFFFFF;
   }
 }
+/* БЛОК - Почему сейчас важно качественно обслуживать автомобиль? */
 .reason-container {
   overflow: hidden;
   border-radius: 20px 20px 0 0;
@@ -642,7 +616,7 @@ main {
   padding-top: 140px;
   color: #000000;
   position: relative;
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 .reason-container .reason__breadcrumb {
@@ -669,27 +643,26 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-  .maintenance {
+  .reason-container {
+    padding: 0 10px;
+  }
+  .reason-container .reason {
+    padding-top: 100px;
     align-items: center;
-    min-height: 932px;
     gap: 16px;
   }
-  .maintenance__title, .maintenance__subtitle {
-    text-align: center;
+  .reason-container .reason__description {
+    display: flex;
+    flex-direction: column;
   }
-  .maintenance__title {
-    margin-top: -10px;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 48px;
-    padding: 0;
-  }
-  .maintenance__title .br {
-    display: block;
+  .reason-container .reason__description .text {
+    padding: 0 10px;
+    margin-bottom: 40px;
   }
 }
+/* БЛОК - Наши услуги */
 .services {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 140px;
   color: #000000;
@@ -726,45 +699,40 @@ main {
   color: #FFFFFF;
 }
 
-@media screen and (max-width: 951px) {
+@media screen and (max-width: 768px) {
   .services {
     padding: 0 10px;
-    grid-template-columns: 1fr;
-    row-gap: 10px;
+    margin-bottom: 100px;
   }
-  .services__list {
-    grid-template-columns: 1fr;
-    row-gap: 10px;
+  .services__header {
+    padding: 0 10px;
   }
   .services__item {
-    background: #F64A0A;
-    flex-direction: column-reverse;
-    padding: 0 10px 32px 10px !important;
-  }
-  .services__item .br {
-    display: none;
-  }
-  .services__item:nth-child(2) {
+    display: flex;
     flex-direction: column;
-    padding-bottom: 30px;
+    justify-content: start;
+    align-items: start;
+    gap: 16px;
+    position: relative;
+    padding: 30px 20px 20px 20px;
   }
-  .services__item .h4 {
-    margin-bottom: 10px;
+  .services__item .p2 {
+    max-width: 300px;
   }
-  .services__item .sub_paragraph {
-    color: #52545A;
-    padding-right: 100px;
-    display: block;
+  .services__item .price {
+    margin-top: 4px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #F64A0A;
+    color: #FFFFFF;
   }
-  .services__item .number-font {
-    text-align: right;
-    position: static !important;
-    margin-bottom: 4px;
-    font-size: 60px;
-    font-weight: 200;
-    line-height: 77px;
+  .services__item .arrow {
+    position: absolute;
+    top: 32px;
+    right: 20px;
   }
 }
+/* БЛОК - Нужна консультация? */
 .invite-container {
   padding: 110px 0;
   background: url("../../../assets/img/electro-service/invite-image-1.png") center/cover no-repeat;
@@ -881,136 +849,135 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-  .invite {
-    margin: 0 10px;
+  .invite-container {
+    background: unset;
+    padding: unset;
+  }
+  .invite-container .invite {
+    margin: 0 10px 100px 10px;
     background: black;
     padding: 60px 10px 10px 10px;
     color: #FFFFFF;
     border-radius: 20px;
-  }
-  .invite > div {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: grid;
     grid-template-columns: 1fr;
-    column-gap: 20px;
   }
-  .invite__header {
+  .invite-container .invite__header {
     padding: 0 10px;
   }
-  .invite__header .h2 {
+  .invite-container .invite__header .h2 {
     font-size: 24px;
     font-weight: 400;
     line-height: 28.8px;
     font-family: "RF Dewi Expanded";
   }
-  .invite__header .p1 {
+  .invite-container .invite__header .p1 {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
   }
-  .invite__main {
+  .invite-container .invite__main {
     background: #141414;
     border-radius: 20px;
     padding: 0;
   }
-  .invite__main .p1 {
+  .invite-container .invite__main .p1 {
     padding: 10px;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
     margin-bottom: 40px;
   }
-  .invite__main .invite-form {
+  .invite-container .invite__main .invite-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  .invite__main .invite-form .text-input {
+  .invite-container .invite__main .invite-form .text-input {
     padding: 14px 20px;
     background: #141414;
     color: #FFFFFF;
   }
-  .invite__main .invite-form .text-input::placeholder {
+  .invite-container .invite__main .invite-form .text-input::placeholder {
     color: #A0A0A0;
   }
-  .invite__main .invite-form .select__icon {
+  .invite-container .invite__main .invite-form .select__icon {
     right: 20px;
   }
-  .invite__main .invite-form .select__icon svg {
+  .invite-container .invite__main .invite-form .select__icon svg {
     color: #52545A;
   }
-  .invite__main .invite-form .select__input {
+  .invite-container .invite__main .invite-form .select__input {
     background: #141414;
     color: #FFFFFF;
     padding: 14px 20px;
   }
-  .invite__main .invite-form .select__input::placeholder {
+  .invite-container .invite__main .invite-form .select__input::placeholder {
     color: #A0A0A0;
   }
-  .invite__main .invite-form .select__options {
+  .invite-container .invite__main .invite-form .select__options {
     background: #141414;
     padding-top: 4px;
     padding-left: 9px;
   }
-  .invite__main .invite-form .select__options .select__option {
+  .invite-container .invite__main .invite-form .select__options .select__option {
     color: #FFFFFF;
   }
-  .invite__main .invite-form .select__options .select__option:hover {
+  .invite-container .invite__main .invite-form .select__options .select__option:hover {
     background: #141414;
     color: #FFF566;
   }
-  .invite__main .invite-form .datepicker-input {
+  .invite-container .invite__main .invite-form .datepicker-input {
     padding: 14px 20px;
     background: #141414;
     color: #FFFFFF;
   }
-  .invite__main .invite-form .datepicker-input::placeholder {
+  .invite-container .invite__main .invite-form .datepicker-input::placeholder {
     color: #A0A0A0;
   }
-  .invite__main .invite-form .datepicker-input:hover {
+  .invite-container .invite__main .invite-form .datepicker-input:hover {
     border-color: #A0A0A0;
   }
-  .invite__main .invite-form .datepicker-icon {
+  .invite-container .invite__main .invite-form .datepicker-icon {
     padding: 18px 4px;
     right: 20px;
   }
-  .invite__main .invite-form .datepicker-icon svg {
+  .invite-container .invite__main .invite-form .datepicker-icon svg {
     color: #52545A;
   }
-  .invite__main .invite-form .datepicker-calendar {
+  .invite-container .invite__main .invite-form .datepicker-calendar {
     background: #141414;
   }
-  .invite__main .invite-form .datepicker-calendar .datepicker-prevday, .invite__main .invite-form .datepicker-calendar .datepicker-nextday {
+  .invite-container .invite__main .invite-form .datepicker-calendar .datepicker-prevday, .invite-container .invite__main .invite-form .datepicker-calendar .datepicker-nextday {
     color: #A0A0A0;
   }
-  .invite__main .invite-form .datepicker-calendar .datepicker-day {
+  .invite-container .invite__main .invite-form .datepicker-calendar .datepicker-day {
     color: #FFFFFF;
   }
-  .invite__main .invite-form .datepicker-calendar .datepicker-day.active {
+  .invite-container .invite__main .invite-form .datepicker-calendar .datepicker-day.active {
     color: #000000;
   }
-  .invite__main .invite-form .datepicker-calendar .weekend {
+  .invite-container .invite__main .invite-form .datepicker-calendar .weekend {
     color: #A0A0A0;
   }
-  .invite__main .agree {
+  .invite-container .invite__main .agree {
     margin-top: 10px;
     margin-bottom: 17px;
     font-size: 8px;
     font-weight: 400;
     line-height: 9.6px;
   }
-  .invite__main .agree .checkbox {
+  .invite-container .invite__main .agree .checkbox {
     margin-right: 10px;
   }
-  .invite__main .agree .checkbox__input:checked + .checkbox__label {
+  .invite-container .invite__main .agree .checkbox__input:checked + .checkbox__label {
     color: #FFFFFF;
   }
-  .invite__main .agree .checkbox__label {
+  .invite-container .invite__main .agree .checkbox__label {
     background: #141414;
     color: #141414;
   }
 }
+/* БЛОК - Отзывы */
 .feedback {
   justify-content: center;
   width: 100%;
@@ -1133,6 +1100,7 @@ main {
     height: 20px;
   }
 }
+/* БЛОК - Почему выбирают PARKK? */
 .preview {
   background: #EBEBEB;
   border-radius: 20px 20px 0 0;
@@ -1283,8 +1251,8 @@ main {
     min-height: unset;
     position: relative;
     overflow: hidden;
-    background: #FFF566;
-    color: #000000;
+    background: #F64A0A;
+    color: #FFFFFF;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -1300,11 +1268,13 @@ main {
   }
   .preview__block .h4 {
     padding: 10px;
+    max-width: 339px;
   }
   .preview__block .p2 {
     max-height: 100px;
     padding: 0 10px;
     margin-bottom: 20px;
+    max-width: 339px;
   }
   .preview__block .mobile-text {
     max-height: 100px;
@@ -1313,8 +1283,8 @@ main {
     margin-bottom: 20px;
   }
   .preview__block:hover {
-    background: #FFF566;
-    color: #000000;
+    background: #F64A0A;
+    color: #FFFFFF;
   }
   .preview__block:hover .number-font {
     position: unset;
@@ -1330,6 +1300,7 @@ main {
     margin-bottom: 20px;
   }
 }
+/* БЛОК - PARKK — уверенность в каждом километре */
 .animation-logo-about {
   background: #000000;
   position: relative;
@@ -1382,14 +1353,22 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-  .animation-logo {
-    min-height: 155vh;
+  .animation-logo-about .motion {
+    height: 600px;
   }
-  .animation-logo .motion-block .text {
+  .animation-logo-about .motion-block {
+    top: calc(50% - 150px);
+  }
+  .animation-logo-about .motion-block .text .h2 {
     font-size: 24px;
     font-weight: 400;
     line-height: 28.8px;
-    margin-top: -14px;
+  }
+  .animation-logo-about .motion-block .motion-wrapper .left-arrow-mobile, .animation-logo-about .motion-block .motion-wrapper .right-arrow-mobile {
+    margin-top: 40px;
+  }
+  .animation-logo-about .motion-block .motion-wrapper .text {
+    margin-top: 20px;
   }
 }
 
