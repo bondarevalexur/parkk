@@ -108,6 +108,15 @@ body {
     display: block;
   }
 }
+.mobile-inline {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-inline {
+    display: inline-flex;
+  }
+}
 .color-white, .header__button_premium:hover, .header__button_premium:hover svg {
   color: #FFFFFF;
 }

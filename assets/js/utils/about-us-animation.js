@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const containerWidth = logoBlock.getBoundingClientRect().width;
 
-    console.log(isMobile)
     // Зададим константы из Фигма, так-как размеры меняются в процессе анимации
     const arrowWidth = isMobile ? 25.4 : 51.47;
     const textWidth = isMobile ? 301 : 575;

@@ -1,17 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {// Находим бургер и меню
-    const videoWrapper = document.querySelector('.advantages__video-wrapper');
-    const videoPlay = videoWrapper.querySelector('.advantages__video-play');
-    const video = videoWrapper.querySelector('.advantages__video');
+document.addEventListener("DOMContentLoaded", () => {
 
-    videoWrapper.addEventListener("click", () => {
-        if (video.paused === true) {
-            video.play();
-            videoPlay.style.display = 'none';
-        } else {
-            video.pause();
-            videoPlay.style.display = 'block';
-        }
-    })
+    const videoWrapper = document.querySelector('.advantages__video-wrapper');
+    if (videoWrapper) {
+        const videoPlay = videoWrapper.querySelector('.advantages__video-play');
+        const video = videoWrapper.querySelector('.advantages__video');
+
+        videoWrapper.addEventListener("click", () => {
+            if (video.paused === true) {
+                video.play();
+                videoPlay.style.display = 'none';
+            } else {
+                video.pause();
+                videoPlay.style.display = 'block';
+            }
+        })
+    }
 
 
     const feedback = document.querySelector('.feedback');

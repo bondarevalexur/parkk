@@ -55,12 +55,14 @@ main {
   }
 }
 
+
+/* Главный экран */
 .maintenance {
   padding-top: 100px;
   color: $black;
   position: relative;
 
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto 140px auto;
 
   &__breadcrumb {
@@ -93,6 +95,9 @@ main {
       max-width: 555px;
 
       justify-self: end;
+
+      border-radius: 20px;
+      overflow: hidden;
     }
   }
 
@@ -191,31 +196,71 @@ main {
 
 @media screen and (max-width: 768px) {
   .maintenance {
-    align-items: center;
-    min-height: 932px;
-    gap: 16px;
+    padding: 100px 10px 0 10px;
+    margin-bottom: 100px;
 
-
-    &__title, &__subtitle {
-      text-align: center;
+    &__breadcrumb {
+      display: none;
     }
 
-    &__title {
-      margin-top: -10px;
+    &__description {
+      display: flex;
+      flex-direction: column;
 
-      font-size: 40px;
-      font-weight: 400;
-      line-height: 48px;
-      padding: 0;
+      & .image {
+        height: 439px;
+      }
 
-      & .br {
-        display: block;
+      & .text {
+        padding: 0 10px;
+        margin-bottom: 40px;
+
+        & .h2 {
+          font-size: 28px;
+          font-weight: 300;
+          line-height: 32px;
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+
+      & .content {
+        margin-right: 0;
+        padding: 0 10px;
+
+        &__item {
+          & .number-font {
+            display: none;
+          }
+        }
+
+        & .button {
+          width: 100%;
+          margin-top: 30px;
+          justify-content: center;
+        }
+      }
+
+      & .image {
+        display: none;
+      }
+
+      & .h2 {
+        padding: 0 10px;
+
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
       }
     }
   }
 }
 
 
+/* БЛОК - Что входит в услугу? */
 .preview {
   background: $black;
   color: $white;
@@ -409,9 +454,8 @@ main {
       position: relative;
       overflow: hidden;
 
-
-      background: $lemon;
-      color: $black;
+      background: $orange;
+      color: $white;
 
       border-radius: 20px;
 
@@ -433,12 +477,14 @@ main {
 
       & .h4 {
         padding: 10px;
+        max-width: 339px;
       }
 
       & .p2 {
         max-height: 100px;
         padding: 0 10px;
         margin-bottom: 20px;
+        max-width: 339px;
       }
 
       & .mobile-text {
@@ -449,8 +495,8 @@ main {
       }
 
       &:hover {
-        background: $lemon;
-        color: $black;
+        background: $orange;
+        color: $white;
 
         & .number-font {
           position: unset;
@@ -472,10 +518,12 @@ main {
   }
 }
 
+
+/* БЛОК - Цены */
 .price-list {
   color: $black;
 
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto 140px auto;
 
   display: flex;
@@ -533,65 +581,40 @@ main {
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .price-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 100px 10px;
+    color: $black;
     margin-bottom: 100px;
+    padding: 0 10px;
 
-    &__header {
-      padding: 0 10px;
-      margin-bottom: 50px;
+    display: flex;
+    gap: 42px;
+
+    &__main {
+      flex-grow: 1;
+
+      display: flex;
+      flex-direction: column;
 
       & .h2 {
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 32px;
+        margin-bottom: 16px;
+        padding: 0 10px;
       }
 
-      & .br {
-        display: none;
+      & .p1 {
+        margin-bottom: 42px;
+        padding: 0 10px;
       }
     }
 
-    &__block {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      padding: 30px 10px 10px 10px !important;
-
-      & .button {
-        background: $lemon;
-        color: $black;
-        width: 100%;
-        justify-content: center;
-      }
-
-      & .photo {
-        display: none;
-      }
-
-      & .h4 {
-        margin-bottom: 0 !important;
-        padding-top: 0 !important;
-      }
-
-      & .datetime {
-        margin-bottom: 18px;
-        padding-top: 0 !important;
-      }
-
-      & .location {
-        padding: 30px 0;
-      }
+    & img {
+      display: none;
     }
   }
 }
 
 
+/* БЛОК - Как записаться? */
 .invite-container {
   padding: 135px 0;
   background: url("../../../assets/img/electro-service/invite-image-1.png") center/cover no-repeat;
@@ -749,180 +772,177 @@ main {
   }
 }
 
-
 @media screen and (max-width: 768px) {
-  .invite {
-    margin: 0 10px;
-    background: black;
+  .invite-container {
+    background: unset;
+    padding: unset;
 
-    padding: 60px 10px 10px 10px;
-    color: $white;
+    .invite {
+      margin: 0 10px 100px 10px;
+      background: black;
 
-    border-radius: 20px;
+      padding: 60px 10px 10px 10px;
+      color: $white;
 
-    & > div {
-      max-width: 1280px;
-      margin: 0 auto;
-
-      display: grid;
-      grid-template-columns: 1fr;
-      column-gap: 20px;
-    }
-
-    &__header {
-      padding: 0 10px;
-
-      & .h2 {
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 28.8px;
-        font-family: $dewi-Expanded;
-      }
-
-      & .p1 {
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 18px;
-      }
-    }
-
-
-    &__main {
-      background: $black-2;
       border-radius: 20px;
-      padding: 0;
 
-      & .p1 {
-        padding: 10px;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 18px;
+      grid-template-columns: 1fr;
 
-        margin-bottom: 40px;
-      }
+      &__header {
+        padding: 0 10px;
 
-      & .invite-form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-
-        & .text-input {
-          padding: 14px 20px;
-          background: $black-2;
-          color: $white;
-
-          &::placeholder {
-            color: $gray;
-          }
+        & .h2 {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28.8px;
+          font-family: $dewi-Expanded;
         }
 
-        & .select {
-          &__icon {
-            right: 20px;
+        & .p1 {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }
 
-            & svg {
-              color: $graphite;
-            }
-          }
 
-          &__input {
-            background: $black-2;
+      &__main {
+        background: $black-2;
+        border-radius: 20px;
+        padding: 0;
 
-            color: $white;
+        & .p1 {
+          padding: 10px;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+
+          margin-bottom: 40px;
+        }
+
+        & .invite-form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+
+          & .text-input {
             padding: 14px 20px;
+            background: $black-2;
+            color: $white;
 
             &::placeholder {
               color: $gray;
             }
           }
 
-          &__options {
-            background: $black-2;
-            padding-top: 4px;
-            padding-left: 9px;
+          & .select {
+            &__icon {
+              right: 20px;
 
-            & .select__option {
+              & svg {
+                color: $graphite;
+              }
+            }
+
+            &__input {
+              background: $black-2;
+
               color: $white;
+              padding: 14px 20px;
+
+              &::placeholder {
+                color: $gray;
+              }
+            }
+
+            &__options {
+              background: $black-2;
+              padding-top: 4px;
+              padding-left: 9px;
+
+              & .select__option {
+                color: $white;
+
+                &:hover {
+                  background: $black-2;
+                  color: $lemon;
+                }
+              }
+            }
+          }
+
+          & .datepicker {
+            &-input {
+              padding: 14px 20px;
+              background: $black-2;
+
+              color: $white;
+
+              &::placeholder {
+                color: $gray;
+              }
 
               &:hover {
-                background: $black-2;
-                color: $lemon;
+                border-color: $gray;
+              }
+            }
+
+            &-icon {
+              padding: 18px 4px;
+              right: 20px;
+
+              & svg {
+                color: $graphite;
+              }
+            }
+
+            &-calendar {
+              background: $black-2;
+
+              & .datepicker-prevday, .datepicker-nextday {
+                color: $gray;
+              }
+
+              & .datepicker-day {
+                color: $white;
+
+                &.active {
+                  color: $black;
+                }
+
+              }
+
+              & .weekend {
+                color: $gray;
               }
             }
           }
         }
 
-        & .datepicker {
-          &-input {
-            padding: 14px 20px;
-            background: $black-2;
+        & .agree {
+          margin-top: 10px;
+          margin-bottom: 17px;
 
-            color: $white;
+          font-size: 8px;
+          font-weight: 400;
+          line-height: 9.6px;
 
-            &::placeholder {
-              color: $gray;
-            }
 
-            &:hover {
-              border-color: $gray;
-            }
-          }
+          & .checkbox {
+            margin-right: 10px;
 
-          &-icon {
-            padding: 18px 4px;
-            right: 20px;
-
-            & svg {
-              color: $graphite;
-            }
-          }
-
-          &-calendar {
-            background: $black-2;
-
-            & .datepicker-prevday, .datepicker-nextday {
-              color: $gray;
-            }
-
-            & .datepicker-day {
-              color: $white;
-
-              &.active{
-                color: $black;
+            &__input {
+              &:checked + .checkbox__label {
+                color: $white;
               }
-
             }
 
-            & .weekend {
-              color: $gray;
+
+            &__label {
+              background: $black-2;
+              color: $black-2;
             }
-          }
-        }
-      }
-
-      & .agree {
-        margin-top: 10px;
-        margin-bottom: 17px;
-
-        font-size: 8px;
-        font-weight: 400;
-        line-height: 9.6px;
-
-
-        & .checkbox {
-          margin-right: 10px;
-
-          &__input {
-            &:checked + .checkbox__label {
-              color: $white;
-            }
-          }
-
-
-          &__label {
-            background: $black-2;
-            color: $black-2;
           }
         }
       }
@@ -931,6 +951,7 @@ main {
 }
 
 
+/* БЛОК - Отзывы*/
 .feedback {
   justify-content: center;
   width: 100%;
@@ -1084,6 +1105,7 @@ main {
 }
 
 
+/* БЛОК - PARKK — уверенность в каждом километре*/
 .animation-logo-about {
   background: $black;
   position: relative;
@@ -1161,16 +1183,32 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-  .animation-logo {
-    min-height: 155vh;
+  .animation-logo-about {
+
+    & .motion {
+      height: 600px;
+    }
 
     & .motion-block {
-      & .text {
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 28.8px;
 
-        margin-top: -14px;
+      top: calc(50% - 150px);
+
+      & .text {
+        & .h2 {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28.8px;
+        }
+      }
+
+      .motion-wrapper {
+        & .left-arrow-mobile, .right-arrow-mobile {
+          margin-top: 40px;
+        }
+
+        & .text {
+          margin-top: 20px;
+        }
       }
     }
   }

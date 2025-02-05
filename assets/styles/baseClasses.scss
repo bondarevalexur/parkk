@@ -110,6 +110,16 @@ body {
   }
 }
 
+.mobile-inline {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-inline {
+    display: inline-flex;
+  }
+}
+
 // 🔴 Переменные цветов
 $colors: (
         white: $white,

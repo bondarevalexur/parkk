@@ -6,15 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const leftArrow = logoBlock.querySelector(`.left-arrow${selectorAddon}`);
     const text = logoBlock.querySelector(`.text`);
     const button = text.querySelector(`.button`);
+    const footer = document.querySelector(`.footer`);
 
     const containerWidth = logoBlock.getBoundingClientRect().width;
 
     // Зададим константы из Фигма, так-как размеры меняются в процессе анимации
     const arrowWidth = isMobile ? 25.4 : 51.47;
     const textWidth = isMobile ? 253 : 575;
-    const arrowGap = isMobile ? 253 : 156 - arrowWidth / 2;
+    const arrowGap = isMobile ? 60 : 156 - arrowWidth / 2;
     const headerHeight = document.querySelector(".header").getBoundingClientRect().height
-
+    const leftGap = isMobile ? 30 : 80;
+    const rightGap = isMobile ? 7 : 30;
     const topBorder = 0
 
     const leftMargin = (containerWidth - textWidth) / 2
@@ -23,39 +25,42 @@ document.addEventListener("DOMContentLoaded", () => {
     const topGap = headerHeight
 
     function init(isFirst = false) {
-            const top = logoBlock.getBoundingClientRect().y - topGap
-            const rightArrowOffset = leftMargin - top * Number(isFirst) - arrowGap
-            const leftArrowOffset = leftMargin + textWidth - arrowWidth + top * Number(isFirst) + arrowGap
 
-            rightArrow.style.display = "block"
-            rightArrow.style.left = `${rightArrowOffset}px`
+        const top = logoBlock.getBoundingClientRect().y - topGap
+        const rightArrowOffset = leftMargin - top * Number(isFirst) - arrowGap
+        const leftArrowOffset = leftMargin + textWidth - arrowWidth + top * Number(isFirst) + arrowGap
 
-            leftArrow.style.display = "block"
-            leftArrow.style.left = `${leftArrowOffset}px`
+        rightArrow.style.display = "block"
+        rightArrow.style.left = `${rightArrowOffset}px`
 
-            text.style.display = "block"
-            text.style.left = `${leftMargin}px`
+        leftArrow.style.display = "block"
+        leftArrow.style.left = `${leftArrowOffset}px`
 
-
+        text.style.display = "block"
+        text.style.left = `${leftMargin}px`;
+        text.style.maxWidth = `${textWidth}px`;
+        text.querySelector("h2").style.width = `${textWidth}px`;
+        text.querySelector("p").style.width = `${textWidth}px`;
+        text.querySelector(".container").style.width = `${textWidth}px`;
+        text.querySelector(".container").style = `min-width: ${textWidth}px`;
     }
 
 
     function step() {
         const top = logoBlock.getBoundingClientRect().y - topGap
 
-        if (top < topBorder) {
+        if (top < window.innerHeight - 200) {
 
             const rightArrowOffset = leftMargin - top - arrowGap
             const leftArrowOffset = leftMargin + textWidth - arrowWidth + top + arrowGap
 
-
-            const leftArrowBorder = (containerWidth - arrowWidth - 80) / 2
+            const leftArrowBorder = Number((containerWidth - arrowWidth - leftGap) / 2)
 
             const titleLeft = leftMargin - top
             const titleCurrentWidth = Math.round(textWidth + top * 2) - 2
 
-
             if (rightArrowOffset <= leftArrowBorder) {
+
                 rightArrow.style.left = `${rightArrowOffset}px`;
                 leftArrow.style.left = `${leftArrowOffset}px`;
 
@@ -64,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 text.querySelector(".container").style.marginLeft = `${top}px`;
             } else {
                 rightArrow.style.left = `${leftArrowBorder}px`;
-                leftArrow.style.left = `${leftArrowBorder + arrowWidth + 30}px`;
+                leftArrow.style.left = `${leftArrowBorder + arrowWidth + rightGap}px`;
             }
 
             if (titleCurrentWidth < 0) {
@@ -83,11 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
             init()
         }
 
-        // if (logoBlock.nextElementSibling.getBoundingClientRect().y < headerHeight + logoBlock.getBoundingClientRect().height) {
-        //     const leftArrowBorder = (containerWidth - arrowWidth - 80) / 2
+        // if (footer.getBoundingClientRect().y < headerHeight + logoBlock.getBoundingClientRect().height) {
+        //     const leftArrowBorder = (containerWidth - arrowWidth - leftGap) / 2
         //
         //     rightArrow.style.left = `${leftArrowBorder}px`;
-        //     leftArrow.style.left = `${leftArrowBorder + arrowWidth + 30}px`;
+        //     leftArrow.style.left = `${leftArrowBorder + arrowWidth + rightGap}px`;
         //     text.style.left = `${leftMargin}px`
         //
         // }
