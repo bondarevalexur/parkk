@@ -95,7 +95,7 @@
       line-height: 32px;
       padding: 0;
 
-      margin: 0 20px 16px 20px;
+      margin: 9px 16px 16px 16px;
 
       & .br {
         display: block;
@@ -103,7 +103,7 @@
     }
 
     & .p1 {
-      margin: 0 20px 60px 20px;
+      margin: 0 10px 60px 10px;
       text-align: center;
     }
 
@@ -165,6 +165,7 @@
   .brands {
     width: 100%;
     padding: 0 10px;
+    margin-bottom: 100px;
 
     &__header {
       flex-direction: column;
@@ -173,6 +174,10 @@
 
       & .h2 {
         max-width: max-content;
+
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
       }
 
       & .p1 {
@@ -184,7 +189,7 @@
       grid-template-columns: 1fr 1fr 1fr;
 
       & .brand {
-        height: 94px;
+        height: 102px;
       }
     }
   }
@@ -238,9 +243,20 @@
 @media screen and (max-width: 768px) {
   .services {
     padding: 0 10px;
+    margin: 100px auto;
 
     &__header {
       padding: 0 10px;
+
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 32px;
+
+      margin-bottom: 36px;
+    }
+
+    &__list {
+      gap: 10px;
     }
 
     &__item {
@@ -422,13 +438,18 @@
     padding: 100px 10px;
 
     &__header {
-      padding: 0 0 40px 0;
+      padding: 0 10px 40px 10px;
+
+      & .h2 {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+      }
     }
 
     &__main {
       grid-template-columns: 1fr;
     }
-
 
     &-text-slider {
       height: 290px;
@@ -439,9 +460,17 @@
 
     }
 
+    &-text-slide {
+      padding: 30px 10px;
+
+      & .h4 {
+        margin-bottom: 10px;
+      }
+    }
+
     &__controllers {
-      padding: 0 10px;
-      bottom: 10px;
+      padding: 0 10px 0 0;
+      bottom: 6px;
     }
 
     &-pagination {
@@ -703,11 +732,22 @@
 
 @media screen and (max-width: 768px) {
   .stations {
-    padding: 100px 10px;
+    padding: 100px 10px 90px 10px;
+
+    &__header {
+      padding: 0 10px;
+
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 32px;
+      margin-bottom: 40px;
+    }
 
     &__address {
       display: flex;
       gap: 40px;
+
+      padding: 0 10px;
 
       margin-bottom: 30px;
 
@@ -743,11 +783,12 @@
     }
 
     & .card {
-      &__dot{
-        & .address-wrapper{
+      &__dot {
+        & .address-wrapper {
           display: none;
         }
       }
+
       & img {
         height: 417px;
       }
@@ -957,10 +998,11 @@
   .preview {
     padding: 100px 10px;
     grid-template-columns: 1fr;
+    row-gap: 10px;
 
     &__header {
       width: 100%;
-
+      margin-bottom: 30px;
       padding: 0 10px;
 
       grid-column-start: 1;
@@ -995,7 +1037,7 @@
       & .number-font {
         font-size: 60px;
         font-weight: 200;
-        line-height: 84px;
+        line-height: 71px;
 
         text-align: end;
         margin-right: 10px;
@@ -1009,7 +1051,7 @@
       & .p2 {
         max-height: 100px;
         padding: 0 10px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
 
       & .mobile-text {
@@ -1200,6 +1242,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .invite-container{
+    width: 100%;
+    background: $light-gray;
+  }
   .invite {
     margin: 0 10px;
     background: black;
@@ -1226,18 +1272,23 @@
         font-weight: 400;
         line-height: 28.8px;
         font-family: $dewi-Expanded;
+
+        margin-bottom: 20px;
       }
 
       & .p1 {
         font-size: 12px;
         font-weight: 400;
         line-height: 18px;
+
+
+        margin-bottom: 10px;
       }
     }
 
 
     &__main {
-      background: $black-2;
+      background: $black;
       border-radius: 20px;
       padding: 0;
 
@@ -1247,7 +1298,7 @@
         font-weight: 400;
         line-height: 18px;
 
-        margin-bottom: 40px;
+        margin-bottom: 30px;
       }
 
       & .invite-form {
@@ -1352,7 +1403,7 @@
 
       & .agree {
         margin-top: 10px;
-        margin-bottom: 17px;
+        margin-bottom: 27px;
 
         font-size: 8px;
         font-weight: 400;

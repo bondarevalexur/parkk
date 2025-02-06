@@ -20,8 +20,8 @@
 
     <script crossorigin src="https://cdn.jsdelivr.net/npm/@babel/standalone@7/babel.min.js"></script>
     <!-- To make the map appear, you must add your apikey -->
-<!--        <script src="https://api-maps.yandex.ru/v3/?apikey=07dbea29-3ea7-4d23-b38e-58867f3f2a5e&lang=en_US"-->
-<!--                type="text/javascript" onerror="ymapErrorHandler()"></script>-->
+    <!--        <script src="https://api-maps.yandex.ru/v3/?apikey=07dbea29-3ea7-4d23-b38e-58867f3f2a5e&lang=en_US"-->
+    <!--                type="text/javascript" onerror="ymapErrorHandler()"></script>-->
 </head>
 <body>
 <header class="header">
@@ -1084,7 +1084,7 @@
         </div>
         <!--         style="display: none"-->
         <div class="card">
-            <div data-value="dot-1"  class="card__dot dot-1">
+            <div data-value="dot-1" class="card__dot dot-1">
                 <div class="address-wrapper">
                     <div class="address">
                         <p class="location">
@@ -1488,102 +1488,105 @@
         </article>
     </section>
 
-    <section class="invite">
-        <div>
-            <header class="invite__header">
-                <h2 class="h2">Приезжайте в PARKK:
-                    сервис, которому можно доверять</h2>
-                <p class="p1">
-                    Забудьте о сложностях с техническим обслуживанием электромобиля
-                </p>
-            </header>
+    <div class="invite-container">
+        <section class="invite">
+            <div>
+                <header class="invite__header">
+                    <h2 class="h2">Приезжайте в<br class="mobile"/>PARKK:
+                        сервис, которому можно доверять</h2>
+                    <p class="p1">
+                        Забудьте о сложностях с техническим обслуживанием электромобиля
+                    </p>
+                </header>
 
-            <div class="invite__main">
-                <p class="p1">Записывайтесь и убедитесь, что ваш электромобиль в лучших руках</p>
+                <div class="invite__main">
+                    <p class="p1">Записывайтесь и убедитесь, что ваш электромобиль в лучших руках</p>
 
 
-                <form class="invite-form">
-                    <input type="text" class="text-input" name="fio" placeholder="Ваше имя"/>
-                    <input type="text" class="text-input" name="tel-number" placeholder="Номер телефона"/>
-                    <div class="select">
-                        <input type="text" class="select__input" name="technic-auto" placeholder="Выберите"
-                               value="Porsche"
-                               readonly>
-                        <button type="button" class="select__icon">
-                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.02229 5.24386C7.39756 5.78742 7.45435 7.24218 7.45435 8.13756L6.40364 8.13756C6.40364 7.22635 6.46043 5.78742 5.82148 5.22803L-4.37114e-07 0L-2.43537e-07 4.42851L5.94928 9.59233C6.57401 10.1359 7.45435 10.1359 8.07908 9.59233L14 4.42851L14 -6.11959e-07L8.02229 5.25969L8.02229 5.24386Z"
-                                      fill="currentColor"/>
-                            </svg>
-                        </button>
-                        <div class="select__options" style="display: none">
-                            <div class="select__option" data-value="Porsche">Porsche</div>
-                            <div class="select__option" data-value="Mercedes-Benz">Mercedes-Benz</div>
-                            <div class="select__option" data-value="BMW">BMW</div>
-                            <div class="select__option" data-value="Audi">Audi</div>
-                            <div class="select__option" data-value="Lexus">Lexus</div>
-                        </div>
-                    </div>
-                    <div class="datepicker">
-                        <input type="text" name="technic-time" class="datepicker-input" placeholder="Удобное время"
-                               readonly>
-                        <button class="datepicker-icon" type="button">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.857143 4.28571H0V10.7143C0.00214286 11.4236 0.576425 11.9979 1.28571 12H10.7143C11.4236 11.9979 11.9979 11.4236 12 10.7143V4.28571H0.857143ZM9 6H9.85714C10.0939 6 10.2857 6.19178 10.2857 6.42857C10.2857 6.66536 10.0939 6.85714 9.85714 6.85714H9C8.76321 6.85714 8.57143 6.66536 8.57143 6.42857C8.57143 6.19178 8.76321 6 9 6ZM9 8.57143H9.85714C10.0939 8.57143 10.2857 8.76321 10.2857 9C10.2857 9.23679 10.0939 9.42857 9.85714 9.42857H9C8.76321 9.42857 8.57143 9.23679 8.57143 9C8.57143 8.76321 8.76321 8.57143 9 8.57143ZM5.57143 6H6.42857C6.66536 6 6.85714 6.19178 6.85714 6.42857C6.85714 6.66536 6.66536 6.85714 6.42857 6.85714H5.57143C5.33464 6.85714 5.14286 6.66536 5.14286 6.42857C5.14286 6.19178 5.33464 6 5.57143 6ZM5.57143 8.57143H6.42857C6.66536 8.57143 6.85714 8.76321 6.85714 9C6.85714 9.23679 6.66536 9.42857 6.42857 9.42857H5.57143C5.33464 9.42857 5.14286 9.23679 5.14286 9C5.14286 8.76321 5.33464 8.57143 5.57143 8.57143ZM2.14286 6H3C3.23679 6 3.42857 6.19178 3.42857 6.42857C3.42857 6.66536 3.23679 6.85714 3 6.85714H2.14286C1.90607 6.85714 1.71429 6.66536 1.71429 6.42857C1.71429 6.19178 1.90607 6 2.14286 6ZM2.14286 8.57143H3C3.23679 8.57143 3.42857 8.76321 3.42857 9C3.42857 9.23679 3.23679 9.42857 3 9.42857H2.14286C1.90607 9.42857 1.71429 9.23679 1.71429 9C1.71429 8.76321 1.90607 8.57143 2.14286 8.57143ZM10.7143 0.857143H9.85714V0.428571C9.85714 0.191781 9.66536 0 9.42857 0C9.19178 0 9 0.191781 9 0.428571V0.857143H3V0.428571C3 0.191781 2.80822 0 2.57143 0C2.33464 0 2.14286 0.191781 2.14286 0.428571V0.857143H1.28571C0.576425 0.859286 0.00213943 1.43357 0 2.14286V3.42857H12V2.14286C11.9979 1.43357 11.4236 0.859282 10.7143 0.857143Z"
-                                      fill="currentColor"/>
-                            </svg>
-                        </button>
-                        <div class="datepicker-calendar">
-                            <div class="datepicker-header">
-                                <span class="datepicker-title p2"></span>
-
-                                <div>
-                                    <button type="button" class="datepicker-prev">
-                                        <svg width="8" height="10" viewBox="0 0 8 10" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.80491 5.73021C3.37007 5.28397 2.20626 5.32453 1.48995 5.32453L1.48995 4.57403C2.21892 4.57403 3.37007 4.6146 3.81758 4.1582L8 1.39876e-06L4.45719 7.79319e-07L0.326135 4.24948C-0.108713 4.69572 -0.108713 5.32453 0.326135 5.77077L4.45719 10L8 10L3.79225 5.73021L3.80491 5.73021Z"
-                                                  fill="currentColor"/>
-                                        </svg>
-                                    </button>
-                                    <button type="button" class="datepicker-next">
-                                        <svg width="8" height="10" viewBox="0 0 8 10" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4.19509 4.26979C4.62993 4.71603 5.79374 4.67547 6.51005 4.67547L6.51005 5.42597C5.78108 5.42597 4.62993 5.38541 4.18242 5.8418L0 10L3.54281 10L7.67386 5.75052C8.10871 5.30428 8.10871 4.67547 7.67386 4.22923L3.54281 3.8966e-07L-8.74228e-07 6.99382e-07L4.20775 4.26979L4.19509 4.26979Z"
-                                                  fill="currentColor"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="datepicker-weekdays"></div>
-                            <div class="datepicker-days"></div>
-                        </div>
-                    </div>
-
-                    <div class="agree p2">
-                        <div class="checkbox">
-                            <input type="checkbox" id="checkbox1" class="checkbox__input" checked>
-                            <label for="checkbox1" class="checkbox__label">
-                                <svg width="11" height="8" viewBox="0 0 11 8" fill="none"
+                    <form class="invite-form">
+                        <input type="text" class="text-input" name="fio" placeholder="Ваше имя"/>
+                        <input type="text" class="text-input" name="tel-number" placeholder="Номер телефона"/>
+                        <div class="select">
+                            <input type="text" class="select__input" name="technic-auto" placeholder="Выберите"
+                                   value="Porsche"
+                                   readonly>
+                            <button type="button" class="select__icon">
+                                <svg width="14" height="10" viewBox="0 0 14 10" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.7949 0.144344C11.0471 0.354011 11.0699 0.715195 10.8456 0.951071L4.32712 7.80821C4.21115 7.9302 4.04493 8 3.87037 8C3.69582 8 3.52959 7.9302 3.41362 7.80821L0.154367 4.37964C-0.0698601 4.14376 -0.0471386 3.78258 0.205117 3.57291C0.457373 3.36325 0.843639 3.38449 1.06787 3.62037L3.87037 6.56846L9.93213 0.191798C10.1564 -0.0440777 10.5426 -0.0653237 10.7949 0.144344Z"
+                                    <path d="M8.02229 5.24386C7.39756 5.78742 7.45435 7.24218 7.45435 8.13756L6.40364 8.13756C6.40364 7.22635 6.46043 5.78742 5.82148 5.22803L-4.37114e-07 0L-2.43537e-07 4.42851L5.94928 9.59233C6.57401 10.1359 7.45435 10.1359 8.07908 9.59233L14 4.42851L14 -6.11959e-07L8.02229 5.25969L8.02229 5.24386Z"
                                           fill="currentColor"/>
                                 </svg>
-                            </label>
+                            </button>
+                            <div class="select__options" style="display: none">
+                                <div class="select__option" data-value="Porsche">Porsche</div>
+                                <div class="select__option" data-value="Mercedes-Benz">Mercedes-Benz</div>
+                                <div class="select__option" data-value="BMW">BMW</div>
+                                <div class="select__option" data-value="Audi">Audi</div>
+                                <div class="select__option" data-value="Lexus">Lexus</div>
+                            </div>
                         </div>
-                        Соглашаюсь с условиями политики конфиденциальности
-                    </div>
+                        <div class="datepicker">
+                            <input type="text" name="technic-time" class="datepicker-input" placeholder="Удобное время"
+                                   readonly>
+                            <button class="datepicker-icon" type="button">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.857143 4.28571H0V10.7143C0.00214286 11.4236 0.576425 11.9979 1.28571 12H10.7143C11.4236 11.9979 11.9979 11.4236 12 10.7143V4.28571H0.857143ZM9 6H9.85714C10.0939 6 10.2857 6.19178 10.2857 6.42857C10.2857 6.66536 10.0939 6.85714 9.85714 6.85714H9C8.76321 6.85714 8.57143 6.66536 8.57143 6.42857C8.57143 6.19178 8.76321 6 9 6ZM9 8.57143H9.85714C10.0939 8.57143 10.2857 8.76321 10.2857 9C10.2857 9.23679 10.0939 9.42857 9.85714 9.42857H9C8.76321 9.42857 8.57143 9.23679 8.57143 9C8.57143 8.76321 8.76321 8.57143 9 8.57143ZM5.57143 6H6.42857C6.66536 6 6.85714 6.19178 6.85714 6.42857C6.85714 6.66536 6.66536 6.85714 6.42857 6.85714H5.57143C5.33464 6.85714 5.14286 6.66536 5.14286 6.42857C5.14286 6.19178 5.33464 6 5.57143 6ZM5.57143 8.57143H6.42857C6.66536 8.57143 6.85714 8.76321 6.85714 9C6.85714 9.23679 6.66536 9.42857 6.42857 9.42857H5.57143C5.33464 9.42857 5.14286 9.23679 5.14286 9C5.14286 8.76321 5.33464 8.57143 5.57143 8.57143ZM2.14286 6H3C3.23679 6 3.42857 6.19178 3.42857 6.42857C3.42857 6.66536 3.23679 6.85714 3 6.85714H2.14286C1.90607 6.85714 1.71429 6.66536 1.71429 6.42857C1.71429 6.19178 1.90607 6 2.14286 6ZM2.14286 8.57143H3C3.23679 8.57143 3.42857 8.76321 3.42857 9C3.42857 9.23679 3.23679 9.42857 3 9.42857H2.14286C1.90607 9.42857 1.71429 9.23679 1.71429 9C1.71429 8.76321 1.90607 8.57143 2.14286 8.57143ZM10.7143 0.857143H9.85714V0.428571C9.85714 0.191781 9.66536 0 9.42857 0C9.19178 0 9 0.191781 9 0.428571V0.857143H3V0.428571C3 0.191781 2.80822 0 2.57143 0C2.33464 0 2.14286 0.191781 2.14286 0.428571V0.857143H1.28571C0.576425 0.859286 0.00213943 1.43357 0 2.14286V3.42857H12V2.14286C11.9979 1.43357 11.4236 0.859282 10.7143 0.857143Z"
+                                          fill="currentColor"/>
+                                </svg>
+                            </button>
+                            <div class="datepicker-calendar">
+                                <div class="datepicker-header">
+                                    <span class="datepicker-title p2"></span>
 
-                    <button class="button popup-form__button">Свяжитесь со мной
-                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
-                                  fill="currentColor"/>
-                        </svg>
-                    </button>
-                </form>
+                                    <div>
+                                        <button type="button" class="datepicker-prev">
+                                            <svg width="8" height="10" viewBox="0 0 8 10" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.80491 5.73021C3.37007 5.28397 2.20626 5.32453 1.48995 5.32453L1.48995 4.57403C2.21892 4.57403 3.37007 4.6146 3.81758 4.1582L8 1.39876e-06L4.45719 7.79319e-07L0.326135 4.24948C-0.108713 4.69572 -0.108713 5.32453 0.326135 5.77077L4.45719 10L8 10L3.79225 5.73021L3.80491 5.73021Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="datepicker-next">
+                                            <svg width="8" height="10" viewBox="0 0 8 10" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.19509 4.26979C4.62993 4.71603 5.79374 4.67547 6.51005 4.67547L6.51005 5.42597C5.78108 5.42597 4.62993 5.38541 4.18242 5.8418L0 10L3.54281 10L7.67386 5.75052C8.10871 5.30428 8.10871 4.67547 7.67386 4.22923L3.54281 3.8966e-07L-8.74228e-07 6.99382e-07L4.20775 4.26979L4.19509 4.26979Z"
+                                                      fill="currentColor"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="datepicker-weekdays"></div>
+                                <div class="datepicker-days"></div>
+                            </div>
+                        </div>
+
+                        <div class="agree p2">
+                            <div class="checkbox">
+                                <input type="checkbox" id="checkbox1" class="checkbox__input" checked>
+                                <label for="checkbox1" class="checkbox__label">
+                                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.7949 0.144344C11.0471 0.354011 11.0699 0.715195 10.8456 0.951071L4.32712 7.80821C4.21115 7.9302 4.04493 8 3.87037 8C3.69582 8 3.52959 7.9302 3.41362 7.80821L0.154367 4.37964C-0.0698601 4.14376 -0.0471386 3.78258 0.205117 3.57291C0.457373 3.36325 0.843639 3.38449 1.06787 3.62037L3.87037 6.56846L9.93213 0.191798C10.1564 -0.0440777 10.5426 -0.0653237 10.7949 0.144344Z"
+                                              fill="currentColor"/>
+                                    </svg>
+                                </label>
+                            </div>
+                            Соглашаюсь с условиями политики конфиденциальности
+                        </div>
+
+                        <button class="button popup-form__button">Свяжитесь со мной
+                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.24386 5.97771C5.78742 6.60244 7.24218 6.54565 8.13756 6.54565L8.13756 7.59636C7.22635 7.59636 5.78742 7.53957 5.22803 8.17852L0 14L4.42851 14L9.59233 8.05072C10.1359 7.42599 10.1359 6.54565 9.59233 5.92092L4.42852 -4.87075e-07L1.22392e-06 -8.74228e-07L5.25969 5.97771L5.24386 5.97771Z"
+                                      fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </main>
 
 <footer class="footer">
