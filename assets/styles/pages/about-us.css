@@ -310,7 +310,7 @@ body {
     font-size: 40px;
     font-weight: 400;
     line-height: 48px;
-    padding: 20px;
+    padding: 30px 20px;
   }
 }
 /* БЛОК - История компании */
@@ -413,6 +413,7 @@ body {
 @media screen and (max-width: 768px) {
   .statistic {
     padding: 0 10px;
+    margin: 100px auto;
   }
   .statistic__history {
     padding: 0 10px;
@@ -421,6 +422,7 @@ body {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
+    margin-bottom: 20px;
   }
   .statistic__history .p2 {
     font-size: 14px;
@@ -449,6 +451,9 @@ body {
     font-weight: 200;
     line-height: 84px;
     margin-bottom: 10px;
+  }
+  .statistic .first-block {
+    padding: 32px 60px 14px 10px !important;
   }
 }
 /* БЛОК - Партнер ведущих производителей зарядных станций и застройщиков */
@@ -481,10 +486,18 @@ body {
 @media screen and (max-width: 951px) {
   .advantages {
     padding: 0 10px;
+    margin: 100px auto;
   }
   .advantages__list {
     grid-template-columns: 1fr;
     row-gap: 10px;
+  }
+  .advantages__item {
+    height: max-content;
+    gap: 36px;
+  }
+  .advantages__item .sub_paragraph {
+    margin-bottom: 0;
   }
 }
 /* БЛОК - Почему PARKK — ваш лучший выбор? */
@@ -592,6 +605,7 @@ body {
 
 @media screen and (max-width: 951px) {
   .why-us {
+    margin: 100px auto;
     padding: 0 10px;
     grid-template-columns: 1fr;
     row-gap: 10px;
@@ -600,7 +614,8 @@ body {
     grid-column-start: 1;
     grid-column-end: 2;
     max-width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    padding: 0 10px;
   }
   .why-us__header .h2 {
     font-size: 28px;
@@ -608,13 +623,23 @@ body {
     line-height: 32px;
   }
   .why-us-text-slide {
-    padding-top: 30px;
-    padding-bottom: 100px;
+    padding: 30px 10px 90px 10px;
   }
   .why-us-text-slide p {
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
+  }
+  .why-us__controllers {
+    padding: 0 10px;
+    bottom: 4px;
+  }
+  .why-us-photo-slider {
+    height: 210px;
+  }
+  .why-us-photo-slide img {
+    height: 100%;
+    object-fit: cover;
   }
 }
 /* БЛОК - Что значит экосистема PARKK? */
@@ -708,6 +733,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .what-us {
+    margin: 100px auto;
     padding: 0 10px;
     grid-template-columns: 1fr;
   }
@@ -716,6 +742,13 @@ body {
     grid-column-end: 2;
     width: 100%;
     margin-bottom: 40px;
+    padding: 0 10px;
+  }
+  .what-us__header .h2 {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 20px;
   }
   .what-us-slider {
     display: none;
@@ -725,6 +758,9 @@ body {
   }
   .what-us-description__item {
     background: #FFF566;
+  }
+  .what-us-description__item h4 {
+    margin-bottom: 10px;
   }
 }
 /* БЛОК - Как мы работаем */
@@ -847,10 +883,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 100px 0;
   }
   .preview-container .preview__header {
     width: 100%;
     padding: 0 10px;
+  }
+  .preview-container .preview__header .h2 {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
   }
   .preview-container .preview__block {
     min-height: max-content;
@@ -858,19 +900,30 @@ body {
   .preview-container .preview__block:nth-child(even) {
     flex-direction: column-reverse;
   }
-  .preview-container .preview__block:nth-child(5) {
-    background: #FFF566;
-    color: #000000;
-  }
   .preview-container .preview__block .h4 {
     max-width: calc(100% - 40px);
+    padding: 0 10px 30px 10px;
   }
   .preview-container .preview__block .number-font {
     font-size: 60px;
     font-weight: 200;
-    line-height: 84px;
+    line-height: 81px;
     text-align: end;
     margin-right: 10px;
+  }
+  .preview-container .preview__block:nth-child(5) {
+    background: #FFF566;
+    color: #000000;
+  }
+  .preview-container .preview__block:nth-child(5) .h4 {
+    margin-bottom: 6px;
+  }
+  .preview-container .preview__block:nth-child(5) .p2 {
+    padding: 0 10px 30px 10px;
+    margin-bottom: 0;
+  }
+  .preview-container .preview-slider {
+    margin-top: 50px;
   }
   .preview-container .preview-slider img {
     width: 370px;
@@ -923,7 +976,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .command-container {
-    padding: 100px 20px;
+    padding: 100px 20px 85px 20px;
   }
   .command-container .command__header {
     flex-direction: column;
@@ -937,6 +990,7 @@ body {
   }
   .command-container .command__persons {
     overflow: auto;
+    gap: 10px;
   }
   .command-container .command__persons .person {
     width: 305px;
@@ -1084,10 +1138,13 @@ body {
   .contacts__info .contacts__image {
     margin-bottom: 20px;
   }
+  .contacts__info .contacts__questions .h4, .contacts__info .contacts__questions .p1 {
+    padding: 0 10px;
+  }
   .contacts__info .contacts__questions .contacts__button {
     width: 100%;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-top: 0;
     grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 3;
