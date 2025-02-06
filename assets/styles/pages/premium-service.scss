@@ -108,7 +108,7 @@ main {
       line-height: 32px;
       padding: 0;
 
-      margin: 0 20px 16px 20px;
+      margin: 10px 20px 16px 20px;
 
       & .br {
         display: block;
@@ -182,7 +182,7 @@ main {
   .brands {
     width: 100%;
     padding: 0 10px;
-    margin-bottom: 100px;
+    margin-bottom: 64px;
 
     &__header {
       flex-direction: column;
@@ -191,6 +191,10 @@ main {
 
       & .h2 {
         max-width: max-content;
+
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
       }
 
       & .p1 {
@@ -200,6 +204,7 @@ main {
 
     &__list {
       grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 30px;
 
       & .brand {
         height: 94px;
@@ -275,6 +280,7 @@ main {
 @media screen and (max-width: 768px) {
   .statistic {
     padding: 0 10px;
+    margin-bottom: 100px;
 
     &__history {
       padding: 0 10px;
@@ -325,6 +331,17 @@ main {
       }
     }
 
+    & .first-block {
+      padding: 38px 21px 11px 9px !important;
+    }
+
+    & .second-block {
+      padding: 25px 21px 11px 9px !important;
+    }
+
+    & .third-block {
+      padding: 24px 0 11px 7px !important;
+    }
   }
 }
 
@@ -382,7 +399,7 @@ main {
 @media screen and (max-width: 768px) {
   .special-offer-container {
     background: url('../../../assets/img/premium-service/special-offer-image-1-mobile.png') $black top/cover no-repeat;
-    padding: 100px 10px;
+    padding: 100px 10px 116px 10px;
 
     .special-offer {
       flex-wrap: wrap;
@@ -391,6 +408,10 @@ main {
       & .h2 {
         padding: 0 10px 0 10px;
         margin-bottom: 20px;
+
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
       }
 
       &__main {
@@ -400,7 +421,7 @@ main {
       &__description {
         max-width: 410px;
         padding: 0 10px;
-        margin-bottom: 60px;
+        margin-bottom: 47px;
 
         & > .h4 {
           font-size: 14px;
@@ -415,11 +436,12 @@ main {
         }
 
         & .brands-text {
+          margin-top: 4px;
           word-spacing: 16px;
 
           & span {
             display: block;
-            padding-top: 10px;
+            padding-top: 14px;
             word-spacing: normal;
           }
         }
@@ -509,6 +531,16 @@ main {
         & .text {
           padding: 0 10px;
           margin-bottom: 40px;
+
+          & .h2 {
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 32px;
+          }
+        }
+
+        & .image{
+          height: 320px;
         }
       }
     }
@@ -573,6 +605,12 @@ main {
 
     &__header {
       padding: 0 10px;
+
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 32px;
+
+      margin-bottom: 40px;
     }
 
     &__item {
@@ -614,8 +652,6 @@ main {
   background: url("../../../assets/img/electro-service/invite-image-1.png") center/cover no-repeat;
 
   .invite {
-
-
     color: $white;
 
     max-width: 1280px;
@@ -862,7 +898,7 @@ main {
 
                 &:hover {
                   background: $black-2;
-                  color: $lemon;
+                  color: $orange;
                 }
               }
             }
@@ -917,8 +953,8 @@ main {
         }
 
         & .agree {
-          margin-top: 10px;
-          margin-bottom: 17px;
+          margin-top: 8px;
+          margin-bottom: 30px;
 
           font-size: 8px;
           font-weight: 400;
@@ -1273,8 +1309,9 @@ main {
 
 @media screen and (max-width: 768px) {
   .preview {
-    padding: 100px 10px;
+    padding: 0 10px 100px 10px;
     grid-template-columns: 1fr;
+    gap: 10px;
 
     &__header {
       width: 100%;
@@ -1283,6 +1320,8 @@ main {
 
       grid-column-start: 1;
       grid-column-end: 2;
+
+      margin-bottom: 30px;
 
       & .h2 {
         font-size: 28px;
@@ -1312,7 +1351,7 @@ main {
       & .number-font {
         font-size: 60px;
         font-weight: 200;
-        line-height: 84px;
+        line-height: 70px;
 
         text-align: end;
         margin-right: 10px;
@@ -1327,7 +1366,7 @@ main {
       & .p2 {
         max-height: 100px;
         padding: 0 10px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         max-width: 339px;
       }
 
@@ -1438,7 +1477,7 @@ main {
 
     & .motion-block {
 
-      top: calc(50% - 150px);
+      top: calc(50% - 125px);
 
       & .text {
         & .h2 {
@@ -1446,11 +1485,15 @@ main {
           font-weight: 400;
           line-height: 28.8px;
         }
+
+        & .button{
+          margin-top: 40px;
+        }
       }
 
       .motion-wrapper {
         & .left-arrow-mobile, .right-arrow-mobile {
-          margin-top: 40px;
+          margin-top: 55px;
         }
 
         & .text {
