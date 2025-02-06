@@ -483,7 +483,7 @@ body {
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 951px) {
+@media screen and (max-width: 768px) {
   .advantages {
     padding: 0 10px;
     margin: 100px auto;
@@ -603,7 +603,7 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width: 951px) {
+@media screen and (max-width: 768px) {
   .why-us {
     margin: 100px auto;
     padding: 0 10px;

@@ -404,7 +404,7 @@ body {
 
 @media screen and (max-width: 1100px) {
   .contacts {
-    margin: 0 10px 40px 10px;
+    margin: 120px 10px 40px 10px;
     grid-template-columns: 1fr;
     column-gap: 0;
   }
@@ -412,24 +412,25 @@ body {
     text-align: left;
     margin-bottom: 40px;
     padding: 0 10px;
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 32px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
   .contacts__title .br {
     display: none;
   }
-  .contacts__image {
-    display: none;
-  }
   .contacts__info {
     background: unset;
-    padding: unset;
+    padding: 0 10px;
     gap: 0;
+  }
+  .contacts__info .h4.premium {
+    margin-top: 40px;
   }
   .contacts__info .contacts__location {
     align-items: center;
-    padding: 0 10px;
     margin-bottom: 20px;
   }
   .contacts__info .info__image_mobile {
@@ -439,11 +440,15 @@ body {
     grid-column-end: 3;
     margin-bottom: 10px;
   }
-  .contacts__info .contacts__phone {
-    margin-left: 10px;
+  .contacts__info .contacts__phone, .contacts__info .contacts__time {
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 9.6px;
   }
-  .contacts__info .contacts__time {
-    margin-right: 10px;
+  .contacts__info .contacts__phone a, .contacts__info .contacts__time a {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
   }
   .contacts__info .contacts__messengers {
     padding: 60px 10px;
@@ -461,6 +466,14 @@ body {
     grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+  .contacts__button {
+    width: 100%;
+    background: #FFF566;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
   }
 }
 

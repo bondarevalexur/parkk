@@ -72,13 +72,13 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content min-content min-content min-content 1fr min-content;
 
-    & .h4{
+    & .h4 {
       grid-column-start: 1;
       grid-column-end: 3;
 
       margin-bottom: 16px;
 
-      &.premium{
+      &.premium {
         margin-top: 60px;
       }
     }
@@ -186,7 +186,7 @@
 
 @media screen and (max-width: 1100px) {
   .contacts {
-    margin: 0 10px 40px 10px;
+    margin: 120px 10px 40px 10px;
     grid-template-columns: 1fr;
     column-gap: 0;
 
@@ -195,28 +195,32 @@
       margin-bottom: 40px;
       padding: 0 10px;
 
-      font-size: 28px;
-      font-weight: 300;
-      line-height: 32px;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
 
+
+      grid-column-start: 1;
+      grid-column-end: 2;
 
       & .br {
         display: none
       }
     }
 
-    &__image {
-      display: none;
-    }
-
     &__info {
       background: unset;
-      padding: unset;
+      padding: 0 10px;
       gap: 0;
+
+      & .h4 {
+        &.premium {
+          margin-top: 40px;
+        }
+      }
 
       & .contacts__location {
         align-items: center;
-        padding: 0 10px;
         margin-bottom: 20px;
       }
 
@@ -229,12 +233,16 @@
         margin-bottom: 10px;
       }
 
-      & .contacts__phone {
-        margin-left: 10px;
-      }
+      & .contacts__phone, & .contacts__time {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 9.6px;
 
-      & .contacts__time {
-        margin-right: 10px;
+        & a {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14.4px;
+        }
       }
 
       & .contacts__messengers {
@@ -263,6 +271,13 @@
       }
     }
 
-
+    &__button{
+      width: 100%;
+      background: $lemon;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
   }
 }
