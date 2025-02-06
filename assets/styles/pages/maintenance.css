@@ -412,7 +412,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .maintenance {
-    padding: 100px 10px 0 10px;
+    padding: 120px 10px 0 10px;
     margin-bottom: 100px;
   }
   .maintenance__breadcrumb {
@@ -445,6 +445,9 @@ body {
   .maintenance__content .content__item .number-font {
     display: none;
   }
+  .maintenance__content .content__item .p2, .maintenance__content .content__item .price-list .custom-table th, .price-list .custom-table .maintenance__content .content__item th, .maintenance__content .content__item .price-list .custom-table td, .price-list .custom-table .maintenance__content .content__item td {
+    padding-bottom: 0;
+  }
   .maintenance__content .content .button {
     width: 100%;
     margin-top: 30px;
@@ -455,6 +458,7 @@ body {
   }
   .maintenance__content .h2 {
     padding: 0 10px;
+    margin-bottom: 40px;
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
@@ -530,9 +534,12 @@ body {
   .preview {
     padding: 100px 10px;
     grid-template-columns: 1fr;
+    row-gap: 10px;
+    margin-bottom: 100px;
   }
   .preview__header {
     width: 100%;
+    margin-bottom: 30px;
     padding: 0 10px;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -558,7 +565,7 @@ body {
   .preview__block .number-font {
     font-size: 60px;
     font-weight: 200;
-    line-height: 84px;
+    line-height: 71px;
     text-align: end;
     margin-right: 10px;
   }
@@ -569,7 +576,7 @@ body {
   .preview__block .p2, .preview__block .price-list .custom-table th, .price-list .custom-table .preview__block th, .preview__block .price-list .custom-table td, .price-list .custom-table .preview__block td {
     max-height: 100px;
     padding: 0 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     max-width: 339px;
   }
   .preview__block .mobile-text {
@@ -651,7 +658,6 @@ body {
   .price-list {
     color: #000000;
     margin-bottom: 100px;
-    padding: 0 10px;
     display: flex;
     gap: 42px;
   }
@@ -661,15 +667,25 @@ body {
     flex-direction: column;
   }
   .price-list__main .h2 {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     padding: 0 10px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
   }
   .price-list__main .p1 {
-    margin-bottom: 42px;
+    margin-bottom: 24px;
     padding: 0 10px;
   }
-  .price-list .custom-table td {
+  .price-list .table-container {
+    padding: 0 10px;
+  }
+  .price-list .custom-table td, .price-list .custom-table th {
     vertical-align: bottom;
+    padding: 20px 10px 15px 10px;
+  }
+  .price-list .custom-table td:nth-child(3), .price-list .custom-table th:nth-child(3) {
+    min-width: 174px;
   }
   .price-list img {
     display: none;
@@ -788,14 +804,15 @@ body {
 
 @media screen and (max-width: 768px) {
   .invite {
-    margin: 0 10px 100px 10px;
+    margin: 0 10px;
     background: black;
     padding: 60px 10px 10px 10px;
     color: #FFFFFF;
     border-radius: 20px;
+    margin-bottom: 100px;
   }
   .invite > div {
-    max-max-width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -809,14 +826,16 @@ body {
     font-weight: 400;
     line-height: 28.8px;
     font-family: "RF Dewi Expanded";
+    margin-bottom: 20px;
   }
   .invite__header .p1 {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
+    margin-bottom: 10px;
   }
   .invite__main {
-    background: #141414;
+    background: #000000;
     border-radius: 20px;
     padding: 0;
   }
@@ -825,7 +844,7 @@ body {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   .invite__main .invite-form {
     display: flex;
@@ -901,7 +920,7 @@ body {
   }
   .invite__main .agree {
     margin-top: 10px;
-    margin-bottom: 17px;
+    margin-bottom: 27px;
     font-size: 8px;
     font-weight: 400;
     line-height: 9.6px;

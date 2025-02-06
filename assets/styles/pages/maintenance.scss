@@ -195,7 +195,7 @@
 
 @media screen and (max-width: 768px) {
   .maintenance {
-    padding: 100px 10px 0 10px;
+    padding: 120px 10px 0 10px;
     margin-bottom: 100px;
 
     &__breadcrumb {
@@ -234,6 +234,10 @@
           & .number-font {
             display: none;
           }
+
+          & .p2 {
+            padding-bottom: 0;
+          }
         }
 
         & .button {
@@ -250,6 +254,7 @@
       & .h2 {
         padding: 0 10px;
 
+        margin-bottom: 40px;
         font-size: 28px;
         font-weight: 300;
         line-height: 32px;
@@ -346,10 +351,13 @@
   .preview {
     padding: 100px 10px;
     grid-template-columns: 1fr;
+    row-gap: 10px;
+
+    margin-bottom: 100px;
 
     &__header {
       width: 100%;
-
+      margin-bottom: 30px;
       padding: 0 10px;
 
       grid-column-start: 1;
@@ -369,6 +377,7 @@
       position: relative;
       overflow: hidden;
 
+
       background: $lemon;
       color: $black;
 
@@ -383,7 +392,7 @@
       & .number-font {
         font-size: 60px;
         font-weight: 200;
-        line-height: 84px;
+        line-height: 71px;
 
         text-align: end;
         margin-right: 10px;
@@ -398,7 +407,7 @@
       & .p2 {
         max-height: 100px;
         padding: 0 10px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         max-width: 339px;
       }
 
@@ -508,7 +517,6 @@
   .price-list {
     color: $black;
     margin-bottom: 100px;
-    padding: 0 10px;
 
     display: flex;
     gap: 42px;
@@ -520,19 +528,33 @@
       flex-direction: column;
 
       & .h2 {
-        margin-bottom: 16px;
+        margin-bottom: 20px;
         padding: 0 10px;
+
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
       }
 
       & .p1 {
-        margin-bottom: 42px;
+        margin-bottom: 24px;
         padding: 0 10px;
       }
     }
 
+    & .table-container {
+      padding: 0 10px;
+    }
+
     .custom-table {
-      & td {
+      & td, & th {
         vertical-align: bottom;
+
+        padding: 20px 10px 15px 10px;
+
+        &:nth-child(3) {
+          min-width: 174px;
+        }
       }
     }
 
@@ -699,16 +721,17 @@
 
 @media screen and (max-width: 768px) {
   .invite {
-    margin: 0 10px 100px 10px;
+    margin: 0 10px;
     background: black;
 
     padding: 60px 10px 10px 10px;
     color: $white;
 
     border-radius: 20px;
+    margin-bottom: 100px;
 
     & > div {
-      max-max-width: 1280px;
+      max-width: 1280px;
       margin: 0 auto;
 
       display: grid;
@@ -724,18 +747,23 @@
         font-weight: 400;
         line-height: 28.8px;
         font-family: $dewi-Expanded;
+
+        margin-bottom: 20px;
       }
 
       & .p1 {
         font-size: 12px;
         font-weight: 400;
         line-height: 18px;
+
+
+        margin-bottom: 10px;
       }
     }
 
 
     &__main {
-      background: $black-2;
+      background: $black;
       border-radius: 20px;
       padding: 0;
 
@@ -745,7 +773,7 @@
         font-weight: 400;
         line-height: 18px;
 
-        margin-bottom: 40px;
+        margin-bottom: 30px;
       }
 
       & .invite-form {
@@ -850,7 +878,7 @@
 
       & .agree {
         margin-top: 10px;
-        margin-bottom: 17px;
+        margin-bottom: 27px;
 
         font-size: 8px;
         font-weight: 400;
