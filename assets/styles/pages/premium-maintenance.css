@@ -421,6 +421,9 @@ main {
   .maintenance__description {
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
+    padding-top: 20px;
+    gap: 0;
   }
   .maintenance__description .image {
     height: 439px;
@@ -442,6 +445,9 @@ main {
     margin-right: 0;
     padding: 0 10px;
   }
+  .maintenance__content .content__item {
+    padding-bottom: 20px;
+  }
   .maintenance__content .content__item .number-font {
     display: none;
   }
@@ -454,6 +460,7 @@ main {
     display: none;
   }
   .maintenance__content .h2 {
+    margin-bottom: 42px;
     padding: 0 10px;
     font-size: 28px;
     font-weight: 300;
@@ -592,13 +599,16 @@ main {
 @media screen and (max-width: 768px) {
   .preview {
     padding: 100px 10px;
+    row-gap: 10px;
     grid-template-columns: 1fr;
+    margin-bottom: 100px;
   }
   .preview__header {
     width: 100%;
     padding: 0 10px;
     grid-column-start: 1;
     grid-column-end: 2;
+    margin-bottom: 30px;
   }
   .preview__header .h2 {
     font-size: 28px;
@@ -621,18 +631,19 @@ main {
   .preview__block .number-font {
     font-size: 60px;
     font-weight: 200;
-    line-height: 84px;
+    line-height: 80px;
     text-align: end;
     margin-right: 10px;
   }
   .preview__block .h4 {
-    padding: 10px;
+    padding: 0 10px;
     max-width: 339px;
+    margin-bottom: 10px;
   }
   .preview__block .p2, .preview__block .price-list .custom-table th, .price-list .custom-table .preview__block th, .preview__block .price-list .custom-table td, .price-list .custom-table .preview__block td {
     max-height: 100px;
     padding: 0 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     max-width: 339px;
   }
   .preview__block .mobile-text {
@@ -650,13 +661,13 @@ main {
     left: unset;
   }
   .preview__block:hover .h4 {
-    padding: 10px;
-    margin-bottom: 0;
+    padding: 0 10px;
+    margin-bottom: 10px;
   }
   .preview__block:hover .p2, .preview__block:hover .price-list .custom-table th, .price-list .custom-table .preview__block:hover th, .preview__block:hover .price-list .custom-table td, .price-list .custom-table .preview__block:hover td {
     max-height: 100px;
     padding: 0 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 /* БЛОК - Цены */
@@ -721,10 +732,20 @@ main {
   .price-list__main .h2 {
     margin-bottom: 16px;
     padding: 0 10px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
   }
   .price-list__main .p1 {
     margin-bottom: 42px;
     padding: 0 10px;
+  }
+  .price-list .custom-table td, .price-list .custom-table th {
+    vertical-align: bottom;
+    padding: 20px 10px 15px 10px;
+  }
+  .price-list .custom-table td:last-child, .price-list .custom-table th:last-child {
+    min-width: 174px;
   }
   .price-list img {
     display: none;
@@ -872,10 +893,10 @@ main {
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
+    margin-bottom: 40px;
   }
   .invite-container .invite__main {
-    background: #141414;
-    border-radius: 20px;
+    background: #000000;
     padding: 0;
   }
   .invite-container .invite__main .p1 {
@@ -922,7 +943,7 @@ main {
   }
   .invite-container .invite__main .invite-form .select__options .select__option:hover {
     background: #141414;
-    color: #FFF566;
+    color: #F64A0A;
   }
   .invite-container .invite__main .invite-form .datepicker-input {
     padding: 14px 20px;
@@ -958,8 +979,8 @@ main {
     color: #A0A0A0;
   }
   .invite-container .invite__main .agree {
-    margin-top: 10px;
-    margin-bottom: 17px;
+    margin-top: 8px;
+    margin-bottom: 30px;
     font-size: 8px;
     font-weight: 400;
     line-height: 9.6px;

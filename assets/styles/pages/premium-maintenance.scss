@@ -206,6 +206,9 @@ main {
     &__description {
       display: flex;
       flex-direction: column;
+      margin-bottom: 100px;
+      padding-top: 20px;
+      gap: 0;
 
       & .image {
         height: 439px;
@@ -235,6 +238,8 @@ main {
           & .number-font {
             display: none;
           }
+
+          padding-bottom: 20px;
         }
 
         & .button {
@@ -249,6 +254,7 @@ main {
       }
 
       & .h2 {
+        margin-bottom: 42px;
         padding: 0 10px;
 
         font-size: 28px;
@@ -430,7 +436,9 @@ main {
 @media screen and (max-width: 768px) {
   .preview {
     padding: 100px 10px;
+    row-gap: 10px;
     grid-template-columns: 1fr;
+    margin-bottom: 100px;
 
     &__header {
       width: 100%;
@@ -439,6 +447,7 @@ main {
 
       grid-column-start: 1;
       grid-column-end: 2;
+      margin-bottom: 30px;
 
       & .h2 {
         font-size: 28px;
@@ -468,7 +477,7 @@ main {
       & .number-font {
         font-size: 60px;
         font-weight: 200;
-        line-height: 84px;
+        line-height: 80px;
 
         text-align: end;
         margin-right: 10px;
@@ -476,14 +485,15 @@ main {
       }
 
       & .h4 {
-        padding: 10px;
+        padding: 0 10px;
         max-width: 339px;
+        margin-bottom: 10px;
       }
 
       & .p2 {
         max-height: 100px;
         padding: 0 10px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         max-width: 339px;
       }
 
@@ -504,14 +514,14 @@ main {
         }
 
         & .h4 {
-          padding: 10px;
-          margin-bottom: 0;
+          padding: 0 10px;
+          margin-bottom: 10px;
         }
 
         & .p2 {
           max-height: 100px;
           padding: 0 10px;
-          margin-bottom: 20px;
+          margin-bottom: 30px;
         }
       }
     }
@@ -599,11 +609,27 @@ main {
       & .h2 {
         margin-bottom: 16px;
         padding: 0 10px;
+
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
       }
 
       & .p1 {
         margin-bottom: 42px;
         padding: 0 10px;
+      }
+    }
+
+    .custom-table {
+      & td, & th {
+        vertical-align: bottom;
+
+        padding: 20px 10px 15px 10px;
+
+        &:last-child {
+          min-width: 174px;
+        }
       }
     }
 
@@ -802,13 +828,14 @@ main {
           font-size: 12px;
           font-weight: 400;
           line-height: 18px;
+
+          margin-bottom: 40px;
         }
       }
 
 
       &__main {
-        background: $black-2;
-        border-radius: 20px;
+        background: $black;
         padding: 0;
 
         & .p1 {
@@ -866,7 +893,7 @@ main {
 
                 &:hover {
                   background: $black-2;
-                  color: $lemon;
+                  color: $orange;
                 }
               }
             }
@@ -921,8 +948,8 @@ main {
         }
 
         & .agree {
-          margin-top: 10px;
-          margin-bottom: 17px;
+          margin-top: 8px;
+          margin-bottom: 30px;
 
           font-size: 8px;
           font-weight: 400;
