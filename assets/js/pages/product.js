@@ -1,8 +1,10 @@
+const isMobile = window.innerWidth < 768
+
 const productSwiper = new Swiper('.product-slider', {
     wrapperClass: 'product-wrapper',
     slideClass: 'product-slide',
     slidesPerView: "auto",
-    spaceBetween: 20,
+    spaceBetween: isMobile ? 10 : 20,
     loop: true,
     centeredSlides: true,
     pagination: {
@@ -19,7 +21,7 @@ const equipmentSwiper = new Swiper('.equipment-slider', {
     wrapperClass: 'equipment-wrapper',
     slideClass: 'equipment-slide',
     slidesPerView: "auto",
-    spaceBetween: 20,
+    spaceBetween: isMobile ? 10 : 20,
     centeredSlides: true,
     pagination: {
         el: ".pagination",
@@ -32,13 +34,11 @@ const equipmentSwiper = new Swiper('.equipment-slider', {
 });
 
 
-const isMobile = window.innerWidth < 768
-
 const optionsSwiper = new Swiper('.options-slider', {
     wrapperClass: 'options-wrapper',
     slideClass: 'options-slide',
     slidesPerView: "auto",
-    spaceBetween: 20,
+    spaceBetween: isMobile ? 10 : 20,
     centeredSlides: true,
     pagination: isMobile ? {
         el: ".options-pagination",
@@ -57,7 +57,7 @@ const proposalSwiper = new Swiper('.proposal-slider', {
     wrapperClass: 'proposal-wrapper',
     slideClass: 'proposal-slide',
     slidesPerView: "auto",
-    spaceBetween: 20,
+    spaceBetween: isMobile ? 10 : 20,
     navigation: {
         nextEl: '.proposal-next',
         prevEl: '.proposal-prev',

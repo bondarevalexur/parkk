@@ -403,20 +403,27 @@ main {
   transition: transform 0.3s ease-in-out;
 }
 .product-slide {
+  width: 100%;
   overflow: hidden;
   flex-shrink: 0;
   flex-grow: 1;
   opacity: 0.4;
   max-width: 1130px;
+  border-radius: 20px;
 }
 .product-slide.swiper-slide-active {
   opacity: 1;
 }
 .product-slide img {
   width: 100%;
+  height: 520px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
+  .product {
+    margin-bottom: 88px;
+  }
   .product__header {
     justify-content: center;
   }
@@ -429,9 +436,18 @@ main {
     line-height: 32px;
     text-align: center;
   }
+  .product .product-slide {
+    width: calc(100% - 60px);
+  }
+  .product .product-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .product .controllers {
     gap: 40px;
     flex-direction: column-reverse;
+    padding: 7px 10px 10px 10px;
   }
   .product .controllers__buttons {
     flex-direction: row-reverse;
@@ -452,14 +468,17 @@ main {
   .product .controllers__slider .price {
     display: block;
     flex-grow: 2;
-    margin-left: 30px;
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.4px;
   }
   .product .controllers__slider .product-prev, .product .controllers__slider .product-next {
     display: none;
   }
   .product .controllers__pagination {
     width: max-content;
-    margin-right: 30px;
+    margin-right: 20px;
   }
 }
 .spec {
@@ -503,7 +522,7 @@ main {
   font-weight: 400;
   line-height: 18px;
 }
-.spec__technic .technic-item span {
+.spec__technic .technic-item .h3 {
   color: #FFF566;
 }
 .spec__manufacture {
@@ -544,16 +563,31 @@ main {
 
 @media screen and (max-width: 768px) {
   .spec {
-    margin-bottom: 100px;
+    margin: 0 10px 100px 10px;
+    padding: 40px 20px;
+  }
+  .spec__header h3 {
+    line-height: 28.8px;
   }
   .spec__technic {
     grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 10px;
+    padding-bottom: 78px;
+  }
+  .spec__technic .technic-item {
+    gap: 3px;
   }
   .spec__technic .desktop {
     display: none;
   }
   .spec__manufacture {
     grid-template-columns: 1fr;
+    padding-top: 38px;
+    padding-bottom: 3px;
+  }
+  .spec__manufacture li .manufacture-title {
+    width: 190px;
   }
 }
 .sizes {
@@ -592,13 +626,16 @@ main {
   .sizes {
     grid-template-columns: 1fr;
     padding: 0 20px;
-    margin-bottom: 100px;
+    margin-bottom: 93px;
   }
   .sizes .h3 {
     text-align: center;
     margin-bottom: 40px;
     grid-column-start: 1;
     grid-column-end: 2;
+  }
+  .sizes__image {
+    margin-bottom: 50px;
   }
 }
 .about {
@@ -640,6 +677,7 @@ main {
     flex-direction: column;
     padding: 100px 20px;
     gap: 30px;
+    margin-bottom: 100px;
   }
   .about .h2 {
     font-size: 28px;
@@ -750,22 +788,26 @@ main {
 
 @media screen and (max-width: 768px) {
   .equipment {
-    padding: 0 10px 200px 10px;
+    padding: 0 10px 183px 10px;
     margin-bottom: 0;
   }
+  .equipment__header {
+    padding: 0 10px;
+  }
   .equipment-wrapper {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
   .equipment-slide {
     overflow: visible;
   }
   .equipment-slide__description {
     height: 100%;
-    max-width: 281px;
+    max-width: 300px;
     bottom: -100%;
     left: 0;
     color: #000000;
-    padding-top: 31px;
+    padding-top: 35px;
+    padding-left: 10px;
   }
   .equipment-slide__description h3 {
     margin-bottom: 8px;
@@ -930,6 +972,13 @@ main {
     padding: 10px 10px 0 10px;
     max-width: 330px;
   }
+  .options-slide__description h3 {
+    line-height: 19px;
+    margin-bottom: 8px;
+  }
+  .options-slide__description p {
+    line-height: 16px;
+  }
   .options .controllers {
     width: 100%;
     height: 50%;
@@ -942,6 +991,7 @@ main {
     position: relative;
     justify-content: end;
     padding-top: 20px;
+    padding-right: 10px;
   }
   .options .options-pagination {
     display: flex;
@@ -1209,6 +1259,7 @@ main {
     grid-template-columns: max-content max-content max-content 1fr;
     column-gap: 40px;
     align-items: end;
+    padding: 16px 20px;
   }
   .proposal .item .car__specs .car-spec {
     gap: 0;
