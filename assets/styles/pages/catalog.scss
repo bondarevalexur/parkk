@@ -41,7 +41,7 @@
       background: $black;
     }
 
-    &_visible{
+    &_visible {
       color: $white;
     }
 
@@ -254,11 +254,14 @@
     padding: 100px 10px;
 
     &__title {
+
       font-size: 40px;
       font-weight: 400;
       line-height: 48px;
 
       padding: 0 10px;
+      margin-bottom: 40px;
+      margin-top: 20px;
     }
 
 
@@ -280,6 +283,8 @@
       &__checkbox {
         grid-column-start: 1;
         grid-column-end: 3;
+
+        gap: 17px;
       }
     }
 
@@ -291,6 +296,9 @@
       width: 100%;
 
       &__header {
+        padding: 0 10px;
+        margin-bottom: 16px;
+
         & .h3 {
           font-size: 16px;
           font-weight: 700;
@@ -308,7 +316,12 @@
       & .car {
         height: 258px;
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 9px;
+
+        border-radius: 14px;
+        overflow: hidden;
+
+        padding: 10px;
 
         &__status {
           padding: 5px 13.5px;
@@ -322,6 +335,8 @@
           grid-template-columns: max-content max-content max-content 1fr;
           column-gap: 40px;
           align-items: end;
+
+          padding: 6px 10px;
 
           & .spec {
             gap: 0;
@@ -487,6 +502,8 @@
   .advantages {
     padding: 0 10px;
     grid-template-columns: 1fr;
+    row-gap: 10px;
+    margin-bottom: 3px;
 
     &__header {
       width: 100%;
@@ -495,6 +512,8 @@
 
       grid-column-start: 1;
       grid-column-end: 2;
+
+      margin-bottom: 30px;
 
       & .h2 {
         font-size: 28px;
@@ -525,7 +544,7 @@
       & .number-font {
         font-size: 60px;
         font-weight: 200;
-        line-height: 84px;
+        line-height: 75px;
 
         text-align: end;
         margin-right: 10px;
@@ -533,7 +552,7 @@
       }
 
       & .h4 {
-        padding: 10px;
+        padding: 4px 10px 10px 10px;
       }
 
       & .p2 {
@@ -544,7 +563,7 @@
         max-height: 100px;
         display: block;
         padding: 0 10px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
 
       &:hover {
@@ -663,12 +682,24 @@
       flex-direction: column;
 
       & .loyalty, .new-cars {
+
+        padding: 20px 10px 10px 10px;
+
         .h3 {
           font-size: 16px;
           font-weight: 700;
           line-height: 19.2px;
 
           margin-bottom: 30px;
+        }
+      }
+
+      & .loyalty {
+        height: 218px;
+
+        & svg {
+          top: -15px;
+          right: -15px;
         }
       }
 

@@ -469,6 +469,8 @@ body {
     font-weight: 400;
     line-height: 48px;
     padding: 0 10px;
+    margin-bottom: 40px;
+    margin-top: 20px;
   }
   .catalog .filters {
     display: grid;
@@ -486,12 +488,17 @@ body {
   .catalog .filters__checkbox {
     grid-column-start: 1;
     grid-column-end: 3;
+    gap: 17px;
   }
   .catalog__items {
     min-width: 100%;
   }
   .catalog .item {
     width: 100%;
+  }
+  .catalog .item__header {
+    padding: 0 10px;
+    margin-bottom: 16px;
   }
   .catalog .item__header .h3 {
     font-size: 16px;
@@ -506,7 +513,10 @@ body {
   .catalog .item .car {
     height: 258px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
+    border-radius: 14px;
+    overflow: hidden;
+    padding: 10px;
   }
   .catalog .item .car__status {
     padding: 5px 13.5px;
@@ -519,6 +529,7 @@ body {
     grid-template-columns: max-content max-content max-content 1fr;
     column-gap: 40px;
     align-items: end;
+    padding: 6px 10px;
   }
   .catalog .item .car__specs .spec {
     gap: 0;
@@ -644,12 +655,15 @@ body {
   .advantages {
     padding: 0 10px;
     grid-template-columns: 1fr;
+    row-gap: 10px;
+    margin-bottom: 3px;
   }
   .advantages__header {
     width: 100%;
     padding: 0 10px;
     grid-column-start: 1;
     grid-column-end: 2;
+    margin-bottom: 30px;
   }
   .advantages__header .h2 {
     font-size: 28px;
@@ -672,12 +686,12 @@ body {
   .advantages__block .number-font {
     font-size: 60px;
     font-weight: 200;
-    line-height: 84px;
+    line-height: 75px;
     text-align: end;
     margin-right: 10px;
   }
   .advantages__block .h4 {
-    padding: 10px;
+    padding: 4px 10px 10px 10px;
   }
   .advantages__block .p2 {
     display: none;
@@ -686,7 +700,7 @@ body {
     max-height: 100px;
     display: block;
     padding: 0 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .advantages__block:hover {
     background: #FFF566;
@@ -777,11 +791,21 @@ body {
     gap: 10px;
     flex-direction: column;
   }
+  .preview__main .loyalty, .preview__main .new-cars {
+    padding: 20px 10px 10px 10px;
+  }
   .preview__main .loyalty .h3, .preview__main .new-cars .h3 {
     font-size: 16px;
     font-weight: 700;
     line-height: 19.2px;
     margin-bottom: 30px;
+  }
+  .preview__main .loyalty {
+    height: 218px;
+  }
+  .preview__main .loyalty svg {
+    top: -15px;
+    right: -15px;
   }
   .preview__main .new-cars {
     height: unset;
