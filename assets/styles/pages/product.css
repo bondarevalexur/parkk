@@ -39,14 +39,14 @@ body {
 .h1 {
   font-size: 60px;
   line-height: 60px;
-  font-family: "TT Autonomous Trl";
+  font-family: "TTAutonomous-Trial";
   font-weight: 400;
 }
 
 .h2 {
   font-size: 36px;
   line-height: 42px;
-  font-family: "TT Autonomous Trl";
+  font-family: "TTAutonomous-Trial";
   font-weight: 300;
 }
 
@@ -81,7 +81,7 @@ body {
 .number-font {
   font-size: 110px;
   line-height: 154px;
-  font-family: "TT Autonomous Trl";
+  font-family: "TTAutonomous-Trial";
   font-weight: 200;
 }
 
