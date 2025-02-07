@@ -69,7 +69,7 @@
     border: 0.5px solid $gray;
     flex-shrink: 1;
 
-    &:hover{
+    &:hover {
       background: $lemon;
       color: $black;
     }
@@ -166,6 +166,14 @@
   }
 }
 
+
+@media screen and (max-width: 1300px) {
+  .brands {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .brands {
     width: 100%;
@@ -242,6 +250,13 @@
     &:hover {
       background: $lemon;
     }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .services {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -435,6 +450,13 @@
     & img {
       width: 100%;
     }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .important {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -735,6 +757,13 @@
 
 }
 
+@media screen and (max-width: 1300px) {
+  .stations {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .stations {
     padding: 100px 10px 90px 10px;
@@ -999,6 +1028,13 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .preview {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .preview {
     padding: 100px 10px;
@@ -1244,8 +1280,8 @@
       }
     }
 
-    & .button{
-      &:hover{
+    & .button {
+      &:hover {
         background: $graphite;
         color: $lemon;
       }
@@ -1253,8 +1289,15 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .invite {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .invite-container{
+  .invite-container {
     width: 100%;
     background: $light-gray;
   }

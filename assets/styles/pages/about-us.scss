@@ -180,6 +180,13 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .statistic {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .statistic {
     padding: 80px 10px;
@@ -288,6 +295,12 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .advantages {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .advantages {
@@ -444,6 +457,13 @@
     & img {
       width: 100%;
     }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .why-us {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -617,6 +637,13 @@
       }
     }
 
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .what-us {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -809,6 +836,13 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .preview-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .preview-container {
     padding: 0 10px;
@@ -935,6 +969,13 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .command-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .command-container {
     padding: 100px 20px 85px 20px;
@@ -1018,6 +1059,13 @@
         text-align: center;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .animation-logo-about {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -1115,6 +1163,13 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .contacts {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .contacts {
     margin: 100px 10px;
@@ -1131,10 +1186,16 @@
       font-weight: 300;
       line-height: 32px;
 
+      grid-column-start: 1;
+      grid-column-end: 2;
 
       & .br {
         display: none
       }
+    }
+
+    & .contacts__image {
+      display: none!important;
     }
 
     &__info {
@@ -1152,12 +1213,13 @@
       }
 
       & .contacts__image {
+        display: block!important;
         margin-bottom: 20px;
       }
 
       & .contacts__questions {
 
-        & .h4, & .p1{
+        & .h4, & .p1 {
           padding: 0 10px;
         }
 

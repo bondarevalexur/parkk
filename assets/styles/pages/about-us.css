@@ -402,6 +402,12 @@ body {
   height: 100%;
 }
 
+@media screen and (max-width: 1300px) {
+  .statistic {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 1000px) {
   .statistic {
     padding: 80px 10px;
@@ -483,6 +489,12 @@ body {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1300px) {
+  .advantages {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .advantages {
     padding: 0 10px;
@@ -603,6 +615,12 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 1300px) {
+  .why-us {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .why-us {
     margin: 100px auto;
@@ -731,6 +749,12 @@ body {
   background: #FFF566;
 }
 
+@media screen and (max-width: 1300px) {
+  .what-us {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .what-us {
     margin: 100px auto;
@@ -875,6 +899,12 @@ body {
   width: 590px;
 }
 
+@media screen and (max-width: 1300px) {
+  .preview-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .preview-container {
     padding: 0 10px;
@@ -974,6 +1004,12 @@ body {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1300px) {
+  .command-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .command-container {
     padding: 100px 20px 85px 20px;
@@ -1040,6 +1076,12 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 1300px) {
+  .animation-logo-about {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .animation-logo-about .motion {
     height: 400px;
@@ -1105,6 +1147,12 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 1300px) {
+  .contacts {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 1100px) {
   .contacts {
     margin: 100px 10px;
@@ -1119,9 +1167,14 @@ body {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
   .contacts__title .br {
     display: none;
+  }
+  .contacts .contacts__image {
+    display: none !important;
   }
   .contacts__info {
     background: unset;
@@ -1136,6 +1189,7 @@ body {
     margin-bottom: 20px;
   }
   .contacts__info .contacts__image {
+    display: block !important;
     margin-bottom: 20px;
   }
   .contacts__info .contacts__questions .h4, .contacts__info .contacts__questions .p1 {

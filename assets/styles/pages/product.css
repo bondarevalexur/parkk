@@ -420,6 +420,12 @@ main {
   object-fit: cover;
 }
 
+@media screen and (max-width: 1300px) {
+  .product {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .product {
     margin-bottom: 88px;
@@ -561,6 +567,12 @@ main {
   text-decoration-skip-ink: none;
 }
 
+@media screen and (max-width: 1300px) {
+  .spec {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .spec {
     margin: 0 10px 100px 10px;
@@ -622,6 +634,12 @@ main {
   color: #52545A;
 }
 
+@media screen and (max-width: 1300px) {
+  .sizes {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .sizes {
     grid-template-columns: 1fr;
@@ -672,6 +690,12 @@ main {
   background: #FFF566;
 }
 
+@media screen and (max-width: 1300px) {
+  .about {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .about {
     flex-direction: column;
@@ -786,6 +810,12 @@ main {
   width: 100%;
 }
 
+@media screen and (max-width: 1300px) {
+  .equipment {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .equipment {
     padding: 0 10px 183px 10px;
@@ -921,6 +951,7 @@ main {
 }
 .options-slider {
   position: relative;
+  width: 100%;
 }
 .options-wrapper {
   width: 100%;
@@ -933,6 +964,7 @@ main {
   flex-grow: 1;
   opacity: 0.4;
   max-width: 1130px;
+  width: 100%;
   border-radius: 20px 20px 0 0;
 }
 .options-slide__description {
@@ -957,6 +989,12 @@ main {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1300px) {
+  .options {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .options {
     padding: 0 10px;
@@ -1193,6 +1231,12 @@ main {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1300px) {
+  .proposal {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .proposal {
     padding: 0 10px;

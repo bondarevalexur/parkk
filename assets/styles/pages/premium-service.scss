@@ -183,6 +183,13 @@ main {
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .brands {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .brands {
     width: 100%;
@@ -279,6 +286,13 @@ main {
     & .number-font {
       margin-bottom: 98px;
     }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .statistic {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -406,6 +420,13 @@ main {
 
 }
 
+@media screen and (max-width: 1300px) {
+  .special-offer-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .special-offer-container {
     background: url('../../../assets/img/premium-service/special-offer-image-1-mobile.png') $black top/cover no-repeat;
@@ -524,6 +545,13 @@ main {
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .reason-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .reason-container {
     padding: 0 10px;
@@ -549,7 +577,7 @@ main {
           }
         }
 
-        & .image{
+        & .image {
           height: 320px;
         }
       }
@@ -605,6 +633,13 @@ main {
       background: $orange;
       color: $white;
     }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .services {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -815,6 +850,13 @@ main {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .invite-container {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -1130,6 +1172,13 @@ main {
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .feedback {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .feedback {
     padding: 0 10px;
@@ -1321,6 +1370,13 @@ main {
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .preview {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .preview {
     padding: 0 10px 100px 10px;
@@ -1479,7 +1535,7 @@ main {
 
           &:hover {
             background: $orange;
-            border-color:  $orange;
+            border-color: $orange;
           }
         }
       }
@@ -1506,7 +1562,7 @@ main {
           line-height: 28.8px;
         }
 
-        & .button{
+        & .button {
           margin-top: 40px;
         }
       }

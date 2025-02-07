@@ -342,6 +342,7 @@ main {
 .maintenance__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
 }
 .maintenance__content .h2 {
   grid-column-start: 1;
@@ -410,6 +411,12 @@ main {
   color: #F64A0A;
 }
 
+@media screen and (max-width: 1300px) {
+  .maintenance {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .maintenance {
     padding: 100px 10px 0 10px;
@@ -596,6 +603,12 @@ main {
   width: 590px;
 }
 
+@media screen and (max-width: 1300px) {
+  .preview {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .preview {
     padding: 100px 10px;
@@ -716,6 +729,12 @@ main {
   max-width: 555px;
 }
 
+@media screen and (max-width: 1300px) {
+  .price-list {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .price-list {
     color: #000000;
@@ -870,6 +889,12 @@ main {
   color: #141414;
 }
 
+@media screen and (max-width: 1300px) {
+  .invite-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .invite-container {
     background: unset;
@@ -1104,6 +1129,12 @@ main {
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 1300px) {
+  .feedback {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .feedback {
     padding: 0 10px;
@@ -1184,6 +1215,12 @@ main {
   border-color: #F64A0A;
 }
 
+@media screen and (max-width: 1300px) {
+  .animation-logo-about {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .animation-logo-about .motion {
     height: 600px;

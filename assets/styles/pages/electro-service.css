@@ -394,6 +394,12 @@ body {
   border-left: 0.5px solid #A0A0A0;
 }
 
+@media screen and (max-width: 1300px) {
+  .brands {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .brands {
     width: 100%;
@@ -456,6 +462,12 @@ body {
   background: #FFF566;
 }
 
+@media screen and (max-width: 1300px) {
+  .services {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .services {
     padding: 0 10px;
@@ -606,6 +618,12 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 1300px) {
+  .important {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .important {
     padding: 100px 10px;
@@ -830,6 +848,12 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 1300px) {
+  .stations {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .stations {
     padding: 100px 10px 90px 10px;
@@ -1025,6 +1049,12 @@ body {
   width: 590px;
 }
 
+@media screen and (max-width: 1300px) {
+  .preview {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .preview {
     padding: 100px 10px;
@@ -1211,6 +1241,12 @@ body {
   color: #FFF566;
 }
 
+@media screen and (max-width: 1300px) {
+  .invite {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .invite-container {
     width: 100%;

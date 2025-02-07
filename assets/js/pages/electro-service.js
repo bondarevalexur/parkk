@@ -28,23 +28,21 @@ const whyUsSwiperPhoto = new Swiper('.important-photo-slider', {
     slidesPerView: "auto",
     spaceBetween: 20,
     loopFillGroupWithBlank: false,
-    navigation: {
-        nextEl: '.important-next',
-        prevEl: '.important-prev',
-    },
-    pagination: isMobile ? {
-        el: ".important-pagination",
-        type: "fraction"
-    } : {
-        el: ".important-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-    },
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+
+
+
+    whyUsSwiperText.on("slideChange", (e) => {
+        whyUsSwiperPhoto.slideTo(e.activeIndex )
+    })
+
+    whyUsSwiperPhoto.on("slideChange", (e) => {
+        whyUsSwiperText.slideTo(e.activeIndex )
+    })
+
+
     const inputs = document.querySelectorAll('input');
     inputs.forEach((input) => {
         input.addEventListener("change", () => {
@@ -80,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
             })
 
             dot.classList.toggle("card__dot_active")
-
 
             mobileAddress.find((mobileAddres) => mobileAddres.dataset.value === dot.dataset.value).classList.toggle("address_active")
         })

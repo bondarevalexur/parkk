@@ -406,6 +406,12 @@ main {
   border-left: 0.5px solid #A0A0A0;
 }
 
+@media screen and (max-width: 1300px) {
+  .brands {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .brands {
     width: 100%;
@@ -482,6 +488,12 @@ main {
   margin-bottom: 98px;
 }
 
+@media screen and (max-width: 1300px) {
+  .statistic {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .statistic {
     padding: 0 10px;
@@ -576,6 +588,12 @@ main {
   background: #FFFFFF;
 }
 
+@media screen and (max-width: 1300px) {
+  .special-offer-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .special-offer-container {
     background: url("../../../assets/img/premium-service/special-offer-image-1-mobile.png") #000000 top/cover no-repeat;
@@ -668,6 +686,12 @@ main {
   width: 100%;
 }
 
+@media screen and (max-width: 1300px) {
+  .reason-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .reason-container {
     padding: 0 10px;
@@ -733,6 +757,12 @@ main {
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 1300px) {
+  .services {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .services {
     padding: 0 10px;
@@ -889,6 +919,12 @@ main {
   color: #141414;
 }
 
+@media screen and (max-width: 1300px) {
+  .invite-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .invite-container {
     background: unset;
@@ -1124,6 +1160,12 @@ main {
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 1300px) {
+  .feedback {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .feedback {
     padding: 0 10px;
@@ -1271,6 +1313,12 @@ main {
   width: 590px;
 }
 
+@media screen and (max-width: 1300px) {
+  .preview {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .preview {
     padding: 0 10px 100px 10px;

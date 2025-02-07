@@ -249,6 +249,13 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .catalog {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .catalog {
     padding: 100px 10px;
@@ -498,6 +505,13 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .advantages {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .advantages {
     padding: 0 10px;
@@ -644,8 +658,8 @@
         right: 0;
       }
 
-      & .button{
-        &:hover{
+      & .button {
+        &:hover {
           background: $lemon;
           border-color: $lemon;
         }
@@ -665,6 +679,13 @@
     }
   }
 
+}
+
+@media screen and (max-width: 1300px) {
+  .preview {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {

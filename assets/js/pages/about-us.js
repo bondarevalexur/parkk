@@ -29,21 +29,6 @@ const whyUsSwiperPhoto = new Swiper('.why-us-photo-slider', {
     slidesPerView: "auto",
     spaceBetween: 20,
     loopFillGroupWithBlank: false,
-    navigation: {
-        nextEl: '.why-us-next',
-        prevEl: '.why-us-prev',
-    },
-    pagination: isMobile ?
-        {
-            el: ".why-us-pagination",
-            type: "fraction"
-        } : {
-            el: ".why-us-pagination",
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + (index + 1) + "</span>";
-            },
-        },
 });
 
 const equipmentSwiper = new Swiper('.what-us-slider', {
@@ -93,6 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             header.classList.remove('header_black');
         }
+    })
+
+    whyUsSwiperText.on("slideChange", (e) => {
+        whyUsSwiperPhoto.slideTo(e.activeIndex )
+    })
+
+    whyUsSwiperPhoto.on("slideChange", (e) => {
+        whyUsSwiperText.slideTo(e.activeIndex )
     })
 
     const whatUsDescription = document.querySelector('.what-us-description');

@@ -460,6 +460,12 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 1300px) {
+  .catalog {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .catalog {
     padding: 100px 10px;
@@ -651,6 +657,12 @@ body {
   margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1300px) {
+  .advantages {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .advantages {
     padding: 0 10px;
@@ -776,6 +788,12 @@ body {
   height: calc(100% - 40px);
 }
 
+@media screen and (max-width: 1300px) {
+  .preview {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .preview {
     padding: 100px 10px 100px 10px;
