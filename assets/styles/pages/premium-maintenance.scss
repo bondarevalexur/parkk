@@ -771,6 +771,10 @@ main {
           justify-content: center;
           background: $orange;
           color: $white;
+
+          &:hover {
+            background: $graphite;
+          }
         }
       }
 
@@ -1202,6 +1206,11 @@ main {
           margin-top: 60px;
 
           padding: 23px 26px;
+
+          &:hover {
+            background: $orange;
+            border-color:  $orange;
+          }
         }
       }
 

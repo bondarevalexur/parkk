@@ -326,6 +326,10 @@ main {
   border: 0.5px solid #A0A0A0;
   flex-shrink: 1;
 }
+.hero__button:hover {
+  background: #F64A0A;
+  border-color: #F64A0A;
+}
 .hero .p1 {
   max-width: 660px;
   margin: 0 0 20px 80px;
@@ -548,6 +552,10 @@ main {
 }
 .special-offer-container .special-offer .manager {
   border: 0.5px solid #A0A0A0;
+}
+.special-offer-container .special-offer .manager:hover {
+  background: #F64A0A;
+  border-color: #F64A0A;
 }
 .special-offer-container .special-offer__description {
   max-width: 630px;
@@ -862,6 +870,9 @@ main {
   justify-content: center;
   background: #F64A0A;
   color: #FFFFFF;
+}
+.invite-container .invite__main .invite-form__button:hover {
+  background: #52545A;
 }
 .invite-container .invite__main .agree {
   margin-top: 10px;
@@ -1382,6 +1393,10 @@ main {
   border: 0.5px solid #A0A0A0;
   margin-top: 60px;
   padding: 23px 26px;
+}
+.animation-logo-about .motion-block .motion-wrapper .text .button:hover {
+  background: #F64A0A;
+  border-color: #F64A0A;
 }
 
 @media screen and (max-width: 768px) {

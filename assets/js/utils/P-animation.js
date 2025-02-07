@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const containerWidth = logoBlock.getBoundingClientRect().width;
 
     // Зададим константы из Фигма, так-как размеры меняются в процессе анимации
-    const arrowWidth = isMobile ? 25.4 : 51.47;
-    const logoWidth = isMobile ? 340 : 689;
-    const arrowsWidth = isMobile ? 389.8 : 725.95;
-    const wordsGap = isMobile ? 14.62 : 29.05;
-    const titleWidth = isMobile ? 227 : 459;
-    const textWidth = isMobile ? 253 : 380;
-    const wordWidth = isMobile ? 68 : 137;
+    let arrowWidth = isMobile ? 25.4 : 51.47;
+    let logoWidth = isMobile ? 340 : 689;
+    let arrowsWidth = isMobile ? 389.8 : 725.95;
+    let wordsGap = isMobile ? 14.62 : 29.05;
+    let titleWidth = isMobile ? 227 : 459;
+    let textWidth = isMobile ? 253 : 380;
+    let wordWidth = isMobile ? 68 : 137;
 
     const topBorder = 0
 
@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const topGap = document.querySelector(".header").getBoundingClientRect().height
 
     function init(isFirst = false) {
-
-
         if (window.innerHeight < logoBlock.nextElementSibling.getBoundingClientRect().y) {
             const top = logoBlock.getBoundingClientRect().y - topGap
             const rightArrowOffset = leftMargin + logoWidth - arrowWidth + top * Number(isFirst)
@@ -148,9 +146,48 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    init(true)
+
     step()
 
-    init(true)
+
+    // window.addEventListener('resize', ()=>{
+    //     console.log(123123123)
+    //
+    //     const isMobile = window.innerWidth < 768
+    //     arrowWidth = isMobile ? 25.4 : 51.47;
+    //     logoWidth = isMobile ? 340 : 689;
+    //     arrowsWidth = isMobile ? 389.8 : 725.95;
+    //     wordsGap = isMobile ? 14.62 : 29.05;
+    //     titleWidth = isMobile ? 227 : 459;
+    //     textWidth = isMobile ? 253 : 380;
+    //     wordWidth = isMobile ? 68 : 137;
+    //
+    //     const top = logoBlock.getBoundingClientRect().y - topGap
+    //     const rightArrowOffset = leftMargin + logoWidth - arrowWidth + top
+    //     const leftArrowOffset = leftMargin - top
+    //
+    //     const wordWidth1 = word.getBoundingClientRect().width;
+    //
+    //     rightArrow.style.display = "block"
+    //     rightArrow.style.left = `${rightArrowOffset}px`
+    //
+    //     leftArrow.style.display = "none"
+    //     leftArrow.style.left = `${leftArrowOffset}px`
+    //
+    //     word.style.display = "block"
+    //     word.style.left = `${leftMargin}px`
+    //
+    //     title.style.display = "block"
+    //     title.style.left = `${leftMargin + wordsGap + wordWidth}px`
+    //     title.style.width = `${titleWidth}px`
+    //     title.querySelector("svg").style.marginLeft = `0`;
+    //
+    //
+    //     text.style.left = `${(containerWidth - textWidth) / 2}px`
+    //     // init(true)
+    //     step()
+    // })
 
     document.addEventListener("scroll", () => {
         step()

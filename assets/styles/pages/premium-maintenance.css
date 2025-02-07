@@ -852,6 +852,9 @@ main {
   background: #F64A0A;
   color: #FFFFFF;
 }
+.invite-container .invite__main .invite-form__button:hover {
+  background: #52545A;
+}
 .invite-container .invite__main .agree {
   margin-top: 10px;
   margin-bottom: 30px;
@@ -1175,6 +1178,10 @@ main {
   border: 0.5px solid #A0A0A0;
   margin-top: 60px;
   padding: 23px 26px;
+}
+.animation-logo-about .motion-block .motion-wrapper .text .button:hover {
+  background: #F64A0A;
+  border-color: #F64A0A;
 }
 
 @media screen and (max-width: 768px) {

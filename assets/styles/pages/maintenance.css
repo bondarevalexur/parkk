@@ -801,6 +801,10 @@ body {
   background: #141414;
   color: #141414;
 }
+.invite__main .button:hover {
+  background: #52545A;
+  color: #FFF566;
+}
 
 @media screen and (max-width: 768px) {
   .invite {

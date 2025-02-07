@@ -318,6 +318,10 @@ body {
   border: 0.5px solid #A0A0A0;
   flex-shrink: 1;
 }
+.hero__button:hover {
+  background: #FFF566;
+  color: #000000;
+}
 .hero .p1 {
   max-width: 540px;
   margin: 0 0 20px 80px;
@@ -1201,6 +1205,10 @@ body {
 .invite__main .agree .checkbox__label {
   background: #141414;
   color: #141414;
+}
+.invite__main .button:hover {
+  background: #52545A;
+  color: #FFF566;
 }
 
 @media screen and (max-width: 768px) {

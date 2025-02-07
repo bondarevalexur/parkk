@@ -68,6 +68,11 @@
     padding: 26px 23px;
     border: 0.5px solid $gray;
     flex-shrink: 1;
+
+    &:hover{
+      background: $lemon;
+      color: $black;
+    }
   }
 
   & .p1 {
@@ -1236,6 +1241,13 @@
           background: $black-2;
           color: $black-2;
         }
+      }
+    }
+
+    & .button{
+      &:hover{
+        background: $graphite;
+        color: $lemon;
       }
     }
   }

@@ -78,6 +78,11 @@ main {
     padding: 26px 23px;
     border: 0.5px solid $gray;
     flex-shrink: 1;
+
+    &:hover {
+      background: $orange;
+      border-color: $orange;
+    }
   }
 
   & .p1 {
@@ -367,6 +372,11 @@ main {
 
     & .manager {
       border: 0.5px solid $gray;
+
+      &:hover {
+        background: $orange;
+        border-color: $orange;
+      }
     }
 
     &__description {
@@ -777,6 +787,10 @@ main {
           justify-content: center;
           background: $orange;
           color: $white;
+
+          &:hover {
+            background: $graphite;
+          }
         }
       }
 
@@ -1461,6 +1475,12 @@ main {
           margin-top: 60px;
 
           padding: 23px 26px;
+
+
+          &:hover {
+            background: $orange;
+            border-color:  $orange;
+          }
         }
       }
 

@@ -716,6 +716,13 @@
         }
       }
     }
+
+    & .button{
+      &:hover{
+        background: $graphite;
+        color: $lemon;
+      }
+    }
   }
 }
 

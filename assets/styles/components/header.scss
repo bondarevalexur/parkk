@@ -8,6 +8,22 @@
   width: 100%;
   z-index: 999;
 
+  & .header-backdrop{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $black;
+    opacity: .4;
+    z-index: -1;
+
+    &_visible{
+      display: block;
+    }
+  }
+
   &_black {
     background: url('../../../assets/img/header-bg.png') center/cover no-repeat;
     background-position-y: bottom;
@@ -101,7 +117,7 @@
         }
 
         &:after {
-          top: 9px !important;
+          top: 12px !important;
           rotate: -45deg;
         }
       }
@@ -204,21 +220,21 @@
         width: 100%;
       }
 
-      &:after {
-        @extend .bg-black;
-
-        content: "";
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-
-        opacity: 0.4;
-        z-index: -1;
-
-      }
+      //&:after {
+      //  @extend .bg-black;
+      //
+      //  content: "";
+      //  display: none;
+      //  position: fixed;
+      //  top: 0;
+      //  left: 0;
+      //  width: 100vw;
+      //  height: 100vh;
+      //
+      //  opacity: 0.4;
+      //  z-index: -1;
+      //
+      //}
 
 
       & .main-navigation {
@@ -377,7 +393,15 @@
         &:before {
           top: 9px;
         }
+
+        &_visible {
+
+          &:after {
+            top: 9px !important;
+          }
+        }
       }
+
 
       & .messengers {
         display: none !important;

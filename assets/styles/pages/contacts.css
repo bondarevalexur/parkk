@@ -475,6 +475,10 @@ body {
     align-items: center;
     margin-top: 10px;
   }
+  .contacts__button:hover {
+    background: #52545A;
+    color: #FFF566;
+  }
 }
 
 /*# sourceMappingURL=contacts.css.map */

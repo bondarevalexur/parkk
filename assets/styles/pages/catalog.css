@@ -762,6 +762,10 @@ body {
   top: 0;
   right: 0;
 }
+.preview__main .loyalty .button:hover {
+  background: #FFF566;
+  border-color: #FFF566;
+}
 .preview__main .new-cars {
   flex-grow: 2;
 }
