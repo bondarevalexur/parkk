@@ -1447,7 +1447,7 @@ main {
   border-color: #F64A0A;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .animation-logo-about .motion {
     height: 600px;
   }

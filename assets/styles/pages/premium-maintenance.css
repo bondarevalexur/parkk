@@ -1221,7 +1221,7 @@ main {
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .animation-logo-about .motion {
     height: 600px;
   }

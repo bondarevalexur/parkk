@@ -1,3 +1,76 @@
+const LOCATION = {
+    center: [56.230450, 57.999051], // starting position [lng, lat]
+    zoom: 12 // starting zoom
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    window.map = null;
+
+    main();
+
+    async function main() {
+        // Waiting for all api elements to be loaded
+        await ymaps3.ready;
+        const {YMap, YMapMarker, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapControls} = ymaps3;
+
+        // Initialize the map
+        map = new YMap(
+            // Pass the link to the HTMLElement of the container
+            document.getElementById('app'),
+            // Pass the map initialization parameters
+            {location: LOCATION, showScaleInCopyrights: true},
+            // Add a map scheme layer
+            [new YMapDefaultSchemeLayer({}), new YMapDefaultFeaturesLayer({})]
+        );
+
+        map.addChild(new YMapDefaultSchemeLayer({
+            customization: customization
+        }));
+
+
+        const dots = document.querySelector("#app-blocks").querySelectorAll(".card__dot")
+        // Мап точек из блока app-blocks и добавление их на карту
+        dots.forEach((el) => {
+            const longitude = Number(el.dataset.longitude);
+            const latitude = Number(el.dataset.latitude);
+
+
+            // Переключаем стили, чтоб показать балун
+            el.addEventListener("click", (e) => {
+                dots.forEach((dot) => {
+                    if (el !== dot)
+                        dot.classList.remove("card__dot_active");
+                })
+                el.classList.toggle("card__dot_active");
+            })
+
+            // Центрируем карту на объекте
+            const handleMarkerClick = () => {
+                if (el.classList.contains("card__dot_active")) {
+                    map.setLocation({
+                        center: [longitude, latitude - 0.02],
+                        duration: 500
+                    });
+                }
+            };
+
+            // Создаем маркер и сетим в карту
+            const marker = new YMapMarker(
+                {
+                    coordinates: [longitude, latitude],
+                    draggable: true,
+                    mapFollowsOnDrag: true,
+                    onClick: handleMarkerClick,
+                },
+                el
+            );
+
+            map.addChild(marker);
+        })
+    }
+})
+
+// СТИЛИ для карты из конструктора
 const customization = [
     {
         "tags": "country",
@@ -6671,170 +6744,3 @@ const customization = [
     }
 ];
 
-const LOCATION = {
-    center: [56.230450, 57.999051], // starting position [lng, lat]
-    zoom: 12 // starting zoom
-};
-
-const MARKER_LOCATION = [56.230450, 57.999051];
-
-const GEOCODING_URL = 'https://geocode-maps.yandex.ru/1.x/?apikey=6cf13f41-1f1b-4178-ac24-24dc123139b7&format=json&lang=ru_RU';
-
-const TRANSLATIONS = {
-    infoText: 'Нажмите иконку «Парк Стрелка»',
-    balloonTitle: 'Парк «Стрелка»',
-    balloonDescription:
-        'Одна из главных достопримечательностей Ярославля. Он расположен на стрелке рек Волги и Которосли.',
-    address: 'Адрес'
-};
-
-// Create a custom information message control
-let InfoMessage = null;
-
-
-const fetchGeoObject = async (coordinates) => {
-    try {
-        const response = await fetch(`${GEOCODING_URL}&geocode=${coordinates[0]},${coordinates[1]}`);
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const data = await response.json();
-
-        const foundGeoObject = data.response.GeoObjectCollection.featureMember[0]?.GeoObject;
-
-        if (!foundGeoObject) {
-            throw new Error('GeoObject not found');
-        }
-
-        return foundGeoObject;
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-};
-
-// Wait for the api to load to access the entity system (YMapComplexEntity)
-ymaps3.ready.then(() => {
-    ymaps3.import.registerCdn('https://cdn.jsdelivr.net/npm/{package}', '@yandex/ymaps3-default-ui-theme@0.0');
-
-    class InfoMessageClass extends ymaps3.YMapComplexEntity {
-        _element = "";
-        _detachDom = () => {
-        };
-
-        // Method for create a DOM control element
-        _createElement(props) {
-            // Create a root element
-            const infoWindow = document.createElement('div');
-            infoWindow.classList.add('info_window');
-            infoWindow.innerHTML = props.text;
-
-            return infoWindow;
-        }
-
-        // Method for attaching the control to the map
-        _onAttach() {
-            this._element = this._createElement(this._props);
-            this._detachDom = ymaps3.useDomContext(this, this._element, this._element);
-        }
-
-        // Method for detaching control from the map
-        _onDetach() {
-            this._detachDom();
-            this._detachDom = undefined;
-            this._element = undefined;
-        }
-    }
-
-    InfoMessage = InfoMessageClass;
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-
-    window.map = null;
-
-    main();
-
-    async function main() {
-        // Waiting for all api elements to be loaded
-        await ymaps3.ready;
-        const {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapControls} = ymaps3;
-
-        const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-default-ui-theme');
-
-
-        let show = false;
-
-        // Initialize the map
-        map = new YMap(
-            // Pass the link to the HTMLElement of the container
-            document.getElementById('app'),
-            // Pass the map initialization parameters
-            {location: LOCATION, showScaleInCopyrights: true},
-            // Add a map scheme layer
-            [new YMapDefaultSchemeLayer({}), new YMapDefaultFeaturesLayer({})]
-        );
-
-        map.addChild(new YMapDefaultSchemeLayer({
-            customization: customization
-        }));
-
-
-        const createPopupContent = () => {
-            const content = document.createElement('div');
-            content.classList.add('balloon');
-            content.id = 'balloon';
-            content.innerHTML = `
-              <div class="address-wrapper">
-                    <div class="address">
-                        <p class="location">
-                            <svg width="9" height="12" viewBox="0 0 9 12" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.56456 9.71496L4.61266 8.5666C4.82044 8.31192 5.8472 7.09193 6.0026 6.89573C6.77028 5.9265 6.9418 5.56605 6.9418 4.78076C6.9418 3.26803 5.7114 2.03761 4.20058 2.03761C2.68781 2.03761 1.45549 3.26803 1.45549 4.78076C1.45549 5.64872 1.45359 5.98445 5.15246 10.2442C4.85868 10.6009 4.54198 10.9919 4.20056 11.4173C0.841242 7.23012 0 6.71505 0 4.78074C0 2.4668 1.8847 0.583984 4.20056 0.583984C6.51446 0.583984 8.39731 2.4668 8.39731 4.78074C8.39731 6.02055 8.04886 6.68108 6.94543 8.06054C6.78406 8.26234 5.75956 9.47833 5.56456 9.71496Z"
-                                      fill="currentColor"/>
-                            </svg>
-                            ул. Макаренко, 55
-                        </p>
-
-                        <p class="time">
-                            <span>часы работы</span>
-                            круглосуточно
-                        </p>
-
-                        <p class="spec">
-                            <span>зарядка электромобилей</span>
-                            мощность 7-22 кВт<br/>
-                            Type 1<br/>
-                            Type 2<br/>
-                            GB / T DC
-                        </p>
-                    </div>
-                </div>
-            `;
-            return content;
-        };
-
-        const handleMarkerClick = () => {
-            show = !show;
-            marker.update({popup: {show}});
-        };
-
-        const marker = new YMapDefaultMarker({
-            coordinates: MARKER_LOCATION,
-            size: 'normal',
-            iconName: 'fallback',
-            onClick: handleMarkerClick,
-            popup: {
-                position: "right",
-                show,
-                content: createPopupContent
-            }
-        });
-
-        map.addChild(marker);
-
-    }
-})

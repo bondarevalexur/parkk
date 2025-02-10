@@ -1,14 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const isMobile = window.innerWidth < 768
+    const isMobile = window.innerWidth < 900
     const selectorAddon = isMobile ? "-mobile" : ""
     const logoBlock = document.querySelector('.animation-logo');
-    const rightArrow = logoBlock.querySelector(`.right-arrow${selectorAddon}`);
-    const leftArrow = logoBlock.querySelector(`.left-arrow${selectorAddon}`);
-    const title = logoBlock.querySelector(`.logo-wrapper${selectorAddon}`);
-    const word = logoBlock.querySelector(`.p-word${selectorAddon}`);
+    let rightArrow = logoBlock.querySelector(`.right-arrow${selectorAddon}`);
+    let leftArrow = logoBlock.querySelector(`.left-arrow${selectorAddon}`);
+    let title = logoBlock.querySelector(`.logo-wrapper${selectorAddon}`);
+    let word = logoBlock.querySelector(`.p-word${selectorAddon}`);
     const text = logoBlock.querySelector(`.text`);
-
-    const containerWidth = logoBlock.getBoundingClientRect().width;
 
     // Зададим константы из Фигма, так-как размеры меняются в процессе анимации
     let arrowWidth = isMobile ? 25.4 : 51.47;
@@ -19,20 +17,33 @@ document.addEventListener("DOMContentLoaded", () => {
     let textWidth = isMobile ? 253 : 380;
     let wordWidth = isMobile ? 68 : 137;
 
-    const topBorder = 0
-
-    const leftMargin = (containerWidth - logoWidth) / 2
-
     // Вычислим высоту заголовка, чтоб начать анимацию, когда блок коснется hedera
     const topGap = document.querySelector(".header").getBoundingClientRect().height
 
-    function init(isFirst = false) {
-        if (window.innerHeight < logoBlock.nextElementSibling.getBoundingClientRect().y) {
-            const top = logoBlock.getBoundingClientRect().y - topGap
-            const rightArrowOffset = leftMargin + logoWidth - arrowWidth + top * Number(isFirst)
-            const leftArrowOffset = leftMargin - top
+    function getState() {
 
-            const wordWidth = word.getBoundingClientRect().width;
+        const top = logoBlock.getBoundingClientRect().y - topGap
+        const nextBlockTop = logoBlock.nextElementSibling.getBoundingClientRect().y
+
+        const containerWidth = logoBlock.getBoundingClientRect().width;
+        const leftMargin = (containerWidth - logoWidth) / 2
+        const rightArrowOffset = leftMargin + logoWidth - arrowWidth + top
+        const leftArrowOffset = leftMargin - top
+
+        if (top > window.innerHeight) {
+            // console.log("Блок не виден, не проводить никаких вычислений")
+
+            return;
+        }
+
+
+        if (top > 0) {
+            // console.log("анимация еще не началась \n стартовое состояние компонентов\n ")
+
+
+            const rightArrowOffset = leftMargin + logoWidth - arrowWidth
+            const leftArrowOffset = leftMargin
+
 
             rightArrow.style.display = "block"
             rightArrow.style.left = `${rightArrowOffset}px`
@@ -48,35 +59,40 @@ document.addEventListener("DOMContentLoaded", () => {
             title.style.width = `${titleWidth}px`
             title.querySelector("svg").style.marginLeft = `0`;
 
-
             text.style.left = `${(containerWidth - textWidth) / 2}px`
-        } else {
+            text.style.display = "none"
 
-            const top = logoBlock.getBoundingClientRect().y - topGap
-            const rightArrowOffset = leftMargin + logoWidth - arrowWidth + top * Number(isFirst)
-            const leftArrowOffset = leftMargin - top
+
+            return;
+        }
+
+        if (nextBlockTop < window.innerHeight) {
+            // console.log("нижний блок появился,\n  анимация закончена\n ")
+
 
             rightArrow.style.display = "block"
-            rightArrow.style.left = `${rightArrowOffset}px`
+            rightArrow.style.left = `${(containerWidth - arrowsWidth) / 2}px`;
 
             leftArrow.style.display = "block"
-            leftArrow.style.left = `${leftArrowOffset}px`
+            leftArrow.style.left = `${(containerWidth - arrowsWidth) / 2 + arrowsWidth - arrowWidth}px`;
 
+            word.style.display = "none"
 
             text.style.display = "block"
             text.style.left = `${(containerWidth - textWidth) / 2}px`
 
-            logoBlock.style.position = "sticky"
+            title.style.display = "none"
+            title.style.left = `${leftMargin + wordsGap + wordWidth}px`
+            title.style.width = `${titleWidth}px`
+            title.querySelector("svg").style.marginLeft = `0`;
+
+            // logoBlock.style.position = "sticky"
+
+            return;
         }
 
-    }
-
-
-    function step() {
-        const top = logoBlock.getBoundingClientRect().y - topGap
-
-        if (top < topBorder && window.innerHeight < logoBlock.nextElementSibling.getBoundingClientRect().y) {
-
+        {
+            // В остальных случаях проводим вычисления состояния блока для анимирования
             // Текущий отступ слева для буквы
             const wordLeft = leftMargin - top;
             // Центр блока для буквы Р
@@ -104,10 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
-            const rightArrowOffset = leftMargin + logoWidth - arrowWidth + top
-            const leftArrowOffset = leftMargin - top
-
-
             const textLeftMargin = (containerWidth - textWidth) / 2
             const wordLeftMargin = (containerWidth - wordWidth) / 2
 
@@ -130,66 +142,38 @@ document.addEventListener("DOMContentLoaded", () => {
                 leftArrow.style.left = `${leftArrowOffset}px`;
             }
         }
-
-        if (top > 0) {
-            init()
-        }
-
-        if (window.innerHeight > logoBlock.nextElementSibling.getBoundingClientRect().y) {
-            rightArrow.style.left = `${(containerWidth - arrowsWidth) / 2}px`;
-            leftArrow.style.left = `${(containerWidth - arrowsWidth) / 2 + arrowsWidth - arrowWidth}px`;
-
-
-            if (logoBlock.nextElementSibling.getBoundingClientRect().y > window.innerHeight / 2 - topGap) {
-                logoBlock.style.position = "sticky"
-            }
-        }
     }
 
-    init(true)
+    getState()
 
-    step()
+    window.addEventListener("resize", () => {
+        rightArrow.style.display = "none"
+        leftArrow.style.display = "none"
+        title.style.display = "none"
+        word.style.display = "none"
+
+        const isMobile = window.innerWidth < 900
+        const selectorAddon = isMobile ? "-mobile" : ""
+
+        rightArrow = logoBlock.querySelector(`.right-arrow${selectorAddon}`);
+        leftArrow = logoBlock.querySelector(`.left-arrow${selectorAddon}`);
+        title = logoBlock.querySelector(`.logo-wrapper${selectorAddon}`);
+        word = logoBlock.querySelector(`.p-word${selectorAddon}`);
 
 
-    // window.addEventListener('resize', ()=>{
-    //     console.log(123123123)
-    //
-    //     const isMobile = window.innerWidth < 768
-    //     arrowWidth = isMobile ? 25.4 : 51.47;
-    //     logoWidth = isMobile ? 340 : 689;
-    //     arrowsWidth = isMobile ? 389.8 : 725.95;
-    //     wordsGap = isMobile ? 14.62 : 29.05;
-    //     titleWidth = isMobile ? 227 : 459;
-    //     textWidth = isMobile ? 253 : 380;
-    //     wordWidth = isMobile ? 68 : 137;
-    //
-    //     const top = logoBlock.getBoundingClientRect().y - topGap
-    //     const rightArrowOffset = leftMargin + logoWidth - arrowWidth + top
-    //     const leftArrowOffset = leftMargin - top
-    //
-    //     const wordWidth1 = word.getBoundingClientRect().width;
-    //
-    //     rightArrow.style.display = "block"
-    //     rightArrow.style.left = `${rightArrowOffset}px`
-    //
-    //     leftArrow.style.display = "none"
-    //     leftArrow.style.left = `${leftArrowOffset}px`
-    //
-    //     word.style.display = "block"
-    //     word.style.left = `${leftMargin}px`
-    //
-    //     title.style.display = "block"
-    //     title.style.left = `${leftMargin + wordsGap + wordWidth}px`
-    //     title.style.width = `${titleWidth}px`
-    //     title.querySelector("svg").style.marginLeft = `0`;
-    //
-    //
-    //     text.style.left = `${(containerWidth - textWidth) / 2}px`
-    //     // init(true)
-    //     step()
-    // })
+        // Зададим константы из Фигма, так-как размеры меняются в процессе анимации
+        arrowWidth = isMobile ? 25.4 : 51.47;
+        logoWidth = isMobile ? 340 : 689;
+        arrowsWidth = isMobile ? 389.8 : 725.95;
+        wordsGap = isMobile ? 14.62 : 29.05;
+        titleWidth = isMobile ? 227 : 459;
+        textWidth = isMobile ? 253 : 380;
+        wordWidth = isMobile ? 68 : 137;
+
+        getState()
+    })
 
     document.addEventListener("scroll", () => {
-        step()
+        getState()
     })
 });

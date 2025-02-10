@@ -1,29 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const isMobile = window.innerWidth < 768
+    const isMobile = window.innerWidth < 900
     const selectorAddon = isMobile ? "-mobile" : ""
     const logoBlock = document.querySelector('.animation-logo-about');
-    const rightArrow = logoBlock.querySelector(`.right-arrow${selectorAddon}`);
-    const leftArrow = logoBlock.querySelector(`.left-arrow${selectorAddon}`);
+    let rightArrow = logoBlock.querySelector(`.right-arrow${selectorAddon}`);
+    let leftArrow = logoBlock.querySelector(`.left-arrow${selectorAddon}`);
     const text = logoBlock.querySelector(`.text`);
 
-    const containerWidth = logoBlock.getBoundingClientRect().width;
 
     // Зададим константы из Фигма, так-как размеры меняются в процессе анимации
-    const arrowWidth = isMobile ? 25.4 : 51.47;
-    const textWidth = isMobile ? 301 : 575;
-    const arrowGap = isMobile ? 60 : 156 - arrowWidth / 2;
-    const heightGap = isMobile ? 253 : 400
-    const headerHeight = document.querySelector(".header").getBoundingClientRect().height
-    const leftGap = isMobile ? 30 : 80;
-    const rightGap = isMobile ? 7 : 30;
-    const topBorder = 0
+    let arrowWidth = isMobile ? 25.4 : 51.47;
+    let textWidth = isMobile ? 301 : 575;
+    let arrowGap = isMobile ? 60 : 156 - arrowWidth / 2;
+    let heightGap = isMobile ? 253 : 400
+    let headerHeight = document.querySelector(".header").getBoundingClientRect().height
+    let leftGap = isMobile ? 30 : 80;
+    let rightGap = isMobile ? 7 : 30;
+    let topBorder = 0
 
-    const leftMargin = (containerWidth - textWidth) / 2
 
     // Вычислим высоту заголовка, чтоб начать анимацию, когда блок коснется hedera
     const topGap = headerHeight + heightGap
 
     function init(isFirst = false) {
+
+        const containerWidth = logoBlock.getBoundingClientRect().width;
+
+        const leftMargin = (containerWidth - textWidth) / 2
 
         const top = logoBlock.getBoundingClientRect().y - topGap
         const rightArrowOffset = leftMargin - top * Number(isFirst) - arrowGap
@@ -42,6 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function step() {
+
+        const containerWidth = logoBlock.getBoundingClientRect().width;
+        const leftMargin = (containerWidth - textWidth) / 2
+
         const top = logoBlock.getBoundingClientRect().y - topGap
 
         if (top < topBorder) {
@@ -98,5 +104,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener("scroll", () => {
         step()
+    })
+
+    window.addEventListener("resize", () => {
+        rightArrow.style.display = "none"
+        leftArrow.style.display = "none"
+
+        const isMobile = window.innerWidth < 900
+        const selectorAddon = isMobile ? "-mobile" : ""
+
+        rightArrow = logoBlock.querySelector(`.right-arrow${selectorAddon}`);
+        leftArrow = logoBlock.querySelector(`.left-arrow${selectorAddon}`);
+
+
+        // Зададим константы из Фигма, так-как размеры меняются в процессе анимации
+        arrowWidth = isMobile ? 25.4 : 51.47;
+        textWidth = isMobile ? 301 : 575;
+        arrowGap = isMobile ? 60 : 156 - arrowWidth / 2;
+        heightGap = isMobile ? 253 : 400
+        headerHeight = document.querySelector(".header").getBoundingClientRect().height
+        leftGap = isMobile ? 30 : 80;
+        rightGap = isMobile ? 7 : 30;
+        topBorder = 0
+
+
+        init()
     })
 });

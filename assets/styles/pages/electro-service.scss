@@ -543,65 +543,8 @@
       width: 100%;
       height: 100%;
 
-      & .ymaps3--popup-marker_container {
-        background: unset;
-        box-shadow: unset;
-      }
-
-      & .ymaps3--popup-marker_tail {
-        display: none
-      }
-
-      & .address-wrapper {
-
-        width: 216px;
-        height: 232px;
-
-        position: relative;
-      }
-
-      & .address {
-
-        width: 216px;
-        background: $graphite-05;
-        border-radius: 14px;
-
-        padding: 20px 10px;
-        color: $white;
-
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 14.4px;
-
-        & span {
-          font-size: 8px;
-          font-weight: 400;
-          line-height: 9.6px;
-          color: $light-gray;
-        }
-
-
-        & .location {
-          margin-bottom: 40px;
-
-          display: flex;
-          gap: 14px;
-          align-items: center;
-        }
-
-        & .time {
-          margin-bottom: 16px;
-
-
-          display: flex;
-          gap: 14px;
-          align-items: center;
-        }
-
-        & .spec {
-          margin-bottom: 28px;
-        }
-      }
+      border-radius: 20px;
+      overflow: hidden;
     }
   }
 
