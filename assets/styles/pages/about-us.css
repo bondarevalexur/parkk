@@ -905,7 +905,7 @@ body {
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   .preview-container {
     padding: 0 10px;
   }

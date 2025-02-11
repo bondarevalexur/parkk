@@ -315,12 +315,16 @@ main {
 .hero .p1, .hero .button, .hero__title {
   position: relative;
   z-index: 1;
-  margin: 0 80px;
+  margin: 0 20px;
 }
 .hero__title {
-  margin-top: 85px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 85px auto 0 auto;
+  padding: 0 20px;
 }
 .hero__button {
+  width: max-content;
   display: block;
   padding: 26px 23px;
   border: 0.5px solid #A0A0A0;
@@ -330,9 +334,14 @@ main {
   background: #F64A0A;
   border-color: #F64A0A;
 }
-.hero .p1 {
+.hero .text {
+  width: 100%;
+  max-width: 1440px;
+  margin: 87px auto 0 auto;
+}
+.hero .text .p1 {
   max-width: 660px;
-  margin: 0 0 20px 80px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -557,10 +566,13 @@ main {
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
-  gap: 132px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .special-offer-container .special-offer .h2 {
   margin-bottom: 60px;
+  max-width: 444px;
 }
 .special-offer-container .special-offer .manager {
   border: 0.5px solid #A0A0A0;
@@ -763,7 +775,7 @@ main {
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1110px) {
   .services {
     padding: 0 10px;
     margin-bottom: 100px;
@@ -925,7 +937,7 @@ main {
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 917px) {
   .invite-container {
     background: unset;
     padding: unset;
@@ -1319,7 +1331,7 @@ main {
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 890px) {
   .preview {
     padding: 0 10px 100px 10px;
     grid-template-columns: 1fr;

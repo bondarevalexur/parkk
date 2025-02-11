@@ -65,15 +65,19 @@ main {
   & .p1, .button, &__title {
     position: relative;
     z-index: 1;
-    margin: 0 80px;
+    margin: 0 20px;
   }
 
   &__title {
-    margin-top: 85px;
-
+    width: 100%;
+    max-width: 1440px;
+    margin: 85px auto 0 auto;
+    padding: 0 20px;
   }
 
   &__button {
+    width: max-content;
+
     display: block;
     padding: 26px 23px;
     border: 0.5px solid $gray;
@@ -85,9 +89,15 @@ main {
     }
   }
 
-  & .p1 {
-    max-width: 660px;
-    margin: 0 0 20px 80px;
+  & .text {
+    & .p1 {
+      max-width: 660px;
+      margin-bottom: 20px;
+    }
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 87px auto 0 auto;
   }
 
 
@@ -378,10 +388,13 @@ main {
     margin: 0 auto;
 
     display: flex;
-    gap: 132px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 
     & .h2 {
       margin-bottom: 60px;
+      max-width: 444px;
     }
 
     & .manager {
@@ -643,7 +656,7 @@ main {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1110px) {
   .services {
     padding: 0 10px;
     margin-bottom: 100px;
@@ -860,7 +873,7 @@ main {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 917px) {
   .invite-container {
     background: unset;
     padding: unset;
@@ -1377,7 +1390,7 @@ main {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 890px) {
   .preview {
     padding: 0 10px 100px 10px;
     grid-template-columns: 1fr;

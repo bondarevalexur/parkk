@@ -313,4 +313,27 @@ body {
   margin-bottom: 40px;
 }
 
+@media screen and (max-width: 1300px) {
+  .politic {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .politic {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .politic__title {
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .politic li {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
 /*# sourceMappingURL=politic.css.map */

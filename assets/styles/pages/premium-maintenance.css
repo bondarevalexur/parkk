@@ -609,7 +609,7 @@ main {
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 890px) {
   .preview {
     padding: 100px 10px;
     row-gap: 10px;
@@ -735,7 +735,7 @@ main {
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   .price-list {
     color: #000000;
     margin-bottom: 100px;
@@ -895,7 +895,7 @@ main {
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   .invite-container {
     background: unset;
     padding: unset;

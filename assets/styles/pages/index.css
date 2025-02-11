@@ -71,7 +71,7 @@ body {
   font-weight: 400;
 }
 
-.p2, .news .controllers__tabs label {
+.p2, .news-container .news .controllers__tabs label {
   font-size: 12px;
   line-height: 16px;
   font-family: "RF Dewi Expanded";
@@ -92,7 +92,7 @@ body {
   font-weight: 400;
 }
 
-.button-font, .news .controllers__tabs input[type=radio]:checked + label, .button {
+.button-font, .news-container .news .controllers__tabs input[type=radio]:checked + label, .button {
   font-size: 12px;
   line-height: 14.4px;
   font-weight: 700;
@@ -350,6 +350,9 @@ body {
   grid-template-columns: 1fr 453px;
   column-gap: 20px;
   margin-bottom: 40px;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .services .catalog {
   position: relative;
@@ -495,6 +498,9 @@ body {
   gap: 20px;
   color: #000000;
   margin-bottom: 60px;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .statistic__column {
   display: flex;
@@ -638,6 +644,9 @@ body {
   grid-template-columns: 1fr 1fr;
   column-gap: 19px;
   margin-bottom: 20px;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
   color: #000000;
 }
 .advantages__list {
@@ -806,16 +815,21 @@ body {
     margin-top: -14px;
   }
 }
-.preview {
+.preview-container {
   background: #000000;
   border-radius: 20px 20px 0 0;
+}
+.preview-container .preview {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 140px 80px;
   column-gap: 20px;
   row-gap: 20px;
 }
-.preview__header {
+.preview-container .preview__header {
   grid-column-start: 1;
   grid-column-end: 3;
   display: flex;
@@ -823,7 +837,7 @@ body {
   gap: 20px;
   margin-bottom: 40px;
 }
-.preview__block {
+.preview-container .preview__block {
   min-height: 274px;
   background: #141414;
   border-radius: 20px;
@@ -834,53 +848,53 @@ body {
   row-gap: 16px;
   column-gap: 16px;
 }
-.preview__block:hover {
+.preview-container .preview__block:hover {
   background: #FFF566;
   color: #000000;
 }
-.preview__block:hover .location, .preview__block:hover .description {
+.preview-container .preview__block:hover .location, .preview-container .preview__block:hover .description {
   color: #52545A;
 }
-.preview__block:hover .button {
+.preview-container .preview__block:hover .button {
   background: #52545A;
   color: #FFF566;
   border: none;
 }
-.preview__block .datetime {
+.preview-container .preview__block .datetime {
   color: #A0A0A0;
   justify-self: end;
   grid-column-start: 2;
   grid-column-end: 3;
 }
-.preview__block .h4 {
+.preview-container .preview__block .h4 {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
 }
-.preview__block .description {
+.preview-container .preview__block .description {
   color: #EBEBEB;
   grid-column-start: 1;
   grid-column-end: 3;
 }
-.preview__block .location {
+.preview-container .preview__block .location {
   color: #A0A0A0;
   display: flex;
   align-items: center;
   gap: 11px;
 }
-.preview__block .button {
+.preview-container .preview__block .button {
   justify-self: end;
   color: #FFFFFF;
   border: 0.5px #A0A0A0 solid;
   width: max-content;
   background: #141414;
 }
-.preview__block .button:hover {
+.preview-container .preview__block .button:hover {
   background: #52545A;
   color: #FFF566;
   border: none;
 }
-.preview__block:nth-child(4) {
+.preview-container .preview__block:nth-child(4) {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-template-columns: calc(50% - 30px) 1fr max-content;
@@ -888,116 +902,121 @@ body {
   column-gap: 60px;
   padding-top: 20px;
 }
-.preview__block:nth-child(4) .h4 {
+.preview-container .preview__block:nth-child(4) .h4 {
   padding-top: 20px;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
 }
-.preview__block:nth-child(4) .datetime {
+.preview-container .preview__block:nth-child(4) .datetime {
   padding-top: 20px;
   grid-column-start: 3;
   grid-column-end: 4;
 }
-.preview__block:nth-child(4) .photo {
+.preview-container .preview__block:nth-child(4) .photo {
   width: 100%;
   grid-row-start: 1;
   grid-row-end: 4;
 }
-.preview__block:nth-child(4) .description {
+.preview-container .preview__block:nth-child(4) .description {
   grid-column-start: 2;
   grid-column-end: 3;
 }
-.preview__block:nth-child(4) .location {
+.preview-container .preview__block:nth-child(4) .location {
   grid-column-start: 2;
   grid-column-end: 3;
 }
 
-@media screen and (max-width: 768px) {
-  .preview {
+@media screen and (max-width: 970px) {
+  .preview-container .preview {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 100px 10px;
     margin-bottom: 100px;
   }
-  .preview__header {
+  .preview-container .preview__header {
     padding: 0 10px;
     margin-bottom: 50px;
   }
-  .preview__header .h2 {
+  .preview-container .preview__header .h2 {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
   }
-  .preview__header .br {
+  .preview-container .preview__header .br {
     display: none;
   }
-  .preview__block {
+  .preview-container .preview__block {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 30px 10px 10px 10px !important;
   }
-  .preview__block .button {
+  .preview-container .preview__block .button {
     background: #FFF566;
     color: #000000;
     width: 100%;
     justify-content: center;
   }
-  .preview__block .photo {
+  .preview-container .preview__block .photo {
     display: none;
   }
-  .preview__block .h4 {
+  .preview-container .preview__block .h4 {
     margin-bottom: 0 !important;
     padding-top: 0 !important;
   }
-  .preview__block .datetime {
+  .preview-container .preview__block .datetime {
     margin-bottom: 18px;
     padding-top: 0 !important;
   }
-  .preview__block .location {
+  .preview-container .preview__block .location {
     padding: 30px 0;
   }
 }
-.feedback {
-  justify-content: center;
-  width: 100%;
-  padding: 140px 0;
+.feedback-container {
   background: #FFFFFF;
+  width: 100%;
 }
-.feedback__header {
+.feedback-container .feedback {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  padding: 140px 0;
+}
+.feedback-container .feedback__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #000000;
   margin: 0 80px 60px 80px;
 }
-.feedback__controllers {
+.feedback-container .feedback__controllers {
   display: flex;
   gap: 20px;
 }
-.feedback-prev, .feedback-next {
+.feedback-container .feedback-prev, .feedback-container .feedback-next {
   cursor: pointer;
 }
-.feedback-prev svg, .feedback-next svg {
+.feedback-container .feedback-prev svg, .feedback-container .feedback-next svg {
   height: 100%;
 }
-.feedback [aria-disabled=true] {
+.feedback-container .feedback [aria-disabled=true] {
   opacity: 0.5;
   pointer-events: none;
   cursor: not-allowed;
 }
-.feedback-slider {
+.feedback-container .feedback-slider {
   position: relative;
   overflow: hidden;
 }
-.feedback-wrapper {
+.feedback-container .feedback-wrapper {
   width: 100%;
   display: flex;
   transition: transform 0.3s ease-in-out;
 }
-.feedback-slide {
+.feedback-container .feedback-slide {
   background: #52545A;
   border-radius: 14px;
   overflow: hidden;
@@ -1005,13 +1024,13 @@ body {
   flex-shrink: 0;
   flex-grow: 1;
 }
-.feedback-slide .video-preview {
+.feedback-container .feedback-slide .video-preview {
   cursor: pointer;
   width: 217px;
   height: 353px;
   position: relative;
 }
-.feedback-slide .video-preview__title {
+.feedback-container .feedback-slide .video-preview__title {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.33);
@@ -1020,24 +1039,24 @@ body {
   top: 0;
   left: 0;
 }
-.feedback-slide .video-preview__play {
+.feedback-container .feedback-slide .video-preview__play {
   position: absolute;
   top: calc(50% - 7px);
   left: calc(50% - 6.5px);
 }
-.feedback-slide .video-preview img {
+.feedback-container .feedback-slide .video-preview img {
   width: 100%;
 }
-.feedback .comment {
+.feedback-container .feedback .comment {
   background: linear-gradient(158.13deg, #D9D9D9 -3.37%, #8D8D8D 34.08%, #898989 48.94%, #737373 88.37%);
   position: relative;
 }
-.feedback .comment__bg {
+.feedback-container .feedback .comment__bg {
   position: absolute;
   top: 0;
   right: 0;
 }
-.feedback .comment__text {
+.feedback-container .feedback .comment__text {
   width: 217px;
   height: 353px;
   position: relative;
@@ -1052,41 +1071,46 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .feedback {
+  .feedback-container .feedback {
     padding: 0 10px;
     margin-bottom: 100px;
   }
-  .feedback__header {
+  .feedback-container .feedback__header {
     margin: 0 10px 40px 10px;
   }
-  .feedback__header .h2 {
+  .feedback-container .feedback__header .h2 {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
   }
-  .feedback__controllers {
+  .feedback-container .feedback__controllers {
     height: 20px;
   }
 }
-.news {
-  justify-content: center;
+.news-container {
   width: 100%;
   background: #EBEBEB;
-  padding: 140px 80px;
+}
+.news-container .news {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  padding: 140px 20px;
   border-radius: 20px 20px 0 0;
 }
-.news__header {
+.news-container .news__header {
   color: #000000;
   width: 50%;
   margin-bottom: 60px;
 }
-.news__header .h2 {
+.news-container .news__header .h2 {
   margin-bottom: 20px;
 }
-.news__header .p1, .news__header .contacts__info .contacts__time time, .contacts__info .contacts__time .news__header time, .news__header .contacts__info .contacts__phone a, .contacts__info .contacts__phone .news__header a, .news__header .services .car-care__list, .services .news__header .car-care__list {
+.news-container .news__header .p1, .news-container .news__header .contacts__info .contacts__time time, .contacts__info .contacts__time .news-container .news__header time, .news-container .news__header .contacts__info .contacts__phone a, .contacts__info .contacts__phone .news-container .news__header a, .news-container .news__header .services .car-care__list, .services .news-container .news__header .car-care__list {
   color: #52545A;
 }
-.news .controllers {
+.news-container .news .controllers {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1094,50 +1118,50 @@ body {
   margin-bottom: 44px;
   margin-top: 4px;
 }
-.news .controllers__tabs input[type=radio] {
+.news-container .news .controllers__tabs input[type=radio] {
   display: none;
 }
-.news .controllers__tabs label {
+.news-container .news .controllers__tabs label {
   padding: 9px 10px;
   cursor: pointer;
   border: 0.5px #A0A0A0 solid;
   border-radius: 10px;
 }
-.news .controllers__tabs input[type=radio]:checked + label {
+.news-container .news .controllers__tabs input[type=radio]:checked + label {
   padding: 10px 11px;
   background-color: #FFF566;
   border: none;
 }
-.news .controllers__slider {
+.news-container .news .controllers__slider {
   display: flex;
   gap: 20px;
 }
-.news-prev, .news-next {
+.news-container .news-prev, .news-container .news-next {
   cursor: pointer;
 }
-.news-prev svg, .news-next svg {
+.news-container .news-prev svg, .news-container .news-next svg {
   height: 100%;
 }
-.news [aria-disabled=true] {
+.news-container .news [aria-disabled=true] {
   opacity: 0.5;
   pointer-events: none;
   cursor: not-allowed;
 }
-.news-slider {
+.news-container .news-slider {
   position: relative;
   overflow: hidden;
 }
-.news-wrapper {
+.news-container .news-wrapper {
   width: 100%;
   display: flex;
   transition: transform 0.3s ease-in-out;
 }
-.news-slide {
+.news-container .news-slide {
   overflow: hidden;
   flex-shrink: 0;
   flex-grow: 1;
 }
-.news .note {
+.news-container .news .note {
   color: #000000;
   width: 413px;
   height: 468px;
@@ -1145,7 +1169,7 @@ body {
   flex-direction: column;
   position: relative;
 }
-.news .note_news:before {
+.news-container .news .note_news:before {
   content: "Новость";
   position: absolute;
   top: 20px;
@@ -1156,17 +1180,17 @@ body {
   background: #FFFFFF;
   color: #000000;
 }
-.news .note__image {
+.news-container .news .note__image {
   border-radius: 20px;
   margin-bottom: 20px;
 }
-.news .note__title {
+.news-container .news .note__title {
   margin-bottom: 16px;
 }
-.news .note__text {
+.news-container .news .note__text {
   color: #52545A;
 }
-.news .note__publish-at {
+.news-container .news .note__publish-at {
   color: #52545A;
   flex-grow: 1;
   flex-wrap: wrap;
@@ -1175,52 +1199,54 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .news {
+  .news-container .news {
     padding: 100px 10px 93px 10px;
   }
-  .news__header {
+  .news-container .news__header {
     width: 100%;
     padding: 0 10px;
   }
-  .news__header .h2 {
+  .news-container .news__header .h2 {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
   }
-  .news .br {
+  .news-container .news .br {
     display: none;
   }
-  .news-slider .controllers {
+  .news-container .news-slider .controllers {
     flex-direction: column;
     margin-bottom: 40px;
   }
-  .news-slider .controllers__tabs {
+  .news-container .news-slider .controllers__tabs {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 54px;
   }
-  .news-slider .controllers__slider {
+  .news-container .news-slider .controllers__slider {
     align-self: end;
     padding-right: 10px;
     height: 20px;
   }
-  .news-slider .note__title {
+  .news-container .news-slider .note__title {
     margin-bottom: 12px;
   }
-  .news-slider .note__title, .news-slider .note__text, .news-slider .note__publish-at {
+  .news-container .news-slider .note__title, .news-container .news-slider .note__text, .news-container .news-slider .note__publish-at {
     padding: 0 10px;
   }
-  .news-slider .note__image {
+  .news-container .news-slider .note__image {
     width: 410px;
   }
 }
 .faq {
+  max-width: 1440px;
+  margin: 139px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   color: #000000;
-  margin: 139px 80px;
+  padding: 0 20px;
 }
 .faq .h2 {
   grid-column-start: 1;
@@ -1303,11 +1329,13 @@ body {
   }
 }
 .contacts {
+  max-width: 1440px;
+  margin: 0 auto 140px auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 20px;
-  margin: 0 80px 140px 80px;
   color: #000000;
+  padding: 0 20px;
 }
 .contacts__title {
   grid-column-start: 1;

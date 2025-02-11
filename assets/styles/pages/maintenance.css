@@ -472,19 +472,23 @@ body {
     line-height: 32px;
   }
 }
-.preview {
+.preview-container {
   background: #EBEBEB;
   border-radius: 20px 20px 0 0;
+  margin-bottom: 140px;
+}
+.preview-container .preview {
+  max-width: 1440px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 140px 80px;
+  padding: 140px 20px;
   column-gap: 20px;
   row-gap: 20px;
-  margin-bottom: 140px;
   color: #000000;
   overflow: hidden;
 }
-.preview__header {
+.preview-container .preview__header {
   grid-column-start: 1;
   grid-column-end: 5;
   width: 50%;
@@ -493,7 +497,7 @@ body {
   gap: 20px;
   margin-bottom: 40px;
 }
-.preview__block {
+.preview-container .preview__block {
   min-height: 500px;
   position: relative;
   overflow: hidden;
@@ -504,34 +508,34 @@ body {
   justify-content: space-between;
   box-shadow: -1px 6px 34px -10px rgba(34, 60, 80, 0.16);
 }
-.preview__block .number-font {
+.preview-container .preview__block .number-font {
   position: relative;
   left: 0;
   transition: all 0.3s ease-in-out;
 }
-.preview__block .h4 {
+.preview-container .preview__block .h4 {
   padding: 40px 0 40px 10px;
   transition: all 0.3s ease-in-out;
 }
-.preview__block .p2, .preview__block .price-list .custom-table th, .price-list .custom-table .preview__block th, .preview__block .price-list .custom-table td, .price-list .custom-table .preview__block td {
+.preview-container .preview__block .p2, .preview-container .preview__block .price-list .custom-table th, .price-list .custom-table .preview-container .preview__block th, .preview-container .preview__block .price-list .custom-table td, .price-list .custom-table .preview-container .preview__block td {
   transition: all 0.3s ease-in-out;
   max-height: 0;
 }
-.preview__block:hover {
+.preview-container .preview__block:hover {
   background: #FFF566;
   color: #000000;
 }
-.preview__block:hover .number-font {
+.preview-container .preview__block:hover .number-font {
   position: relative;
   left: -30px;
   transition: all 0.3s ease-in-out;
 }
-.preview__block:hover .h4 {
+.preview-container .preview__block:hover .h4 {
   padding: 0 10px;
   margin-bottom: 12px;
   transition: all 0.3s ease-in-out;
 }
-.preview__block:hover .p2, .preview__block:hover .price-list .custom-table th, .price-list .custom-table .preview__block:hover th, .preview__block:hover .price-list .custom-table td, .price-list .custom-table .preview__block:hover td {
+.preview-container .preview__block:hover .p2, .preview-container .preview__block:hover .price-list .custom-table th, .price-list .custom-table .preview-container .preview__block:hover th, .preview-container .preview__block:hover .price-list .custom-table td, .price-list .custom-table .preview-container .preview__block:hover td {
   transition: all 0.3s ease-in-out;
   max-height: 100px;
   padding: 0 10px 40px 10px;
@@ -539,32 +543,32 @@ body {
 }
 
 @media screen and (max-width: 1300px) {
-  .preview {
+  .preview-container .preview {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
-  .preview {
+@media screen and (max-width: 970px) {
+  .preview-container .preview {
     padding: 100px 10px;
     grid-template-columns: 1fr;
     row-gap: 10px;
     margin-bottom: 100px;
   }
-  .preview__header {
+  .preview-container .preview__header {
     width: 100%;
     margin-bottom: 30px;
     padding: 0 10px;
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  .preview__header .h2 {
+  .preview-container .preview__header .h2 {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
     padding-right: 0;
   }
-  .preview__block {
+  .preview-container .preview__block {
     min-height: unset;
     position: relative;
     overflow: hidden;
@@ -576,42 +580,42 @@ body {
     justify-content: space-between;
     box-shadow: -1px 6px 34px -10px rgba(34, 60, 80, 0.16);
   }
-  .preview__block .number-font {
+  .preview-container .preview__block .number-font {
     font-size: 60px;
     font-weight: 200;
     line-height: 71px;
     text-align: end;
     margin-right: 10px;
   }
-  .preview__block .h4 {
+  .preview-container .preview__block .h4 {
     padding: 10px;
     max-width: 339px;
   }
-  .preview__block .p2, .preview__block .price-list .custom-table th, .price-list .custom-table .preview__block th, .preview__block .price-list .custom-table td, .price-list .custom-table .preview__block td {
+  .preview-container .preview__block .p2, .preview-container .preview__block .price-list .custom-table th, .price-list .custom-table .preview-container .preview__block th, .preview-container .preview__block .price-list .custom-table td, .price-list .custom-table .preview-container .preview__block td {
     max-height: 100px;
     padding: 0 10px;
     margin-bottom: 30px;
     max-width: 339px;
   }
-  .preview__block .mobile-text {
+  .preview-container .preview__block .mobile-text {
     max-height: 100px;
     display: block;
     padding: 0 10px;
     margin-bottom: 20px;
   }
-  .preview__block:hover {
+  .preview-container .preview__block:hover {
     background: #FFF566;
     color: #000000;
   }
-  .preview__block:hover .number-font {
+  .preview-container .preview__block:hover .number-font {
     position: unset;
     left: unset;
   }
-  .preview__block:hover .h4 {
+  .preview-container .preview__block:hover .h4 {
     padding: 10px;
     margin-bottom: 0;
   }
-  .preview__block:hover .p2, .preview__block:hover .price-list .custom-table th, .price-list .custom-table .preview__block:hover th, .preview__block:hover .price-list .custom-table td, .price-list .custom-table .preview__block:hover td {
+  .preview-container .preview__block:hover .p2, .preview-container .preview__block:hover .price-list .custom-table th, .price-list .custom-table .preview-container .preview__block:hover th, .preview-container .preview__block:hover .price-list .custom-table td, .price-list .custom-table .preview-container .preview__block:hover td {
     max-height: 100px;
     padding: 0 10px;
     margin-bottom: 20px;
@@ -674,7 +678,7 @@ body {
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   .price-list {
     color: #000000;
     margin-bottom: 100px;
@@ -717,7 +721,7 @@ body {
   color: #FFFFFF;
 }
 .invite > div {
-  max-max-width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 517px;
@@ -832,7 +836,7 @@ body {
     padding-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   .invite {
     margin: 0 10px;
     background: black;

@@ -449,7 +449,10 @@ main {
 // Блок - Размеры
 .sizes {
   color: $black;
-  padding: 140px 155px;
+  padding: 140px 20px;
+
+  max-width: 1440px;
+  margin: auto;
 
   display: grid;
   grid-template-columns:minmax(629px, 1fr) 1fr;
@@ -519,86 +522,94 @@ main {
 
 
 // Блок - РАRKК — с 2008 года мы aктивно зaнимaeмcя импopтoм aвтомoбилей
-.about {
+.about-container {
   background: $black;
-  padding: 100px 155px;
-  margin-bottom: 140px;
-  border-radius: 20px 20px 0 0;
+  width: 100%;
 
-  display: flex;
-  gap: 132px;
+  .about {
+    max-width: 1440px;
+    margin: 0 auto 140px auto;
 
-  &__description {
-    max-width: 422px;
-    flex-shrink: 0;
+    padding: 100px 20px;
+    border-radius: 20px 20px 0 0;
 
-    & p {
-      margin-bottom: 60px;
-    }
+    display: flex;
+    gap: 132px;
 
-    & .manager {
-      color: $black;
-      background: $lemon;
-      letter-spacing: -1.3px;
-      margin-right: 10px;
+    &__description {
+      max-width: 422px;
+      flex-shrink: 0;
 
-      &:hover {
-        background: $white;
+      & p {
+        margin-bottom: 60px;
       }
-    }
 
-    & .test-drive {
-      color: $white;
-      background: $black;
-      border: 0.5px solid $light-gray;
-
-      &:hover {
+      & .manager {
         color: $black;
         background: $lemon;
-      }
-    }
+        letter-spacing: -1.3px;
+        margin-right: 10px;
 
+        &:hover {
+          background: $white;
+        }
+      }
+
+      & .test-drive {
+        color: $white;
+        background: $black;
+        border: 0.5px solid $light-gray;
+
+        &:hover {
+          color: $black;
+          background: $lemon;
+        }
+      }
+
+    }
   }
 }
 
 @media screen and (max-width: 1300px) {
-  .about {
-    padding-right: 20px;
-    padding-left: 20px;
+  .about-container {
+    .about {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    padding: 100px 20px;
+  .about-container {
+    .about {
+      flex-direction: column;
+      padding: 100px 20px;
 
-    gap: 30px;
+      gap: 30px;
 
-    margin-bottom: 100px;
+      margin-bottom: 100px;
 
-    & .h2 {
-      font-size: 28px;
-      font-weight: 300;
-      line-height: 32px;
-    }
+      & .h2 {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+      }
 
-    &__buttons {
-      display: flex;
-      justify-content: center;
+      &__buttons {
+        display: flex;
+        justify-content: center;
 
-      & .button {
-        letter-spacing: unset;
-        padding-left: 14px;
-        padding-right: 14px;
+        & .button {
+          letter-spacing: unset;
+          padding-left: 14px;
+          padding-right: 14px;
 
-        flex-shrink: 0;
+          flex-shrink: 0;
 
+        }
       }
     }
   }
-
-
 }
 
 
@@ -802,11 +813,13 @@ main {
 
 // Блок - Экстерьер-Интерьер
 .options {
-  overflow: hidden;
+
+  max-width: 1440px;
+  overflow: visible;
+  margin: 0 auto 140px auto;
+
   position: relative;
   color: $black;
-
-  margin-bottom: 140px;
 
 
   &__header {

@@ -56,7 +56,10 @@
 
 // БЛОК - Каталог
 .catalog {
-  padding: 210px 80px;
+  max-width: 1440px;
+  margin: auto;
+
+  padding: 210px 20px;
   color: $black;
 
   &__main {
@@ -256,7 +259,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1130px) {
   .catalog {
     padding: 100px 10px;
 
@@ -419,9 +422,12 @@
 
 // БЛОК - Преимущества покупки в PARKK
 .advantages {
+  max-width: 1440px;
+  margin: auto;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 32px 80px;
+  padding: 32px 20px;
   column-gap: 20px;
   row-gap: 20px;
 
@@ -607,7 +613,10 @@
 
 // БЛОК - Актуальные акции и предложения
 .preview {
-  padding: 110px 80px 140px 80px;
+  max-width: 1440px;
+  margin: auto;
+
+  padding: 110px 20px 140px 20px;
   color: $black;
 
   &__header {
@@ -688,7 +697,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   .preview {
     padding: 100px 10px 100px 10px;
     color: $black;

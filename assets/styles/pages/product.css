@@ -604,7 +604,9 @@ main {
 }
 .sizes {
   color: #000000;
-  padding: 140px 155px;
+  padding: 140px 20px;
+  max-width: 1440px;
+  margin: auto;
   display: grid;
   grid-template-columns: minmax(629px, 1fr) 1fr;
   column-gap: 78px;
@@ -656,63 +658,67 @@ main {
     margin-bottom: 50px;
   }
 }
-.about {
+.about-container {
   background: #000000;
-  padding: 100px 155px;
-  margin-bottom: 140px;
+  width: 100%;
+}
+.about-container .about {
+  max-width: 1440px;
+  margin: 0 auto 140px auto;
+  padding: 100px 20px;
   border-radius: 20px 20px 0 0;
   display: flex;
   gap: 132px;
 }
-.about__description {
+.about-container .about__description {
   max-width: 422px;
   flex-shrink: 0;
 }
-.about__description p {
+.about-container .about__description p {
   margin-bottom: 60px;
 }
-.about__description .manager {
+.about-container .about__description .manager {
   color: #000000;
   background: #FFF566;
   letter-spacing: -1.3px;
   margin-right: 10px;
 }
-.about__description .manager:hover {
+.about-container .about__description .manager:hover {
   background: #FFFFFF;
 }
-.about__description .test-drive {
+.about-container .about__description .test-drive {
   color: #FFFFFF;
   background: #000000;
   border: 0.5px solid #EBEBEB;
 }
-.about__description .test-drive:hover {
+.about-container .about__description .test-drive:hover {
   color: #000000;
   background: #FFF566;
 }
 
 @media screen and (max-width: 1300px) {
-  .about {
+  .about-container .about {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
 @media screen and (max-width: 768px) {
-  .about {
+  .about-container .about {
     flex-direction: column;
     padding: 100px 20px;
     gap: 30px;
     margin-bottom: 100px;
   }
-  .about .h2 {
+  .about-container .about .h2 {
     font-size: 28px;
     font-weight: 300;
     line-height: 32px;
   }
-  .about__buttons {
+  .about-container .about__buttons {
     display: flex;
     justify-content: center;
   }
-  .about__buttons .button {
+  .about-container .about__buttons .button {
     letter-spacing: unset;
     padding-left: 14px;
     padding-right: 14px;
@@ -869,10 +875,11 @@ main {
   }
 }
 .options {
-  overflow: hidden;
+  max-width: 1440px;
+  overflow: visible;
+  margin: 0 auto 140px auto;
   position: relative;
   color: #000000;
-  margin-bottom: 140px;
 }
 .options__header {
   max-width: 1130px;
