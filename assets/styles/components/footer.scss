@@ -25,6 +25,11 @@
         & .po-update_сut {
           display: none
         }
+        color: $graphite;
+
+        &:hover {
+          color: $black;
+        }
       }
 
       & .p2 {
@@ -79,6 +84,11 @@
 
 
     cursor: url("../../../assets/img/cur.svg"), pointer;
+
+    &:hover a{
+      opacity: 0;
+      transition: 150ms all;
+    }
 
     & svg {
       display: none;

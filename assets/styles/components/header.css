@@ -117,7 +117,7 @@ body {
     display: inline-flex;
   }
 }
-.color-white, .header__button_premium:hover, .header__button_premium:hover svg {
+.color-white, .header__button_premium:hover svg {
   color: #FFFFFF;
 }
 
@@ -271,27 +271,13 @@ body {
   width: 100%;
   z-index: 999;
 }
-.header .header-backdrop {
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #000000;
-  opacity: 0.4;
-  z-index: -1;
-}
-.header .header-backdrop_visible {
-  display: block;
-}
 .header_black {
   background: url("../../../assets/img/header-bg.png") center/cover no-repeat;
   background-position-y: bottom;
   box-shadow: -1px 6px 34px -10px rgba(34, 60, 80, 0.16);
 }
 .header .messengers {
-  display: none;
+  display: flex;
   gap: 10px;
   cursor: pointer;
   margin-right: 40px;
@@ -304,7 +290,6 @@ body {
   justify-content: center;
   border: 0.5px #A0A0A0 solid;
   border-radius: 10px;
-  background: #000000;
 }
 .header .messengers a svg {
   color: #FFF566;
@@ -380,8 +365,14 @@ body {
 .header__button_premium {
   margin-left: 10px;
 }
+.header__button_premium:hover {
+  color: #FFFFFF;
+  border-color: #F64A0A;
+}
 .header .nav {
   max-height: 0;
+  height: 100vh;
+  background: #000000;
   transition: max-height 0.4s linear;
   overflow: hidden;
 }
@@ -514,9 +505,6 @@ body {
   }
   .header__nav .burger_visible:after {
     top: 9px !important;
-  }
-  .header__nav .messengers {
-    display: none !important;
   }
   .header .nav .mobile-contacts {
     display: block;

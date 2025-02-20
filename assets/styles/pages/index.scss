@@ -501,49 +501,107 @@
     column-gap: 20px;
   }
 
+  //&__item {
+  //  display: flex;
+  //  flex-direction: column;
+  //  justify-content: space-between;
+  //
+  //  overflow: hidden;
+  //
+  //  border-radius: 20px;
+  //  padding: 40px 10px 0 10px;
+  //
+  //  & .number-font {
+  //    position: relative;
+  //    left: -10px;
+  //  }
+  //
+  //  &:hover, &_active {
+  //    background: $lemon;
+  //
+  //    & .number-font {
+  //      position: relative;
+  //      left: -30px;
+  //      transition: all 0.3s ease-in-out;
+  //    }
+  //
+  //    & .h4 {
+  //      padding: 0 10px;
+  //      margin-bottom: 12px;
+  //      transition: all 0.3s ease-in-out;
+  //    }
+  //
+  //    & .sub_paragraph {
+  //      transition: all 0.3s ease-in-out;
+  //      max-height: 100px;
+  //      padding: 0 10px 40px 10px;
+  //      margin-bottom: 12px;
+  //
+  //      color: $graphite;
+  //      display: block;
+  //    }
+  //  }
+  //
+  //  & .sub_paragraph {
+  //    display: none;
+  //  }
+  //}
+
   &__item {
+
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: -1px 6px 34px -10px rgba(34, 60, 80, 0.16);
 
 
-    border-radius: 20px;
-    padding: 40px 10px 0 10px;
+    & > div {
+      overflow: hidden;
+    }
 
     & .number-font {
       position: relative;
-      left: -10px;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    & .h4 {
+      padding: 40px 0 40px 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    & .p2 {
+      transition: all 0.3s ease-in-out;
+      max-height: 0;
     }
 
     &:hover {
       background: $lemon;
-    }
 
-    & .sub_paragraph {
-      display: none;
-    }
-  }
+      & .number-font {
+        position: relative;
+        left: -30px;
+        transition: all 0.3s ease-in-out;
+      }
 
-  &__item:nth-child(2) {
-    overflow: hidden;
-    background: $lemon;
-    padding-top: 0;
-    padding-bottom: 48px;
+      & .h4 {
+        padding: 40px 10px 0 10px;
+        margin-bottom: 16px;
+        transition: all 0.3s ease-in-out;
+      }
 
-    & .number-font {
-      flex-grow: 1;
-
-      position: relative;
-      left: -42px;
-    }
-
-    & .h4 {
-      margin-bottom: 16px;
-    }
-
-    & .sub_paragraph {
-      color: $graphite;
-      display: block;
+      & .p2 {
+        transition: all 0.3s ease-in-out;
+        max-height: 100px;
+        padding: 0 10px 30px 10px;
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -751,12 +809,12 @@
       row-gap: 16px;
       column-gap: 16px;
 
-      &:hover {
+      &_active {
         background: $lemon;
         color: $black;
 
         & .location, .description {
-          color: $graphite;
+          color: $graphite !important;
         }
 
         & .button {
@@ -1111,10 +1169,10 @@
         }
 
         & input[type="radio"]:checked + label {
-          @extend .button-font;
-          padding: 10px 11px;
+          //@extend .button-font;
+          padding: 9px 10px;
           background-color: $lemon;
-          border: none;
+          border-color: $lemon;
         }
       }
 
@@ -1289,7 +1347,7 @@
     background: $light-gray;
     border-radius: 14px;
     padding: 32px 20px;
-    transition: padding 0.4s linear;
+    transition: padding 0.5s linear;
 
     &__header {
       display: flex;
@@ -1298,12 +1356,12 @@
       align-items: center;
       margin-bottom: 0;
       cursor: pointer;
-      transition: margin-bottom 0.4s linear;
+      transition: margin-bottom 0.5s linear;
 
       & svg {
         color: $graphite;
         margin-right: 10px;
-        transition: transform 0.4s linear;
+        transition: transform 0.5s linear;
         flex-shrink: 0;
       }
 
@@ -1315,32 +1373,37 @@
     }
 
     &__answer {
-      color: $light-gray;
+      color: $graphite;
       max-height: 0;
       overflow: hidden;
+      transition: max-height 0.7s linear;
+
+      &_open{
+        max-height: 200px;
+        transition: max-height 0.7s linear;
+      }
     }
 
 
     &_open {
       background: $graphite;
       padding-bottom: 40px;
-      transition: padding-bottom 0.4s linear;
+      transition: padding-bottom 0.5s linear;
 
       & .question__header {
         color: $white;
         margin-bottom: 16px;
-        transition: margin-bottom 0.4s linear;
+        transition: margin-bottom 0.5s linear;
 
         & svg {
           color: $lemon;
           transform: rotate(180deg);
-          transition: transform 0.4s linear;
+          transition: transform 0.5s linear;
         }
       }
 
       & .question__answer {
-        max-height: 200px;
-        transition: max-height 0.2s linear;
+        color: $light-gray;
       }
     }
   }

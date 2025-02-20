@@ -18,6 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 
+    const faqBlock = document.querySelector('.faq');
+    const questions = faqBlock.querySelectorAll('.question');
+    questions.forEach((question) => {
+        const answers = question.querySelector(".question__answer");
+
+        question.addEventListener("click", () => {
+            if (question.classList.contains('question_open')) {
+                setTimeout(() => question.classList.remove('question_open'), 200);
+                answers.classList.remove('question__answer_open')
+            } else {
+                question.classList.add('question_open');
+                setTimeout(() => answers.classList.add('question__answer_open'), 200);
+            }
+        })
+    })
 
     const header = document.querySelector('.header');
     document.addEventListener("scroll", () => {

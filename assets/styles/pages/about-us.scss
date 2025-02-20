@@ -729,7 +729,7 @@
       flex-direction: column;
       justify-content: space-between;
 
-      &:hover {
+      &:nth-child(5) {
         background: $lemon;
         color: $black;
       }

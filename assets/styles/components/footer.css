@@ -282,9 +282,13 @@ body {
 }
 .footer__sitemap ul li {
   margin-bottom: 10px;
+  color: #52545A;
 }
 .footer__sitemap ul li .po-update_сut {
   display: none;
+}
+.footer__sitemap ul li:hover {
+  color: #000000;
 }
 .footer__sitemap ul .p2 {
   color: #52545A;
@@ -325,6 +329,10 @@ body {
   width: 200px;
   height: 200px;
   cursor: url("../../../assets/img/cur.svg"), pointer;
+}
+.footer__designer-logo:hover a {
+  opacity: 0;
+  transition: 150ms all;
 }
 .footer__designer-logo svg {
   display: none;

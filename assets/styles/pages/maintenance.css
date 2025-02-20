@@ -294,8 +294,23 @@ body {
 .header__logo_visible .header__button, .header__logo_visible .header__logo, .header__container_visible .header__button, .header__container_visible .header__logo, .header__button_visible .header__button, .header__button_visible .header__logo {
   color: #FFFFFF;
 }
+.header__logo_visible .header__nav .messengers a:hover, .header__container_visible .header__nav .messengers a:hover, .header__button_visible .header__nav .messengers a:hover {
+  background: #FFF566;
+}
+.header__logo_visible .header__nav .messengers a:hover svg, .header__container_visible .header__nav .messengers a:hover svg, .header__button_visible .header__nav .messengers a:hover svg {
+  color: #000000;
+}
+.header__logo_visible .header__nav .messengers a svg, .header__container_visible .header__nav .messengers a svg, .header__button_visible .header__nav .messengers a svg {
+  color: #FFF566;
+}
 .header__nav .burger:after, .header__nav .burger:before {
   background: #000000;
+}
+.header__nav .messengers a {
+  background: unset;
+}
+.header__nav .messengers a svg {
+  color: #000000;
 }
 .header__nav_visible {
   color: #FFFFFF;

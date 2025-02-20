@@ -820,7 +820,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.preview-container .preview__block:hover {
+.preview-container .preview__block:nth-child(5) {
   background: #FFF566;
   color: #000000;
 }

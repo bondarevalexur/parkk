@@ -32,6 +32,25 @@
       & .header__button, .header__logo {
         color: $white;
       }
+
+      & .header__nav {
+        & .messengers {
+          & a {
+            &:hover {
+              background: $lemon;
+
+              & svg {
+                color: $black;
+              }
+            }
+
+            & svg {
+              color: $lemon;
+            }
+          }
+
+        }
+      }
     }
   }
 
@@ -39,6 +58,16 @@
   &__nav {
     & .burger:after, .burger:before, {
       background: $black;
+    }
+
+
+    & .messengers{
+      & a{
+        background: unset;
+        & svg{
+          color: $black;
+        }
+      }
     }
 
     & .burger_visible {

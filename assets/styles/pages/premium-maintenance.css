@@ -298,8 +298,23 @@ main {
 .header__logo_visible .header__button, .header__logo_visible .header__logo, .header__container_visible .header__button, .header__container_visible .header__logo, .header__button_visible .header__button, .header__button_visible .header__logo {
   color: #FFFFFF;
 }
+.header__logo_visible .header__nav .messengers a:hover, .header__container_visible .header__nav .messengers a:hover, .header__button_visible .header__nav .messengers a:hover {
+  background: #FFF566;
+}
+.header__logo_visible .header__nav .messengers a:hover svg, .header__container_visible .header__nav .messengers a:hover svg, .header__button_visible .header__nav .messengers a:hover svg {
+  color: #000000;
+}
+.header__logo_visible .header__nav .messengers a svg, .header__container_visible .header__nav .messengers a svg, .header__button_visible .header__nav .messengers a svg {
+  color: #FFF566;
+}
 .header__nav .burger:after, .header__nav .burger:before {
   background: #000000;
+}
+.header__nav .messengers a {
+  background: unset;
+}
+.header__nav .messengers a svg {
+  color: #000000;
 }
 .header__nav .burger_visible:after, .header__nav .burger_visible:before {
   background: #FFFFFF;
@@ -713,8 +728,13 @@ main {
   vertical-align: top;
   text-align: left;
 }
-.price-list .custom-table td:last-child {
-  min-width: 220px;
+.price-list .custom-table th:last-child {
+  text-align: right;
+  padding-right: 50px;
+}
+.price-list .custom-table td:last-child .td-wrapper {
+  width: 120px;
+  align-items: end;
 }
 .price-list .custom-table .td-wrapper {
   display: inline-flex;
@@ -834,6 +854,18 @@ main {
 }
 .invite-container .invite__main .invite-form .select__input::placeholder {
   color: #A0A0A0;
+}
+.invite-container .invite__main .invite-form .select__options {
+  background: #141414;
+  padding-top: 4px;
+  padding-left: 9px;
+}
+.invite-container .invite__main .invite-form .select__options .select__option {
+  color: #FFFFFF;
+}
+.invite-container .invite__main .invite-form .select__options .select__option:hover {
+  background: #141414;
+  color: #F64A0A;
 }
 .invite-container .invite__main .invite-form .datepicker-input {
   padding: 14px 20px;
@@ -1238,6 +1270,102 @@ main {
   }
   .animation-logo-about .motion-block .motion-wrapper .text {
     margin-top: 20px;
+  }
+}
+.faq-container {
+  width: 100%;
+}
+.faq-container .faq {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  color: #000000;
+  padding: 140px 20px;
+}
+.faq-container .faq .h2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.faq-container .faq .question-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faq-container .faq .question {
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 32px 20px;
+  transition: padding 0.5s linear;
+}
+.faq-container .faq .question__header {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: margin-bottom 0.5s linear;
+}
+.faq-container .faq .question__header svg {
+  color: #52545A;
+  margin-right: 10px;
+  transition: transform 0.5s linear;
+  flex-shrink: 0;
+}
+.faq-container .faq .question__header:hover svg {
+  color: #F64A0A;
+}
+.faq-container .faq .question__answer {
+  color: #52545A;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s linear;
+}
+.faq-container .faq .question__answer_open {
+  max-height: 200px;
+  transition: max-height 0.7s linear;
+}
+.faq-container .faq .question_open {
+  background: #52545A;
+  padding-bottom: 40px;
+  transition: padding-bottom 0.5s linear;
+}
+.faq-container .faq .question_open .question__header {
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  transition: margin-bottom 0.5s linear;
+}
+.faq-container .faq .question_open .question__header svg {
+  color: #F64A0A;
+  transform: rotate(180deg);
+  transition: transform 0.5s linear;
+}
+.faq-container .faq .question_open .question__answer {
+  color: #EBEBEB;
+}
+
+@media screen and (max-width: 768px) {
+  .faq {
+    margin: 100px 10px;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+  .faq .question-column {
+    gap: 10px;
+  }
+  .faq .h2 {
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
   }
 }
 

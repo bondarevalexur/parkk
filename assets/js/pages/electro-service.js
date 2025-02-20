@@ -28,18 +28,18 @@ const whyUsSwiperPhoto = new Swiper('.important-photo-slider', {
     slidesPerView: "auto",
     spaceBetween: 20,
     loopFillGroupWithBlank: false,
+    allowTouchMove: false
 });
 
 document.addEventListener("DOMContentLoaded", () => {
 
 
-
     whyUsSwiperText.on("slideChange", (e) => {
-        whyUsSwiperPhoto.slideTo(e.activeIndex )
+        whyUsSwiperPhoto.slideTo(e.activeIndex)
     })
 
     whyUsSwiperPhoto.on("slideChange", (e) => {
-        whyUsSwiperText.slideTo(e.activeIndex )
+        whyUsSwiperText.slideTo(e.activeIndex)
     })
 
 

@@ -4,16 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (statisticBlock) {
         const animateNumbersList = statisticBlock.querySelectorAll('.animate-number-js');
 
-        let startAnimation = false
-
         document.addEventListener("scroll", () => {
-            const top = statisticBlock.getBoundingClientRect().y
-            const animationGap = Number(statisticBlock.dataset.animationgap ?? 0)
 
-            if (top + animationGap < window.innerHeight && !startAnimation) {
-                startAnimation = true;
+            animateNumbersList.forEach((item) => {
+                const top = item.getBoundingClientRect().y
+                const animationGap = Number(item.dataset.animationgap ?? 0)
+                const startAnimation = Boolean(item.dataset.startAnimation ?? false)
 
-                animateNumbersList.forEach((item) => {
+                if (top + animationGap < window.innerHeight && !startAnimation) {
+                    item.dataset.startAnimation = true
                     item.innerHTML = "0"
 
                     const time = Number(item.dataset.time)
@@ -37,9 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         item.innerHTML = `${toValue}${addSymbol ?? ""}`
                     }, 2000)
-                })
-            }
 
+
+                }
+            })
         })
     }
 });

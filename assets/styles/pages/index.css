@@ -92,7 +92,7 @@ body {
   font-weight: 400;
 }
 
-.button-font, .news-container .news .controllers__tabs input[type=radio]:checked + label, .button {
+.button-font, .button {
   font-size: 12px;
   line-height: 14.4px;
   font-weight: 700;
@@ -655,39 +655,49 @@ body {
   column-gap: 20px;
 }
 .advantages__item {
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 20px;
-  padding: 40px 10px 0 10px;
+  box-shadow: -1px 6px 34px -10px rgba(34, 60, 80, 0.16);
+}
+.advantages__item > div {
+  overflow: hidden;
 }
 .advantages__item .number-font {
   position: relative;
-  left: -10px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+.advantages__item .h4 {
+  padding: 40px 0 40px 10px;
+  transition: all 0.3s ease-in-out;
+}
+.advantages__item .p2, .advantages__item .news-container .news .controllers__tabs label, .news-container .news .controllers__tabs .advantages__item label {
+  transition: all 0.3s ease-in-out;
+  max-height: 0;
 }
 .advantages__item:hover {
   background: #FFF566;
 }
-.advantages__item .sub_paragraph {
-  display: none;
-}
-.advantages__item:nth-child(2) {
-  overflow: hidden;
-  background: #FFF566;
-  padding-top: 0;
-  padding-bottom: 48px;
-}
-.advantages__item:nth-child(2) .number-font {
-  flex-grow: 1;
+.advantages__item:hover .number-font {
   position: relative;
-  left: -42px;
+  left: -30px;
+  transition: all 0.3s ease-in-out;
 }
-.advantages__item:nth-child(2) .h4 {
+.advantages__item:hover .h4 {
+  padding: 40px 10px 0 10px;
   margin-bottom: 16px;
+  transition: all 0.3s ease-in-out;
 }
-.advantages__item:nth-child(2) .sub_paragraph {
-  color: #52545A;
-  display: block;
+.advantages__item:hover .p2, .advantages__item:hover .news-container .news .controllers__tabs label, .news-container .news .controllers__tabs .advantages__item:hover label {
+  transition: all 0.3s ease-in-out;
+  max-height: 100px;
+  padding: 0 10px 30px 10px;
+  margin-bottom: 10px;
 }
 .advantages__video-wrapper {
   position: relative;
@@ -848,14 +858,14 @@ body {
   row-gap: 16px;
   column-gap: 16px;
 }
-.preview-container .preview__block:hover {
+.preview-container .preview__block_active {
   background: #FFF566;
   color: #000000;
 }
-.preview-container .preview__block:hover .location, .preview-container .preview__block:hover .description {
-  color: #52545A;
+.preview-container .preview__block_active .location, .preview-container .preview__block_active .description {
+  color: #52545A !important;
 }
-.preview-container .preview__block:hover .button {
+.preview-container .preview__block_active .button {
   background: #52545A;
   color: #FFF566;
   border: none;
@@ -1128,9 +1138,9 @@ body {
   border-radius: 10px;
 }
 .news-container .news .controllers__tabs input[type=radio]:checked + label {
-  padding: 10px 11px;
+  padding: 9px 10px;
   background-color: #FFF566;
-  border: none;
+  border-color: #FFF566;
 }
 .news-container .news .controllers__slider {
   display: flex;
@@ -1263,7 +1273,7 @@ body {
   background: #EBEBEB;
   border-radius: 14px;
   padding: 32px 20px;
-  transition: padding 0.4s linear;
+  transition: padding 0.5s linear;
 }
 .faq .question__header {
   display: flex;
@@ -1272,40 +1282,44 @@ body {
   align-items: center;
   margin-bottom: 0;
   cursor: pointer;
-  transition: margin-bottom 0.4s linear;
+  transition: margin-bottom 0.5s linear;
 }
 .faq .question__header svg {
   color: #52545A;
   margin-right: 10px;
-  transition: transform 0.4s linear;
+  transition: transform 0.5s linear;
   flex-shrink: 0;
 }
 .faq .question__header:hover svg {
   color: #FFF566;
 }
 .faq .question__answer {
-  color: #EBEBEB;
+  color: #52545A;
   max-height: 0;
   overflow: hidden;
+  transition: max-height 0.7s linear;
+}
+.faq .question__answer_open {
+  max-height: 200px;
+  transition: max-height 0.7s linear;
 }
 .faq .question_open {
   background: #52545A;
   padding-bottom: 40px;
-  transition: padding-bottom 0.4s linear;
+  transition: padding-bottom 0.5s linear;
 }
 .faq .question_open .question__header {
   color: #FFFFFF;
   margin-bottom: 16px;
-  transition: margin-bottom 0.4s linear;
+  transition: margin-bottom 0.5s linear;
 }
 .faq .question_open .question__header svg {
   color: #FFF566;
   transform: rotate(180deg);
-  transition: transform 0.4s linear;
+  transition: transform 0.5s linear;
 }
 .faq .question_open .question__answer {
-  max-height: 200px;
-  transition: max-height 0.2s linear;
+  color: #EBEBEB;
 }
 
 @media screen and (max-width: 768px) {

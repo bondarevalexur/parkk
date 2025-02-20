@@ -28,9 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const faqBlock = document.querySelector('.faq');
     const questions = faqBlock.querySelectorAll('.question');
     questions.forEach((question) => {
-        question.addEventListener("click", () => {
-            question.classList.toggle('question_open');
+        const answers = question.querySelector(".question__answer");
 
+        question.addEventListener("click", () => {
+            if (question.classList.contains('question_open')) {
+                setTimeout(() => question.classList.remove('question_open'), 200);
+                answers.classList.remove('question__answer_open')
+            } else {
+                question.classList.add('question_open');
+                setTimeout(() => answers.classList.add('question__answer_open'), 200);
+            }
         })
     })
 
@@ -50,5 +57,37 @@ document.addEventListener("DOMContentLoaded", () => {
             header.classList.remove('header_black');
         }
     })
+
+    const preview = document.querySelector('.preview');
+    const previewBlocks = preview.querySelectorAll('.preview__block');
+
+    previewBlocks.forEach((previewBlock) => {
+        const button = previewBlock.querySelector('.button');
+        button.addEventListener("mouseover", () => {
+            previewBlock.classList.add('preview__block_active');
+        })
+
+        button.addEventListener("mouseout", () => {
+            previewBlock.classList.remove('preview__block_active');
+        })
+    })
+
+    const advantages = document.querySelector('.advantages');
+    const advantagesVideo = advantages.querySelector('.advantages__video');
+    const advantagesVideoIcon = advantages.querySelector('.advantages__video-play');
+
+    const scrollCalbac = () => {
+        const top = advantagesVideo.getBoundingClientRect().y;
+        const topGap = window.innerHeight - advantagesVideo.getBoundingClientRect().height;
+
+        if (top < topGap && (advantagesVideo.paused || advantagesVideo.ended)) {
+            advantagesVideo.play();
+            advantagesVideoIcon.style.display = 'none';
+            window.removeEventListener("scroll", scrollCalbac)
+        }
+    }
+
+    window.addEventListener("scroll", scrollCalbac)
+
 });
 

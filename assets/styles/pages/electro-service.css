@@ -321,10 +321,8 @@ body {
   padding: 26px 23px;
   border: 0.5px solid #A0A0A0;
   flex-shrink: 1;
-}
-.hero__button:hover {
   background: #FFF566;
-  color: #000000;
+  color: #000000 !important;
 }
 .hero .text {
   width: 100%;
@@ -434,6 +432,111 @@ body {
   }
   .brands__list .brand {
     height: 102px;
+  }
+}
+/* БЛОК - Специальное предложение */
+.special-offer-container {
+  width: 100%;
+  padding: 140px 0 108px 0;
+  border-radius: 20px 20px 0 0;
+  background: url("../../../assets/img/premium-service/special-offer-image-1.png") #000000 bottom/cover no-repeat;
+}
+.special-offer-container .special-offer {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.special-offer-container .special-offer .h2 {
+  margin-bottom: 60px;
+  max-width: 444px;
+}
+.special-offer-container .special-offer .manager {
+  border: 0.5px solid #A0A0A0;
+}
+.special-offer-container .special-offer .manager:hover {
+  background: #F64A0A;
+  border-color: #F64A0A;
+}
+.special-offer-container .special-offer__description {
+  max-width: 630px;
+  flex-shrink: 0;
+}
+.special-offer-container .special-offer__description .h4 {
+  margin-bottom: 18px;
+}
+.special-offer-container .special-offer__description .text {
+  margin-bottom: 60px;
+  max-width: 512px;
+}
+.special-offer-container .special-offer__description .manager {
+  color: #000000;
+  background: #F64A0A;
+}
+.special-offer-container .special-offer__description .manager:hover {
+  background: #FFFFFF;
+}
+
+@media screen and (max-width: 1300px) {
+  .special-offer-container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .special-offer-container {
+    background: url("../../../assets/img/premium-service/special-offer-image-1-mobile.png") #000000 top/cover no-repeat;
+    padding: 100px 10px 116px 10px;
+  }
+  .special-offer-container .special-offer {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .special-offer-container .special-offer .h2 {
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+  }
+  .special-offer-container .special-offer__main {
+    grid-template-columns: 1fr;
+  }
+  .special-offer-container .special-offer__description {
+    max-width: 410px;
+    padding: 0 10px;
+    margin-bottom: 47px;
+  }
+  .special-offer-container .special-offer__description > .h4 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+  }
+  .special-offer-container .special-offer__description .text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+  }
+  .special-offer-container .special-offer__description .brands-text {
+    margin-top: 4px;
+    word-spacing: 16px;
+  }
+  .special-offer-container .special-offer__description .brands-text span {
+    display: block;
+    padding-top: 14px;
+    word-spacing: normal;
+  }
+  .special-offer-container .special-offer .manager {
+    width: 100%;
+    color: #FFFFFF;
+    background: unset;
+    text-align: center;
+  }
+  .special-offer-container .special-offer .manager:hover {
+    background: unset;
+    color: #FFFFFF;
   }
 }
 /* Блок -  */

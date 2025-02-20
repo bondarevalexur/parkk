@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Зададим константы из Фигма, так-как размеры меняются в процессе анимации
     let arrowWidth = isMobile ? 25.4 : 51.47;
-    let textWidth = isMobile ? 301 : 575;
+    let textWidth = isMobile ? 301 : 695;
     let arrowGap = isMobile ? 60 : 156 - arrowWidth / 2;
     let heightGap = isMobile ? 253 : 400
     let headerHeight = document.querySelector(".header").getBoundingClientRect().height
@@ -25,21 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
         const leftMargin = (containerWidth - textWidth) / 2
 
         const top = logoBlock.getBoundingClientRect().y - topGap
-        const rightArrowOffset = leftMargin - top * Number(isFirst) - arrowGap
-        const leftArrowOffset = leftMargin + textWidth - arrowWidth + top * Number(isFirst) + arrowGap
+        const leftArrowBorder = Number((containerWidth - arrowWidth - leftGap) / 2)
 
         rightArrow.style.display = "block"
-        rightArrow.style.left = `${rightArrowOffset}px`
+        rightArrow.style.left = `${leftArrowBorder}px`
 
         leftArrow.style.display = "block"
-        leftArrow.style.left = `${leftArrowOffset}px`
+        leftArrow.style.left = `${leftArrowBorder + arrowWidth + rightGap}px`
 
         text.style.display = "block"
         text.style.left = `${leftMargin}px`;
         text.style.maxWidth = `${textWidth}px`;
+        text.style.width = `${0}px`;
         text.querySelector("h2").style.width = `${textWidth}px`;
         if (text.querySelector("p")) text.querySelector("p").style.width = `${textWidth}px`;
-        text.querySelector(".container").style.width = `${textWidth}px`;
+        text.querySelector(".container").style.width = `${0}px`;
         text.querySelector(".container").style = `min-width: ${textWidth}px`;
     }
 
@@ -49,34 +49,36 @@ document.addEventListener("DOMContentLoaded", () => {
         const containerWidth = logoBlock.getBoundingClientRect().width;
         const leftMargin = (containerWidth - textWidth) / 2
 
-        const top = logoBlock.getBoundingClientRect().y - topGap
+        const top = logoBlock.getBoundingClientRect().y - topGap - 300
 
         if (top > 0) {
             init()
         }
 
-
         if (top < topBorder) {
+            const rightArrowOffset = Number((containerWidth - arrowWidth - leftGap) / 2) + top
+            const leftArrowOffset = Number((containerWidth - arrowWidth - leftGap) / 2) + arrowWidth + rightGap - top
 
-            const rightArrowOffset = leftMargin - top - arrowGap
-            const leftArrowOffset = leftMargin + textWidth - arrowWidth + top + arrowGap
+            const leftArrowBorder = leftMargin - arrowGap
 
-            const leftArrowBorder = Number((containerWidth - arrowWidth - leftGap) / 2)
-
-            const titleLeft = leftMargin - top
-            const titleCurrentWidth = Math.round(textWidth + top * 2) - 2
+            const titleLeft = Number((containerWidth) / 2) + top
+            const titleCurrentWidth = Math.round( - top * 2) - 2
 
 
-            if (rightArrowOffset <= leftArrowBorder) {
+            console.log(rightArrowOffset <= leftArrowBorder)
+            if (rightArrowOffset >= leftArrowBorder) {
                 rightArrow.style.left = `${rightArrowOffset}px`;
                 leftArrow.style.left = `${leftArrowOffset}px`;
 
                 text.style.left = `${titleLeft}px`;
                 text.style.width = `${titleCurrentWidth}px`;
-                text.querySelector(".container").style.marginLeft = `${top}px`;
+                text.querySelector(".container").style.marginLeft = `${(titleCurrentWidth - textWidth)/2}px`;
             } else {
-                rightArrow.style.left = `${leftArrowBorder}px`;
-                leftArrow.style.left = `${leftArrowBorder + arrowWidth + rightGap}px`;
+                const rightArrowOffset = leftMargin - arrowGap
+                const leftArrowOffset = leftMargin + textWidth - arrowWidth + arrowGap
+
+                rightArrow.style.left = `${rightArrowOffset}px`;
+                leftArrow.style.left = `${leftArrowOffset}px`;
             }
 
             if (titleCurrentWidth < 0) {
@@ -86,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } else {
             text.style.left = `${leftMargin}px`;
-            text.style.width = `${textWidth}px`;
+            text.style.width = `${0}px`;
             text.querySelector("h2").style.marginLeft = `${0}px`;
             text.querySelector(".container").style.marginLeft = `${0}px`;
         }

@@ -29,6 +29,7 @@ const whyUsSwiperPhoto = new Swiper('.why-us-photo-slider', {
     slidesPerView: "auto",
     spaceBetween: 20,
     loopFillGroupWithBlank: false,
+    allowTouchMove: false
 });
 
 const equipmentSwiper = new Swiper('.what-us-slider', {
@@ -39,6 +40,7 @@ const equipmentSwiper = new Swiper('.what-us-slider', {
     spaceBetween: 20,
     loop: true,
     centeredSlides: true,
+    loopFillGroupWithBlank: false,
     pagination: {
         el: ".what-us-pagination",
         clickable: true,
