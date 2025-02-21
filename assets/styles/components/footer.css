@@ -328,7 +328,6 @@ body {
   position: absolute;
   width: 200px;
   height: 200px;
-  cursor: url("../../../assets/img/cur.svg"), pointer;
 }
 .footer__designer-logo:hover a {
   opacity: 0;
