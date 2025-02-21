@@ -82,11 +82,6 @@
     width: 200px;
     height: 200px;
 
-    &:hover a{
-      opacity: 0;
-      transition: 150ms all;
-    }
-
     & svg {
       display: none;
       cursor: url("../../../assets/img/cur.svg"), pointer;
