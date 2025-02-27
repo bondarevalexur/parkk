@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    let needOverflow = true;
+
     const popupOpenButtons = document.querySelectorAll('.popup-open-button');
     const popup = document.querySelector('.popup');
     const form = popup.querySelector('.popup-form');
@@ -25,7 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const popupStart = button.dataset.popup;
             popup.style.display = "flex";
             popup.style.top = `${window.scrollY}px`;
-            document.body.style.overflow = "hidden";
+
+            if (document.body.style.overflow === "hidden") {
+                needOverflow = false;
+            } else {
+                document.body.style.overflow = "hidden";
+            }
 
 
             switch (popupStart) {
@@ -133,7 +140,12 @@ document.addEventListener("DOMContentLoaded", () => {
     close.addEventListener("click", (e) => {
         e.preventDefault()
         popup.classList.remove("popup_visible")
-        document.body.style.overflow = "auto";
+
+        if (needOverflow) {
+            document.body.style.overflow = "auto";
+        } else {
+            needOverflow = true
+        }
 
         setTimeout(() => {
             popup.style.display = "none";
@@ -144,7 +156,12 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.addEventListener("click", (e) => {
         if (!e.target.closest(".popup__content")) {
             popup.classList.remove("popup_visible")
-            document.body.style.overflow = "auto";
+
+            if (needOverflow) {
+                document.body.style.overflow = "auto";
+            } else {
+                needOverflow = true
+            }
 
             setTimeout(() => {
                 popup.style.display = "none";
