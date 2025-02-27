@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     popupOpenButtons.forEach((button) => {
         button.addEventListener('click', (e) => {
 
-            const videoSrc = `assets/video/${button.dataset.video}.mp4`
+            const videoSrc = `${button.dataset.video}`
             video.src = videoSrc;
             currentScroll = window.scrollY
 

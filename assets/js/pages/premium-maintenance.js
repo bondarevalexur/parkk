@@ -1,16 +1,17 @@
-const feedbackSwiper = new Swiper('.feedback-slider', {
-    wrapperClass: 'feedback-wrapper',
-    slideClass: 'feedback-slide',
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    loopFillGroupWithBlank: false,
-    navigation: {
-        nextEl: '.feedback-next',
-        prevEl: '.feedback-prev',
-    },
-});
-
 document.addEventListener("DOMContentLoaded", () => {
+    const feedbackSwiper = new Swiper('.feedback-slider', {
+        wrapperClass: 'feedback-wrapper',
+        slideClass: 'feedback-slide',
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        loopFillGroupWithBlank: false,
+        navigation: {
+            nextEl: '.feedback-next',
+            prevEl: '.feedback-prev',
+        },
+    });
+
+
     const inputs = document.querySelectorAll('input');
     inputs.forEach((input) => {
         input.addEventListener("change", () => {

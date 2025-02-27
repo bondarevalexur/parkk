@@ -1,38 +1,36 @@
-const isMobile = window.innerWidth < 768
-
-const whyUsSwiperText = new Swiper('.important-text-slider', {
-    wrapperClass: 'important-text-wrapper',
-    slideClass: 'important-text-slide',
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    loopFillGroupWithBlank: false,
-    pagination: isMobile ? {
-        el: ".important-pagination",
-        type: "fraction"
-    } : {
-        el: ".important-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-    },
-    navigation: {
-        nextEl: '.important-next',
-        prevEl: '.important-prev',
-    },
-});
-
-const whyUsSwiperPhoto = new Swiper('.important-photo-slider', {
-    wrapperClass: 'important-photo-wrapper',
-    slideClass: 'important-photo-slide',
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    loopFillGroupWithBlank: false,
-    allowTouchMove: false
-});
-
 document.addEventListener("DOMContentLoaded", () => {
+    const isMobile = window.innerWidth < 768
 
+    const whyUsSwiperText = new Swiper('.important-text-slider', {
+        wrapperClass: 'important-text-wrapper',
+        slideClass: 'important-text-slide',
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        loopFillGroupWithBlank: false,
+        pagination: isMobile ? {
+            el: ".important-pagination",
+            type: "fraction"
+        } : {
+            el: ".important-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+        navigation: {
+            nextEl: '.important-next',
+            prevEl: '.important-prev',
+        },
+    });
+
+    const whyUsSwiperPhoto = new Swiper('.important-photo-slider', {
+        wrapperClass: 'important-photo-wrapper',
+        slideClass: 'important-photo-slide',
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        loopFillGroupWithBlank: false,
+        allowTouchMove: false
+    });
 
     whyUsSwiperText.on("slideChange", (e) => {
         whyUsSwiperPhoto.slideTo(e.activeIndex)

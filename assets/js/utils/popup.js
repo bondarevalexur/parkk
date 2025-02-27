@@ -9,7 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const testBlock = popup.querySelector('.test');
     const technicBlock = popup.querySelector('.technic');
     const commentBLock = popup.querySelector('.comment');
-    const blocks = {"test": testBlock, "technic": technicBlock, "order": commentBLock, "car-care": commentBLock};
+    const eventBLock = popup.querySelector('.event-type');
+    const blocks = {
+        "test": testBlock,
+        "technic": technicBlock,
+        "order": commentBLock,
+        "car-care": commentBLock,
+        "event": eventBLock
+    };
 
 
     popupOpenButtons.forEach((button) => {

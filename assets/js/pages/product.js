@@ -1,70 +1,71 @@
-const isMobile = window.innerWidth < 768
-
-const productSwiper = new Swiper('.product-slider', {
-    wrapperClass: 'product-wrapper',
-    slideClass: 'product-slide',
-    slidesPerView: "auto",
-    spaceBetween: isMobile ? 10 : 20,
-    loop: true,
-    centeredSlides: true,
-    pagination: {
-        el: ".controllers__pagination",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: '.product-next',
-        prevEl: '.product-prev',
-    },
-});
-
-const equipmentSwiper = new Swiper('.equipment-slider', {
-    wrapperClass: 'equipment-wrapper',
-    slideClass: 'equipment-slide',
-    slidesPerView: "auto",
-    spaceBetween: isMobile ? 10 : 20,
-    centeredSlides: true,
-    pagination: {
-        el: ".pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.equipment-next',
-        prevEl: '.equipment-prev',
-    },
-});
-
-
-const optionsSwiper = new Swiper('.options-slider', {
-    wrapperClass: 'options-wrapper',
-    slideClass: 'options-slide',
-    slidesPerView: "auto",
-    spaceBetween: isMobile ? 10 : 20,
-    centeredSlides: true,
-    pagination: isMobile ? {
-        el: ".options-pagination",
-        clickable: true,
-    } : {
-        el: ".options-pagination",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: '.options-next',
-        prevEl: '.options-prev',
-    },
-});
-
-const proposalSwiper = new Swiper('.proposal-slider', {
-    wrapperClass: 'proposal-wrapper',
-    slideClass: 'proposal-slide',
-    slidesPerView: "auto",
-    spaceBetween: isMobile ? 10 : 20,
-    navigation: {
-        nextEl: '.proposal-next',
-        prevEl: '.proposal-prev',
-    },
-});
-
 document.addEventListener("DOMContentLoaded", () => {
+    const isMobile = window.innerWidth < 768
+
+    const productSwiper = new Swiper('.product-slider', {
+        wrapperClass: 'product-wrapper',
+        slideClass: 'product-slide',
+        slidesPerView: "auto",
+        spaceBetween: isMobile ? 10 : 20,
+        loop: true,
+        centeredSlides: true,
+        pagination: {
+            el: ".controllers__pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: '.product-next',
+            prevEl: '.product-prev',
+        },
+    });
+
+    const equipmentSwiper = new Swiper('.equipment-slider', {
+        wrapperClass: 'equipment-wrapper',
+        slideClass: 'equipment-slide',
+        slidesPerView: "auto",
+        spaceBetween: isMobile ? 10 : 20,
+        centeredSlides: true,
+        pagination: {
+            el: ".pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.equipment-next',
+            prevEl: '.equipment-prev',
+        },
+    });
+
+
+    const optionsSwiper = new Swiper('.options-slider', {
+        wrapperClass: 'options-wrapper',
+        slideClass: 'options-slide',
+        slidesPerView: "auto",
+        spaceBetween: isMobile ? 10 : 20,
+        centeredSlides: true,
+        pagination: isMobile ? {
+            el: ".options-pagination",
+            clickable: true,
+        } : {
+            el: ".options-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: '.options-next',
+            prevEl: '.options-prev',
+        },
+    });
+
+    const proposalSwiper = new Swiper('.proposal-slider', {
+        wrapperClass: 'proposal-wrapper',
+        slideClass: 'proposal-slide',
+        slidesPerView: "auto",
+        spaceBetween: isMobile ? 10 : 20,
+        navigation: {
+            nextEl: '.proposal-next',
+            prevEl: '.proposal-prev',
+        },
+    });
+
+
     const inputs = document.querySelectorAll('input');
     inputs.forEach((input) => {
         input.addEventListener("change", () => {
