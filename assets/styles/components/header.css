@@ -558,5 +558,10 @@ body {
     display: none;
   }
 }
+@media screen and (max-width: 435px) {
+  .messengers {
+    display: none !important;
+  }
+}
 
 /*# sourceMappingURL=header.css.map */

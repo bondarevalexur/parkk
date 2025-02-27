@@ -75,16 +75,16 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 
         const value = e.target.dataset.value
-        const currentBlock = blocks?.[value]
+
+        const currentBlock = blocks?.[value];
+        if (currentBlock)
+            currentBlock.style.display = "";
 
         if (value === "technic") {
             buttonPopupForm.classList.add('popup-form__button_premium');
         } else {
             buttonPopupForm.classList.remove('popup-form__button_premium');
         }
-
-        if (currentBlock)
-            currentBlock.style.display = "";
     })
 
     function flattenDeep(array) {
