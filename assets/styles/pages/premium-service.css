@@ -627,6 +627,7 @@ main {
     max-width: 410px;
     padding: 0 10px;
     margin-bottom: 47px;
+    width: 100%;
   }
   .special-offer-container .special-offer__description > .h4 {
     font-size: 14px;

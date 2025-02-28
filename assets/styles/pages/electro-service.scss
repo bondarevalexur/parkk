@@ -74,7 +74,7 @@
     flex-shrink: 1;
 
     background: $lemon;
-    color: $black!important;
+    color: $black !important;
   }
 
   & .text {
@@ -305,6 +305,7 @@
       }
 
       &__description {
+        width: 100%;
         max-width: 410px;
         padding: 0 10px;
         margin-bottom: 47px;
@@ -402,7 +403,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1110px) {
   .services {
     padding: 0 10px;
     margin: 100px auto;
@@ -647,6 +648,18 @@
       padding: 0 10px;
       display: flex;
       align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .important {
+    &__header {
+      & .h2 {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 26px;
+      }
     }
   }
 }
