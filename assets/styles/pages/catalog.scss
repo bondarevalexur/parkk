@@ -275,6 +275,7 @@
 
       & img {
         width: 100%;
+        height: 100%;
       }
     }
   }
@@ -423,6 +424,8 @@
 
           background: $lemon;
           color: $black;
+
+          gap: 10px;
 
           &:hover {
             background: $graphite;

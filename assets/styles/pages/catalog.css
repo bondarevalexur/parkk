@@ -475,6 +475,7 @@ body {
 }
 .catalog .item__bg img {
   width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 1300px) {
@@ -588,6 +589,7 @@ body {
     justify-content: center;
     background: #FFF566;
     color: #000000;
+    gap: 10px;
   }
   .catalog .item .mobile-actions .button:hover {
     background: #52545A;
