@@ -303,6 +303,10 @@ body {
 .select__input.active:hover {
   border-color: #A0A0A0;
 }
+.select__input[disabled=true] {
+  border-color: #A0A0A0;
+  cursor: unset;
+}
 .select__icon {
   position: absolute;
   right: 10px;

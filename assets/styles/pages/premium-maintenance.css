@@ -1349,15 +1349,15 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-  .faq {
+  .faq-container .faq {
     margin: 100px 10px;
     grid-template-columns: 1fr;
     row-gap: 10px;
   }
-  .faq .question-column {
+  .faq-container .faq .question-column {
     gap: 10px;
   }
-  .faq .h2 {
+  .faq-container .faq .h2 {
     text-align: left;
     grid-column-start: 1;
     grid-column-end: 2;

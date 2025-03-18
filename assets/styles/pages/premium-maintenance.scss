@@ -1442,26 +1442,28 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-  .faq {
-    margin: 100px 10px;
-    grid-template-columns: 1fr;
-    row-gap: 10px;
+  .faq-container {
+    .faq {
+      margin: 100px 10px;
+      grid-template-columns: 1fr;
+      row-gap: 10px;
 
-    & .question-column {
-      gap: 10px;
-    }
+      & .question-column {
+        gap: 10px;
+      }
 
-    & .h2 {
-      text-align: left;
-      grid-column-start: 1;
-      grid-column-end: 2;
-      padding: 0 10px;
-      margin-bottom: 30px;
+      & .h2 {
+        text-align: left;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding: 0 10px;
+        margin-bottom: 30px;
 
-      font-size: 28px;
-      font-weight: 300;
-      line-height: 32px;
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
 
+      }
     }
   }
 }

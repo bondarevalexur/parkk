@@ -46,6 +46,11 @@
         border-color: $gray;
       }
     }
+
+    &[disabled=true] {
+      border-color: $gray;
+      cursor: unset;
+    }
   }
 
   &__icon {
