@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const popupOpenButtons = document.querySelectorAll('.popup-open-button');
     const popup = document.querySelector('.popup');
+    const popupThanks = popup.querySelector('#js-thanks');
+    const popupMain = popup.querySelector('#js-main');
     const form = popup.querySelector('.popup-form');
     const close = popup.querySelector('.popup__close');
     const questionSelect = popup.querySelector('[name="question-type"]');
@@ -133,6 +135,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (isValid) {
             console.log("Объект для отправки на бэк", jsonObject);
+
+            popupThanks.style.display = "flex";
+            popupMain.style.display = "none";
         }
     })
 

@@ -310,6 +310,20 @@ body {
   margin-bottom: 30px;
   line-height: 18px;
 }
+.popup__content.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 243px;
+  padding-top: 16px;
+}
+.popup__content.thanks h3 {
+  margin-bottom: 16px;
+}
+.popup__content p {
+  margin-bottom: 39px;
+}
 .popup-form {
   display: flex;
   flex-direction: column;
