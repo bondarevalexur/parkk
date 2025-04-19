@@ -501,5 +501,203 @@ body {
     color: #FFF566;
   }
 }
+/* Блок -  */
+.stations {
+  color: #000000;
+  max-width: 1290px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  justify-content: center;
+}
+.stations__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.stations .app-wrapper {
+  height: 500px;
+  max-width: 1280px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.32);
+  border-radius: 20px;
+}
+.stations .app-wrapper #app {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.stations .card {
+  position: relative;
+}
+.stations .card__dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #FFF566;
+  display: block;
+  cursor: pointer;
+  position: absolute;
+}
+.stations .card__dot .address-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.stations .card__dot:after, .stations .card__dot:before {
+  background: #000000;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 1px;
+  border-radius: 4px;
+  transition: all linear 0.4s;
+}
+.stations .card__dot:before {
+  top: 14.5px;
+  left: 11px;
+}
+.stations .card__dot:after {
+  top: 11px;
+  left: 14.5px;
+  width: 1px;
+  height: 8px;
+}
+.stations .card__dot .address {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: fit-content;
+  max-width: 236px;
+  background: rgba(82, 84, 90, 0.6039215686);
+  border-radius: 14px;
+  padding: 20px 10px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+}
+.stations .card__dot .address span {
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 9.6px;
+  color: #EBEBEB;
+}
+.stations .card__dot .address .location {
+  white-space: nowrap;
+  margin-bottom: 8px;
+}
+.stations .card__dot .address .time {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.stations .card__dot .address .spec {
+  margin-bottom: 28px;
+}
+.stations .card__dot_active {
+  background: #52545A;
+}
+.stations .card__dot_active:before {
+  rotate: 45deg;
+  background: #FFFFFF;
+}
+.stations .card__dot_active:after {
+  rotate: 45deg;
+  background: #FFFFFF;
+}
+.stations .card__dot_active .address {
+  display: block;
+}
+.stations .card .dot-1 {
+  top: 39%;
+  left: 43%;
+}
+.stations .card img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .stations {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .stations {
+    padding: 100px 10px 90px 10px;
+  }
+  .stations__header {
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 40px;
+  }
+  .stations__address {
+    display: flex;
+    gap: 40px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+  .stations__address ul li {
+    margin-bottom: 4px;
+  }
+  .stations__address ul li:nth-child(1) {
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 9.6px;
+    color: #52545A;
+  }
+  .stations__address .work-time span {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 9.6px;
+    color: #52545A;
+  }
+  .stations .card__dot .address-wrapper {
+    display: none;
+  }
+  .stations .card img {
+    height: 417px;
+  }
+  .stations .dot-1 {
+    top: 20% !important;
+    left: 33% !important;
+  }
+  .stations .mobile-address {
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  .stations .mobile-address .address {
+    max-height: 0;
+    display: flex;
+    border-radius: 10px;
+    background: #F6F6F6;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    transition: all 0.4s linear;
+  }
+  .stations .mobile-address .address span {
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 9.6px;
+    color: #52545A;
+    display: block;
+  }
+  .stations .mobile-address .address_active {
+    padding: 10px;
+    max-height: 300px;
+    transition: all 0.4s linear;
+  }
+}
 
 /*# sourceMappingURL=contacts.css.map */

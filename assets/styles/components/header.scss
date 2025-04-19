@@ -280,8 +280,24 @@
   }
 }
 
+@media screen and (max-width: 1414px) {
+  .header {
+
+    &__buttons {
+      button {
+        padding: 23px 12px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .header {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
     &__buttons {
       display: none !important;
     }
@@ -323,6 +339,11 @@
 
 @media screen and (max-width: 900px) {
   .header {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .nav {
 
       &__menu {
@@ -338,8 +359,6 @@
 
 @media screen and (max-width: 768px) {
   .header {
-
-
     &__container {
       display: flex;
       justify-content: space-between;

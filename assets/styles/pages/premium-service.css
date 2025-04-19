@@ -315,13 +315,11 @@ main {
 .hero .p1, .hero .button, .hero__title {
   position: relative;
   z-index: 1;
-  margin: 0 20px;
 }
 .hero__title {
   width: 100%;
   max-width: 1440px;
-  margin: 85px auto 0 auto;
-  padding: 0 20px;
+  padding: 87px 80px 0 80px;
 }
 .hero__button {
   width: max-content;
@@ -335,11 +333,11 @@ main {
 .hero .text {
   width: 100%;
   max-width: 1440px;
-  margin: 87px auto 0 auto;
+  padding: 0 80px;
 }
 .hero .text .p1 {
   max-width: 660px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 768px) {

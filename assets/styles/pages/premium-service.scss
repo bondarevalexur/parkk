@@ -65,14 +65,12 @@ main {
   & .p1, .button, &__title {
     position: relative;
     z-index: 1;
-    margin: 0 20px;
   }
 
   &__title {
     width: 100%;
     max-width: 1440px;
-    margin: 85px auto 0 auto;
-    padding: 0 20px;
+    padding: 87px 80px 0 80px;
   }
 
   &__button {
@@ -90,14 +88,13 @@ main {
   & .text {
     & .p1 {
       max-width: 660px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
     width: 100%;
     max-width: 1440px;
-    margin: 87px auto 0 auto;
+    padding: 0 80px;
   }
-
 
 }
 

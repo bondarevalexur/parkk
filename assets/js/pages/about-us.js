@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         direction: "vertical",
         slidesPerView: "auto",
         spaceBetween: 20,
+        allowTouchMove: false,
         loop: true,
         centeredSlides: true,
         loopFillGroupWithBlank: false,

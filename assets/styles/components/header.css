@@ -453,7 +453,16 @@ body {
   display: none;
 }
 
+@media screen and (max-width: 1414px) {
+  .header__buttons button {
+    padding: 23px 12px;
+  }
+}
 @media screen and (max-width: 1300px) {
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+  }
   .header__buttons {
     display: none !important;
   }
@@ -476,6 +485,10 @@ body {
   }
 }
 @media screen and (max-width: 900px) {
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+  }
   .header .nav__menu {
     grid-template-columns: 1fr 1fr;
   }
