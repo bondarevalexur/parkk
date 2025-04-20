@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const titleCurrentWidth = Math.round( - top * 2) - 2
 
 
-            console.log(rightArrowOffset <= leftArrowBorder)
             if (rightArrowOffset >= leftArrowBorder) {
                 rightArrow.style.left = `${rightArrowOffset}px`;
                 leftArrow.style.left = `${leftArrowOffset}px`;

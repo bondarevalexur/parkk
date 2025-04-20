@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttons = options.querySelectorAll('.button');
     const slider = document.querySelector('.options-slider .options-wrapper');
     const slides = [...slider.querySelectorAll('.options-slide')];
-    console.log(buttons)
+
     slides.forEach((slide) => {
         if (slide.dataset.value !== "exterior") {
             slider.removeChild(slide)
