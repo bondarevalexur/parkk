@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const popupThanks = popup.querySelector('#js-thanks');
     const popupMain = popup.querySelector('#js-main');
     const form = popup.querySelector('.popup-form');
-    const close = popup.querySelector('.popup__close');
+    const closeList = popup.querySelectorAll('.popup__close');
     const questionSelect = popup.querySelector('[name="question-type"]');
     const buttonPopupForm = popup.querySelector('.popup-form__button');
     const agreeCheckbox = popup.querySelector('.agree .checkbox');
@@ -141,20 +141,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+    closeList.forEach((close) => {
+        close.addEventListener("click", (e) => {
+            e.preventDefault()
+            popup.classList.remove("popup_visible")
 
-    close.addEventListener("click", (e) => {
-        e.preventDefault()
-        popup.classList.remove("popup_visible")
+            if (needOverflow) {
+                document.body.style.overflow = "auto";
+            } else {
+                needOverflow = true
+            }
 
-        if (needOverflow) {
-            document.body.style.overflow = "auto";
-        } else {
-            needOverflow = true
-        }
-
-        setTimeout(() => {
-            popup.style.display = "none";
-        }, 300);
+            setTimeout(() => {
+                popup.style.display = "none";
+            }, 300);
+        })
     })
 
     // Закрытие списка при клике вне контента
